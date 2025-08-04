@@ -1,0 +1,438 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Main content */
+.main-content {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Form styles */
+.calculator-form {
+    padding: 2rem;
+}
+
+.form-section {
+    margin-bottom: 2.5rem;
+}
+
+.form-section h2 {
+    color: #2d3748;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.help-text {
+    display: block;
+    font-size: 0.85rem;
+    color: #718096;
+    margin-top: 0.25rem;
+}
+
+/* Slider styles */
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider-container input[type="range"] {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: #e2e8f0;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.slider-container input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.slider-value {
+    font-weight: 600;
+    color: #667eea;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Checkbox styles */
+.checkbox-group {
+    margin-top: 1rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 4px;
+    margin-right: 0.75rem;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background: #667eea;
+    border-color: #667eea;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Button styles */
+.calculate-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 1rem;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+/* Results section */
+.results-section {
+    padding: 2rem;
+    background: #f7fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.results-section h2 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cost-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cost-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cost-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.cost-card h3 {
+    color: #4a5568;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.cost-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.cost-card p {
+    color: #718096;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Total cost */
+.total-cost {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    color: white;
+}
+
+.total-cost h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.total-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Savings highlight */
+.savings-highlight {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    margin-top: 2rem;
+}
+
+.savings-highlight h3 {
+    color: #2d3748;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.savings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.savings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid #48bb78;
+}
+
+.savings-label {
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.savings-percentage {
+    font-weight: 600;
+    color: #48bb78;
+    font-size: 0.9rem;
+}
+
+.savings-amount {
+    font-weight: 700;
+    color: #667eea;
+    font-size: 1.1rem;
+}
+
+.total-savings {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    border-radius: 12px;
+    color: white;
+}
+
+.total-savings h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.total-savings-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cta-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-top: 1.5rem;
+}
+
+.cta-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.cta-link:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .calculator-form,
+    .results-section {
+        padding: 1.5rem;
+    }
+    
+    .cost-breakdown {
+        grid-template-columns: 1fr;
+    }
+    
+    .savings-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .total-amount {
+        font-size: 2.5rem;
+    }
+    
+    .slider-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .slider-value {
+        text-align: center;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .calculator-form,
+    .results-section {
+        padding: 1rem;
+    }
+    
+    .cost-amount {
+        font-size: 1.5rem;
+    }
+    
+    .total-amount {
+        font-size: 2rem;
+    }
+} 

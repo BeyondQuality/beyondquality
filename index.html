@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True cost of testing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>True cost of testing</h1>
+            <p class="subtitle">Benchmark your team's annual testing investment against industry data and see where you can save.</p>
+        </header>
+
+        <main class="main-content">
+            <form id="calculatorForm" class="calculator-form">
+                <div class="form-section">
+                    <h2>Team Configuration</h2>
+                    
+                    <div class="form-group">
+                        <label for="teamSize">Team Size</label>
+                        <input type="number" id="teamSize" name="teamSize" min="1" max="1000" value="15" required>
+                        <span class="help-text">Number of developers and QA engineers</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numTests">Number of E2E Tests</label>
+                        <input type="number" id="numTests" name="numTests" min="1" max="10000" value="625" required>
+                        <span class="help-text">Total end-to-end tests in your suite</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="failureRate">Test Failure Rate (%)</label>
+                        <div class="slider-container">
+                            <input type="range" id="failureRate" name="failureRate" min="1" max="20" value="3.0" step="0.5">
+                            <span class="slider-value" id="failureRateValue">3.0%</span>
+                        </div>
+                        <span class="help-text">Percentage of tests that fail on average</span>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Operations</h2>
+                    
+                    <div class="form-group">
+                        <label for="runsPerDay">CI/CD Runs per Day</label>
+                        <input type="number" id="runsPerDay" name="runsPerDay" min="1" max="10" value="1" required>
+                        <span class="help-text">How many times your test suite runs daily</span>
+                    </div>
+
+                    <div class="form-group checkbox-group" style="display: none;">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="usesTMS" name="usesTMS">
+                            <span class="checkmark"></span>
+                            Currently using a Test Management System
+                        </label>
+                        <span class="help-text">Check if you already have a TMS like Qase</span>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Cost Parameters</h2>
+                    
+                    <div class="form-group">
+                        <label for="qaSalary">QA Engineer Salary ($/year)</label>
+                        <input type="number" id="qaSalary" name="qaSalary" min="30000" max="200000" value="90000" required>
+                        <span class="help-text">Average annual salary for QA engineers</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sdetSalary">SDET Salary ($/year)</label>
+                        <input type="number" id="sdetSalary" name="sdetSalary" min="40000" max="250000" value="120000" required>
+                        <span class="help-text">Average annual salary for SDETs</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="defectCost">Cost per Escaped Defect ($)</label>
+                        <input type="number" id="defectCost" name="defectCost" min="100" max="10000" value="2000" required>
+                        <span class="help-text">Average cost when a bug reaches production</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">Calculate Costs</button>
+            </form>
+
+            <div id="results" class="results-section" style="display: none;">
+                <h2>Your Annual Testing Costs</h2>
+                <div class="cost-breakdown">
+                    <div class="cost-card">
+                        <h3>Test Creation</h3>
+                        <div class="cost-amount" id="testCreationCost">$0</div>
+                        <p>Initial test development and setup</p>
+                    </div>
+                    
+                    <div class="cost-card">
+                        <h3>Maintenance</h3>
+                        <div class="cost-amount" id="maintenanceCost">$0</div>
+                        <p>Ongoing test maintenance and debugging</p>
+                    </div>
+                    
+                    <div class="cost-card">
+                        <h3>Coordination</h3>
+                        <div class="cost-amount" id="coordinationCost">$0</div>
+                        <p>Team coordination and communication overhead</p>
+                    </div>
+                    
+                    <div class="cost-card">
+                        <h3>Flaky Test Tax</h3>
+                        <div class="cost-amount" id="flakyCost">$0</div>
+                        <p>Additional time spent on unreliable tests</p>
+                    </div>
+                    
+                    <div class="cost-card">
+                        <h3>Escaped Defects</h3>
+                        <div class="cost-amount" id="escapedDefectCost">$0</div>
+                        <p>Cost of bugs that reach production</p>
+                    </div>
+                    
+
+                </div>
+
+                <div class="total-cost">
+                    <h2>Total Annual Cost</h2>
+                    <div class="total-amount" id="totalCost">$0</div>
+                </div>
+
+                <div class="savings-highlight">
+                    <h3>💡 Potential Savings with Qase & AIDEN</h3>
+                    <div class="savings-grid">
+                        <div class="savings-item">
+                            <span class="savings-label">Maintenance Cost</span>
+                            <span class="savings-percentage">30-50% reduction</span>
+                            <span class="savings-amount" id="maintenanceSavings">$0</span>
+                        </div>
+                        <div class="savings-item">
+                            <span class="savings-label">Coordination Cost</span>
+                            <span class="savings-percentage">60% reduction</span>
+                            <span class="savings-amount" id="coordinationSavings">$0</span>
+                        </div>
+                        <div class="savings-item">
+                            <span class="savings-label">Flaky Test Tax</span>
+                            <span class="savings-percentage">25-50% reduction</span>
+                            <span class="savings-amount" id="flakySavings">$0</span>
+                        </div>
+                    </div>
+                    <div class="total-savings">
+                        <h4>Total Potential Annual Savings</h4>
+                        <div class="total-savings-amount" id="totalSavings">$0</div>
+                    </div>
+                    <p class="cta-text">Ready to reduce your testing costs? <a href="#" class="cta-link">Talk to our sales team</a></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="qase_cost_calculator.js?v=1.1"></script>
+    <script src="app.js?v=1.1"></script>
+</body>
+</html> 

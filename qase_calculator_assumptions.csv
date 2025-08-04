@@ -1,0 +1,15 @@
+Parameter / Assumption,Default Value,Applies To,Justification / Notes
+Working hours/year,2080,All salary calculations,Standard full-time in US (52 weeks × 40 h)
+Time to create a test,2 hours,Test creation cost,"Includes coding, data setup, and verification"
+Test maintenance time per failure,0.75 hours,Maintenance cost,"Debug, rerun, PR, redeploy"
+Test failure rate,3.0%,Failures/month,Typical E2E flake rate; configurable
+Runs per day,1,Failure exposure,Daily CI/CD runs; affects volume of failures
+QA engineer salary,"$90,000/year",Labour cost,Based on US average
+SDET salary,"$120,000/year",Labour cost,Based on US average
+Split of creation work (QAE vs SDET),"60% QAE, 40% SDET",Creation cost,Assumes test frameworks + authoring are shared
+Split of maintenance work,"80% QAE, 20% SDET",Maintenance cost,"Most maintenance falls to QA, not infra engineers"
+Coordination time per dev/month (no TMS),4 hours,Coordination cost,"Duplicate effort, lack of central source of truth"
+Coordination reduction with Qase,60%,Coordination cost,Better traceability reduces wasted time
+Flaky test overhead per failure,+0.5 hours,Flaky test tax,Extra effort to rerun/retriage when flake is suspected
+Defect leakage rate,10% of failures,Escaped defect cost,Proportion of missed bugs escaping into production
+Cost per escaped defect,"$2,000",Escaped defect cost,"Conservative average based on downtime, rework, support"
