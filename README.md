@@ -1,1 +1,1 @@
-Beyond Quality interview and podcast
+Beyond Quality community
