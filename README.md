@@ -19,7 +19,7 @@ Beyond Quality is a _working_ community, not just a talking one. Here, QA/QE pro
 
 ## How
 
-We work in the open. Instead of siloed efforts that vanish after they’re done, we collaborate on:
+We work in the open. Instead of siloed efforts that vanish after they’re done, we collaborate on the following activities:
 
 1. **Research & Writing*. Join ongoing projects like Economics of Testing and contribute resources, insights, and reviews. Improve your profile as a thought leader while producing open, reusable research.
 	
