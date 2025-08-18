@@ -8,7 +8,7 @@ A collaborative _workspace_ where QA/QE professionals take the work they're alre
 
 On most forums and platforms like Reddit, conversations are fleeting — ideas get buried, and there's no guarantee of follow-through.
 
-Beyond Quality is a _working_ community, not just a talking one. Here, QA/QE professionals collaborate on research, prepare talks, solve real problems, and document the results so they become lasting, reusable resources. By working together, you _save time_ while producing _higher-quality results_, and get credit for your contributions (for instance, by being listed in the published whitepapers).
+Beyond Quality is a _working_ community, not just a talking one. Here, QA/QE professionals collaborate on research, prepare talks, solve real problems, and document the results so they become lasting, reusable resources. By working together, you _save time_ while producing _higher-quality results_, and get credit for your contributions (for example, by being listed in the published whitepapers).
 
 ## Who it's for
 
@@ -21,7 +21,7 @@ Beyond Quality is a _working_ community, not just a talking one. Here, QA/QE pro
 
 We work in the open. Instead of siloed efforts that vanish after they’re done, we collaborate on the following activities:
 
-1. **Research & Writing*. Join ongoing projects like Economics of Testing and contribute resources, insights, and reviews. Improve your profile as a thought leader while producing open, reusable research.
+1. **[Research & Writing](research.md)**. Join ongoing projects like Economics of Testing and contribute resources, insights, and reviews. Improve your profile as a thought leader while producing open, reusable research.
 	
 2. **Talk & Article Preparation**. Present your talk ideas, get expert feedback, and refine them into conference-ready sessions. Help others do the same — and get recognized for your input.
 
