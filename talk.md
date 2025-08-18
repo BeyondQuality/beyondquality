@@ -1,6 +1,6 @@
 # Talk preparation
 
-Why Collaborate on Talks?
+## Why Collaborate on Talks?
 
 Preparing a talk is rewarding but also time-consuming. Most speakers:
 - Struggle to shape an idea into a clear, compelling thesis.
@@ -8,6 +8,8 @@ Preparing a talk is rewarding but also time-consuming. Most speakers:
 - Only get feedback when they present.
 
 At **Beyond Quality**, we treat talk preparation like research: something best done in the open. With early collaboration, you save time, produce better talks, and build confidence before hitting the stage.
+
+The talks can be suited for conferences or meetups. If you're new in public speaking, it's always easier to start presenting at a meetup (such as [Qase Quality Engineering meetups](https://www.meetup.com/pro/quality-assurance-meetups/) or any other), get some practice at these medium-scaled events, and then go all-in and apply for a bigger conference.
 
 ## How It Works
 

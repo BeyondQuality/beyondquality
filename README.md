@@ -6,9 +6,11 @@ A collaborative _workspace_ where QA/QE professionals take the work they're alre
 
 ## Why
 
-On most forums and platforms like Reddit, conversations are fleeting — ideas get buried, and there's no guarantee of follow-through.
+This community is for quality professionals who want to go above and beyond their jobs. We strive to master our craft, challenge assumptions, and push the discipline forward **together**. Beyond Quality is for those who can't stop asking why.
 
-Beyond Quality is a _working_ community, not just a talking one. Here, QA/QE professionals collaborate on research, prepare talks, solve real problems, and document the results so they become lasting, reusable resources. By working together, you _save time_ while producing _higher-quality results_, and get credit for your contributions (for example, by being listed in the published whitepapers).
+On most forums and platforms like Reddit, conversations are fleeting, ideas get buried, and there’s no guarantee of follow-through.
+
+Beyond Quality is a **working** community, not just a talking one. Here, QA/QE professionals collaborate on research, prepare talks, solve real problems, and document the results so they become lasting, reusable resources. By working together, we all can save time while producing higher-quality results, and get credit for the contributions (for example, by being listed in published whitepapers).
 
 ## Who it's for
 
@@ -28,3 +30,16 @@ We work in the open. Instead of siloed efforts that vanish after they’re done,
 3. **Problem-Solving Sessions**. Bring real QA/QE challenges and work through solutions as a group. Learn diagnostic techniques and decision-making frameworks you can use in your job.
 
 4. **Product Feedback & Testing**. Participate in early access programs and influence the tools you use — while being part of a trusted inner circle.
+
+You choose how to participate: just observe, throw in some links and ideas, partner with someone else's research, or start your own.
+
+For now, our home base is [BeyondQuality GitHub](https://github.com/sharovatov/beyondquality/): simple, open, and transparent. As we grow, we'll self-organize into Zoom calls, chats, or even physical gatherings.
+
+## Founding Crew
+
+We are currently a crew of partners:
+- [Anupam Krishnamurthy](https://www.linkedin.com/in/anupam-krishnamurthy/)
+- [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/)
+- [Vitaly Sharovatov](https://www.linkedin.com/in/vsharovatov/)
+
+If you want to participate, here's the github where most of the work will be done: https://github.com/sharovatov/beyondquality/
