@@ -23,7 +23,7 @@ We work in the open. Instead of siloed efforts that vanish after they’re done,
 
 1. **[Research & Writing](research.md)**. Join ongoing projects like Economics of Testing and contribute resources, insights, and reviews. Improve your profile as a thought leader while producing open, reusable research.
 	
-2. **Talk & Article Preparation**. Present your talk ideas, get expert feedback, and refine them into conference-ready sessions. Help others do the same — and get recognized for your input.
+2. **[Talk Preparation](talk.md)**. Present your talk ideas, get expert feedback, and refine them into conference-ready sessions. Help others do the same — and get recognized for your input.
 
 3. **Problem-Solving Sessions**. Bring real QA/QE challenges and work through solutions as a group. Learn diagnostic techniques and decision-making frameworks you can use in your job.
 
