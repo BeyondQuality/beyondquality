@@ -2,7 +2,7 @@
 
 ## What
 
-A collaborative _workspace_ where QA/QE professionals take the work they're already doing — research, talk and article prep, problem-solving — and make it better, faster, and shared.
+A collaborative _workspace_ where QA/QE professionals take the work they're already doing: research, talk and article prep, problem-solving — and make it better, faster, and shared.
 
 ## Why
 
