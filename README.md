@@ -37,9 +37,11 @@ For now, our home base is [BeyondQuality GitHub](https://github.com/sharovatov/b
 
 ## Founding Crew
 
-We are currently a crew of partners:
+- [Vitaly Sharovatov](https://www.linkedin.com/in/vsharovatov/) — [Qase](https://qase.io) developer advocate, founder
+
+Partners:
 - [Anupam Krishnamurthy](https://www.linkedin.com/in/anupam-krishnamurthy/)
 - [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/)
-- [Vitaly Sharovatov](https://www.linkedin.com/in/vsharovatov/)
+
 
 If you want to participate, here's the github where most of the work will be done: https://github.com/sharovatov/beyondquality/
