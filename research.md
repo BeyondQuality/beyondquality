@@ -28,8 +28,7 @@ Collaborative work on research turns the lonely, high-effort part of research in
 
 1. Author pitches an idea of a research or an article they are considering working on:
     - Post a short thesis/question (1–2 sentences) and 2–3 bullets on what you want to explore. For example, “My thesis is that ‘more testing’ doesn’t always mean ‘better quality’, and I want to unpack this with research.”
-
-1.2. Ask for specific help (critique framing, suggest sources, join outlining, review drafts).
+    - Ask for specific help (critique framing, suggest sources, join outlining, review drafts).
 
 2. Collaborators express help in different roles: sourcer, summarizer, reviewer, shaper, or co-author. Low-barrier contributions (links, quick comments) are always welcome. Categoriges of efforts are:
     - Level 1 (5–15 min): drop resources, quick feedback.
