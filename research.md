@@ -27,13 +27,14 @@ Collaborative work on research turns the lonely, high-effort part of research in
 ## Process proposal
 
 1. Author pitches an idea of a research or an article they are considering working on:
-1.1 Post a short thesis/question (1–2 sentences) and 2–3 bullets on what you want to explore. For example, “My thesis is that ‘more testing’ doesn’t always mean ‘better quality’, and I want to unpack this with research.”
+    - Post a short thesis/question (1–2 sentences) and 2–3 bullets on what you want to explore. For example, “My thesis is that ‘more testing’ doesn’t always mean ‘better quality’, and I want to unpack this with research.”
 
 1.2. Ask for specific help (critique framing, suggest sources, join outlining, review drafts).
+
 2. Collaborators express help in different roles: sourcer, summarizer, reviewer, shaper, or co-author. Low-barrier contributions (links, quick comments) are always welcome. Categoriges of efforts are:
-- Level 1 (5–15 min): drop resources, quick feedback.
-- Level 2 (1–3 hrs): summarize sources, suggest structure.
-- Level 3 (deep dive): draft sections, review whole paper, act as co-author.
+    - Level 1 (5–15 min): drop resources, quick feedback.
+    - Level 2 (1–3 hrs): summarize sources, suggest structure.
+    - Level 3 (deep dive): draft sections, review whole paper, act as co-author.
 3. Publish & credit. Everyone who contributes is acknowledged. Co-authors and deep reviewers are named on the final piece.
 
 ## Proposal example
@@ -45,15 +46,15 @@ The common belief that "more testing automatically leads to higher quality" is a
 
 **Main Ideas / Subtopics to Explore**:
 1. Defining Quality vs. Testing
-- Clarify the meaning of "quality" in a software context, take it from ISO family of standards, show how testing is just one activity that influences quality.
+    - Clarify the meaning of "quality" in a software context, take it from ISO family of standards, show how testing is just one activity that influences quality.
 2. The Diminishing Returns of Testing
-- Explore the basic economics of testing: the more you test, the less additional value you get per test.
+    - Explore the basic economics of testing: the more you test, the less additional value you get per test.
 3. Risks of Over-Testing
-- Opportunity costs (time/resources spent on low-value tests).
-- False sense of safety (“we ran thousands of tests, so quality must be good”).
+    - Opportunity costs (time/resources spent on low-value tests).
+    - False sense of safety (“we ran thousands of tests, so quality must be good”).
 4. Alternative Approaches
-- Shift focus to test effectiveness and strategy, not volume.
-- Balance testing with prevention (requirements, design, etc).
+    - Shift focus to test effectiveness and strategy, not volume.
+    - Balance testing with prevention (requirements, design, etc).
 
 **Ask (How you can help):**
 - Review this framing: does it capture the real problem?
