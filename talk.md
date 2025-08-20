@@ -1,8 +1,3 @@
----
-layout: talk
-title: "Talk prep"
----
-
 # Talk preparation
 
 ## Why Collaborate on Talks?
