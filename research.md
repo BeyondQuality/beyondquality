@@ -1,3 +1,8 @@
+---
+layout: research
+title: "Article writing and research"
+---
+
 # Article writing and research
 
 Writing strong articles, whitepapers, or deep-dive blog posts takes a lot of effort:

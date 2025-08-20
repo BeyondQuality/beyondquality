@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Beyond Quality - The QA/QE Community of Practice"
+---
+
 # Beyond Quality, The QA/QE Community of Practice
 
 ## What
