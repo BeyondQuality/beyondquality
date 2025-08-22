@@ -1,4 +1,4 @@
-# Laziness and procrastination in teams
+# Belief in laziness as a self-fulfilling prophecy
 
 - Author: [Vitaly Sharovatov](https://sharovatov.github.io)
 - Collaborators: [Anupam Krishnamurthy](https://github.com/anupamck)
