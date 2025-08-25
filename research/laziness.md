@@ -106,6 +106,3 @@ The alternative is clear: rather than controlling harder, managers must address 
 - Inzlicht, M., Shenhav, A., & Olivola, C. Y. (2018). The effort paradox: Effort is both costly and valued. Trends in Cognitive Sciences, 22(4), 337–349.
 - Brooks, F. P. (1975). The Mythical Man-Month. Addison-Wesley.
 - DeMarco, T. (1997). The Deadline: A Novel About Project Management. Dorset House.
-
-
-TODO: check all research links
