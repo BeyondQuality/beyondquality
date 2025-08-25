@@ -13,6 +13,8 @@ Managers often attribute underperformance to employee laziness. This narrative l
 
 Few myths are as pervasive in management as the idea that employees underperform because they are lazy. The assumption that workers must be "pushed" to produce introduces corporate practices such as time tracking, surveillance software, rigid KPI systems and constant deadlines. This perspective aligns with Douglas McGregor's (1960) Theory X view of management, in which people are seen as inherently unmotivated and in need of control.
 
+[//]: # (Frederick Taylor, and his Principles of Scientific Management - https://en.wikipedia.org/wiki/The_Principles_of_Scientific_Management did much to embed this belief of lazy employees deep into management theory, so much so that Taylor is known as 'the father of scientific management'. But closer examination shows his theories to be wholly unscientific. )
+
 Yet, psychology and organizational research have consistently demonstrated that so-called "laziness" is rarely a fixed trait. Instead, behaviors perceived as laziness often emerge from systemic issues: unclear goals, cognitive overload, stress, burnout, or emotional regulation failures. Price's Laziness Does Not Exist (2020) illustrates this argument for a broader audience, reframing "laziness" as a protective response to overload. Similarly, Pink's Drive (2009) popularized decades of research showing that motivation depends on autonomy, mastery, and purpose, but not fear or surveillance.
 
 Cultural treatments of laziness go back centuries (e.g., Roberts, 2021, On Laziness), but modern science increasingly converges on the idea that underperformance is context-dependent, not trait-based. This paper argues that managerial belief in laziness is not only scientifically inaccurate but also dangerous. When managers act on this belief, they often introduce greater control and pressure, which paradoxically decrease performance and quality.
@@ -82,6 +84,13 @@ This review is narrative, not systematic, and does not include every study on mo
 The belief in employee laziness is not only scientifically unfounded but actively harmful. By responding to perceived laziness with greater control, managers undermine the very performance and quality they aim to improve. This creates a self-fulfilling prophecy of decline.
 
 The alternative is clear: rather than controlling harder, managers must address systemic factors—clarity, autonomy, workload, and supportive processes. Only by breaking the cycle can organizations sustain both productivity and quality.
+
+
+[//]: # (Overall, the paper has a solid skeleton, with several credible sources tied elegantly together. At its essence lies the self-fulfilling prophesy of 'lazy employees'. The belief in this prophesy is reinforced by the feedback loop mentioned. This self-fulfilling prophesy strikes at the heart of the problem itself.) 
+
+[//]: # (Further feedback from me will depend on what we want to do with this paper. E.g., While the paper has several strong academic references, it could be more made more persuasive by improving its story-telling aspects. But that might dilute its academic nature.)
+
+[//]: # (My two cents - for the reasons mentioned in the paper, this belief among management in the self-fulfilling prophesy of lazy workers was well established, particularly in the industrial revolution, when workers were seen merely as a 'factor-of-production' rather than as human beings. The ethical frameworks of the same period E.g., Kant's categorical imperative, already condemned this view, but it could be argued that treating workers in this manner may nevertheless have led to higher profits and economical gains, even at moral costs. To make the paper more compelling, it would also need to demonstrate that viewing employees in this manner is bad for business today, because we have moved on from the era of mass production in the industrial age.)
 
 ## References (selected key works):
 
