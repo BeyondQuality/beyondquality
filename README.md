@@ -2,7 +2,7 @@
 
 ## What
 
-A collaborative _workspace_ where QA/QE professionals take the work they're already doing: research, talk and article prep, problem-solving — and make it better, faster, and shared.
+A collaborative _workspace_ where QA/QE professionals take the work they're already doing: research, talk, workshop and article prep, problem-solving — and make it better, faster, and shared.
 
 ## Why
 
@@ -10,12 +10,12 @@ This community is for quality professionals who want to go above and beyond thei
 
 On most forums and platforms like Reddit, conversations are fleeting, ideas get buried, and there’s no guarantee of follow-through.
 
-Beyond Quality is a **working** community, not just a talking one. Here, QA/QE professionals collaborate on research, prepare talks, solve real problems, and document the results so they become lasting, reusable resources. By working together, we all can save time while producing higher-quality results, and get credit for the contributions (for example, by being listed in published whitepapers).
+Beyond Quality is a **working** community, not just a talking one. Here, QA/QE professionals collaborate on research, prepare talks and workshops, solve real problems, and document the results so they become lasting, reusable resources. By working together, we all can save time while producing higher-quality results, and get credit for the contributions (for example, by being listed in published whitepapers).
 
 ## Who it's for
 
 - QA/QE practitioners who want to sharpen their skills while saving time.
-- Speakers and writers looking to refine their talks and articles through peer feedback.
+- Speakers and writers looking to refine their talks, workshops and articles through peer feedback.
 - Problem-solvers who enjoy diagnosing testing challenges and finding better solutions.
 - Learners who want to grow by working alongside experienced professionals.
 
