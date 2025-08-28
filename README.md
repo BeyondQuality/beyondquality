@@ -13,7 +13,7 @@ Here are our core beliefs:
 4. We build and collaborate in public.
 5. We create the whole, that is greater than the sum of individual parts.
 
-This community is open to any tech professional who wants to bring depth and rigour into solving problems. We love cross-functional collaboration. We aren't limited to quality specialists, but we all care about the quality of our work.
+This community is open to any tech professional who wants to bring depth and rigour into solving problems. We love inter-disciplinary collaboration. We aren't limited to quality specialists, but we all care about the quality of our work.
 
 ## What we do here
 
