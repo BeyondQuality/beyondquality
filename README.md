@@ -6,12 +6,12 @@ We are a community of technology professionals, who care about helping each othe
 
 Solving difficult problems in the pursuit of mastery can be a lonely task, but it need not be. Collaboration makes this work easier, more effective and fun.
 
-Here are a set of our core beliefs:
-_We are travellers on a journey of continuous improvement._
-_We go beyond the superficial. We go past the obvious to discover deeper truths. We transcend the ordinary to uncover the extraordinary._
-_We grow by helping others with care and generosity._
-_We build and collaborate in public._
-_We create the whole, that is greater than the sum of individual parts._
+Here are our core beliefs:
+1. We are travellers on a journey of continuous improvement.
+2. We go beyond the obvious and the superficial to discover deeper truths.
+3. We grow by helping others with care and generosity.
+4. We build and collaborate in public.
+5. We create the whole, that is greater than the sum of individual parts.
 
 This community is open to any tech professional who wants to bring depth and rigour into solving problems. We love cross-functional collaboration. We aren't limited to quality specialists, but we all care about the quality of our work.
 
