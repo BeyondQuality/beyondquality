@@ -1,4 +1,4 @@
-# Beyond Quality Community of Practice
+# Beyond Quality
 
 ## Who we are
 
@@ -43,3 +43,7 @@ Partners:
 
 
 If you want to participate, here's our [GitHub page](https://github.com/sharovatov/beyondquality/).
+
+## Resources
+
+- [Code of conduct](coc.md)
