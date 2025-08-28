@@ -1,39 +1,37 @@
 # Beyond Quality, The QA/QE Community of Practice
 
-## What
+## Who we are
 
-A collaborative _workspace_ where QA/QE professionals take the work they're already doing: research, talk, workshop and article prep, problem-solving — and make it better, faster, and shared.
+We are a community of technology professionals, who care about helping each other master our craft. 
 
-## Why
+Solving difficult problems in the pursuit of mastery can be a lonely task, but it need not be. Collaboration makes this work easier, more effective and fun.
 
-This community is for quality professionals who want to go above and beyond their jobs. We strive to master our craft, challenge assumptions, and push the discipline forward **together**. Beyond Quality is for those who can't stop asking why.
+Here are a set of our core beliefs:
+_We are travellers on a journey of continuous improvement._
+_We go beyond the superficial. We go past the obvious to discover deeper truths. We transcend the ordinary to uncover the extraordinary._
+_We grow by helping others with care and generosity._
+_We build and collaborate in public._
+_We create the whole, that is greater than the sum of individual parts._
 
-On most forums and platforms like Reddit, conversations are fleeting, ideas get buried, and there’s no guarantee of follow-through.
+This community is open to any tech professional who wants to bring depth and rigour into solving problems. We love cross-functional collaboration. We aren't limited to quality specialists, but we all care about the quality of our work.
 
-Beyond Quality is a **working** community, not just a talking one. Here, QA/QE professionals collaborate on research, prepare talks and workshops, solve real problems, and document the results so they become lasting, reusable resources. By working together, we all can save time while producing higher-quality results, and get credit for the contributions (for example, by being listed in published whitepapers).
+## What we do here
 
-## Who it's for
+Beyond Quality is a collaborative, public workspace. We share our project with the community and invite collaborators. 
 
-- QA/QE practitioners who want to sharpen their skills while saving time.
-- Speakers and writers looking to refine their talks, workshops and articles through peer feedback.
-- Problem-solvers who enjoy diagnosing testing challenges and finding better solutions.
-- Learners who want to grow by working alongside experienced professionals.
+Examples of the kind of work we do here:
+1. **[Research & Writing](research.md)**: Pursue interesting problems deeper, and uncover insights that are hidden beneath the surface. Share these insights though discussions, articles, blogs and white papers.
+2. **[Talk Preparation](talk.md)**: Present your talk or workshop ideas, get expert feedback and refine them into conference-ready sessions. Help others do the same, and get recognized for your input.
+3. **Problem-Solving Sessions**. Problem-Solving Sessions: Share a problem that you are dealing with at work and get help from the community to solve it. Learn from the experience of others and pay it forward.
 
-## How
+But these are just examples. You choose how you wish to participate: just observe, throw in some links and ideas, partner with someone else’s research, or start your own.
 
-We work in the open. Instead of siloed efforts that vanish after they’re done, we collaborate on the following activities:
+## Where we work
 
-1. **[Research & Writing](research.md)**. Join ongoing projects like Economics of Testing and contribute resources, insights, and reviews. Improve your profile as a thought leader while producing open, reusable research.
-	
-2. **[Talk Preparation](talk.md)**. Present your talk ideas, get expert feedback, and refine them into conference-ready sessions. Help others do the same — and get recognized for your input.
+For now, our home base is [BeyondQuality GitHub](https://github.com/sharovatov/beyondquality/): simple, open, and transparent. 
 
-3. **Problem-Solving Sessions**. Bring real QA/QE challenges and work through solutions as a group. Learn diagnostic techniques and decision-making frameworks you can use in your job.
+As we grow, we’ll self-organize into Zoom calls, chats, or even physical gatherings. The discussions we have on our GitHub page will form the basis for synchronous collaboration online or in-person.
 
-4. **Product Feedback & Testing**. Participate in early access programs and influence the tools you use — while being part of a trusted inner circle.
-
-You choose how to participate: just observe, throw in some links and ideas, partner with someone else's research, or start your own.
-
-For now, our home base is [BeyondQuality GitHub](https://github.com/sharovatov/beyondquality/): simple, open, and transparent. As we grow, we'll self-organize into Zoom calls, chats, or even physical gatherings.
 
 ## Founding Crew
 
@@ -44,4 +42,4 @@ Partners:
 - [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/)
 
 
-If you want to participate, here's the github where most of the work will be done: https://github.com/sharovatov/beyondquality/
+If you want to participate, here's our [GitHub page](https://github.com/sharovatov/beyondquality/).
