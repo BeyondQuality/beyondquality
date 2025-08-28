@@ -16,7 +16,17 @@ Recognizing that we do need to invest, the next question becomes where to alloca
 
 To build such a portfolio, we must first identify which risks matter most. ISO/IEC/IEEE 29119 makes this explicit: risk identification is the first step in test planning. Similarly, ISO/IEC 25010 provides a structured set of quality characteristics that can serve as categories for defining risk areas. By starting from risks, we can then make deliberate, economically sound decisions about which testing activities to invest in and to what extent, ensuring that the portfolio aligns with the organization’s tolerance for risk and its business priorities.
 
-![Testing types, activities and measures](testing_types_activities_measures.png)
+These risks failure can be understood as the risks of not meeting one or more quality characteristics. ISO 25010 defines nine groups of such characteristics, and for every product and at every stage of its lifecycle these groups will vary in importance.
+
+[insert quality characteristics]
+
+Once risks (not meeting certain quality characteristics) are prioritized, we gain clarity on _where_ to invest: which risks we need to reduce most, and which can be given less attention. For example, in an early prototype, flexibility and maintainability may carry little risk, while for a production system they become critical.
+
+The question of _how_ to invest is more complex. Every testing level, type, and measure affects multiple risks at once, and in different ways. Overlaps are inevitable: the same activity may mitigate several risks, while different activities may address the same risk. This overlap is not a flaw but a feature and it provides safety margins. What must be avoided is underlap, where some risks remain uncovered. Since no investment can guarantee complete risk elimination, in practice it is often better to do _slightly more_ than strictly necessary, rather than fall short: from a risk management perspective, it's rational to "slightly over-invest" (better redundancy than a gap).
+
+Figure 2: Testing types, activities and measures:
+
+![Figure 2, Testing types, activities and measures](testing_types_activities_measures.png)
 
 ## Resources
 
