@@ -1,4 +1,4 @@
-# Beyond Quality, The QA/QE Community of Practice
+# Beyond Quality Community of Practice
 
 ## Who we are
 
