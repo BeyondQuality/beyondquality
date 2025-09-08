@@ -13,7 +13,7 @@ Managers often attribute underperformance to employee laziness. This narrative l
 
 Few myths are as pervasive in management as the idea that employees underperform because they are lazy. The assumption that workers must be "pushed" to produce introduces corporate practices such as time tracking, surveillance software, rigid KPI systems and constant deadlines. This perspective aligns with Douglas McGregor's (1960) Theory X view of management, in which people are seen as inherently unmotivated and in need of control.
 
-[//]: # (Frederick Taylor, and his Principles of Scientific Management - https://en.wikipedia.org/wiki/The_Principles_of_Scientific_Management did much to embed this belief of lazy employees deep into management theory, so much so that Taylor is known as 'the father of scientific management'. But closer examination shows his theories to be wholly unscientific. )
+The very concept of "laziness" carries significant moral and cultural baggage. The English word _lazy_ entered usage in the mid-16th century, with roots tracing back to earlier Germanic terms that evoke [weakness or idleness](https://www.etymonline.com/word/lazy). The idea of idleness as a moral failing dates even further back: sloth, or _acedia_, was condemned as one of the Seven Deadly Sins in early Christian doctrine, long before the modern workplace existed. Centuries later, the Protestant work ethic, especially in its Puritan form, intensified the moral equation of industriousness with virtue, and framed rest or delays as vice. By the dawn of the Industrial Revolution, the notion of laziness had become deeply institutionalized: workers were seen less as individuals and more as factors of production, further entrenching the suspicion of laziness as not just a personal flaw, but a managerial norm.
 
 Yet, psychology and organizational research have consistently demonstrated that so-called "laziness" is rarely a fixed trait. Instead, behaviors perceived as laziness often emerge from systemic issues: unclear goals, cognitive overload, stress, burnout, or emotional regulation failures. Price's Laziness Does Not Exist (2020) illustrates this argument for a broader audience, reframing "laziness" as a protective response to overload. Similarly, Pink's Drive (2009) popularized decades of research showing that motivation depends on autonomy, mastery, and purpose, but not fear or surveillance.
 
@@ -77,20 +77,17 @@ Breaking the cycle requires reframing managerial assumptions:
 
 ## Limitations
 
-This review is narrative, not systematic, and does not include every study on motivation and performance. Evidence comes from diverse fields (psychology, management, behavioral economics), and not all findings may generalize across industries. Nonetheless, the consistency across domains strengthens confidence in the proposed cycle.
+This review is narrative, not systematic, and therefore does not claim to exhaustively cover every study on motivation and performance. Evidence was drawn from diverse fields including psychology, management, and behavioral economics; not all findings may generalize across industries or cultural contexts. Most of the research cited originates in Western, industrialized settings, where managerial practices and cultural values about work are relatively similar. Cross-cultural differences may shape how "laziness" is conceptualized and how the cycle of belief and control operates.
+
+It is also important to acknowledge occupational variation. Much of the evidence applies to knowledge work, where autonomy and cognitive load are central concerns. In occupations with structurally low autonomy (e.g., manual or gig work), the dynamics described here may manifest differently. Additionally, while traits such as conscientiousness or grit influence persistence, they do not provide evidence for an inherent "laziness" trait.
+
+Finally, while certain control practices, such as strict deadlines or close monitoring, can generate short-term spikes in output, research shows that these gains come at the expense of creativity, well-being, and sustainable performance. In fact, their apparent effectiveness may reinforce managerial faith in control, making the vicious cycle more likely to persist. Thus, rather than contradicting the central argument, short-term gains illustrate the very mechanism by which the belief in laziness sustains itself.
 
 ##  Conclusion
 
 The belief in employee laziness is not only scientifically unfounded but actively harmful. By responding to perceived laziness with greater control, managers undermine the very performance and quality they aim to improve. This creates a self-fulfilling prophecy of decline.
 
 The alternative is clear: rather than controlling harder, managers must address systemic factors—clarity, autonomy, workload, and supportive processes. Only by breaking the cycle can organizations sustain both productivity and quality.
-
-
-[//]: # (Overall, the paper has a solid skeleton, with several credible sources tied elegantly together. At its essence lies the self-fulfilling prophesy of 'lazy employees'. The belief in this prophesy is reinforced by the feedback loop mentioned. This self-fulfilling prophesy strikes at the heart of the problem itself.) 
-
-[//]: # (Further feedback from me will depend on what we want to do with this paper. E.g., While the paper has several strong academic references, it could be more made more persuasive by improving its story-telling aspects. But that might dilute its academic nature.)
-
-[//]: # (My two cents - for the reasons mentioned in the paper, this belief among management in the self-fulfilling prophesy of lazy workers was well established, particularly in the industrial revolution, when workers were seen merely as a 'factor-of-production' rather than as human beings. The ethical frameworks of the same period E.g., Kant's categorical imperative, already condemned this view, but it could be argued that treating workers in this manner may nevertheless have led to higher profits and economical gains, even at moral costs. To make the paper more compelling, it would also need to demonstrate that viewing employees in this manner is bad for business today, because we have moved on from the era of mass production in the industrial age.)
 
 ## References (selected key works):
 
