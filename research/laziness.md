@@ -56,7 +56,9 @@ A large body of evidence connects control and overload to burnout and reduced qu
 
 ### Stage 4: Performance Decline → Reinforced Belief in Laziness
 
-When performance drops under stress and overload, managers often interpret the outcome as proof of laziness. This creates a feedback loop akin to the self-fulfilling prophecy (Rosenthal & Jacobson, 1968). Classic project-management literature illustrates the danger: Brooks' Law shows that adding people under deadline pressure increases delays rather than solving them (Brooks, 1975). Similarly, DeMarco's The Deadline (1997) narratively demonstrates how fear-driven overcontrol worsens project outcomes. Rather than investigating systemic conditions, managers double down on pressure, perpetuating the vicious cycle.
+When performance drops under stress and overload, managers often interpret the outcome as proof of laziness. This creates a feedback loop akin to the self-fulfilling prophecy (Rosenthal & Jacobson, 1968). Classic project-management literature illustrates the danger: Brooks' Law shows that adding people under deadline pressure increases delays rather than solving them (Brooks, 1975). Similarly, DeMarco's The Deadline (1997) narratively demonstrates how fear-driven overcontrol worsens project outcomes.
+
+These reinforcing dynamics are particularly visible in domains like software development, where tight control often leads to declining product quality, further justifying managerial suspicion and triggering even stricter oversight. This makes software a useful applied case for examining how the cycle perpetuates itself.
 
 ## Discussion
 
