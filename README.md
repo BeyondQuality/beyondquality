@@ -36,11 +36,8 @@ As we grow, we’ll self-organize into Zoom calls, chats, or even physical gathe
 ## Founding Crew
 
 - [Vitaly Sharovatov](https://www.linkedin.com/in/vsharovatov/) — [Qase](https://qase.io) developer advocate, founder
-
-Co-founders:
-- [Anupam Krishnamurthy](https://www.linkedin.com/in/anupam-krishnamurthy/)
-- [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/)
-
+- [Anupam Krishnamurthy](https://www.linkedin.com/in/anupam-krishnamurthy/) — co-founder
+- [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/) — co-founder
 
 If you want to participate, here's our [GitHub page](https://github.com/sharovatov/beyondquality/).
 
