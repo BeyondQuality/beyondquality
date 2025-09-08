@@ -37,7 +37,7 @@ As we grow, we’ll self-organize into Zoom calls, chats, or even physical gathe
 
 - [Vitaly Sharovatov](https://www.linkedin.com/in/vsharovatov/) — [Qase](https://qase.io) developer advocate, founder
 
-Partners:
+Co-founders:
 - [Anupam Krishnamurthy](https://www.linkedin.com/in/anupam-krishnamurthy/)
 - [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/)
 
