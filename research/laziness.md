@@ -17,7 +17,9 @@ The very concept of "laziness" carries significant moral and cultural baggage. T
 
 Yet, psychology and organizational research have consistently demonstrated that so-called "laziness" is rarely a fixed trait. Instead, behaviors perceived as laziness often emerge from systemic issues: unclear goals, cognitive overload, stress, burnout, or emotional regulation failures. Price's Laziness Does Not Exist (2020) illustrates this argument for a broader audience, reframing "laziness" as a protective response to overload. Similarly, Pink's Drive (2009) popularized decades of research showing that motivation depends on autonomy, mastery, and purpose, but not fear or surveillance.
 
-Cultural treatments of laziness go back centuries (e.g., Roberts, 2021, On Laziness), but modern science increasingly converges on the idea that underperformance is context-dependent, not trait-based. This paper argues that managerial belief in laziness is not only scientifically inaccurate but also dangerous. When managers act on this belief, they often introduce greater control and pressure, which paradoxically decrease performance and quality.
+Cultural treatments of laziness go back centuries (e.g., Roberts, 2021, On Laziness), but modern science increasingly converges on the idea that underperformance is context-dependent, not trait-based. This paper argues that the managerial tendency to attribute underperformance to laziness before examining systemic factors is not only scientifically inaccurate but also dangerous. When managers act on this belief, they often introduce greater control and pressure, which paradoxically may decrease performance and quality.
+
+[//]: # (Softened the formulation here, as it is more accurate to challenge the attribution of underperformance to laziness relative to other systemic factors. Without this, our limits to applicability aren't clear.)
 
 We review research from psychology, organizational behavior, and neuroscience to show how this dynamic operates as a self-fulfilling prophecy.
 
@@ -31,6 +33,14 @@ We review research from psychology, organizational behavior, and neuroscience to
 This review follows a narrative literature review approach. Sources were identified via Google Scholar, PsycINFO, and Scopus using combinations of keywords such as "laziness AND workplace", "work motivation", "control AND autonomy AND performance", "burnout AND productivity", and "information overload cognitive fatigue". Foundational theories (e.g., Self-Determination Theory, Cognitive Load Theory, Prospect Theory) and meta-analyses were prioritized. Inclusion criteria focused on adult work contexts, psychological or organizational mechanisms, and links to performance or quality outcomes. Opinion pieces without empirical basis were excluded.
 
 ## Results: The vicious circle of laziness beliefs
+
+```mermaid
+flowchart TB
+  A["Belief in laziness"] --> B["More control (surveillance, time tracking, strict KPIs)"]
+  B --> C["Autonomy loss and stress"]
+  C --> D["Performance decline"]
+  D --> A
+```
 
 ### Stage 1: Belief in Laziness → Control Practices
 
@@ -56,7 +66,10 @@ A large body of evidence connects control and overload to burnout and reduced qu
 
 ### Stage 4: Performance Decline → Reinforced Belief in Laziness
 
-When performance drops under stress and overload, managers often interpret the outcome as proof of laziness. This creates a feedback loop akin to the self-fulfilling prophecy (Rosenthal & Jacobson, 1968). Classic project-management literature illustrates the danger: Brooks' Law shows that adding people under deadline pressure increases delays rather than solving them (Brooks, 1975). Similarly, DeMarco's The Deadline (1997) narratively demonstrates how fear-driven overcontrol worsens project outcomes.
+When performance drops under stress and overload, managers often interpret the outcome as proof of laziness. This creates a feedback loop akin to the self-fulfilling prophecy (Rosenthal & Jacobson, 1968). Classic project-management literature illustrates the danger: Brooks' Law shows that adding people under deadline pressure increases delays rather than solving them (Brooks, 1975). Similarly, DeMarco’s The Deadline (1997) uses narrative to explore how unrealistic schedules, fear-driven control, and loss of team autonomy can collectively undermine project outcomes.
+
+[//]: # (Broadened the scope of what The Deadline offers.)
+
 
 These reinforcing dynamics are particularly visible in domains like software development, where tight control often leads to declining product quality, further justifying managerial suspicion and triggering even stricter oversight. This makes software a useful applied case for examining how the cycle perpetuates itself.
 
@@ -68,7 +81,7 @@ Lewin’s Field Theory (1951) provides a useful lens: workplace behavior is shap
 
 Software development offers a particularly clear example of this vicious circle. Because high-quality software depends on autonomy, focus, and sustained cognitive effort, attempts to control developers more tightly often generate the very problems they are meant to prevent. Rigid, control-heavy methods such as waterfall planning increase reporting burdens and reduce flexibility, which in turn fuel stress and overload. As quality declines through late defect discovery and rework, managers interpret the failures as evidence of insufficient effort and impose even stricter oversight. This aligns with the broader feedback loop identified in this review: belief in laziness → increased control → autonomy loss and overload → quality decline → reinforced belief in laziness. By contrast, more autonomy-supportive approaches such as agile have been shown to improve customer satisfaction and perceived product quality (Dingsøyr et al., 2012). Developer accounts echo this, describing how micromanagement of implementation details disrupts creativity and problem-solving. In software contexts, then, the costs of the self-fulfilling prophecy are especially visible, as quality erosion feeds directly back into tighter managerial control.
 
-It is also important to note nuance. Research shows that effort can increase the perceived value of outcomes—the so-called "effort paradox" or "IKEA effect" (Inzlicht et al., 2018). However, this occurs primarily when effort is self-directed. Externally imposed control strips away ownership, turning potentially meaningful effort into burdensome compliance.
+[//]: # (Not sure how the IKEA effect relates to this paper. I get that the IKEA effect challenges the notion that people always aim to minimise effort, but it has little to do with management attribution of underperformance to laziness. Can the paragraph above go? )
 
 Breaking the cycle requires reframing managerial assumptions:
 
@@ -81,9 +94,13 @@ Breaking the cycle requires reframing managerial assumptions:
 
 This review is narrative, not systematic, and therefore does not claim to exhaustively cover every study on motivation and performance. Evidence was drawn from diverse fields including psychology, management, and behavioral economics; not all findings may generalize across industries or cultural contexts. Most of the research cited originates in Western, industrialized settings, where managerial practices and cultural values about work are relatively similar. Cross-cultural differences may shape how "laziness" is conceptualized and how the cycle of belief and control operates.
 
-It is also important to acknowledge occupational variation. Much of the evidence applies to knowledge work, where autonomy and cognitive load are central concerns. In occupations with structurally low autonomy (e.g., manual or gig work), the dynamics described here may manifest differently. Additionally, while traits such as conscientiousness or grit influence persistence, they do not provide evidence for an inherent "laziness" trait.
+It is also important to acknowledge occupational variation. Much of the evidence applies to knowledge work, where autonomy and cognitive load are central concerns. In occupations with structurally low autonomy (e.g., manual or gig work), the dynamics described here may manifest differently. Additionally, while traits such as conscientiousness or grit influence persistence, they do not provide evidence for an inherent "laziness" trait<sup>\*</sup>. Finally, while certain control practices, such as strict deadlines or close monitoring, can generate short-term spikes in output, research shows that these gains come at the expense of creativity, well-being, and sustainable performance<sup>\*</sup>.  
 
-Finally, while certain control practices, such as strict deadlines or close monitoring, can generate short-term spikes in output, research shows that these gains come at the expense of creativity, well-being, and sustainable performance. In fact, their apparent effectiveness may reinforce managerial faith in control, making the vicious cycle more likely to persist. Thus, rather than contradicting the central argument, short-term gains illustrate the very mechanism by which the belief in laziness sustains itself.
+[//]: # (* - Citation would be helpful here) 
+
+In fact, their apparent effectiveness may reinforce managerial faith in control, making the vicious cycle more likely to persist. Thus, rather than contradicting the central argument, short-term gains illustrate the very mechanism by which the belief in laziness sustains itself.
+
+[//]: # (I loved the paragraph above! Perpetuates the self-fulfilling prophesy.) 
 
 ##  Conclusion
 
