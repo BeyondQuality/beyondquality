@@ -39,8 +39,7 @@ flowchart TB
   A["Belief in laziness"] --> B["More control (surveillance, time tracking, strict KPIs)"]
   B --> C["Autonomy loss and stress"]
   C --> D["Performance decline"]
-  D --> E["Reinforced belief in laziness"]
-  E --> A
+  D --> A
 ```
 
 ### Stage 1: Belief in Laziness → Control Practices
