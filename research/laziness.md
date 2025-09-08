@@ -62,9 +62,9 @@ When performance drops under stress and overload, managers often interpret the o
 
 This review identifies a destructive cycle in management practice: belief in laziness leads to control, which undermines autonomy and increases stress, which then lowers performance, reinforcing the belief.
 
-Lewin's Field Theory (1951) provides a useful lens: workplace behavior is shaped by both "driving forces" (incentives, deadlines, rewards) and "restraining forces" (stress, unclear goals, poor processes). Managers frequently focus on amplifying driving forces while neglecting restraining forces, creating counterproductive dynamics.
+Lewin’s Field Theory (1951) provides a useful lens: workplace behavior is shaped by both “driving forces” (incentives, deadlines, rewards) and “restraining forces” (stress, unclear goals, poor processes). Managers frequently focus on amplifying driving forces while neglecting restraining forces, creating counterproductive dynamics.
 
-This cycle is resilient because it aligns with intuitive but flawed managerial heuristics. Under risk, managers seek direct levers—more deadlines, tighter KPIs, stricter monitoring. However, these interventions backfire, consistent with decades of psychological and organizational research.
+Software development offers a particularly clear example of this vicious circle. Because high-quality software depends on autonomy, focus, and sustained cognitive effort, attempts to control developers more tightly often generate the very problems they are meant to prevent. Rigid, control-heavy methods such as waterfall planning increase reporting burdens and reduce flexibility, which in turn fuel stress and overload. As quality declines through late defect discovery and rework, managers interpret the failures as evidence of insufficient effort and impose even stricter oversight. This aligns with the broader feedback loop identified in this review: belief in laziness → increased control → autonomy loss and overload → quality decline → reinforced belief in laziness. By contrast, more autonomy-supportive approaches such as agile have been shown to improve customer satisfaction and perceived product quality (Dingsøyr et al., 2012). Developer accounts echo this, describing how micromanagement of implementation details disrupts creativity and problem-solving. In software contexts, then, the costs of the self-fulfilling prophecy are especially visible, as quality erosion feeds directly back into tighter managerial control.
 
 It is also important to note nuance. Research shows that effort can increase the perceived value of outcomes—the so-called "effort paradox" or "IKEA effect" (Inzlicht et al., 2018). However, this occurs primarily when effort is self-directed. Externally imposed control strips away ownership, turning potentially meaningful effort into burdensome compliance.
 
@@ -112,3 +112,4 @@ The alternative is clear: rather than controlling harder, managers must address 
 - Inzlicht, M., Shenhav, A., & Olivola, C. Y. (2018). The effort paradox: Effort is both costly and valued. Trends in Cognitive Sciences, 22(4), 337–349.
 - Brooks, F. P. (1975). The Mythical Man-Month. Addison-Wesley.
 - DeMarco, T. (1997). The Deadline: A Novel About Project Management. Dorset House.
+- Dingsøyr et al., 2012. A decade of agile methodologies: Towards explaining agile software development
