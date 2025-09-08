@@ -35,7 +35,7 @@ This review follows a narrative literature review approach. Sources were identif
 ## Results: The vicious circle of laziness beliefs
 
 ```mermaid
-flowchart LR
+flowchart TB
   A["Belief in laziness"] --> B["More control (surveillance, time tracking, strict KPIs)"]
   B --> C["Autonomy loss and stress"]
   C --> D["Performance decline"]
