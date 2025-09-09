@@ -37,7 +37,7 @@ As we grow, we’ll self-organize into Zoom calls, chats, or even physical gathe
 
 - [Vitaly Sharovatov](https://www.linkedin.com/in/vsharovatov/) — [Qase](https://qase.io) developer advocate, founder
 - [Anupam Krishnamurthy](https://www.linkedin.com/in/anupam-krishnamurthy/) — freelance test solution architect, co-founder
-- [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/), quality engineering leader, co-founder
+- [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/) — quality engineering leader, co-founder
 
 If you want to participate, here's our [GitHub page](https://github.com/BeyondQuality/beyondquality).
 
