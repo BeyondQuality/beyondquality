@@ -28,7 +28,7 @@ But these are just examples. You choose how you wish to participate: just observ
 
 ## Where we work
 
-For now, our home base is [BeyondQuality GitHub](https://github.com/sharovatov/beyondquality/): simple, open, and transparent. 
+For now, our home base is [BeyondQuality GitHub](https://github.com/BeyondQuality/beyondquality): simple, open, and transparent. 
 
 As we grow, we’ll self-organize into Zoom calls, chats, or even physical gatherings. The discussions we have on our GitHub page will form the basis for synchronous collaboration online or in-person.
 
@@ -39,7 +39,7 @@ As we grow, we’ll self-organize into Zoom calls, chats, or even physical gathe
 - [Anupam Krishnamurthy](https://www.linkedin.com/in/anupam-krishnamurthy/) — co-founder
 - [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/), quality engineering leader, co-founder
 
-If you want to participate, here's our [GitHub page](https://github.com/sharovatov/beyondquality/).
+If you want to participate, here's our [GitHub page](https://github.com/BeyondQuality/beyondquality).
 
 ## Resources
 
