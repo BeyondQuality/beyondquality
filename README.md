@@ -32,6 +32,10 @@ For now, our home base is [BeyondQuality GitHub](https://github.com/BeyondQualit
 
 As we grow, we’ll self-organize into Zoom calls, chats, or even physical gatherings. The discussions we have on our GitHub page will form the basis for synchronous collaboration online or in-person.
 
+## How you can get started
+
+Join the discussions on our GitHub page. Introduce yourself in [this discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/2), comment on [existing discussion threads](https://github.com/BeyondQuality/beyondquality/discussions) or start one of your own. 
+
 
 ## Founding Crew
 
