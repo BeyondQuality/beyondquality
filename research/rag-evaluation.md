@@ -44,7 +44,7 @@ All of this work can be viewed in this [Jupiter Notebook](https://github.com/anu
 
 ## Observations
 
-Here are a few of our learnings
+Overall, the task has met its objectives. We were able to build a PoC, and here are a few of our learnings
 - Building a custom RAG model offers several levers to customise its behaviour. These include:
 	- The choice of retrieval algorithm and its parameters
 	- Chunking strategy (choosing how a datasource is to be split up)
