@@ -16,17 +16,35 @@ Recognizing that we do need to invest, the next question becomes where to alloca
 
 To build such a portfolio, we must first identify which risks matter most. ISO/IEC/IEEE 29119 makes this explicit: risk identification is the first step in test planning. Similarly, ISO/IEC 25010 provides a structured set of quality characteristics that can serve as categories for defining risk areas. By starting from risks, we can then make deliberate, economically sound decisions about which testing activities to invest in and to what extent, ensuring that the portfolio aligns with the organization’s tolerance for risk and its business priorities.
 
-These risks failure can be understood as the risks of not meeting one or more quality characteristics. ISO 25010 defines nine groups of such characteristics, and for every product and at every stage of its lifecycle these groups will vary in importance.
+These risks failure can be understood as the risks of not meeting one or more quality characteristics (see Figure 1). ISO 25010 defines nine groups of such characteristics, and for every product and at every stage of its lifecycle these groups will vary in importance.
 
 Figure 1: Quality Characteristics
 ![Figure 1, Quality Characteristics](quality_characteristics.png)
 
 Once risks (not meeting certain quality characteristics) are prioritized, we gain clarity on _where_ to invest: which risks we need to reduce most, and which can be given less attention. For example, in an early prototype, flexibility and maintainability may carry little risk, while for a production system they become critical.
 
-The question of _how_ to invest is more complex. Every testing level, type, and measure affects multiple risks at once, and in different ways. Overlaps are inevitable: the same activity may mitigate several risks, while different activities may address the same risk. This overlap is not a flaw but a feature and it provides safety margins. What must be avoided is underlap, where some risks remain uncovered. Since no investment can guarantee complete risk elimination, in practice it is often better to do _slightly more_ than strictly necessary, rather than fall short: from a risk management perspective, it's rational to "slightly over-invest" (better redundancy than a gap).
+The question of _how_ to invest is more complex. Every testing level, type, and measure (see Figure 2) affects multiple risks at once, and in different ways. Overlaps are inevitable: the same activity may mitigate several risks, while different activities may address the same risk. This overlap is not a flaw but a feature and it provides safety margins. What must be avoided is underlap, where some risks remain uncovered. Since no investment can guarantee complete risk elimination, in practice it is often better to do _slightly more_ than strictly necessary, rather than fall short: from a risk management perspective, it's rational to "slightly over-invest" (better redundancy than a gap).
 
 Figure 2: Testing types, activities and measures:
 ![Figure 2, Testing types, activities and measures](testing_types_activities_measures.png)
+
+**NB**: There are mandatory standards for testing in certain industries. For instance, DO-178C for aviation, ISO 26262 for automotive industry, and IEC 62304 for medical device software.
+
+None of the ISOs I have studied provide a mapping between quality characteristics and testing types, activities and measures. This poses a problem, and experts's knowledge is the only solution at this stage. On later stages, when some investments are done, we can assess the investment portfolio optimality.
+
+**[mention the survey and its results]**
+
+**TODO** elaborate on how to choose testing approaches (estimated costs [knowledge and skills => estimated effort)
+
+The prioritised list of testing approaches defines the testing strategy for the identified and prioritised risks. These are currently akin to expert-based investment choices.
+
+As with any investment, however, it is not enough to simply allocate resources, we also need a way to verify whether those choices are delivering value. This requires a structured approach to reviewing and assessing the efficiency of our testing portfolio: if our expert choices and estimations were good.
+
+## Assessing the portfolio efficiency
+
+Once a testing strategy has been defined, we must plan for its evaluation. Just as investors periodically review their portfolios, organizations need to reassess whether their chosen mix of testing approaches continues to reduce the most important risks in a cost-effective way.
+
+Two questions frame this evaluation: when to review the strategy, and how to measure its efficiency. The first ensures that assessment is built into the life cycle rather than left to a _postmortem_ when a risk has occurred; the second provides the criteria and metrics to determine whether the strategy is delivering sufficient return on investment.
 
 ## Resources
 
