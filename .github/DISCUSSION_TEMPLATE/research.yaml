@@ -1,90 +1,30 @@
-title: "[Research] <title>"
-labels:
-  - research
-description: |
-  Use this form to propose a research/activity topic for feedback and collaboration.
-  Please keep it lightweight; it’s fine if goals pivot later.
-# discussion_category: Research  # Uncomment and set to an existing Discussions category name if desired
-
-body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for starting a research/activity discussion. Fill in what you can; blanks are okay.
-
-  - type: input
-    id: title_short
-    attributes:
-      label: Research or activity title
-      placeholder: Short, descriptive title
-    validations:
-      required: true
-
-  - type: textarea
-    id: why
-    attributes:
-      label: Why
-      description: Motivation, why it matters to you, and who else can benefit.
-      placeholder: Explain the problem, context, impact, and audience.
-    validations:
-      required: true
-
-  - type: textarea
-    id: goals
-    attributes:
-      label: Current goals / expected results
-      description: It’s okay if these change later; share the current direction.
-      placeholder: List outcomes you hope to achieve or questions you want to answer.
-    validations:
-      required: false
-
-  - type: textarea
-    id: prior_work
-    attributes:
-      label: What’s been done already
-      description: Prior exploration, artifacts, data, or related work (if any).
-      placeholder: Links, notes, prior experiments, references.
-    validations:
-      required: false
-
-  - type: checkboxes
-    id: help_needed
-    attributes:
-      label: What kind of help would be most useful?
-      description: Select all that apply.
-      options:
-        - label: Feedback on ideas
-        - label: Critical review / challenge
-        - label: Collaboration on research or implementation
-        - label: Advice / mentorship
-        - label: Pointers to literature / prior art
-        - label: Access to data / case studies
-        - label: Review of drafts / artifacts
-        - label: Other (specify below)
-
-  - type: textarea
-    id: collab_direction
-    attributes:
-      label: If collaboration — possible direction
-      description: Areas where collaborators could contribute (methods, data collection, writing, implementation, etc.).
-      placeholder: Outline concrete activities or roles.
-    validations:
-      required: false
-
-  - type: input
-    id: target_artifact
-    attributes:
-      label: Target artifact
-      description: What are you aiming to produce?
-      placeholder: e.g., Literature review, experiment/report, tool/prototype, talk, blog post, dataset
-    validations:
-      required: false
-
-  - type: textarea
-    id: notes
-    attributes:
-      label: Anything else
-      placeholder: Constraints, timelines, risks, open questions.
-    validations:
-      required: false
-
+- type: textarea
+  attributes:
+    label: Operating System
+    description: What operating system are you using?
+    placeholder: "Example: macOS Big Sur"
+    value: operating system
+  validations:
+    required: true
+- type: dropdown
+  attributes:
+    label: Version
+    description: What version of our software are you running?
+    multiple: false
+    options:
+      - 1.0.2 (Default)
+      - 1.0.3 (Edge)
+    default: 0
+  validations:
+    required: true
+- type: checkboxes
+  attributes:
+    label: Code of Conduct
+    description: The Code of Conduct helps create a safe space for everyone. We require
+      that everyone agrees to it.
+    options:
+      - label: I agree to follow this project's [Code of Conduct](link/to/coc)
+        required: true
+- type: markdown
+  attributes:
+    value: "Thanks for completing our form!"
