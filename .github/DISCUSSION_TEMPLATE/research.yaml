@@ -1,82 +1,56 @@
-title: "[Research]"
+title: ""
+
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for starting a research/activity discussion. Fill in what you can; blanks are okay.
-
-  - type: input
-    id: title_short
-    attributes:
-      label: Research or activity title
-      placeholder: Short, descriptive title
-    validations:
-      required: true
+        Thanks for starting a research discussion.
 
   - type: textarea
     id: why
     attributes:
       label: Why
-      description: Motivation, why it matters to you, and who else can benefit.
-      placeholder: Explain the problem, context, impact, and audience.
-    validations:
-      required: true
-
-  - type: textarea
-    id: goals
-    attributes:
-      label: Current goals / expected results
-      description: It’s okay if these change later; share the current direction.
-      placeholder: List outcomes you hope to achieve or questions you want to answer.
+      description: What motivates you to conduct this research?
+      placeholder: Explain the problem, context, impact, and who will benefit.
     validations:
       required: false
 
   - type: textarea
-    id: prior_work
     attributes:
-      label: What’s been done already
-      description: Prior exploration, artifacts, data, or related work (if any).
-      placeholder: Links, notes, prior experiments, references.
+      label: Expected results
+      description: At the end of your research, what would you have hoped to achieved?
+      placeholder: List out expected outcomes questions you want to answer. It's okay if these change later.
     validations:
       required: false
 
-  - type: checkboxes
-    id: help_needed
+  - type: textarea
     attributes:
-      label: What kind of help would be most useful?
-      description: Select all that apply.
-      options:
-        - label: Feedback on ideas
-        - label: Critical review / challenge
-        - label: Collaboration on research or implementation
-        - label: Advice / mentorship
-        - label: Pointers to literature / prior art
-        - label: Access to data / case studies
-        - label: Review of drafts / artifacts
-        - label: Other (specify below)
+      label: Background
+      description: Provide detailed context for your research task. 
+      placeholder: Cite prior work, artifacts, data, or related concepts. Err on the side of providing more context here. 
+    validations:
+      required: false
 
   - type: textarea
-    id: collab_direction
     attributes:
-      label: If collaboration — possible direction
-      description: Areas where collaborators could contribute (methods, data collection, writing, implementation, etc.).
+      label: How can the community help?
+      description: How can others contribute? (feedback, collaboration, advice etc.).
       placeholder: Outline concrete activities or roles.
     validations:
       required: false
 
   - type: input
-    id: target_artifact
     attributes:
       label: Target artifact
       description: What are you aiming to produce?
-      placeholder: e.g., Literature review, experiment/report, tool/prototype, talk, blog post, dataset
+      placeholder: e.g., techical paper, demo, tool/prototype, talk, blog post etc.
     validations:
       required: false
 
   - type: textarea
     id: notes
     attributes:
-      label: Anything else
-      placeholder: Constraints, timelines, risks, open questions.
+      label: Anything else you want to add?
     validations:
       required: false
+
