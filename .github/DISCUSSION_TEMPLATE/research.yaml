@@ -7,11 +7,10 @@ body:
         Thanks for starting a research discussion.
 
   - type: textarea
-    id: why
     attributes:
-      label: Why
+      label: Why?
       description: What motivates you to conduct this research?
-      placeholder: Explain the research problem, impact, and who will benefit.
+      placeholder: Summarize the research problem, impact, and who will benefit.
     validations:
       required: false
 
@@ -19,21 +18,13 @@ body:
     attributes:
       label: Expected results
       description: At the end of your research, what would you have hoped to achieved?
-      placeholder: List out expected outcomes questions you want to answer. It's okay if these change later.
+      placeholder: "List out expected outcomes questions you want to answer. It's okay if these change later."
     validations:
       required: false
 
   - type: textarea
     attributes:
-      label: Background
-      description: Provide detailed context for your research task. 
-      placeholder: Explain related concepts and cite prior work. Err on the side of providing more context here than less. 
-    validations:
-      required: false
-
-  - type: textarea
-    attributes:
-      label: Collaboration needed
+      label: Collaboration
       description: How can others contribute? (feedback, collaboration, advice etc.).
       placeholder: Outline concrete activities or roles.
     validations:
@@ -48,10 +39,9 @@ body:
       required: false
 
   - type: textarea
-    id: notes
     attributes:
-      label: Additional information
-      placeholder: Anything else you want to add?
+      label: Background and additional information
+      description: Provide detailed context for your research task. 
+      placeholder: Explain related concepts and cite prior work. Err on the side of providing more context here than less. 
     validations:
       required: false
-
