@@ -1,4 +1,4 @@
-title: "[Research ]"
+title: "[Research Title]"
 
 body:
   - type: markdown
@@ -11,7 +11,7 @@ body:
     attributes:
       label: Why
       description: What motivates you to conduct this research?
-      placeholder: Explain the problem, context, impact, and who will benefit.
+      placeholder: Explain the research problem, impact, and who will benefit.
     validations:
       required: false
 
@@ -27,13 +27,13 @@ body:
     attributes:
       label: Background
       description: Provide detailed context for your research task. 
-      placeholder: Cite prior work, artifacts, data, or related concepts. Err on the side of providing more context here. 
+      placeholder: Explain related concepts and cite prior work. Err on the side of providing more context here than less. 
     validations:
       required: false
 
   - type: textarea
     attributes:
-      label: How can the community help?
+      label: Collaboration needed
       description: How can others contribute? (feedback, collaboration, advice etc.).
       placeholder: Outline concrete activities or roles.
     validations:
@@ -50,7 +50,8 @@ body:
   - type: textarea
     id: notes
     attributes:
-      label: Anything else you want to add?
+      label: Additional information
+      placeholder: Anything else you want to add?
     validations:
       required: false
 
