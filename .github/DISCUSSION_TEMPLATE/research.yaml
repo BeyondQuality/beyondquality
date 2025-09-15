@@ -1,55 +1,82 @@
-title: "[General] "
-labels: ["General Introduction"]
+title: "[Research]"
 body:
   - type: markdown
     attributes:
       value: |
-        This is text that will show up in the template!
-  - type: textarea
-    id: improvements
-    attributes:
-      label: Top 3 improvements
-      description: "What are the top 3 improvements we could make to this project?"
-      value: |
-        1.
-        2.
-        3.
-        ...
-      render: bash
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: |
-        ## Markdown header
-        And some more markdown
+        Thanks for starting a research/activity discussion. Fill in what you can; blanks are okay.
+
   - type: input
-    id: has-id
+    id: title_short
     attributes:
-      label: Suggestions
-      description: A description about suggestions to help you
+      label: Research or activity title
+      placeholder: Short, descriptive title
     validations:
       required: true
-  - type: dropdown
-    id: download
+
+  - type: textarea
+    id: why
     attributes:
-      label: Which area of this project could be most improved?
-      options:
-        - Documentation
-        - Pull request review time
-        - Bug fix time
-        - Release cadence
+      label: Why
+      description: Motivation, why it matters to you, and who else can benefit.
+      placeholder: Explain the problem, context, impact, and audience.
     validations:
       required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: Current goals / expected results
+      description: It’s okay if these change later; share the current direction.
+      placeholder: List outcomes you hope to achieve or questions you want to answer.
+    validations:
+      required: false
+
+  - type: textarea
+    id: prior_work
+    attributes:
+      label: What’s been done already
+      description: Prior exploration, artifacts, data, or related work (if any).
+      placeholder: Links, notes, prior experiments, references.
+    validations:
+      required: false
+
   - type: checkboxes
+    id: help_needed
     attributes:
-      label: Check that box!
+      label: What kind of help would be most useful?
+      description: Select all that apply.
       options:
-        - label: This one!
-          required: true
-        - label: I won't stop you if you check this one, too
-  - type: markdown
+        - label: Feedback on ideas
+        - label: Critical review / challenge
+        - label: Collaboration on research or implementation
+        - label: Advice / mentorship
+        - label: Pointers to literature / prior art
+        - label: Access to data / case studies
+        - label: Review of drafts / artifacts
+        - label: Other (specify below)
+
+  - type: textarea
+    id: collab_direction
     attributes:
-      value: |
-        ### The thrilling conclusion
-        _to our template_
+      label: If collaboration — possible direction
+      description: Areas where collaborators could contribute (methods, data collection, writing, implementation, etc.).
+      placeholder: Outline concrete activities or roles.
+    validations:
+      required: false
+
+  - type: input
+    id: target_artifact
+    attributes:
+      label: Target artifact
+      description: What are you aiming to produce?
+      placeholder: e.g., Literature review, experiment/report, tool/prototype, talk, blog post, dataset
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      placeholder: Constraints, timelines, risks, open questions.
+    validations:
+      required: false
