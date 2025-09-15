@@ -1,10 +1,8 @@
+name: Research Template
 title: "[Research] <title>"
 labels:
   - research
-description: |
-  Use this form to propose a research/activity topic for feedback and collaboration.
-  Please keep it lightweight; it’s fine if goals pivot later.
-# discussion_category: Research  # Uncomment and set to an existing Discussions category name if desired
+description: Propose research topic
 
 body:
 - type: textarea
