@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Managers often attribute underperformance to employee laziness. This narrative literature review examines evidence across psychology, organizational behavior, and neuroscience to challenge this belief. Instead of inherent laziness, research shows underperformance typically results from systemic conditions such as cognitive overload, lack of autonomy, unclear goals, or burnout. Critically, when managers believe in laziness, they often respond by exerting greater control through surveillance, time tracking, strict KPIs, or excessive deadlines. Evidence demonstrates that such control undermines motivation, increases stress, and degrades performance and quality, thus reinforcing the initial belief in laziness. This review synthesizes findings across multiple domains to show a vicious circle: belief in laziness → more control → autonomy loss and stress → performance decline → reinforced belief in laziness. Breaking this cycle requires reframing managerial assumptions and shifting focus from control to systemic support, autonomy, and sustainable work design.
+Managers often attribute underperformance to employee laziness. This narrative literature review examines evidence across psychology, organizational behavior, and neuroscience to challenge this belief. Instead of inherent laziness, research shows underperformance typically results from systemic conditions such as cognitive overload, lack of autonomy, unclear goals, or burnout. Critically, when managers believe in laziness, they often respond by exerting greater management control through surveillance, time tracking, strict KPIs, or excessive deadlines. Evidence demonstrates that such control undermines motivation, increases stress, and degrades performance and quality, thus reinforcing the initial belief in laziness. This review synthesizes findings across multiple domains to show a vicious circle: manager's belief in laziness → manager exerts more control → employees suffer autonomy loss and stress → performance declines → manager's belief in laziness is reinforced. Breaking this cycle requires reframing managerial assumptions and shifting focus from control to systemic support, autonomy, and sustainable work design.
 
 ## Introduction
 
@@ -18,13 +18,13 @@ The very concept of "laziness" carries significant moral and cultural baggage. T
 
 Yet, psychology and organizational research have consistently demonstrated that so-called "laziness" is rarely a fixed trait. Instead, behaviors perceived as laziness often emerge from systemic issues: unclear goals, cognitive overload, stress, burnout, or emotional regulation failures. Price's Laziness Does Not Exist (2020) illustrates this argument for a broader audience, reframing "laziness" as a protective response to overload. Similarly, Pink's Drive (2009) popularized decades of research showing that motivation depends on autonomy, mastery, and purpose, but not fear or surveillance.
 
-Cultural treatments of laziness go back centuries (e.g., Roberts, 2021, On Laziness), but modern science increasingly converges on the idea that underperformance is context-dependent, not trait-based. This paper argues that the managerial tendency to attribute underperformance to laziness before examining systemic factors is not only scientifically inaccurate but also dangerous. When managers act on this belief, they often introduce greater control and pressure, which paradoxically may decrease performance and quality.
+Cultural treatments of laziness go back centuries (e.g., Roberts, 2021, On Laziness), but modern science increasingly converges on the idea that underperformance is context-dependent, not trait-based. This paper argues that the managerial tendency to attribute underperformance to laziness before examining systemic factors is not only scientifically inaccurate but also dangerous. When managers act on this belief, they often impose greater control and pressure on employees, which paradoxically may decrease performance and quality.
 
 We review research from psychology, organizational behavior, and neuroscience to show how this dynamic operates as a self-fulfilling prophecy.
 
 **Research questions**:
-1. How do managerial beliefs about laziness lead to greater control?
-2. What effects do control practices have on motivation, well-being, and performance?
+1. How do managerial beliefs about laziness lead to managers wanting greater control over employees?
+2. What effects do these controlling practices have on motivation, well-being, and performance?
 3. How does this dynamic reinforce itself as a vicious cycle?
 
 ## Methods
@@ -35,17 +35,17 @@ This review follows a narrative literature review approach. Sources were identif
 
 ```mermaid
 flowchart TB
-  A["Belief in laziness"] --> B["More control (surveillance, time tracking, strict KPIs)"]
-  B --> C["Autonomy loss and stress"]
-  C --> D["Performance decline"]
+  A["Manager's belief in laziness"] --> B["Manager exerts more control (surveillance, time tracking, strict KPIs)"]
+  B --> C["Employees suffer autonomy loss and stress"]
+  C --> D["Performance declines"]
   D --> A
 ```
 
-### Stage 1: Belief in Laziness → Control Practices
+### Stage 1: Manager's belief in Laziness → Control Practices
 
-Managers facing risk (missed deadlines, cost overruns) often default to control. Prospect theory (Kahneman & Tversky, 1979) shows humans overweight potential losses, making leaders particularly sensitive to perceived underperformance. Research on managerial mindsets (McGregor’s Theory X) demonstrates that those who assume workers are lazy are more likely to adopt surveillance, strict deadlines, and punitive performance metrics (Miner, 2005).
+Managers facing risk (missed deadlines, cost overruns) often default to exerting greater control over their employees. Prospect theory (Kahneman & Tversky, 1979) shows humans overweight potential losses, making leaders particularly sensitive to perceived underperformance. Research on managerial mindsets (McGregor’s Theory X) demonstrates that those who assume workers are lazy are more likely to adopt surveillance, strict deadlines, and punitive performance metrics (Miner, 2005).
 
-### Stage 2: Control → Autonomy Loss, Stress, and Overload
+### Stage 2: Manager Exerts More Control → Employees Suffer Autonomy Loss, Stress, and Overload
 
 Self-Determination Theory (Ryan & Deci, 2000) demonstrates that autonomy, competence, and relatedness are essential psychological needs driving motivation and well-being. When managerial control frustrates these needs, motivation declines sharply. Studies on micromanagement confirm this, showing associations with higher stress, lower creativity, and increased turnover intentions (Kaur, 2015).
 
@@ -53,9 +53,9 @@ Behavioral economics reinforces these findings. Falk & Kosfeld's (2006) seminal 
 
 Over-control also contributes to workload inflation, as reporting and compliance activities accumulate, generating information overload. Eppler & Mengis (2004) describe overload as a central organizational challenge, while Ackerman & Kanfer (2009) and Boksem & Tops (2008) show that cognitive fatigue depletes executive functioning, impairing sustained performance.
 
-### Stage 3: Autonomy Loss & Stress → Performance Decline
+### Stage 3: Employees Suffer Autonomy Loss & Stress → Performance Declines
 
-A large body of evidence connects control and overload to burnout and reduced quality:
+A large body of evidence connects managerial control and overload to burnout and reduced quality:
 
 - Burnout: Maslach, Leiter, & Bakker's Burnout at Work (2014) shows chronic stress leads to exhaustion, depersonalization, and reduced accomplishment, all of which predict absenteeism and error rates.
 - Cognitive overload: Sweller's Cognitive Load Theory (1988), together with research on fatigue (Boksem & Tops, 2008), demonstrates how overload reduces decision quality and increases error likelihood.
@@ -63,7 +63,7 @@ A large body of evidence connects control and overload to burnout and reduced qu
 - Scarcity effects: Mullainathan & Shafir (2013) show that scarcity of time or resources reduces "cognitive bandwidth", leading to poor judgment and performance tradeoffs.
 - Flow disruption: Csikszentmihalyi (1990) finds that optimal performance requires tasks at the right challenge–skill balance. Pressure and surveillance often prevent flow, thereby undermining both productivity and quality.
 
-### Stage 4: Performance Decline → Reinforced Belief in Laziness
+### Stage 4: Performance Declines → Manager's Belief in Laziness is Reinforced
 
 When performance drops under stress and overload, managers often interpret the outcome as proof of laziness. This creates a feedback loop akin to the self-fulfilling prophecy (Rosenthal & Jacobson, 1968). Classic project-management literature illustrates the danger: Brooks' Law shows that adding people under deadline pressure increases delays rather than solving them (Brooks, 1975). Similarly, DeMarco’s The Deadline (1997) uses narrative to explore how unrealistic schedules, fear-driven control, and loss of team autonomy can collectively undermine project outcomes.
 
@@ -75,7 +75,7 @@ This review identifies a destructive cycle in management practice: belief in laz
 
 Lewin’s Field Theory (1951) provides a useful lens: workplace behavior is shaped by both “driving forces” (incentives, deadlines, rewards) and “restraining forces” (stress, unclear goals, poor processes). Managers frequently focus on amplifying driving forces while neglecting restraining forces, creating counterproductive dynamics.
 
-Software development offers a particularly clear example of this vicious circle. Because high-quality software depends on autonomy, focus, and sustained cognitive effort, attempts to control developers more tightly often generate the very problems they are meant to prevent. Rigid, control-heavy methods such as waterfall planning increase reporting burdens and reduce flexibility, which in turn fuel stress and overload. As quality declines through late defect discovery and rework, managers interpret the failures as evidence of insufficient effort and impose even stricter oversight. This aligns with the broader feedback loop identified in this review: belief in laziness → increased control → autonomy loss and overload → quality decline → reinforced belief in laziness. By contrast, more autonomy-supportive approaches such as agile have been shown to improve customer satisfaction and perceived product quality (Dingsøyr et al., 2012). Developer accounts echo this, describing how micromanagement of implementation details disrupts creativity and problem-solving. In software contexts, then, the costs of the self-fulfilling prophecy are especially visible, as quality erosion feeds directly back into tighter managerial control.
+Software development offers a particularly clear example of this vicious circle. Because high-quality software depends on autonomy, focus, and sustained cognitive effort, attempts to control developers more tightly often generate the very problems they are meant to prevent. Rigid, control-heavy methods such as waterfall planning increase reporting burdens and reduce flexibility, which in turn fuel stress and overload. As quality declines through late defect discovery and rework, managers interpret the failures as evidence of insufficient effort and impose even stricter oversight. This aligns with the broader feedback loop identified in this review: manager's belief in laziness → manager imposes more control → employees suffer autonomy loss and overload → quality declines → manager's belief in laziness is reinforced. By contrast, more autonomy-supportive approaches such as agile have been shown to improve customer satisfaction and perceived product quality (Dingsøyr et al., 2012). Developer accounts echo this, describing how micromanagement of implementation details disrupts creativity and problem-solving. In software contexts, then, the costs of the self-fulfilling prophecy are especially visible, as quality erosion feeds directly back into tighter managerial control.
 
 Breaking the cycle requires reframing managerial assumptions:
 
