@@ -52,9 +52,9 @@ NB: these are only illustrations. Every product, team, and organization has its 
 
 | Evaluation Area | Example Triggers / Metrics | Purpose |
 | --------------- | -------------------------- | ------- |
-| When to review  | 1. Scheduled cadence (per release, quarterly, semi-annual) 2. Event-driven (architecture change, new risks, regulatory shift) 3. Early-warning signals (spike in escaped defects, increased customer complaints, delivery slowdowns) | Ensures the portfolio is reassessed regularly and reactively when risk context changes. |
-| Outcome effectiveness | 1. Defect containment (pre-release vs. post-release)- 2. Severity-weighted defect density 3. Cost of quality (prevention/appraisal vs. failure) 4. Customer impact (support tickets, churn, NPS) | Determines if the testing investment actually reduced critical risks. |
-| Efficiency of portfolio | 1. Test effort vs. coverage balance 2. Lead time for change / delivery speed 3. Redundancy vs. gaps (overlap vs. underlap in risk coverage) 4. ROI proxy (testing cost vs. avoided rework cost) | Shows whether resources are being optimally allocated across testing approaches. |
+| When to review  | 1. Scheduled cadence (per release, quarterly, semi-annual) <br>2. Event-driven (architecture change, new risks, regulatory shift) <br>3. Early-warning signals (spike in escaped defects, increased customer complaints, delivery slowdowns) | Ensures the portfolio is reassessed regularly and reactively when risk context changes. |
+| Outcome effectiveness | 1. Defect containment (pre-release vs. post-release) <br>2. Severity-weighted defect density <br>3. Cost of quality (prevention/appraisal vs. failure) <br>4. Customer impact (support tickets, churn, NPS) | Determines if the testing investment actually reduced critical risks. |
+| Efficiency of portfolio | 1. Test effort vs. coverage balance <br>2. Lead time for change / delivery speed <br>3. Redundancy vs. gaps (overlap vs. underlap in risk coverage) <br>4. ROI proxy (testing cost vs. avoided rework cost) | Shows whether resources are being optimally allocated across testing approaches. |
 
 
 ## Resources
