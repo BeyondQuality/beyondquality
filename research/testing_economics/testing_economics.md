@@ -56,6 +56,11 @@ NB: these are only illustrations. Every product, team, and organization has its 
 | Outcome effectiveness | 1. Defect containment (pre-release vs. post-release) <br>2. Severity-weighted defect density <br>3. Cost of quality (prevention/appraisal vs. failure) <br>4. Customer impact (support tickets, churn, NPS) | Determines if the testing investment actually reduced critical risks. |
 | Efficiency of portfolio | 1. Test effort vs. coverage balance <br>2. Lead time for change / delivery speed <br>3. Redundancy vs. gaps (overlap vs. underlap in risk coverage) <br>4. ROI proxy (testing cost vs. avoided rework cost) | Shows whether resources are being optimally allocated across testing approaches. |
 
+## Adjusting the portfolio
+
+Evaluation is not the end of the process but a feedback loop. As with financial portfolios, when risks, priorities, or results change, the mix of testing activities may need to change as well. Resources should be shifted toward approaches that prove effective, reduced where returns are low, or reallocated to new activities as new risks appear. 
+
+**Testing strategy is not a one-time design but a continuous cycle of investment, review, and adjustment.**
 
 ## Resources
 
