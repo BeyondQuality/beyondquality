@@ -46,6 +46,17 @@ Once a testing strategy has been defined, we must plan for its evaluation. Just 
 
 Two questions frame this evaluation: when to review the strategy, and how to measure its efficiency. The first ensures that assessment is built into the life cycle rather than left to a _postmortem_ when a risk has occurred; the second provides the criteria and metrics to determine whether the strategy is delivering sufficient return on investment.
 
+In practice, evaluation can be guided by a simple structure that addresses both when to review and how to measure. The outline below shows example evaluation areas, triggers, and metrics. 
+
+NB: these are only illustrations. Every product, team, and organization has its own context, so the actual contents of this table must be recreated for each case. What matters is not adopting someone else's metrics wholesale, but ensuring that the chosen evaluation criteria reflect your risks, priorities, and tolerance for investment.
+
+| Evaluation Area | Example Triggers / Metrics | Purpose |
+| --------------- | -------------------------- | ------- |
+| When to review  | 1. Scheduled cadence (per release, quarterly, semi-annual) 2. Event-driven (architecture change, new risks, regulatory shift) 3. Early-warning signals (spike in escaped defects, increased customer complaints, delivery slowdowns) | Ensures the portfolio is reassessed regularly and reactively when risk context changes. |
+| Outcome effectiveness | 1. Defect containment (pre-release vs. post-release)- 2. Severity-weighted defect density 3. Cost of quality (prevention/appraisal vs. failure) 4. Customer impact (support tickets, churn, NPS) | Determines if the testing investment actually reduced critical risks. |
+| Efficiency of portfolio | 1. Test effort vs. coverage balance 2. Lead time for change / delivery speed 3. Redundancy vs. gaps (overlap vs. underlap in risk coverage) 4. ROI proxy (testing cost vs. avoided rework cost) | Shows whether resources are being optimally allocated across testing approaches. |
+
+
 ## Resources
 
 - [ISO/IEC/IEEE 29119-1:2022 Software and systems engineering — Software testing](https://www.iso.org/standard/81291.html)
