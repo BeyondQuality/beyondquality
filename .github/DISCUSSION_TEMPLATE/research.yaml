@@ -1,0 +1,47 @@
+title: "[Research Title]"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for starting a research discussion.
+
+  - type: textarea
+    attributes:
+      label: Why?
+      description: What motivates you to conduct this research?
+      placeholder: Summarize the research problem, impact, and who will benefit.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Expected results
+      description: At the end of your research, what would you have hoped to achieved?
+      placeholder: "List out expected outcomes questions you want to answer. It's okay if these change later."
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Collaboration
+      description: How can others contribute? (feedback, collaboration, advice etc.).
+      placeholder: Outline concrete activities or roles.
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Target artifact
+      description: What are you aiming to produce?
+      placeholder: e.g., techical paper, demo, tool/prototype, talk, blog post etc.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Background and additional information
+      description: Provide detailed context for your research task. 
+      placeholder: Explain related concepts and cite prior work. Err on the side of providing more context here than less. 
+    validations:
+      required: false
