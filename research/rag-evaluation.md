@@ -63,10 +63,18 @@ Overall, the task has met its objectives. We were able to build a PoC, and here 
   
   Therefore, such automated evaluations need to complement human testing to quality a RAG model, rather than replace it. 
 
+## Exploratory Testing Results (WIP)
+
+- The Ragas evaluation is somewhat unstable. When I run the entire Jupyter notebook code in one shot, the kernel crashes and restarts. However, if I pause one step before the evaluation and then run it, it works fine. This appears to be some resource management issue that is hard to debug. 
+- Ragas evaluation (as of v0.3.5) currently doesn't work with models that use reasoning mode (like gpt-5), since these models don't expose temperate as a parameter that can be modified. Ragas pins temperature values down (temperature=0 or temperature=0.1) to get more stable, and less stochastic outputs.  
 
 ## Next Steps
 
 - Perform exploratory testing with Ragas to see what the framework can do well, and find out its limitations
+- Compare and contrast different chunking strategies, to see their effect on the outputs
+  - Broad chunking, with each page being its own chunk
+  - Narrow chunking, with each heading being its own chunk
+  - Random chunking, with each chunk being a certain size, with overlaps to adjacent chunks
   
 We aim to share these findings as artifacts, one of which is this article. Other promising avenues are live-demoes and video recordings. 
 
