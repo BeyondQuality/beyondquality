@@ -14,9 +14,9 @@ One of the most promising use-cases for Large Language Models (LLMs) is  Retriev
 ### How does RAG work?
 Let us start by breaking down what RAG (Retrieval Augmented Generation) is. Similar to human working memory, LLMs (Large Language Models) have a limited context window. The more the context window is loaded, the more error prone an LLM's responses can be. ChatGPT currently supports 128k tokens or about 96000 words (as of 11.09.25). Despite this massive size, studies have shown that [LLM performance degrades when working with large context windows](https://arxiv.org/pdf/2307.03172). 
 
-RAG offers an antidote to this degradation. With RAG, a large document or data source is broken down into smaller chunks. These chunks are indexed and stored in a database. When a user queries an LLM, the chunks that are most relevant to the query are retrieved from the database and inserted into an LLM's context window. The LLM then uses these retrieved chunks to formulate a response. The retrieval is done using more 'old-school' non-LLM techniques such as semantic search. E.g., say you uploaded a high-school general science textbook to an LLM. When you ask a question related to gravitation, the specific chunks that pertain to this topic are retrieved and the LLM then uses these specific chunks to answer the question rather than the entire textbook. 
+RAG offers an antidote to this degradation. With RAG, a large document or data source is broken down into smaller chunks. These chunks are indexed and stored in a database. When a user queries an LLM, the chunks that are most relevant to the query are retrieved from the database and inserted into an LLM's context window. The LLM then uses these retrieved chunks to formulate a response. The retrieval is done using non-LLM techniques such as semantic search. E.g., say you uploaded a high-school general science textbook to an LLM. When you ask a question related to gravitation, the specific chunks that pertain to this topic are retrieved and the LLM then uses these specific chunks to answer the question rather than the entire textbook. 
 
-Having understood how RAG works helps us appreciate how relevant this technique can be. Several companies will benefit from building RAG models that index their internal information and offer users a chat interface to access this information. For E.g., one of my former clients, an industrial pump manufacturer, is currently building a RAG model to help customers choose the right pump for their use case. 
+Having understood how RAG works helps us appreciate how relevant this technique can be. Several companies will benefit from building RAG models that index their internal information and offer users a chat interface to access this information. For E.g., one of my former clients, an industrial pump manufacturer, is currently implementing a RAG model to build an LLM that help customers choose the right pump for their application. 
 
 ### Qualifying a RAG model
 It can be difficult to objectively qualify a RAG model. However, there are some metrics that we can use to qualify most RAG models. Examples include
@@ -36,12 +36,12 @@ The manner in which these learnings can be shared can take the form of a reposit
 ## What has been done so far?
 
 The following steps have been done
-- A RAG model has been built using LangChain
-- [Blogposts from an old blog](https://github.com/anupamck/rag101/blob/main/parsedPosts.json) were added to the model as test data
-- Ragas assessment is included to qualify the model
-- LangSmith can be used to examine traces of the assessment  
+- A RAG model has been built using LangChain.
+- [The 37signals Employee Handbook](https://basecamp.com/handbook) has been used as test data for the model. This information is representative of the data companies will use to build RAG models.
+- Ragas assessment is included to qualify the model.
+- LangSmith can be used to examine traces of the assessment.  
 
-All of this work can be viewed in this [Jupiter Notebook](https://github.com/anupamck/rag101/blob/main/blogpostsRagWithRagas.ipynb) within the project's repository. 
+All of this work can be viewed in this [Jupiter Notebook](https://github.com/anupamck/rag101/blob/main/basecampHandbookRagWithRagas.ipynb) within the project's repository. 
 
 ## Observations
 
@@ -51,10 +51,12 @@ Overall, the task has met its objectives. We were able to build a PoC, and here 
 	- Chunking strategy (choosing how a datasource is to be split up)
 	- The choice of embeddings (to store these chunks in a vector DB)
 	- The choice of vector DB 
-	This control is likely to be crucial to _tame_ a RAG model to behave in the manner that it is intended to. 
-- At a first glance, Ragas metrics do what they expected. However, further testing is needed to qualify them, and see where they break. 
-- Ragas offer metrics that either rely solely on LLM evaluation or have the LLM use human generated references
-- These are still early days in the field. We were able to contribute [2 PRs](https://github.com/explodinggradients/ragas/commits?author=anupamck) to fix errors in Ragas documentation. A bug report we filed led to the discovery of a [security vulnerability in LangChain](https://github.com/langchain-ai/langchain/issues/32709). Anybody who gets involved now can easily contribute to this field. 
+	
+ 	This control is likely to be crucial to _tame_ a RAG model to behave in the manner that it is intended to. 
+- Ragas offer metrics that either rely solely on LLM evaluation or combine this evaluation with human generated references.
+- These are still early days in the field. We were able to contribute [2 PRs](https://github.com/explodinggradients/ragas/commits?author=anupamck) to fix errors in Ragas documentation.
+- A bug report we filed led to the discovery of a [security vulnerability in LangChain](https://github.com/langchain-ai/langchain/issues/32709).
+- Anybody who gets involved now can easily contribute to this field. 
 - The Ragas metrics are intended to provide objective feedback on the model's behaviour. While this is valuable, a RAG model's quality will continue to rely on subjective human judgement for factors such as whether the model
   - retrieves the most appropriate sources to answer a given question
   - formulates answers in a manner that is compelling for the reader
@@ -64,9 +66,7 @@ Overall, the task has met its objectives. We were able to build a PoC, and here 
 
 ## Next Steps
 
-- Replace the test data source with one that is 
-  - closer to what companies would use RAG models for
-  - helps evaluate Ragas output more objectively
+- Perform exploratory testing with Ragas to see what the framework can do well, and find out its limitations
   
 We aim to share these findings as artifacts, one of which is this article. Other promising avenues are live-demoes and video recordings. 
 
