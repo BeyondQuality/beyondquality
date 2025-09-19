@@ -1,11 +1,17 @@
-I've taken liberty to categorise the current advise given by so many great people.
+# Public speaking: why and how?
+
+- Author: [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/)
+- Collaborators: Maryia, you should choose who needs to be here :)
+- Date: 19 September, 2025
+- [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/11)
+
+Vitaly: I've taken liberty to categorise the current advise given by so many great people.
 
 ## The "whys"
 
 ### 1. Challenge yourself / build courage
 
 @mesutdurukal: Challenge myself. Public speaking is not easy; it requires social courage. Once you start, it gets easier, but the first step is scary. I just wanted to close my eyes and push myself into the sea.
-
 
 ### 2. Travel & fun
 
@@ -75,3 +81,5 @@ Rahul Verma (via @maryiat): I grew up on stage as a theatre actor. Conferences b
 @maaretp: At least you did not have to pay full price to attend if you deliver a talk.
 
 @bischoffdev: Let's not forget that as a conference speaker you not only get to visit conferences for free, but you also make a lot of new friends there.
+
+
