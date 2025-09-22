@@ -35,7 +35,7 @@ This review follows a narrative literature review approach. Sources were identif
 
 ```mermaid
 flowchart TB
-  A["Manager's belief in laziness"] --> B["Manager exerts more control (surveillance, time tracking, strict KPIs)"]
+  A["Manager's belief in laziness"] --> B["Manager exerts more control"]
   B --> C["Employees suffer autonomy loss and stress"]
   C --> D["Performance declines"]
   D --> A
