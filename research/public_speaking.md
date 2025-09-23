@@ -110,7 +110,7 @@ From the discussion: prep advice from very experienced speakers.
 
 Rahul Verma: Slides aren't the point; the conversation in the room is. 
 
-@PIIARSoftware: Sometimes good vibes and what you say gives 80% of the value, not the slides that fly behind you. 
+@PIIARSoftware: I try to focus on 3 things. First present something that You want to show as Your achievement, be proud of that. Second, present it in a way that the audience can try it out in their ecosystem, give them some action points and a place to start. Third, have fun presenting the subject. Sometimes good vibes and what You say gives the 80% vaule of the talk not the slides that fly behind You.
 
 ### 3. Plan for interaction
 
@@ -124,7 +124,7 @@ Rahul Verma: Slides aren't the point; the conversation in the room is.
 
 @mesutdurukal: Saying I don't know shouldn't be difficult. 
 
-### 5. Practice with peers for early feedback
+### 5. Practice and get early feedback
 
 @anupamck: I always end up recording my presentations several times... I also gather feedback from other people (especially my wife).
 
@@ -136,6 +136,9 @@ Rahul Verma: Some ideas won't land, so I iterate. I design for imperfection.
 
 @maaretp: Practice makes better: smaller audiences, but also forced audiences (university students) with topics you are most comfortable with.
 
+@RikardEdgren001: I memorize the first sentences, because if it is a good start, all will go well. I try to start with an ice breaker, quite often it is something that happened on the way to the conference (for instance when I could show my green and white socks I had to wear in Dublin when the luggage was lost).
+If the presentation goes really, really well, I remember almost nothing of what I actually said.
+
 ### 6. Practice timing & pacing
 
 @sharovatov: Practicing conscious slowing-down exercises... I forced myself to silently count to 5 before each next line.
@@ -143,6 +146,8 @@ Rahul Verma: Some ideas won't land, so I iterate. I design for imperfection.
 @bischoffdev: Successful talk delivery starts with thorough preparation, including practicing your pacing, timing, and especially your opening and closing sentences. 
 
 @rgroetz2: Be on time. It's embarrassing for the speakers after you if you take longer. 
+
+@RikardEdgren001: I write a rough script for all of my slides, but I don't follow it (unless it is an online talk, then I do it word-by-word). But writing a script gives me one way of expressing the important points, and if I forget some of them, it doesn't matter (there should be enough anyway). I also try to put some humour in there, and tend to remember those parts better.
 
 ### 7. Enjoy yourself
 
@@ -160,9 +165,10 @@ Rahul Verma: Some ideas won't land, so I iterate. I design for imperfection.
 
 @rgroetz2: The audience deserves authenticity, and that's what builds trust and makes a talk memorable. 
 
-Rahul Verma: I don't present to please. I present an idea, trusting that somewhere in the room my audience sits. 
+Rahul Verma: I don't present to please. I present an idea, trusting that somewhere in the room my audience sits. Talk to the audience, not at a topic.
 
-Rahul Verma: Talk to the audience, not at a topic.
+@RikardEdgren001: Over time I found that my style was a mix of very abstract things and very concrete experiences. If it is a keynote I want something catchy and provoking. For a normal session, just my story can be enough.
+
 
 ### 9. Overcome self-doubt (I don't have anything to say”)
 
@@ -182,6 +188,10 @@ Rahul Verma: I start from the idea that this talk is going to fail... treat the 
 @mesutdurukal: Beat your imposter syndrome. I know a good way for this: Embrace the idea that you are not claiming to teach people something they don't know. You are going to share your story. Ok, now you are safe, no one can better know your story.
 
 @sharovatov: We humans are social creatures, and standing in front of a room full of eyes locked on us taps into some very old instincts. We value social approval, and consciously or not, we're asking ourselves: is my content good enough, or is it just banal? Most people outgrow this fear with experience and gradually become more natural on stage. 
+
+## 13. Don't rush
+
+@RikardEdgren001: It takes months for me to create a great talk; several iterations with the necessary rest for sub-conscious reflection.
 
 
 ## Storytelling & Talk structure
