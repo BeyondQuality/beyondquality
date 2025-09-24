@@ -13,6 +13,7 @@ From the discussion: these are the reasons why people started presenting.
 
 @mesutdurukal: Challenge myself. Public speaking is not easy; it requires social courage. Once you start, it gets easier, but the first step is scary. I just wanted to close my eyes and push myself into the sea.
 
+
 ### 2. Travel & fun
 
 @lisacrispin: I started speaking at conferences in order to GO to conferences, so I could learn and meet people. I also volunteered and did everything I could to get to them, because my employers couldn't or wouldn't pay for me to go.
@@ -24,6 +25,7 @@ From the discussion: these are the reasons why people started presenting.
 @PerJonasHermansson: I speak at conferences because I truly enjoy it ... most importantly — it's fun! It's an opportunity to strengthen both my own and my company's brand ... and most importantly — it's fun!
 
 @PIIARSoftware: I love the confereces. The vibe, atmosphere… Smile beats the fear, have a story to tell and share it with the room.
+
 
 ### 3. Networking, visibility, personal brand & career growth
 
@@ -43,6 +45,9 @@ From the discussion: these are the reasons why people started presenting.
 
 @maaretp: Entrepreneurial side gigs: Teaching can be a way of making a living too and conferences are ways of introducing you as someone with knowledge to teach or consult on.
 
+@ethfeat: There are many  reasons: building your reputation, increasing your visibility, strengthening your personal brand, and opening doors to new opportunities.
+
+
 ### 4. Increase diversity of thought & exposure to trends
 
 @mesutdurukal: Even just seeing the topics helps you understand the most common problems other people are facing, which tools are becoming popular, and the latest trends.
@@ -57,9 +62,11 @@ From the discussion: these are the reasons why people started presenting.
 
 @maaretp: I have learned a lot and many people could learn from what I did so far, and I am not done learning. 
 
+
 ### 6. Fixing social awkwardness
 
 @maaretp: Fixing sociall awkwardness: when you speak, they come talk to you. Meeting strangers is hard except when introducing yourself with a talk on stage.
+
 
 ### 7. Happiness & self-esteem (eudaimonia)
 
@@ -74,10 +81,14 @@ From the discussion: these are the reasons why people started presenting.
 
 @maaretp: Speakers dinners and the connections in the speaker community: you learn a bit from talks, but you learn tons from other speakers. And speakers hang out together.
 
+@ethfeat: Speaking can be as much about giving back to the community as it is about shaping your own professional journey.
+
+
 ### 9. Pedagogical urge / ethical drive
 
 @sharovatov: I have this ethical belief that if I can make the world a little better by sharing what I know, then I should.
 
+@ethfeat: People have many reasons for stepping on stage. For me, it has always been about sharing what I know and teaching others—there’s a special joy in passing on knowledge. On top of that, I’ve always loved being on stage, so speaking is both fun and personally rewarding.
 
 ### 10. Authentic expression / theatre roots
 
@@ -106,11 +117,15 @@ From the discussion: prep advice from very experienced speakers.
 
 @sharovatov: In my first three-four years of public speaking I was always rushing. Rushing to such a degree that I was losing my breath. I significantly improved the situation by practicing conscious slowing-down exercises, they were quite simple. For instance, I wrote myself 10 lines to practice with, and I forced myself to silently count to 5 before each next line. Or, for the same 10 lines, I had to walk two-three steps after each line.
 
+@ethfeat: Delivering a great talk is more of a mental challenge than a technical one. Beyond knowing your material, you need to be mentally prepared: learn how to manage stress, handle unexpected situations, and peak at the right time.
+
+
 ### 2. Don't focus on slides, focus on story
 
 Rahul Verma: Slides aren't the point; the conversation in the room is. 
 
 @PIIARSoftware: I try to focus on 3 things. First present something that You want to show as Your achievement, be proud of that. Second, present it in a way that the audience can try it out in their ecosystem, give them some action points and a place to start. Third, have fun presenting the subject. Sometimes good vibes and what You say gives the 80% vaule of the talk not the slides that fly behind You.
+
 
 ### 3. Plan for interaction
 
@@ -118,11 +133,13 @@ Rahul Verma: Slides aren't the point; the conversation in the room is.
 
 @PerJonasHermansson: Think of it as entertainment with added value: knowledge.
 
+
 ### 4. Admit what you don't know
 
 @bischoffdev: Don't be afraid to admit when you don't know something—it's much better than stumbling through. 
 
 @mesutdurukal: Saying I don't know shouldn't be difficult. 
+
 
 ### 5. Practice and get early feedback
 
@@ -139,6 +156,7 @@ Rahul Verma: Some ideas won't land, so I iterate. I design for imperfection.
 @RikardEdgren001: I memorize the first sentences, because if it is a good start, all will go well. I try to start with an ice breaker, quite often it is something that happened on the way to the conference (for instance when I could show my green and white socks I had to wear in Dublin when the luggage was lost).
 If the presentation goes really, really well, I remember almost nothing of what I actually said.
 
+
 ### 6. Practice timing & pacing
 
 @sharovatov: Practicing conscious slowing-down exercises... I forced myself to silently count to 5 before each next line.
@@ -149,6 +167,7 @@ If the presentation goes really, really well, I remember almost nothing of what 
 
 @RikardEdgren001: I write a rough script for all of my slides, but I don't follow it (unless it is an online talk, then I do it word-by-word). But writing a script gives me one way of expressing the important points, and if I forget some of them, it doesn't matter (there should be enough anyway). I also try to put some humour in there, and tend to remember those parts better.
 
+
 ### 7. Enjoy yourself
 
 @PerJonasHermansson: When you're having fun, the audience will too. 
@@ -158,6 +177,9 @@ If the presentation goes really, really well, I remember almost nothing of what 
 @PIIARSoftware: Smile beats the fear... You are a live example of your story.
 
 @rgroetz2: If I enjoy myself on stage, the audience usually does too
+
+@ethfeat: Slides and visuals are just as important. They should support your message, not overload it. Use graphics, examples, or illustrations that make your point clearer and keep the audience’s attention. A talk that’s both meaningful and enjoyable is always the one people remember.
+
 
 ### 8. Be honest & authentic (don't sell)
 
@@ -174,9 +196,11 @@ Rahul Verma: I don't present to please. I present an idea, trusting that somewhe
 
 @bischoffdev: Don't let the thought ‘I don't have anything to add' hold you back. 
 
+
 ### 10. Design for imperfection / accept failure
 
 Rahul Verma: I start from the idea that this talk is going to fail... treat the submitted idea as a hypothesis and let it evolve. 
+
 
 ### 11. Body language, voice, emotional connection
 
@@ -184,14 +208,20 @@ Rahul Verma: I start from the idea that this talk is going to fail... treat the 
 
 @sharovatov: Voice projection drills to build presence. 
 
+@ethfeat: Body language plays a huge role — your posture, how you move on stage, how you use your tone of voice, when you pause and summarize, and even the pace of your speech all shape the audience’s experience. Equally important is eye contact and interaction; the audience should feel engaged, not lulled to sleep.
+
+
 ### 12. Imposter syndrome
 @mesutdurukal: Beat your imposter syndrome. I know a good way for this: Embrace the idea that you are not claiming to teach people something they don't know. You are going to share your story. Ok, now you are safe, no one can better know your story.
 
 @sharovatov: We humans are social creatures, and standing in front of a room full of eyes locked on us taps into some very old instincts. We value social approval, and consciously or not, we're asking ourselves: is my content good enough, or is it just banal? Most people outgrow this fear with experience and gradually become more natural on stage. 
 
+
 ## 13. Don't rush
 
 @RikardEdgren001: It takes months for me to create a great talk; several iterations with the necessary rest for sub-conscious reflection.
+
+@ethfeat: It all starts with an idea — something worth sharing. Once you have that, the real work begins. Crafting a great talk is usually a longer, iterative process. Personally, I keep improving my talks even after I’ve delivered them, so each time the audience hears a more refined version.
 
 
 ## Storytelling & Talk structure
@@ -200,9 +230,11 @@ Rahul Verma: I start from the idea that this talk is going to fail... treat the 
 
 @PerJonasHermansson: Start by deciding what message you want to convey.
 
+
 ### 2. Hero's journey / villain archetype
 
 @rgroetz2: My talks always follow a kind of hero's journey... there's a villain ... and the hero learns and overcomes.
+
 
 ### 3. Hook → Situation → Complication → Solution (SCS)
 
@@ -210,15 +242,22 @@ Rahul Verma: I start from the idea that this talk is going to fail... treat the 
 
 @anupamck: I try and get my audience to pay attention with a hook... situation, complication, solution. 
 
+
 ### 4. Problem-solution framing
 
 @mesutdurukal: Almost always, it is a problem-solution pattern.
+
+@ethfeat: Beyond the technical content, you need to think about how you’ll explain it in an engaging way. Maybe you use a parallel, a story, or a theme to make it more relatable. Then comes the structure: carefully building the journey from the problem statement to the solution so the audience can follow along with you.
+
 
 ### 5. Adapt language to the audience
 
 @bischoffdev: Be inclusive in your language and adapt your presentation style to your audience.
  but possibly need to be separated. Maryia, let's discuss.
 
+ ### 6. Keep the rythm
+ @ethfeat: A strong talk has a clear rhythm: a powerful start, a solid middle, and a memorable finish. Remember, people often judge a presentation less by its content and more by how it made them feel. They want something relatable, something that sticks. Your job is to capture their attention — and keep it until the very last word.
+ 
 
 ## Resources
 ### Articles
