@@ -47,12 +47,15 @@ From the discussion: these are the reasons why people started presenting.
 
 @ethfeat: There are many  reasons: building your reputation, increasing your visibility, strengthening your personal brand, and opening doors to new opportunities.
 
+@KariKakkonen: It is a natural step forward in growing as a professional - sharing with others. It gives you credibility as a professional.
+
 
 ### 4. Increase diversity of thought & exposure to trends
 
 @mesutdurukal: Even just seeing the topics helps you understand the most common problems other people are facing, which tools are becoming popular, and the latest trends.
 
 @maaretp: Represent Finland, represent women, represent people speaking from experiences.
+
 
 ### 5. Teaching is the best learning / deepen expertise
 
@@ -72,6 +75,8 @@ From the discussion: these are the reasons why people started presenting.
 
 @sharovatov: Speaking at conferences contributes a lot to my eudaimonia ... presenting can compensate for lack of social appreciation at work → recognition → self-esteem → greater happiness → productivity.
 
+@KariKakkonen: It is a great way to attend a conference in a more central role than as a participant.
+
 
 ### 8. Giving back to and being part of the community
 
@@ -90,6 +95,9 @@ From the discussion: these are the reasons why people started presenting.
 
 @ethfeat: People have many reasons for stepping on stage. For me, it has always been about sharing what I know and teaching others—there’s a special joy in passing on knowledge. On top of that, I’ve always loved being on stage, so speaking is both fun and personally rewarding.
 
+@KariKakkonen: It is sharing for the common good; why keep your ideas to your own?
+
+
 ### 10. Authentic expression / theatre roots
 
 Rahul Verma (via @maryiat): I grew up on stage as a theatre actor. Conferences became the closest thing to theatre while staying a testing professional.
@@ -100,6 +108,9 @@ Rahul Verma (via @maryiat): I grew up on stage as a theatre actor. Conferences b
 @maaretp: At least you did not have to pay full price to attend if you deliver a talk.
 
 @bischoffdev: Let's not forget that as a conference speaker you not only get to visit conferences for free, but you also make a lot of new friends there.
+
+@KariKakkonen: It is a way to attend more conferences, and thus learn and network more effectively.
+
 
 ---
 
@@ -126,12 +137,16 @@ Rahul Verma: Slides aren't the point; the conversation in the room is.
 
 @PIIARSoftware: I try to focus on 3 things. First present something that You want to show as Your achievement, be proud of that. Second, present it in a way that the audience can try it out in their ecosystem, give them some action points and a place to start. Third, have fun presenting the subject. Sometimes good vibes and what You say gives the 80% vaule of the talk not the slides that fly behind You.
 
+@KariKakkonen: Balanced slides with enough content (for notes) but not too much (so people won't read but listen to you).
+
 
 ### 3. Plan for interaction
 
 @mesutdurukal: Make it interactive. Ask small questions, encourage them to vote.
 
 @PerJonasHermansson: Think of it as entertainment with added value: knowledge.
+
+@KariKakkonen: Ask questions, ask for interaction during and after the talk.
 
 
 ### 4. Admit what you don't know
@@ -156,6 +171,8 @@ Rahul Verma: Some ideas won't land, so I iterate. I design for imperfection.
 @RikardEdgren001: I memorize the first sentences, because if it is a good start, all will go well. I try to start with an ice breaker, quite often it is something that happened on the way to the conference (for instance when I could show my green and white socks I had to wear in Dublin when the luggage was lost).
 If the presentation goes really, really well, I remember almost nothing of what I actually said.
 
+@KariKakkonen: Memorize the main point in each slide, make the point, don't read all the slide content, or verbalize it differently.
+
 
 ### 6. Practice timing & pacing
 
@@ -166,6 +183,8 @@ If the presentation goes really, really well, I remember almost nothing of what 
 @rgroetz2: Be on time. It's embarrassing for the speakers after you if you take longer. 
 
 @RikardEdgren001: I write a rough script for all of my slides, but I don't follow it (unless it is an online talk, then I do it word-by-word). But writing a script gives me one way of expressing the important points, and if I forget some of them, it doesn't matter (there should be enough anyway). I also try to put some humour in there, and tend to remember those parts better.
+
+@KariKakkonen: Be on time, start, and finish.
 
 
 ### 7. Enjoy yourself
@@ -210,6 +229,8 @@ Rahul Verma: I start from the idea that this talk is going to fail... treat the 
 
 @ethfeat: Body language plays a huge role — your posture, how you move on stage, how you use your tone of voice, when you pause and summarize, and even the pace of your speech all shape the audience’s experience. Equally important is eye contact and interaction; the audience should feel engaged, not lulled to sleep.
 
+@KariKakkonen: Talk to the audience (90% time facing the crowd).
+
 
 ### 12. Imposter syndrome
 @mesutdurukal: Beat your imposter syndrome. I know a good way for this: Embrace the idea that you are not claiming to teach people something they don't know. You are going to share your story. Ok, now you are safe, no one can better know your story.
@@ -222,6 +243,8 @@ Rahul Verma: I start from the idea that this talk is going to fail... treat the 
 @RikardEdgren001: It takes months for me to create a great talk; several iterations with the necessary rest for sub-conscious reflection.
 
 @ethfeat: It all starts with an idea — something worth sharing. Once you have that, the real work begins. Crafting a great talk is usually a longer, iterative process. Personally, I keep improving my talks even after I’ve delivered them, so each time the audience hears a more refined version.
+
+@KariKakkonen: Start early enough to have time for a good second look.
 
 
 ## Storytelling & Talk structure
@@ -253,10 +276,17 @@ Rahul Verma: I start from the idea that this talk is going to fail... treat the 
 ### 5. Adapt language to the audience
 
 @bischoffdev: Be inclusive in your language and adapt your presentation style to your audience.
- but possibly need to be separated. Maryia, let's discuss.
+
+@KariKakkonen: Basics to align participants, but also going deep on the key topic.
+
+@KariKakkonen: Talk in general, understandable terms, and explain yourself if needed.
+
 
  ### 6. Keep the rythm
  @ethfeat: A strong talk has a clear rhythm: a powerful start, a solid middle, and a memorable finish. Remember, people often judge a presentation less by its content and more by how it made them feel. They want something relatable, something that sticks. Your job is to capture their attention — and keep it until the very last word.
+
+ ### 7. Ways of presenting
+ @KariKakkonen: Use multiple ways of presenting (add a flipchart, video, music, poll, discussion with audience).
  
 
 ## Resources
