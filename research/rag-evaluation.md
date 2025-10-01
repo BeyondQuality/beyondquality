@@ -4,17 +4,17 @@
 - Collaborators: [Vitaly Sharovatov](https://sharovatov.github.io/)
 - Date: 11 September, 2025
 - [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/8)
-- [Repository](https://github.com/anupamck/rag101)
+- [Repository](https://github.com/anupamck/rag-evaluation)
 
 ## Summary
-One of the most promising use-cases for Large Language Models (LLMs) is  Retrieval Augmented Generation (RAG). RAG helps LLMs handle large amounts of contextual data by helping them overcome the limitations of context stuffing by augmenting the generation capabilities of an LLM with the ability to retrieve the relevant part of a larger context to the corresponding user query. Qualifying an LLM using automated testing is a challenge, given the non-deterministic nature of their responses. To tackle this challenge, several LLM assessment frameworks are on the rise, one of which is Ragas (RAG Assessment). The aim of this research task is to build a RAG model, qualify it using Ragas as a proof-of-concept, and share the findings with the community. 
+One of the most promising use-cases for Large Language Models (LLMs) is  Retrieval Augmented Generation (RAG). RAG helps LLMs handle large amounts of contextual data by helping them overcome the limitations of context stuffing by augmenting the text generation capabilities of an LLM with the ability to retrieve the relevant part of a larger context to the corresponding user query. Qualifying an LLM using automated testing is a challenge, given the non-deterministic nature of their responses. To tackle this challenge, several LLM assessment frameworks are on the rise, one of which is Ragas (RAG Assessment). The aim of this research task is to build a RAG model, qualify it using Ragas as a proof-of-concept, and share the findings with the community. 
 
 ## Why conduct this research?
 
 ### How does RAG work?
 Let us start by breaking down what RAG (Retrieval Augmented Generation) is. Similar to human working memory, LLMs (Large Language Models) have a limited context window. The more the context window is loaded, the more error prone an LLM's responses can be. ChatGPT currently supports 128k tokens or about 96000 words (as of 11.09.25). Despite this massive size, studies have shown that [LLM performance degrades when working with large context windows](https://arxiv.org/pdf/2307.03172). 
 
-RAG offers an antidote to this degradation. With RAG, a large document or data source is broken down into smaller chunks. These chunks are indexed and stored in a database. When a user queries an LLM, the chunks that are most relevant to the query are retrieved from the database and inserted into an LLM's context window. The LLM then uses these retrieved chunks to formulate a response. The retrieval is done using non-LLM techniques such as semantic search. E.g., say you uploaded a high-school general science textbook to an LLM. When you ask a question related to gravitation, the specific chunks that pertain to this topic are retrieved and the LLM then uses these specific chunks to answer the question rather than the entire textbook. 
+RAG offers an antidote to this degradation. With RAG, a large document or data source is broken down into smaller chunks. These chunks are indexed and stored in a database. When a user queries an LLM, the chunks that are most relevant to the query are retrieved from the database and inserted into an LLM's context window. The LLM then uses these retrieved chunks to formulate a response. The retrieval is done using machine learning techniques such as semantic search. E.g., say you uploaded a high-school general science textbook to an LLM. When you ask a question related to gravitation, the specific chunks that pertain to this topic are retrieved and the LLM then uses these specific chunks to answer the question rather than the entire textbook. 
 
 Having understood how RAG works helps us appreciate how relevant this technique can be. Several companies will benefit from building RAG models that index their internal information and offer users a chat interface to access this information. For E.g., one of my former clients, an industrial pump manufacturer, is currently implementing a RAG model to build an LLM that help customers choose the right pump for their application. 
 
@@ -31,6 +31,7 @@ Another challenge with testing LLMs is their non-deterministic nature. Most auto
 ## Research objective
 
 The objective for this research task is to build a RAG model, qualify it using Ragas, and share what we learn with the community. While building a RAG model from scratch can seem an intimidating task, it is made much easier by [beginner-friendly tutorials from LangChain](https://python.langchain.com/docs/tutorials/rag/). 
+
 The manner in which these learnings can be shared can take the form of a repository, live-demonstrations, articles, webinars etc. We will figure this out as we go. 
 
 ## What has been done so far?
@@ -41,7 +42,7 @@ The following steps have been done
 - Ragas assessment is included to qualify the model.
 - LangSmith can be used to examine traces of the assessment.  
 
-All of this work can be viewed in this [Jupiter Notebook](https://github.com/anupamck/rag101/blob/main/basecampHandbookRagWithRagas.ipynb) within the project's repository. 
+All of this work can be viewed in this [Jupiter Notebook](https://github.com/anupamck/rag-evaluation/blob/main/basecampHandbookRagWithRagas.ipynb) within the project's repository. 
 
 ## Observations
 
@@ -55,17 +56,20 @@ Overall, the task has met its objectives. We were able to build a PoC, and here 
  	This control is likely to be crucial to _tame_ a RAG model to behave in the manner that it is intended to. 
 - Ragas offer metrics that either rely solely on LLM evaluation or combine this evaluation with human generated references.
 - These are still early days in the field. We were able to contribute [2 PRs](https://github.com/explodinggradients/ragas/commits?author=anupamck) to fix errors in Ragas documentation.
-- A bug report we filed led to the discovery of a [security vulnerability in LangChain](https://github.com/langchain-ai/langchain/issues/32709).
-- Anybody who gets involved now can easily contribute to this field. 
+- A bug report we filed led to the discovery of a [security vulnerability in LangChain](https://github.com/langchain-ai/langchain/issues/32709). This vulnerability is due to an indirect injection attack, which happens when the retrieved context in a RAG model contains instructions that override the model's original prompt causing it to behave in unexpected ways. 
 - The Ragas metrics are intended to provide objective feedback on the model's behaviour. While this is valuable, a RAG model's quality will continue to rely on subjective human judgement for factors such as whether the model
   - retrieves the most appropriate sources to answer a given question
-  - formulates answers in a manner that is compelling for the reader
+  - formulates answers in a manner that is compelling for the reader  
   
-  Therefore, such automated evaluations need to complement human testing to quality a RAG model, rather than replace it. 
+  Therefore, such automated evaluations need to complement human testing to quality a RAG model, rather than replace it.
+- Anybody who gets involved now can easily contribute to this field.
 
 ## Exploratory Testing Results (WIP)
 
-- The Ragas evaluation is somewhat unstable. When I run the entire Jupyter notebook code in one shot, the kernel crashes and restarts. However, if I pause one step before the evaluation and then run it, it works fine. This appears to be some resource management issue that is hard to debug. 
+- The Ragas evaluation is somewhat unstable. When I run the entire Jupyter notebook code in one shot, the kernel crashes and restarts. However, if I pause one step before the evaluation and then run it, it works fine. This appears to be some resource management issue that is hard to debug.
+- For questions that have a nuanced answer, the framework was found to return an evaluation that can be unexpected. For E.g. the question, "Can I work on another job in parallel?", contains a nuanced answer in the handbook. When the RAG model offers a nuanced answer to this question, this answer is evaluated by Ragas as having an answer relevancy of 0, which is a false positive. This behaviour could be rectified
+	- By improving the evaluation framework by adding more nuanced examples to its example set.
+ 	- By using a bigger model (`gpt-4o-mini` consistently returns a false positive, whereas `gpt-4o` returns a better result) 	
 - Ragas evaluation (as of v0.3.5) currently doesn't work with models that use reasoning mode (like gpt-5), since these models don't expose temperate as a parameter that can be modified. Ragas pins temperature values down (temperature=0 or temperature=0.1) to get more stable, and less stochastic outputs.  
 
 ## Next Steps
