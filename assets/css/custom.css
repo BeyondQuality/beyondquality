@@ -12,12 +12,11 @@
   
   /* Typography */
   --font-serif: 'Georgia', 'Times New Roman', serif;
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
   /* Spacing */
-  --container-max-width: 896px; /* max-w-4xl equivalent */
+  --container-max-width: 896px;
   --section-spacing: 3rem;
-  --card-spacing: 1rem;
   
   /* Border radius */
   --radius: 0.5rem;
@@ -256,23 +255,11 @@ a:hover {
   grid-template-columns: 1fr;
 }
 
-/* Discussion/Research Cards */
-.discussion-card,
-.research-card {
-  padding: 1.5rem;
-}
-
-.discussion-title,
+/* Research Cards */
 .research-title {
   font-size: 1.125rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
-}
-
-.discussion-meta,
-.research-meta {
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
 }
 
 /* Footer */
@@ -307,42 +294,6 @@ a:hover {
   font-size: 1.125rem;
   font-weight: 500;
   color: hsl(var(--foreground));
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-  .grid-2-cols {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .podcast-card {
-    flex-direction: row;
-  }
-  
-  .nav-links {
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .nav-container {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem 1.5rem;
-  }
-  
-  .nav-links {
-    margin-top: 1rem;
-    gap: 1.5rem;
-  }
-  
-  .footer-sponsors {
-    gap: 2rem;
-  }
-  
-  .main-content {
-    padding: 2rem 1.5rem;
-  }
 }
 
 /* GitHub Discussions Integration */
@@ -451,4 +402,36 @@ a:hover {
 
 .discussions-error a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .grid-2-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .podcast-card {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 1.5rem;
+  }
+  
+  .nav-links {
+    margin-top: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .footer-sponsors {
+    gap: 2rem;
+  }
+  
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
 }
