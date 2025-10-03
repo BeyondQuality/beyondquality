@@ -1,5 +1,5 @@
 /* Custom CSS for Beyond Quality - Recreating the Lovable design */
-/* Cache bust: v4.0 - Play button overlay and YouTube link */
+/* Cache bust: v5.0 - Thumbnail width and hover spacing fix */
 
 /* CSS Variables for Design System */
 :root {
@@ -213,9 +213,11 @@ a:hover {
   position: relative;
   display: inline-block;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.5rem;
+  margin: -0.5rem;
 }
 
-.podcast-thumbnail-link:hover {
+.podcast-thumbnail-link:hover img {
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -246,7 +248,7 @@ a:hover {
 
 .podcast-thumbnail {
   width: 100%;
-  max-width: 10rem;
+  max-width: 12rem;
   height: auto;
   border: 1px solid hsl(var(--border));
   border-radius: var(--radius);
@@ -492,6 +494,10 @@ a:hover {
   
   .podcast-card {
     flex-direction: row;
+  }
+  
+  .podcast-thumbnail {
+    max-width: 16rem;
   }
 }
 
