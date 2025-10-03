@@ -61,4 +61,11 @@ The common belief that "more testing automatically leads to higher quality" is a
 - Help draft or refine the risks of over-testing
 - Volunteer to co-review the final draft before publication.
 
+## Community Discussions
+
+<div id="github-discussions">
+  <!-- Discussions will be loaded here by JavaScript -->
+</div>
+
+{% include discussions-script.html %}
 
