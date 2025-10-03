@@ -1,0 +1,253 @@
+<!-- GitHub Discussions Script -->
+<script>
+// Cache bust: v2.0
+document.addEventListener('DOMContentLoaded', function() {
+    const discussionsContainer = document.getElementById('github-discussions');
+    if (!discussionsContainer) return;
+
+    // GitHub REST API endpoint for discussions
+    const GITHUB_API_URL = 'https://api.github.com/repos/BeyondQuality/beyondquality/discussions';
+
+    // Function to format date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        });
+    }
+
+    // Function to truncate text
+    function truncateText(text, maxLength = 150) {
+        if (text.length <= maxLength) return text;
+        return text.substring(0, maxLength) + '...';
+    }
+
+    // Function to render discussions
+    function renderDiscussions(discussions) {
+        if (discussions.length === 0) {
+            discussionsContainer.innerHTML = '<p>No discussions found.</p>';
+            return;
+        }
+
+        const discussionsHTML = discussions.map(discussion => `
+            <div class="discussion-item">
+                <div class="discussion-header">
+                    <span class="discussion-category">${discussion.category.emoji || '💬'} ${discussion.category.name}</span>
+                    <span class="discussion-date">${formatDate(discussion.created_at)}</span>
+                </div>
+                <h3 class="discussion-title">
+                    <a href="${discussion.html_url}" target="_blank" rel="noopener noreferrer">
+                        ${discussion.title}
+                    </a>
+                </h3>
+                <div class="discussion-body">
+                    ${truncateText(discussion.body.replace(/<[^>]*>/g, ''), 200)}
+                </div>
+                <div class="discussion-footer">
+                    <div class="discussion-author">
+                        <img src="${discussion.user.avatar_url}" alt="${discussion.user.login}" class="author-avatar">
+                        <span>${discussion.user.login}</span>
+                    </div>
+                    <div class="discussion-stats">
+                        <span class="upvotes">👍 ${discussion.reactions['+1'] || 0}</span>
+                        <span class="answers">💬 ${discussion.comments || 0}</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+        discussionsContainer.innerHTML = discussionsHTML;
+    }
+
+    // Function to show error
+    function showError(message) {
+        let errorMessage = message;
+        let isRateLimit = message.includes('rate limit') || message.includes('API rate limit');
+        
+        if (isRateLimit) {
+            errorMessage = "Rate limit reached. Please try again later or visit GitHub directly.";
+        }
+        
+        discussionsContainer.innerHTML = `
+            <div class="discussions-error">
+                <p>❌ ${errorMessage}</p>
+                <p><a href="https://github.com/BeyondQuality/beyondquality/discussions" target="_blank" rel="noopener noreferrer">
+                    View discussions on GitHub
+                </a></p>
+                ${isRateLimit ? '<p><small>Rate limit resets every hour. You can refresh the page later.</small></p>' : ''}
+            </div>
+        `;
+    }
+
+    // Function to show loading
+    function showLoading() {
+        discussionsContainer.innerHTML = '<div class="discussions-loading">🔄 Loading discussions...</div>';
+    }
+
+    // Fetch discussions from GitHub API
+    async function fetchDiscussions() {
+        showLoading();
+
+        try {
+            const response = await fetch(GITHUB_API_URL, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const discussions = await response.json();
+
+            if (Array.isArray(discussions) && discussions.length > 0) {
+                renderDiscussions(discussions);
+            } else {
+                throw new Error('No discussions data found');
+            }
+
+        } catch (error) {
+            console.error('Error fetching discussions:', error);
+            showError(error.message);
+        }
+    }
+
+    // Start fetching discussions
+    fetchDiscussions();
+});
+</script>
+
+<!-- Discussions Styles -->
+<style>
+#github-discussions {
+    margin: 2rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.discussion-item {
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background: #fff;
+    transition: box-shadow 0.2s ease;
+}
+
+.discussion-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.discussion-category {
+    background: #f6f8fa;
+    color: #586069;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.discussion-date {
+    color: #586069;
+    font-size: 12px;
+}
+
+.discussion-title {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.discussion-title a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.discussion-title a:hover {
+    text-decoration: underline;
+}
+
+.discussion-body {
+    color: #586069;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.discussion-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discussion-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.author-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.discussion-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: #586069;
+}
+
+.upvotes, .answers {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.discussions-loading, .discussions-error {
+    text-align: center;
+    padding: 2rem;
+    color: #586069;
+}
+
+.discussions-error {
+    background: #ffeef0;
+    border: 1px solid #f97583;
+    border-radius: 6px;
+}
+
+.discussions-error a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.discussions-error a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .discussion-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .discussion-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+</style>
