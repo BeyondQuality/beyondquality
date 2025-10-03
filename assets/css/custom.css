@@ -206,7 +206,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0.5rem;
+  /*padding: 0.5rem;*/
 }
 
 .podcast-thumbnail {
@@ -227,6 +227,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: .5rem;
 }
 
 .podcast-title {
