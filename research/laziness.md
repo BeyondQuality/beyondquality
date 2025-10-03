@@ -4,7 +4,7 @@
 - Collaborators: [Anupam Krishnamurthy](https://github.com/anupamck)
 - Start date: 20 August 2025
 - [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/3)
-- DOI: 10.5281/zenodo.17085990
+- DOI: 10.5281/zenodo.17085989
 
 ## Abstract
 
