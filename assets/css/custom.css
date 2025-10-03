@@ -172,20 +172,29 @@ a:hover {
   margin: 0;
 }
 
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0.75rem 0 0 0;
+}
+
 /* Sections */
 .section {
   margin-bottom: var(--section-spacing);
 }
 
 .section-large {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 /* About Section */
 .about-content {
   font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .about-content p {
