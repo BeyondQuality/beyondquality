@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
             thumbnailLink.href = video.link;
         }
 
+        // Update YouTube link in listening options
+        const youtubeLink = podcastContainer.querySelector('.youtube-link');
+        if (youtubeLink) {
+            youtubeLink.href = video.link;
+        }
+
         // Update title
         const titleElement = podcastContainer.querySelector('.podcast-title');
         if (titleElement) {
