@@ -1,0 +1,134 @@
+<!-- YouTube Latest Video Script -->
+<script>
+// Cache bust: v1.0
+document.addEventListener('DOMContentLoaded', function() {
+    const podcastContainer = document.querySelector('.podcast-card');
+    if (!podcastContainer) return;
+
+    // YouTube playlist RSS feed URL
+    const YOUTUBE_RSS_URL = 'https://www.youtube.com/feeds/videos.xml?playlist_id=PLFtS8Ah0wZvVgbgsk8B8OVMSPXOahX4oU';
+
+    // Function to extract video ID from YouTube URL
+    function extractVideoId(url) {
+        const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/);
+        return match ? match[1] : null;
+    }
+
+    // Function to format date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        });
+    }
+
+    // Function to truncate text
+    function truncateText(text, maxLength = 100) {
+        if (text.length <= maxLength) return text;
+        return text.substring(0, maxLength) + '...';
+    }
+
+    // Function to update podcast section
+    function updatePodcastSection(video) {
+        const videoId = extractVideoId(video.link);
+        if (!videoId) return;
+
+        // Update thumbnail
+        const thumbnailImg = podcastContainer.querySelector('.podcast-thumbnail');
+        const thumbnailLink = podcastContainer.querySelector('.podcast-thumbnail-link');
+        
+        if (thumbnailImg) {
+            thumbnailImg.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+            thumbnailImg.alt = video.title;
+        }
+        
+        if (thumbnailLink) {
+            thumbnailLink.href = video.link;
+        }
+
+        // Update title
+        const titleElement = podcastContainer.querySelector('.podcast-title');
+        if (titleElement) {
+            titleElement.textContent = video.title;
+        }
+
+        // Update description
+        const descriptionElement = podcastContainer.querySelector('.podcast-description');
+        if (descriptionElement) {
+            descriptionElement.textContent = `Latest episode: ${truncateText(video.description)} Published ${formatDate(video.published)}.`;
+        }
+    }
+
+    // Function to show error
+    function showError(message) {
+        const titleElement = podcastContainer.querySelector('.podcast-title');
+        const descriptionElement = podcastContainer.querySelector('.podcast-description');
+        
+        if (titleElement) {
+            titleElement.textContent = 'Latest Podcast Episode';
+        }
+        
+        if (descriptionElement) {
+            descriptionElement.innerHTML = `Unable to load latest episode. <a href="https://www.youtube.com/playlist?list=PLFtS8Ah0wZvVgbgsk8B8OVMSPXOahX4oU" target="_blank" rel="noopener noreferrer">View playlist on YouTube</a>`;
+        }
+    }
+
+    // Function to show loading
+    function showLoading() {
+        const titleElement = podcastContainer.querySelector('.podcast-title');
+        const descriptionElement = podcastContainer.querySelector('.podcast-description');
+        
+        if (titleElement) {
+            titleElement.textContent = 'Loading latest episode...';
+        }
+        
+        if (descriptionElement) {
+            descriptionElement.textContent = 'Fetching the most recent podcast episode...';
+        }
+    }
+
+    // Fetch latest video from YouTube RSS feed
+    async function fetchLatestVideo() {
+        showLoading();
+
+        try {
+            // Use a CORS proxy to fetch the RSS feed
+            const proxyUrl = 'https://api.allorigins.win/raw?url=';
+            const response = await fetch(proxyUrl + encodeURIComponent(YOUTUBE_RSS_URL));
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const xmlText = await response.text();
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+            // Get the first entry (latest video)
+            const entry = xmlDoc.querySelector('entry');
+            if (!entry) {
+                throw new Error('No video entries found in RSS feed');
+            }
+
+            // Extract video data
+            const video = {
+                title: entry.querySelector('title')?.textContent || 'Untitled',
+                link: entry.querySelector('link')?.getAttribute('href') || '',
+                description: entry.querySelector('media\\:description, description')?.textContent || '',
+                published: entry.querySelector('published')?.textContent || ''
+            };
+
+            updatePodcastSection(video);
+
+        } catch (error) {
+            console.error('Error fetching YouTube video:', error);
+            showError(error.message);
+        }
+    }
+
+    // Start fetching the latest video
+    fetchLatestVideo();
+});
+</script>
