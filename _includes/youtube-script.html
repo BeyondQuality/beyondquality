@@ -14,18 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
         return match ? match[1] : null;
     }
 
-    // Function to format date
-    function formatDate(dateString) {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-        });
-    }
 
     // Function to truncate text
-    function truncateText(text, maxLength = 100) {
+    function truncateText(text, maxLength = 200) {
         if (text.length <= maxLength) return text;
         return text.substring(0, maxLength) + '...';
     }
@@ -63,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update description
         const descriptionElement = podcastContainer.querySelector('.podcast-description');
         if (descriptionElement) {
-            descriptionElement.textContent = `Latest episode: ${truncateText(video.description)} Published ${formatDate(video.published)}.`;
+            descriptionElement.textContent = `Latest episode: ${truncateText(video.description)}`;
         }
     }
 
