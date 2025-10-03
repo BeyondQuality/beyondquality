@@ -1,0 +1,454 @@
+/* Custom CSS for Beyond Quality - Recreating the Lovable design */
+
+/* CSS Variables for Design System */
+:root {
+  /* Colors */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --border: 214.3 31.8% 91.4%;
+  --card-background: 0 0% 100%;
+  --hover-border: 214.3 31.8% 78.4%;
+  
+  /* Typography */
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  /* Spacing */
+  --container-max-width: 896px; /* max-w-4xl equivalent */
+  --section-spacing: 3rem;
+  --card-spacing: 1rem;
+  
+  /* Border radius */
+  --radius: 0.5rem;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.nav {
+  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.nav-brand {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-brand:hover {
+  color: hsl(var(--muted-foreground));
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: hsl(var(--foreground));
+  font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+  color: hsl(var(--foreground));
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Links */
+a {
+  color: hsl(var(--foreground));
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Cards */
+.card {
+  background-color: hsl(var(--card-background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  border-color: hsl(var(--hover-border));
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+/* Sections */
+.section {
+  margin-bottom: var(--section-spacing);
+}
+
+.section-large {
+  margin-bottom: 3rem;
+}
+
+/* About Section */
+.about-content {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+
+/* Podcast Section */
+.podcast-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.podcast-thumbnail {
+  width: 100%;
+  max-width: 10rem;
+  height: auto;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  transition: opacity 0.2s ease;
+}
+
+.podcast-thumbnail:hover {
+  opacity: 0.8;
+}
+
+.podcast-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.podcast-title {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.podcast-description {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.podcast-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: auto;
+}
+
+.podcast-links a {
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.podcast-links a:hover {
+  color: hsl(var(--foreground));
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.grid-2-cols {
+  grid-template-columns: 1fr;
+}
+
+/* Discussion/Research Cards */
+.discussion-card,
+.research-card {
+  padding: 1.5rem;
+}
+
+.discussion-title,
+.research-title {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.discussion-meta,
+.research-meta {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid hsl(var(--border));
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.footer-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1.5rem;
+}
+
+.footer-sponsors {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.sponsor {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .grid-2-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .podcast-card {
+    flex-direction: row;
+  }
+  
+  .nav-links {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 1.5rem;
+  }
+  
+  .nav-links {
+    margin-top: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .footer-sponsors {
+    gap: 2rem;
+  }
+  
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* GitHub Discussions Integration */
+#github-discussions {
+  margin-top: 1rem;
+}
+
+.discussion-item {
+  background-color: hsl(var(--card-background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.discussion-item:hover {
+  border-color: hsl(var(--hover-border));
+}
+
+.discussion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.discussion-category {
+  background-color: #f8fafc;
+  color: hsl(var(--muted-foreground));
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.discussion-date {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.75rem;
+}
+
+.discussion-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.discussion-title a {
+  color: hsl(var(--foreground));
+  text-decoration: none;
+}
+
+.discussion-title a:hover {
+  text-decoration: underline;
+}
+
+.discussion-body {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.discussion-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discussion-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author-avatar {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+}
+
+.discussion-stats {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.discussions-loading,
+.discussions-error {
+  text-align: center;
+  padding: 2rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.discussions-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius);
+}
+
+.discussions-error a {
+  color: hsl(var(--foreground));
+  text-decoration: none;
+}
+
+.discussions-error a:hover {
+  text-decoration: underline;
+}
