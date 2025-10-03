@@ -1,4 +1,5 @@
 /* Custom CSS for Beyond Quality - Recreating the Lovable design */
+/* Cache bust: v3.0 - Discussion font fix */
 
 /* CSS Variables for Design System */
 :root {
@@ -108,6 +109,12 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/* Section headings - consistent smaller size */
+.section h2,
+.grid h2 {
+  font-size: 1.25rem;
+}
+
 h3 {
   font-size: 1.125rem;
   font-weight: 400;
@@ -171,14 +178,14 @@ a:hover {
 }
 
 .section-large {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 /* About Section */
 .about-content {
   font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .about-content p {
@@ -335,18 +342,24 @@ a:hover {
   font-size: 0.75rem;
 }
 
-.discussion-title {
+#github-discussions .discussion-title {
   margin: 0 0 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-family: var(--font-serif) !important;
 }
 
-.discussion-title a {
+#github-discussions .discussion-title a {
   color: hsl(var(--foreground));
   text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: var(--font-serif) !important;
+  font-weight: 400 !important;
+  font-size: 1.125rem !important;
 }
 
 .discussion-title a:hover {
+  color: hsl(var(--muted-foreground));
   text-decoration: underline;
 }
 
@@ -367,6 +380,8 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
 }
 
 .author-avatar {
@@ -380,6 +395,12 @@ a:hover {
   gap: 0.75rem;
   font-size: 0.75rem;
   color: hsl(var(--muted-foreground));
+}
+
+.upvotes, .answers {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .discussions-loading,
@@ -398,10 +419,27 @@ a:hover {
 .discussions-error a {
   color: hsl(var(--foreground));
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .discussions-error a:hover {
+  color: hsl(var(--muted-foreground));
   text-decoration: underline;
+}
+
+/* Responsive design for discussions */
+@media (max-width: 768px) {
+  .discussion-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .discussion-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
 
 /* Responsive Design */
