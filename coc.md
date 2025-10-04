@@ -1,4 +1,4 @@
-# Code of conduct
+## Our Code of Conduct
 
 1. **We are respectful**. Treat everyone with kindness. We are here to collaborate and collaboration rarely works well when people are unkind. Personal attacks, harassment, or hate speech will not be tolerated.
 2. **We are inclusive**. Collaboration prospers when there's a diversity of thought. We welcome diverse perspectives. We avoid language or actions that exclude or belittle others.

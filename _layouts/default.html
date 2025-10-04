@@ -35,10 +35,10 @@
         <a href="/" class="nav-brand">Beyond Quality</a>
         
         <div class="nav-links">
-          <a href="/whoweare" class="nav-link {% if page.url == '/whoweare' %}active{% endif %}">Who we are</a>
-          <a href="/talk" class="nav-link {% if page.url == '/talk' %}active{% endif %}">Talk Prep</a>
-          <a href="/research" class="nav-link {% if page.url == '/research' %}active{% endif %}">Research</a>
-          <a href="/coc" class="nav-link {% if page.url == '/coc' %}active{% endif %}">Code of Conduct</a>
+          <a href="/whoweare" class="nav-link {% if page.url contains '/whoweare' %}active{% endif %}">Who we are</a>
+          <a href="/talk" class="nav-link {% if page.url contains '/talk' %}active{% endif %}">Talk Prep</a>
+          <a href="/research" class="nav-link {% if page.url contains '/research' %}active{% endif %}">Research</a>
+          <a href="/coc" class="nav-link {% if page.url contains '/coc' %}active{% endif %}">Code of Conduct</a>
         </div>
       </div>
     </nav>

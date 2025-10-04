@@ -1,4 +1,4 @@
-# Article writing and research
+## Why Collaborate on Article Writing and Research?
 
 Writing strong articles, whitepapers, or deep-dive blog posts takes a lot of effort:
 - Formulating the idea

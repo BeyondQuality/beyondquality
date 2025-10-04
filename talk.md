@@ -1,5 +1,3 @@
-# Talk preparation
-
 ## Why Collaborate on Talks and Workshops?
 
 Preparing a talk or a workshop is rewarding but also time-consuming. Most speakers:
