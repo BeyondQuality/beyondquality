@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <!-- End Jekyll SEO tag -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="nav-brand">Beyond Quality</a>
+        
+        <div class="nav-links">
+          <a href="{{ '/talk' | relative_url }}" class="nav-link {% if page.url == '/talk' %}active{% endif %}">Talk Prep</a>
+          <a href="{{ '/research' | relative_url }}" class="nav-link {% if page.url == '/research' %}active{% endif %}">Research</a>
+          <a href="{{ '/coc' | relative_url }}" class="nav-link {% if page.url == '/coc' %}active{% endif %}">Code of Conduct</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <h2 class="footer-title">Supported by</h2>
+        <div class="footer-sponsors">
+          <div class="sponsor">Qase</div>
+          <div class="sponsor">Regent AB</div>
+          <div class="sponsor">Partner TBD</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
