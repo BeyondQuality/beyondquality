@@ -86,7 +86,6 @@ body {
 .nav-link:hover,
 .nav-link.active {
   color: hsl(var(--foreground));
-  font-weight: 500;
 }
 
 /* Main Content */
