@@ -151,7 +151,7 @@ a:hover {
 }
 
 .card-content {
-  padding: 1.2rem 0 1rem 1.2rem;
+  padding: 1rem 0 1rem 1.2rem;
 }
 
 .card-header {
@@ -214,6 +214,7 @@ a:hover {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 0.5rem;
   margin: -0.5rem;
+  margin-top: 0;
 }
 
 .podcast-thumbnail-link:hover img {
@@ -257,9 +258,6 @@ a:hover {
 
 .podcast-content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-left: .5rem;
 }
 
@@ -282,7 +280,7 @@ a:hover {
   gap: 0.75rem;
   font-size: 0.875rem;
   color: hsl(var(--muted-foreground));
-  margin-top: auto;
+  margin-top: 0.5rem;
 }
 
 .podcast-links a {
