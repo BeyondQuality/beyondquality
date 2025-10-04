@@ -259,6 +259,7 @@ a:hover {
 .podcast-content {
   flex: 1;
   margin-left: .5rem;
+  margin-top: .3rem;
 }
 
 .podcast-title {
