@@ -371,6 +371,7 @@ a:hover {
 }
 
 .discussion-category {
+  display: none;
   background-color: #f8fafc;
   color: hsl(var(--muted-foreground));
   padding: 0.25rem 0.5rem;
@@ -499,6 +500,8 @@ a:hover {
   }
 }
 
+.podcast-links span { display: none; }
+
 @media (max-width: 767px) {
   .nav-container {
     flex-direction: column;
@@ -515,6 +518,8 @@ a:hover {
   .nav-link[data-mobile] {
     font-size: 0;
   }
+
+  .card-content { padding-right: 1rem; }
   
   .nav-link[data-mobile]::after {
     content: attr(data-mobile);
@@ -536,5 +541,57 @@ a:hover {
   
   .main-content {
     padding: 2rem 1.5rem;
+  }
+  
+  /* Mobile podcast card optimizations */
+  .podcast-card {
+    gap: 1rem;
+  }
+  
+  .podcast-thumbnail {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .podcast-content {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .podcast-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .podcast-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    /* Allow text to wrap naturally instead of truncating */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Keep podcast links in one line on mobile with better spacing */
+  .podcast-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .podcast-links span {
+    margin-right: 0.5rem;
+  }
+  
+  .podcast-links a {
+    display: inline;
+    padding: 0;
+    border-bottom: none;
+    width: auto;
+    text-align: left;
+    white-space: nowrap;
   }
 }
