@@ -511,6 +511,25 @@ a:hover {
     gap: 1.5rem;
   }
   
+  /* Mobile navigation text replacement */
+  .nav-link[data-mobile] {
+    font-size: 0;
+  }
+  
+  .nav-link[data-mobile]::after {
+    content: attr(data-mobile);
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: hsl(var(--muted-foreground));
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link[data-mobile]:hover::after,
+  .nav-link[data-mobile].active::after {
+    color: hsl(var(--foreground));
+    font-weight: 500;
+  }
+  
   .footer-sponsors {
     gap: 2rem;
   }
