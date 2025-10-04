@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Function to truncate text
-    function truncateText(text, maxLength = 200) {
+    function truncateText(text, maxLength = 300) {
         if (text.length <= maxLength) return text;
         return text.substring(0, maxLength) + '...';
     }
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update description
         const descriptionElement = podcastContainer.querySelector('.podcast-description');
         if (descriptionElement) {
-            descriptionElement.textContent = `Latest episode: ${truncateText(video.description)}`;
+            descriptionElement.textContent = `${truncateText(video.description)}`;
         }
     }
 

@@ -151,7 +151,7 @@ a:hover {
 }
 
 .card-content {
-  padding: 1.5rem;
+  padding: 1.2rem 0 1rem 1.2rem;
 }
 
 .card-header {
@@ -272,7 +272,7 @@ a:hover {
 .podcast-description {
   font-size: 0.875rem;
   color: hsl(var(--muted-foreground));
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
   line-height: 1.5;
 }
 
