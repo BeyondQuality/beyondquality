@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const videoId = extractVideoId(video.link);
         if (!videoId) return;
 
+        const videoLink = `https://www.youtube.com/watch?v=${videoId}&list=${playListID}`;
+        
         // Update thumbnail
         const thumbnailImg = podcastContainer.querySelector('.podcast-thumbnail');
         const thumbnailLink = podcastContainer.querySelector('.podcast-thumbnail-link');
@@ -38,13 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (thumbnailLink) {
-            thumbnailLink.href = video.link;
+            thumbnailLink.href = videoLink;
         }
 
         // Update YouTube link in listening options
         const youtubeLink = podcastContainer.querySelector('.youtube-link');
         if (youtubeLink) {
-            youtubeLink.href = video.link;
+            youtubeLink.href = videoLink;
         }
 
         // Update title
