@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const podcastContainer = document.querySelector('.podcast-card');
     if (!podcastContainer) return;
 
+    const playListID = 'PLNtskxLbZna6VDjH6hBhYm0mSZKPhX7Fi';
+
     // YouTube playlist RSS feed URL
-    const YOUTUBE_RSS_URL = 'https://www.youtube.com/feeds/videos.xml?playlist_id=PLFtS8Ah0wZvVgbgsk8B8OVMSPXOahX4oU';
+    const YOUTUBE_RSS_URL = 'https://www.youtube.com/feeds/videos.xml?playlist_id=' + playListID;
 
     // Function to extract video ID from YouTube URL
     function extractVideoId(url) {
@@ -68,7 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (descriptionElement) {
-            descriptionElement.innerHTML = `Unable to load latest episode. <a href="https://www.youtube.com/playlist?list=PLFtS8Ah0wZvVgbgsk8B8OVMSPXOahX4oU" target="_blank" rel="noopener noreferrer">View playlist on YouTube</a>`;
+            let playlistURL = 'https://www.youtube.com/playlist?list=' + playListID;
+            descriptionElement.innerHTML = `Unable to load latest episode. <a href="${playlistURL}" target="_blank" rel="noopener noreferrer">View playlist on YouTube</a>`;
         }
     }
 
