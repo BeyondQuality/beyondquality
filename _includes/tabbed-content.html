@@ -1,0 +1,152 @@
+<!-- Tabbed Content Interface -->
+<div class="tabbed-interface">
+  <!-- Tab Navigation -->
+  <div class="tab-nav">
+    <button class="tab-button active" data-tab="podcast">Podcast</button>
+    <button class="tab-button" data-tab="qa-confessions">QA Confessions</button>
+    <button class="tab-button" data-tab="discussions">Discussions</button>
+    <button class="tab-button" data-tab="artifacts">Artifacts</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content">
+    <!-- Podcast Tab -->
+    <div class="tab-panel active" id="podcast-tab">
+      <section class="section section-large">
+        <h2>Latest Podcast Episode</h2>
+        <div class="card">
+          <div class="card-content">
+            <div class="podcast-card">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" class="podcast-thumbnail-link">
+                <img src="bq.jpeg" width="254" height="142" alt="Latest podcast episode thumbnail" class="podcast-thumbnail">
+              </a>
+              <div class="podcast-content">
+                <h3 class="podcast-title">Episode Title Here</h3>
+                <p class="podcast-description">
+                  Latest episode discussing quality engineering topics.
+                </p>
+                <div class="podcast-links">
+                  <span>Listen on:</span>
+                  <a href="https://open.spotify.com/show/2JaVYJgv2aqFuV0HOQ8DXv" target="_blank" rel="noopener noreferrer">Spotify</a>
+                  <a href="https://podcasts.apple.com/podcast/id1838471583" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+                  <a href="#" class="youtube-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% include youtube-script.html %}
+    </div>
+
+    <!-- QA Confessions Tab -->
+    <div class="tab-panel" id="qa-confessions-tab">
+      <section class="section section-large">
+        <h2>QA Confessions</h2>
+        <div class="card">
+          <div class="card-content">
+            <div class="qa-confessions-intro">
+              <p>Short 3-4 minute interviews with QA professionals sharing their experiences and insights from events around the world.</p>
+              <div class="youtube-playlist">
+                <a href="https://www.youtube.com/playlist?list=PLNtskxLbZna7Bf4n39-Jn57iK68Lme_0" target="_blank" rel="noopener noreferrer" class="playlist-link">
+                  <div class="playlist-card">
+                    <div class="playlist-icon">📺</div>
+                    <div class="playlist-content">
+                      <h3>Watch QA Confessions Playlist</h3>
+                      <p>View all interviews on YouTube</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Discussions Tab -->
+    <div class="tab-panel" id="discussions-tab">
+      <section>
+        <h2>Ongoing Discussions</h2>
+        <div id="github-discussions">
+          <!-- Discussions will be loaded here by JavaScript -->
+        </div>
+        {% include discussions-script.html %}
+      </section>
+    </div>
+
+    <!-- Artifacts Tab -->
+    <div class="tab-panel" id="artifacts-tab">
+      <section>
+        <h2>Research Artifacts</h2>
+        <div class="research-list">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="research-title"><a href="/research/testing_economics/testing_economics">Economics of testing</a></h3>
+              <p class="card-description">Treating testing as a risk-mitigation investment, exploring how to build optimal testing portfolios that maximize risk reduction for available resources using ISO 25010 quality characteristics.</p>
+              <div class="card-author">
+                <img src="https://github.com/sharovatov.png" alt="sharovatov" class="author-avatar">
+                <span>sharovatov</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">
+              <h3 class="research-title"><a href="/research/rag-evaluation">RAG evaluation using Ragas - A proof-of-concept</a></h3>
+              <p class="card-description">Building and evaluating a Retrieval-Augmented Generation model using the Ragas framework to assess answer relevance, faithfulness, and context relevance with LLM-as-judge methodology.</p>
+              <div class="card-author">
+                <img src="https://github.com/anupamck.png" alt="anupamck" class="author-avatar">
+                <span>anupamck</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">
+              <h3 class="research-title"><a href="/research/laziness">Belief in laziness as a self-fulfilling prophecy</a></h3>
+              <p class="card-description">A literature review challenging the myth of employee laziness, showing how managerial beliefs in laziness lead to controlling practices that actually decrease performance and create a vicious cycle.</p>
+              <div class="card-author">
+                <img src="https://github.com/sharovatov.png" alt="sharovatov" class="author-avatar">
+                <span>sharovatov</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">
+              <h3 class="research-title"><a href="/research/public_speaking">Public speaking: why and how?</a></h3>
+              <p class="card-description">A community-driven guide exploring motivations for public speaking (challenge, travel, networking) and practical advice for technical professionals to start and improve their speaking journey.</p>
+              <div class="card-author">
+                <img src="https://avatars.githubusercontent.com/u/105771099?v=4" alt="maryiat" class="author-avatar">
+                <span>maryiat</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- Tab JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const targetTab = this.getAttribute('data-tab');
+      
+      // Remove active class from all buttons and panels
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabPanels.forEach(panel => panel.classList.remove('active'));
+      
+      // Add active class to clicked button and corresponding panel
+      this.classList.add('active');
+      document.getElementById(targetTab + '-tab').classList.add('active');
+    });
+  });
+});
+</script>

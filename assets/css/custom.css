@@ -485,6 +485,125 @@ a:hover {
   }
 }
 
+/* Tabbed Interface */
+.tabbed-interface {
+  margin-bottom: 4rem;
+}
+
+.tab-nav {
+  display: flex;
+  border-bottom: 1px solid hsl(var(--border));
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+
+.tab-button:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+}
+
+.tab-button.active {
+  color: hsl(var(--foreground));
+  border-bottom-color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+}
+
+.tab-content {
+  position: relative;
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* QA Confessions specific styles */
+.qa-confessions-intro {
+  margin-bottom: 1.5rem;
+}
+
+.qa-confessions-intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.youtube-playlist {
+  margin-top: 1rem;
+}
+
+.playlist-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.playlist-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: hsl(var(--card-background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.playlist-card:hover {
+  border-color: hsl(var(--hover-border));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.playlist-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.playlist-content h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+  color: hsl(var(--foreground));
+}
+
+.playlist-content p {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
 /* Responsive Design */
 @media (min-width: 768px) {
   .grid-2-cols {
@@ -497,6 +616,10 @@ a:hover {
   
   .podcast-thumbnail {
     max-width: 16rem;
+  }
+  
+  .tab-nav {
+    overflow-x: visible;
   }
 }
 
@@ -541,6 +664,22 @@ a:hover {
   
   .main-content {
     padding: 2rem 1.5rem;
+  }
+  
+  /* Mobile tabbed interface optimizations */
+  .tab-nav {
+    padding: 0 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    min-width: auto;
+  }
+  
+  .tabbed-interface {
+    margin-bottom: 3rem;
   }
   
   /* Mobile podcast card optimizations */
@@ -593,5 +732,20 @@ a:hover {
     width: auto;
     text-align: left;
     white-space: nowrap;
+  }
+  
+  /* Mobile QA Confessions optimizations */
+  .playlist-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .playlist-icon {
+    font-size: 1.5rem;
+  }
+  
+  .playlist-content h3 {
+    font-size: 1rem;
   }
 }

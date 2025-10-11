@@ -14,6 +14,4 @@ layout: default
   </p>
 </div>
 
-{% include podcast-section.html %}
-
-{% include discussions-research-grid.html %}
+{% include tabbed-content.html %}
