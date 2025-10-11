@@ -13,28 +13,26 @@
     <!-- Podcast Tab -->
     <div class="tab-panel active" id="podcast-tab">
       <section class="section section-large">
-        <h2>Latest Podcast Episode</h2>
-        <div class="card">
-          <div class="card-content">
-            <div class="podcast-card">
-              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" class="podcast-thumbnail-link">
-                <img src="bq.jpeg" width="254" height="142" alt="Latest podcast episode thumbnail" class="podcast-thumbnail">
-              </a>
-              <div class="podcast-content">
-                <h3 class="podcast-title">Episode Title Here</h3>
-                <p class="podcast-description">
-                  Latest episode discussing quality engineering topics.
-                </p>
-                <div class="podcast-links">
-                  <span>Listen on:</span>
-                  <a href="https://open.spotify.com/show/2JaVYJgv2aqFuV0HOQ8DXv" target="_blank" rel="noopener noreferrer">Spotify</a>
-                  <a href="https://podcasts.apple.com/podcast/id1838471583" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
-                  <a href="#" class="youtube-link" target="_blank" rel="noopener noreferrer">YouTube</a>
-                </div>
-              </div>
-            </div>
+        <p>Every three weeks, we record a podcast to share insights and findings with the broader community.</p>
+        <div class="podcast-links">
+          <span>Listen on:</span>
+          <a href="https://open.spotify.com/show/2JaVYJgv2aqFuV0HOQ8DXv" target="_blank" rel="noopener noreferrer">Spotify</a>
+          <a href="https://podcasts.apple.com/podcast/id1838471583" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+          <a href="https://www.youtube.com/playlist?list=PLNtskxLbZna6VDjH6hBhYm0mSZKPhX7Fi" class="youtube-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        
+        <div class="podcast-player">
+          <div class="youtube-embed-container">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLNtskxLbZna6VDjH6hBhYm0mSZKPhX7Fi&rel=0" 
+                    width="560" 
+                    height="315" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
           </div>
         </div>
+        <div><span id="episode-description"></span></div>
       </section>
       {% include youtube-script.html %}
     </div>

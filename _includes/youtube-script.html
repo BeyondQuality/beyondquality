@@ -1,93 +1,48 @@
-<!-- YouTube Latest Video Script -->
+<!-- YouTube Episode Description Script -->
 <script>
-// Cache bust: v1.0
+// Cache bust: v2.0 - Simplified for episode description only
 document.addEventListener('DOMContentLoaded', function() {
-    const podcastContainer = document.querySelector('.podcast-card');
-    if (!podcastContainer) return;
+    const episodeDescriptionElement = document.getElementById('episode-description');
+    if (!episodeDescriptionElement) return;
 
     const playListID = 'PLNtskxLbZna6VDjH6hBhYm0mSZKPhX7Fi';
 
     // YouTube playlist RSS feed URL
     const YOUTUBE_RSS_URL = 'https://www.youtube.com/feeds/videos.xml?playlist_id=' + playListID;
 
-    // Function to extract video ID from YouTube URL
-    function extractVideoId(url) {
-        const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/);
-        return match ? match[1] : null;
-    }
-
-
-    // Function to truncate text
-    function truncateText(text, maxLength = 300) {
+    // Function to truncate text at "Links" word
+    function truncateText(text) {
+        // Look for "Links" (case insensitive) and truncate just before it
+        const linksIndex = text.toLowerCase().indexOf('links');
+        if (linksIndex > 0) {
+            return text.substring(0, linksIndex).trim();
+        }
+        
+        // Fallback: if no "Links" found, use a reasonable character limit
+        const maxLength = 200;
         if (text.length <= maxLength) return text;
         return text.substring(0, maxLength) + '...';
     }
 
-    // Function to update podcast section
-    function updatePodcastSection(video) {
-        const videoId = extractVideoId(video.link);
-        if (!videoId) return;
-
-        const videoLink = `https://www.youtube.com/watch?v=${videoId}&list=${playListID}`;
-        
-        // Update thumbnail
-        const thumbnailImg = podcastContainer.querySelector('.podcast-thumbnail');
-        const thumbnailLink = podcastContainer.querySelector('.podcast-thumbnail-link');
-        
-        if (thumbnailImg) {
-            thumbnailImg.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
-            thumbnailImg.alt = video.title;
-        }
-        
-        if (thumbnailLink) {
-            thumbnailLink.href = videoLink;
-        }
-
-        // Update YouTube link in listening options
-        const youtubeLink = podcastContainer.querySelector('.youtube-link');
-        if (youtubeLink) {
-            youtubeLink.href = videoLink;
-        }
-
-        // Update title
-        const titleElement = podcastContainer.querySelector('.podcast-title');
-        if (titleElement) {
-            titleElement.textContent = video.title;
-        }
-
-        // Update description
-        const descriptionElement = podcastContainer.querySelector('.podcast-description');
-        if (descriptionElement) {
-            descriptionElement.textContent = `${truncateText(video.description)}`;
+    // Function to update episode description
+    function updateEpisodeDescription(video) {
+        if (episodeDescriptionElement) {
+            episodeDescriptionElement.textContent = truncateText(video.description);
         }
     }
 
     // Function to show error
     function showError(message) {
-        const titleElement = podcastContainer.querySelector('.podcast-title');
-        const descriptionElement = podcastContainer.querySelector('.podcast-description');
-        
-        if (titleElement) {
-            titleElement.textContent = 'Latest Podcast Episode';
-        }
-        
-        if (descriptionElement) {
+        if (episodeDescriptionElement) {
             let playlistURL = 'https://www.youtube.com/playlist?list=' + playListID;
-            descriptionElement.innerHTML = `Unable to load latest episode. <a href="${playlistURL}" target="_blank" rel="noopener noreferrer">View playlist on YouTube</a>`;
+            episodeDescriptionElement.innerHTML = `Unable to load latest episode description. <a href="${playlistURL}" target="_blank" rel="noopener noreferrer">View playlist on YouTube</a>`;
         }
     }
 
     // Function to show loading
     function showLoading() {
-        const titleElement = podcastContainer.querySelector('.podcast-title');
-        const descriptionElement = podcastContainer.querySelector('.podcast-description');
-        
-        if (titleElement) {
-            titleElement.textContent = 'Loading latest episode...';
-        }
-        
-        if (descriptionElement) {
-            descriptionElement.textContent = 'Fetching the most recent podcast episode...';
+        if (episodeDescriptionElement) {
+            episodeDescriptionElement.textContent = 'Loading latest episode description...';
         }
     }
 
@@ -122,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 published: entry.querySelector('published')?.textContent || ''
             };
 
-            updatePodcastSection(video);
+            updateEpisodeDescription(video);
 
         } catch (error) {
             console.error('Error fetching YouTube video:', error);
