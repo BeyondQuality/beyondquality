@@ -3,9 +3,9 @@
   <!-- Tab Navigation -->
   <div class="tab-nav">
     <button class="tab-button active" data-tab="podcast">Podcast</button>
-    <button class="tab-button" data-tab="qa-confessions">QA Confessions</button>
     <button class="tab-button" data-tab="discussions">Discussions</button>
     <button class="tab-button" data-tab="artifacts">Artifacts</button>
+    <button class="tab-button" data-tab="qa-confessions">QA Confessions</button>
   </div>
 
   <!-- Tab Content -->
@@ -40,23 +40,17 @@
     <!-- QA Confessions Tab -->
     <div class="tab-panel" id="qa-confessions-tab">
       <section class="section section-large">
-        <h2>QA Confessions</h2>
-        <div class="card">
-          <div class="card-content">
-            <div class="qa-confessions-intro">
-              <p>Short 3-4 minute interviews with QA professionals sharing their experiences and insights from events around the world.</p>
-              <div class="youtube-playlist">
-                <a href="https://www.youtube.com/playlist?list=PLNtskxLbZna7Bf4n39-Jn57iK68Lme_0" target="_blank" rel="noopener noreferrer" class="playlist-link">
-                  <div class="playlist-card">
-                    <div class="playlist-icon">📺</div>
-                    <div class="playlist-content">
-                      <h3>Watch QA Confessions Playlist</h3>
-                      <p>View all interviews on YouTube</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
+        <p>These are short 3-4 minute interviews with QA professionals sharing their experiences and insights from events around the world.</p>
+                
+        <div class="podcast-player">
+          <div class="youtube-embed-container">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLNtskxLbZna7Bf4n39-Jn57iK68Lme_0R&rel=0" 
+                    width="560" 
+                    height="315" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
           </div>
         </div>
       </section>
@@ -65,7 +59,7 @@
     <!-- Discussions Tab -->
     <div class="tab-panel" id="discussions-tab">
       <section>
-        <h2>Ongoing Discussions</h2>
+        <p>Collaborative work on research turns the lonely, high-effort part of research into a shared, energizing process. Discussions are a great way to get feedback on your ideas before they harden into artifacts.</p>
         <div id="github-discussions">
           <!-- Discussions will be loaded here by JavaScript -->
         </div>
@@ -76,7 +70,7 @@
     <!-- Artifacts Tab -->
     <div class="tab-panel" id="artifacts-tab">
       <section>
-        <h2>Research Artifacts</h2>
+        <p>These are the research artifacts that have been produced by the community.</p>
         <div class="research-list">
           <div class="card">
             <div class="card-header">
