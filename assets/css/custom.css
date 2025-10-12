@@ -92,7 +92,7 @@ body {
 .main-content {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem 0 1.5rem;
 }
 
 /* Typography */
@@ -275,7 +275,7 @@ a:hover {
 .footer {
   border-top: 1px solid hsl(var(--border));
   padding: 2rem 0;
-  margin-top: 4rem;
+  margin-top: 0;
 }
 
 .footer-container {
@@ -447,7 +447,7 @@ a:hover {
 
 /* Tabbed Interface */
 .tabbed-interface {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .tab-nav {
@@ -559,7 +559,7 @@ a:hover {
   }
   
   .main-content {
-    padding: 2rem 1.5rem;
+   
   }
   
   /* Mobile tabbed interface optimizations */
