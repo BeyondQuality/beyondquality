@@ -5,8 +5,7 @@
 - Date: 8 October, 2025
 - [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/22)
 
-
-These are my ideas on how QA principles can be applied to hiring.
+## How QA principles can be applied to hiring.
 
 This document contains two sections: the full one with all the content, and the short one where I will be preparing my talk based on this content.
 
