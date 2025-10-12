@@ -561,6 +561,10 @@ a:hover {
 
 .tab-content {
   position: relative;
+  background-color: hsl(0 0% 98%);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-top: 0;
 }
 
 .tab-panel {
@@ -600,6 +604,7 @@ a:hover {
   
   .tab-nav {
     overflow-x: visible;
+    margin-bottom: 0;
   }
 }
 
