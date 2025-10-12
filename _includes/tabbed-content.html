@@ -11,67 +11,60 @@
   <!-- Tab Content -->
   <div class="tab-content">
     <!-- Podcast Tab -->
-    <div class="tab-panel active" id="podcast-tab">
-      <section class="section section-large">
-        <p>Every three weeks, we record a podcast to share insights and findings with the broader community.</p>
-        <div class="podcast-links">
-          <span>Listen on:</span>
-          <a href="https://open.spotify.com/show/2JaVYJgv2aqFuV0HOQ8DXv" target="_blank" rel="noopener noreferrer">Spotify</a>
-          <a href="https://podcasts.apple.com/podcast/id1838471583" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
-          <a href="https://www.youtube.com/playlist?list=PLNtskxLbZna6VDjH6hBhYm0mSZKPhX7Fi" class="youtube-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <div class="tab-panel active section-large" id="podcast-tab">
+      <p>Every three weeks, we record a podcast to share insights and findings with the broader community.</p>
+      <div class="podcast-links">
+        <span>Listen on:</span>
+        <a href="https://open.spotify.com/show/2JaVYJgv2aqFuV0HOQ8DXv" target="_blank" rel="noopener noreferrer">Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1838471583" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+        <a href="https://www.youtube.com/playlist?list=PLNtskxLbZna6VDjH6hBhYm0mSZKPhX7Fi" class="youtube-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </div>
+      
+      <div class="podcast-player">
+        <div class="youtube-embed-container">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLNtskxLbZna6VDjH6hBhYm0mSZKPhX7Fi&rel=0" 
+                  width="560" 
+                  height="315" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
         </div>
-        
-        <div class="podcast-player">
-          <div class="youtube-embed-container">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLNtskxLbZna6VDjH6hBhYm0mSZKPhX7Fi&rel=0" 
-                    width="560" 
-                    height="315" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-        <div><span id="episode-description"></span></div>
-      </section>
+      </div>
+      <div id="episode-description"></div>
       {% include youtube-script.html %}
     </div>
 
     <!-- QA Confessions Tab -->
-    <div class="tab-panel" id="qa-confessions-tab">
-      <section class="section section-large">
-        <p>These are short 3-4 minute interviews with QA professionals sharing their experiences and insights from events around the world.</p>
-                
-        <div class="podcast-player">
-          <div class="youtube-embed-container">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLNtskxLbZna7Bf4n39-Jn57iK68Lme_0R&rel=0" 
-                    width="560" 
-                    height="315" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-          </div>
+    <div class="tab-panel section-large" id="qa-confessions-tab">
+      <p>These are short 3-4 minute interviews with QA professionals sharing their experiences and insights from events around the world.</p>
+              
+      <div class="podcast-player">
+        <div class="youtube-embed-container">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLNtskxLbZna7Bf4n39-Jn57iK68Lme_0R&rel=0" 
+                  width="560" 
+                  height="315" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
         </div>
-      </section>
+      </div>
     </div>
 
     <!-- Discussions Tab -->
     <div class="tab-panel" id="discussions-tab">
-      <section>
-        <p>Collaborative work on research turns the lonely, high-effort part of research into a shared, energizing process. Discussions are a great way to get feedback on your ideas before they harden into artifacts.</p>
-        <div id="github-discussions">
-          <!-- Discussions will be loaded here by JavaScript -->
-        </div>
-        {% include discussions-script.html %}
-      </section>
+      <p>Collaborative work on research turns the lonely, high-effort part of research into a shared, energizing process. Discussions are a great way to get feedback on your ideas before they harden into artifacts.</p>
+      <div id="github-discussions">
+        <!-- Discussions will be loaded here by JavaScript -->
+      </div>
+      {% include discussions-script.html %}
     </div>
 
     <!-- Artifacts Tab -->
     <div class="tab-panel" id="artifacts-tab">
-      <section>
-        <p>These are the research artifacts that have been produced by the community.</p>
-        <div class="research-list">
+      <p>These are the research artifacts that have been produced by the community.</p>
+      <div class="research-list">
           <div class="card">
             <div class="card-header">
               <h3 class="research-title"><a href="/research/testing_economics/testing_economics">Economics of testing</a></h3>
@@ -116,7 +109,6 @@
             </div>
           </div>
         </div>
-      </section>
     </div>
   </div>
 </div>

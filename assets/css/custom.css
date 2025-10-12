@@ -189,6 +189,11 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
+/* Apply section styles to tab panels */
+.tab-panel.section-large {
+  margin-bottom: 0;
+}
+
 /* About Section */
 .about-content {
   font-size: 1rem;
@@ -239,7 +244,11 @@ a:hover {
 /* Embedded YouTube Player */
 .podcast-player {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+}
+
+#episode-description {
+  margin-top: 1rem;
 }
 
 .youtube-embed-container {
@@ -487,7 +496,7 @@ a:hover {
   position: relative;
   background-color: hsl(0 0% 98%);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 1rem 2rem 1rem 1rem;
   margin-top: 0;
 }
 
@@ -558,9 +567,6 @@ a:hover {
     gap: 2rem;
   }
   
-  .main-content {
-   
-  }
   
   /* Mobile tabbed interface optimizations */
   .tab-nav {
