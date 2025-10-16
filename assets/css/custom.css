@@ -86,13 +86,15 @@ body {
 .nav-link:hover,
 .nav-link.active {
   color: hsl(var(--foreground));
+  color: #ed6736;
 }
 
 /* Main Content */
 .main-content {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 1.5rem 1rem 1.5rem;
+  
 }
 
 /* Typography */
@@ -284,7 +286,7 @@ a:hover {
 /* Footer */
 .footer {
   border-top: 1px solid hsl(var(--border));
-  padding: 2rem 0;
+  padding: 0 0 2rem 0;
   margin-top: 0;
 }
 
@@ -298,7 +300,7 @@ a:hover {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   font-weight: 400;
-  color: hsl(var(--muted-foreground));
+  color: #ed6736;
   margin-bottom: 1.5rem;
 }
 
@@ -489,7 +491,8 @@ a:hover {
 
 .tab-button.active {
   color: hsl(var(--foreground));
-  border-bottom-color: hsl(var(--foreground));
+  /*border-bottom-color: hsl(var(--foreground));*/
+  border-bottom-color: #ed6736;
   background-color: hsl(var(--background));
 }
 
