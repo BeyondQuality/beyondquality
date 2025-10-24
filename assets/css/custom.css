@@ -325,6 +325,10 @@ a:hover {
   transition: opacity 0.3s ease;
 }
 
+.regent .sponsor-logo {
+  height: 2.6rem;
+}
+
 .sponsor-logo:hover {
   opacity: 1;
 }
