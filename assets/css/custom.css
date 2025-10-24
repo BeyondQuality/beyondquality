@@ -317,6 +317,18 @@ a:hover {
   color: hsl(var(--foreground));
 }
 
+.sponsor-logo {
+  height: 2rem;
+  width: auto;
+  max-width: 120px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  opacity: 1;
+}
+
 /* GitHub Discussions Integration */
 #github-discussions {
   margin-top: 1rem;
