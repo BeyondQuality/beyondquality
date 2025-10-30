@@ -5,6 +5,16 @@
 - Date: 19 September, 2025
 - [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/11)
 
+## Introduction
+
+I still remember the first time I stood up to speak at a local tech meetup. My heart was pounding, and I wondered what I’d gotten myself into. As an engineer in the tech industry (and a tester at my inner core), I had always been more comfortable behind a screen than on a stage. Public speaking felt intimidating. Over time, however, I discovered that sharing my ideas in front of an audience was one of the most rewarding decisions of my career. In this short book, I want to share my journey and hard-earned lessons about speaking at meetups and conferences. My goal is to help beginner speakers: engineers, testers, managers, anyone in tech – gain the confidence and know-how to step up to the microphone. 
+
+Public speaking is a skill, not an innate talent. In fact, fear of public speaking is extremely common.  Up to 75% of people [1] experience “glossophobia”, the anxiety around giving speeches. I was definitely one of them. If you feel nervous about speaking, you’re in good company. As the famous Mark Twain quipped, “There are only two types of speakers: the nervous and the liars”. In other words, even seasoned presenters get the jitters. They’ve just learned to cope with it. The good news is that anyone can learn to speak effectively with practice and preparation. I certainly didn’t start out as a confident speaker, but through experience I improve little by little. Each talk becomes easier than the last. 
+
+This guide is organized into three parts. In Part 1, we’ll explore the "Why’s". Why people choose to present and why I decided to start speaking. Knowing your motivation can inspire you to take this challenge. Part 2 is about the "How’s" of preparation. How to craft a great tech presentation, from choosing a topic to rehearsing. Part 3 covers how to deliver your presentation smoothly on the day. Dealing with stage fright, engaging the audience, and handling Q&A. Throughout, I’ll share personal anecdotes, practical tips, a few checklists and the best advice from my colleagues (from complete beginners to speaking gurus). 
+
+Whether you’re a QA tester who’s never spoken beyond team meetings, a junior developer thinking of giving a lightning talk, or a manager asked to present at an industry conference, this guide is for you. By the end, I hope you’ll feel that public speaking in tech is not only doable, but possibly even enjoyable. It’s okay to be nervous. Feeling that way just means you care about doing a good job. With that, let’s start by examining the big question: why even do public speaking in the first place?
+
 ## The "whys"
 
 From the discussion: these are the reasons why people started presenting.
@@ -354,6 +364,7 @@ Rahul Verma: I start from the idea that this talk is going to fail... treat the 
 
 ## Resources
 Discussion on GitHub where you can find original answers, ask your questions and connect with the author and collaborators: https://github.com/BeyondQuality/beyondquality/discussions/11 
+[1] https://www.crossrivertherapy.com/public-speaking-statistics
 
 ### Articles
 https://www.softwaretester.blog/how-to-speak-at-conferences-the-procrastinators-approach
