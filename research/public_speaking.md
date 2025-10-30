@@ -156,7 +156,7 @@ Take a moment to think about which of these resonate with you, or add your own. 
 Now that we’ve covered the motivations behind public speaking, let’s get into the practical side: how do you actually prepare a good tech presentation? What steps can you take to craft a talk that will inform and inspire your audience? We’ll explore that next.
 
 
-## The "hows"
+## How to prepare a presentation
 
 Preparing for a talk can feel overwhelming, especially if you’re new to it. I remember staring at a blank page while planning my first conference presentation, not sure where to begin. The key is to break the process into manageable steps. In this section, I’ll share a step-by-step approach to crafting a great presentation, from selecting your topic all the way to rehearsing your finished talk. We’ll also discuss some tips specific to technical talks (like slide design and demos) and ways to get feedback as you prepare. By the end of this part, you should have a checklist of preparation tasks to guide you.
 
