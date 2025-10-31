@@ -476,6 +476,8 @@ Discussion on GitHub where you can find original answers, ask your questions and
 
 ### Articles
 https://www.softwaretester.blog/how-to-speak-at-conferences-the-procrastinators-approach
+https://nicolalindgren.com/speaking-at-a-conference-a-practical-guide-for-first-time-presenters/
+https://nicolalindgren.com/11-public-speaking-tips-that-you-might-not-know/ 
 
 ### Books
 Sharon Bowman's book Training from the Back of the Room
