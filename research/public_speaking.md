@@ -101,6 +101,8 @@ Maaret Pyhäjärvi: I have learned a lot and many people could learn from what I
 
 Marko Rytkonen: When you create talk you really need to think it. Not just the content, but also on how to say the things. The same is when you publish a book.
 
+Richard Bradshaw: The act of creating a conference talks, significantly helps you understand your own learning and journey.
+
 
 ### 6. Fixing social awkwardness and increasing self/confidence
 
@@ -212,6 +214,8 @@ Kari Kakkonen: Balanced slides with enough content (for notes) but not too much 
 
 Bas Dijkstra: The less text there is on your slides, the better - people either read the slide or listen to you, not both
 
+Pablo Garcia Munos: When people ask me "What should I talk about" I always reply, what part of testing do you burn the most for right now, that is what you have to speak about.
+
 
 ### 3. Plan for interaction
 
@@ -301,6 +305,8 @@ Viviane Hennecke: I feel when you can free yourself from expectations to fit int
 ### 9. Overcome self-doubt (I don't have anything to say”)
 
 Benjamin Bischoff: Don't let the thought ‘I don't have anything to add' hold you back. 
+
+Richard Bradshaw: When new, focus only on your experiences. They are yours. No one can tell you, your experiences are wrong!
 
 
 ### 10. Design for imperfection / accept failure
@@ -435,11 +441,13 @@ Kari Kakkonen: Use multiple ways of presenting (add a flipchart, video, music, p
 
 Bas Dijkstra: With me, it's typically 'if you give me 10 minutes, I'll talk for 10 minutes, if you give me 2 hours, I'll talk for 2 hours'. Most of the talk I come up with on the spot, including the bad jokes. Of course I do some preparation, mostly with  the slides, but as anyone who has seen my slide deck can tell you, I don't spend a lot of time on them :)
 
- Marko Rytkonen: Use humor, if possible and fits to your personality/style
+Marko Rytkonen: Use humor, if possible and fits to your personality/style
+
+Don't introduce yourself at the start, they've read that in the program, get straight into and at the end say if you want to hear more from me, hear are my socials etc.
 
 Delivering a presentation is as much about mindset as it is about technique. If you believe in your message and care about helping the audience understand it, that intent will shine through. Don’t aim for a “perfect” talk; aim for a useful and authentic one. In most cases, people won’t remember minor stumbles, but they will remember your attitude and the value they got from your talk. After it’s over, congratulate yourself. You did something that most people find daunting.
 
-Every presentation is a learning experience. No matter how it went, reflect on what you did well and what you could improve next time. I often collect down a couple of notes after a talk (“went too fast on slide X” or “live demo took longer than expected”). This helps me adjust for future talks. Speaking is a continuous journey. Even veterans seek to get better each time.
+Richard Bradshaw: Every presentation is a learning experience. No matter how it went, reflect on what you did well and what you could improve next time. I often collect down a couple of notes after a talk (“went too fast on slide X” or “live demo took longer than expected”). This helps me adjust for future talks. Speaking is a continuous journey. Even veterans seek to get better each time.
 
 
 
@@ -469,27 +477,46 @@ Happy speaking, and see you on stage!
 
 
 ## Resources
+
 Discussion on GitHub where you can find original answers, ask your questions and connect with the author and collaborators: https://github.com/BeyondQuality/beyondquality/discussions/11 
+
 [1] https://www.crossrivertherapy.com/public-speaking-statistics
+
 [2] https://arxiv.org/abs/1904.08239
+
 [3] https://onlinelibrary.wiley.com/doi/abs/10.1002/acp.3410 
+
 [4] https://www.sciencedirect.com/science/article/abs/pii/S0361476X13000209
+
 [5] The 15 Invaluable Laws of Growth: Live Them and Reach Your Potential 
 
+
 ### Articles
+
 https://www.softwaretester.blog/how-to-speak-at-conferences-the-procrastinators-approach
+
 https://nicolalindgren.com/speaking-at-a-conference-a-practical-guide-for-first-time-presenters/
+
 https://nicolalindgren.com/11-public-speaking-tips-that-you-might-not-know/ 
 
+
 ### Books
+
 Sharon Bowman's book Training from the Back of the Room
+
 Presentation Zen: Simple Ideas on Presentation Design and Delivery (Voices That Matter) 
+
 Advanced Presentations by Design: Creating Communication that Drives Action 
 
 
+
 ### Videos
+
 https://www.youtube.com/watch?v=1sOgYNgq88E
+
 https://www.youtube.com/watch?v=Unzc731iCUY 
+
 https://www.ted.com/playlists/324/the_official_ted_talk_guide_pl 
+
 
 
