@@ -19,7 +19,7 @@ Whether you’re a QA tester who’s never spoken beyond team meetings, a junior
 
 Why would a busy tech professional bother to prepare a talk and speak in front of an audience? The answers will vary for everyone, but understanding the “why” is important. In my case, I stumbled into public speaking almost by accident. I was attending a testing meetup where I heard an inspiring talk about a new automation approach. After the session, I ended up in a conversation with the speaker. He encouraged me to share my experiences in testing, saying that even as a newcomer I had valuable insights. My first reaction was, “Who, me? What do I have to talk about?” But his encouragement planted a seed. Over the next few weeks, I realized I did have a story to tell.  A recent project where I introduced a QA lab. I decided to turn that experience into a short presentation. That small meetup talk changed my perspective, and it was the first step on my speaking journey.
 
-One big reason people present is to share knowledge and passion. Perhaps you’ve solved a tricky problem, mastered a tool, or learned a lesson the hard way. By speaking about it, you can help others in the community. In the tech world, we thrive on shared learning. By teaching others, we also deepen our own understanding. In fact, trying to explain a topic to an audience will quickly reveal what you truly know and what you don’t. It’s a fantastic learning experience for the speaker as well. I’ve found that preparing a talk forces me to research and organize my thoughts, which makes me more expert on the subject. As the saying goes, the best way to learn something is to teach it.
+One big reason people present is to share knowledge and passion. Perhaps you’ve solved a tricky problem, mastered a tool, or learned a lesson the hard way. By speaking about it, you can help others in the community. In the tech world, we thrive on shared learning. By teaching others, we also deepen our own understanding. In fact, trying to explain a topic to an audience will quickly reveal what you truly know and what you don’t. It’s a fantastic learning experience for the speaker as well. I’ve found that preparing a talk forces me to research and organize my thoughts, which makes me more expert on the subject. As the saying goes, the best way to learn something is to teach it. [3]
 
 Another motivation is professional growth. Public speaking is a great way to develop leadership and communication skills. Many engineers (my past self included) aren’t naturally comfortable speaking to groups. But in leadership roles or customer-facing situations, being able to present confidently is a huge advantage. Even if you’re not aiming for management, being known as someone who can articulate ideas clearly can open up career opportunities. I’ve had conferences and webinars lead to job offers and consulting inquiries, simply because speaking increases visibility. It helps establishing personal brand as a knowledgeable professional in your field.
 
@@ -109,7 +109,7 @@ Maaret Pyhäjärvi: Fixing sociall awkwardness: when you speak, they come talk t
 
 ### 7. Happiness & self-esteem (eudaimonia)
 
-Vitaly Sharovatov: Speaking at conferences contributes a lot to my eudaimonia ... presenting can compensate for lack of social appreciation at work → recognition → self-esteem → greater happiness → productivity.
+Vitaly Sharovatov: Speaking at conferences contributes a lot to my eudaimonia ... presenting can compensate for lack of social appreciation at work → recognition → self-esteem → greater happiness → productivity. [2]
 
 Kari Kakkonen: It is a great way to attend a conference in a more central role than as a participant.
 
@@ -469,11 +469,21 @@ Happy speaking, and see you on stage!
 ## Resources
 Discussion on GitHub where you can find original answers, ask your questions and connect with the author and collaborators: https://github.com/BeyondQuality/beyondquality/discussions/11 
 [1] https://www.crossrivertherapy.com/public-speaking-statistics
+[2] https://arxiv.org/abs/1904.08239
+[3] https://onlinelibrary.wiley.com/doi/abs/10.1002/acp.3410 
 
 ### Articles
 https://www.softwaretester.blog/how-to-speak-at-conferences-the-procrastinators-approach
 
 ### Books
 Sharon Bowman's book Training from the Back of the Room
+Presentation Zen: Simple Ideas on Presentation Design and Delivery (Voices That Matter) 
+Advanced Presentations by Design: Creating Communication that Drives Action 
+
+
+### Videos
+https://www.youtube.com/watch?v=1sOgYNgq88E
+https://www.youtube.com/watch?v=Unzc731iCUY 
+https://www.ted.com/playlists/324/the_official_ted_talk_guide_pl 
 
 
