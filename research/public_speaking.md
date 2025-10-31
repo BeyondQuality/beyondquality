@@ -387,6 +387,8 @@ Marko Rytkonen: Learnings does not need to be revolutionary, small things are im
 
 Marko Rytkonen: Create credible story line
 
+Pablo Garcia Munos: For me a Great Talk is when someone has dug deep in a part of testing that they consider important and want all others to know what they found out. Those talks are the best.
+
 
 ### 2. Hero's journey / villain archetype
 
