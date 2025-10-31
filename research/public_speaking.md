@@ -19,7 +19,7 @@ Whether you’re a QA tester who’s never spoken beyond team meetings, a junior
 
 Why would a busy tech professional bother to prepare a talk and speak in front of an audience? The answers will vary for everyone, but understanding the “why” is important. In my case, I stumbled into public speaking almost by accident. I was attending a testing meetup where I heard an inspiring talk about a new automation approach. After the session, I ended up in a conversation with the speaker. He encouraged me to share my experiences in testing, saying that even as a newcomer I had valuable insights. My first reaction was, “Who, me? What do I have to talk about?” But his encouragement planted a seed. Over the next few weeks, I realized I did have a story to tell.  A recent project where I introduced a QA lab. I decided to turn that experience into a short presentation. That small meetup talk changed my perspective, and it was the first step on my speaking journey.
 
-One big reason people present is to share knowledge and passion. Perhaps you’ve solved a tricky problem, mastered a tool, or learned a lesson the hard way. By speaking about it, you can help others in the community. In the tech world, we thrive on shared learning. By teaching others, we also deepen our own understanding. In fact, trying to explain a topic to an audience will quickly reveal what you truly know and what you don’t. It’s a fantastic learning experience for the speaker as well. I’ve found that preparing a talk forces me to research and organize my thoughts, which makes me more expert on the subject. As the saying goes, the best way to learn something is to teach it. [3]
+One big reason people present is to share knowledge and passion. Perhaps you’ve solved a tricky problem, mastered a tool, or learned a lesson the hard way. By speaking about it, you can help others in the community. In the tech world, we thrive on shared learning. By teaching others, we also deepen our own understanding. In fact, trying to explain a topic to an audience will quickly reveal what you truly know and what you don’t. It’s a fantastic learning experience for the speaker as well. I’ve found that preparing a talk forces me to research and organize my thoughts, which makes me more expert on the subject. As the saying goes, the best way to learn something is to teach it. [3] [4]
 
 Another motivation is professional growth. Public speaking is a great way to develop leadership and communication skills. Many engineers (my past self included) aren’t naturally comfortable speaking to groups. But in leadership roles or customer-facing situations, being able to present confidently is a huge advantage. Even if you’re not aiming for management, being known as someone who can articulate ideas clearly can open up career opportunities. I’ve had conferences and webinars lead to job offers and consulting inquiries, simply because speaking increases visibility. It helps establishing personal brand as a knowledgeable professional in your field.
 
@@ -102,10 +102,10 @@ Maaret Pyhäjärvi: I have learned a lot and many people could learn from what I
 Marko Rytkonen: When you create talk you really need to think it. Not just the content, but also on how to say the things. The same is when you publish a book.
 
 
-### 6. Fixing social awkwardness
+### 6. Fixing social awkwardness and increasing self/confidence
 
 Maaret Pyhäjärvi: Fixing sociall awkwardness: when you speak, they come talk to you. Meeting strangers is hard except when introducing yourself with a talk on stage.
-
+Maile Rohiväli: Speaking in public helps to grow self confidence and therefore makes everything at everyday work also much easier. All the talks between dev-s and testers - piece of cake ;). Public speaking also helps to get connections, it helps to make one self visible and career growth can be much more interesting: there are more options available, not just one or two directions. Getting to know and talk to other speakers gives good ideas how to do something better, create more value, maybe even just how to have more fun with everyday job. [5]
 
 ### 7. Happiness & self-esteem (eudaimonia)
 
@@ -471,6 +471,8 @@ Discussion on GitHub where you can find original answers, ask your questions and
 [1] https://www.crossrivertherapy.com/public-speaking-statistics
 [2] https://arxiv.org/abs/1904.08239
 [3] https://onlinelibrary.wiley.com/doi/abs/10.1002/acp.3410 
+[4] https://www.sciencedirect.com/science/article/abs/pii/S0361476X13000209
+[5] The 15 Invaluable Laws of Growth: Live Them and Reach Your Potential 
 
 ### Articles
 https://www.softwaretester.blog/how-to-speak-at-conferences-the-procrastinators-approach
