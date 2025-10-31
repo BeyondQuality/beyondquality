@@ -32,6 +32,9 @@ Lastly, there are some fun perks! If you speak at out-of-town conferences, you m
 Everyone’s reasons to speak will be a bit different. Maybe you want to advocate for a cause, like encouraging more diversity in tech. Maybe you have a unique testing technique you’re excited to popularize. Or maybe you simply want to challenge yourself. There’s no wrong reason. What matters is that you have one. When you know what you want to get out of speaking, it gives motivation to push through the hard work of preparation and the butterflies on stage.
 
 
+
+
+
 ### 1. Challenge yourself / build courage
 
 Mesut Durukal: Challenge myself. Public speaking is not easy; it requires social courage. Once you start, it gets easier, but the first step is scary. I just wanted to close my eyes and push myself into the sea.
@@ -60,7 +63,7 @@ Anupam Krishnamurthy: Speaking at a conference also lends credibility to my work
 
 Benjamin Bischoff: Speaking at a conference has a lot of benefits for your personal development and your career ... you expose both your personal and your company brand.
 
-@oren-reshef: One of the requirements for senior level is public speaking.
+Oren Reshef: One of the requirements for senior level is public speaking.
 
 Vitaly Sharovatov: Public reputation or a clear personal brand is a great proactive signal which is almost always received and considered at the earliest hiring stage, at the CV selection stage. This is why I believe it's clearly beneficial to invest in public speaking (presenting at conferences, meetups, etc).
 
@@ -90,7 +93,7 @@ Maaret Pyhäjärvi: Represent Finland, represent women, represent people speakin
 
 ### 5. Teaching is the best learning / deepen expertise
 
-@ClaraRamosGonzalez: Teaching is the best way of learning, I've learned a lot and improved my own work when designing the talks.
+Clara Ramos Gonzalez: Teaching is the best way of learning, I've learned a lot and improved my own work when designing the talks.
 
 Benjamin Bischoff: By thinking about it, reading about it and constantly reflecting on potential questions that could be asked, you slowly but surely turn into an expert of this topic.
 
@@ -154,6 +157,8 @@ Marko Rytkonen: It enables participation to the conferences. Some employers do n
 Take a moment to think about which of these resonate with you, or add your own. Your story and perspective are unique.  No one else has lived your exact experiences. Even if a topic has been talked about before, your take on it can bring value. I used to worry “I have nothing new to add”, but remember: you have a story to share too! Your viewpoint, whether as a beginner or expert, is always unique and can shine a new light on a subject. Once you find a reason that excites you, hold onto it. It will keep you going through the work of creating and delivering a presentation.
 
 Now that we’ve covered the motivations behind public speaking, let’s get into the practical side: how do you actually prepare a good tech presentation? What steps can you take to craft a talk that will inform and inspire your audience? We’ll explore that next.
+
+
 
 
 ## How to prepare a presentation
@@ -280,7 +285,7 @@ Attila Fekete: Slides and visuals are just as important. They should support you
 
 ### 8. Be honest & authentic (don't sell)
 
-@ClaraRamosGonzalez: Be honest, don't try to sell, try to communicate. 
+Clara Ramos Gonzalez: Be honest, don't try to sell, try to communicate. 
 
 Rudolf Groetz: The audience deserves authenticity, and that's what builds trust and makes a talk memorable. 
 
@@ -344,6 +349,8 @@ Marko Rytkonen: Talking is not just talking, remember "dramatic pauses". Give pe
 
 
 With preparation done, you’ve already won half the battle. At this point, you know your material and have set yourself up for success. Still, the moment of stepping on stage can be nerve-wracking. In the next part, we’ll talk about delivering your presentation. How to handle those nerves and make your time on stage as smooth as possible.
+
+
 
 
 ## How to deliver a good presentation
@@ -422,13 +429,42 @@ Anupam Krishnamurthy: I try and get my audience to pay attention with a hook... 
 
 
  ### 7. Ways to present
- Kari Kakkonen: Use multiple ways of presenting (add a flipchart, video, music, poll, discussion with audience).
+Kari Kakkonen: Use multiple ways of presenting (add a flipchart, video, music, poll, discussion with audience).
 
- Bas Dijkstra: With me, it's typically 'if you give me 10 minutes, I'll talk for 10 minutes, if you give me 2 hours, I'll talk for 2 hours'. Most of the talk I come up with on the spot, including the bad jokes. Of course I do some preparation, mostly with  the slides, but as anyone who has seen my slide deck can tell you, I don't spend a lot of time on them :)
+Bas Dijkstra: With me, it's typically 'if you give me 10 minutes, I'll talk for 10 minutes, if you give me 2 hours, I'll talk for 2 hours'. Most of the talk I come up with on the spot, including the bad jokes. Of course I do some preparation, mostly with  the slides, but as anyone who has seen my slide deck can tell you, I don't spend a lot of time on them :)
 
  Marko Rytkonen: Use humor, if possible and fits to your personality/style
 
- 
+Delivering a presentation is as much about mindset as it is about technique. If you believe in your message and care about helping the audience understand it, that intent will shine through. Don’t aim for a “perfect” talk; aim for a useful and authentic one. In most cases, people won’t remember minor stumbles, but they will remember your attitude and the value they got from your talk. After it’s over, congratulate yourself. You did something that most people find daunting.
+
+Every presentation is a learning experience. No matter how it went, reflect on what you did well and what you could improve next time. I often collect down a couple of notes after a talk (“went too fast on slide X” or “live demo took longer than expected”). This helps me adjust for future talks. Speaking is a continuous journey. Even veterans seek to get better each time.
+
+
+
+
+
+ ## Final Thoughts
+
+Looking back on my public speaking journey, I’m struck by how much I have grown from it. What started as a single meetup presentation turned into a series of talks at larger conferences, panels and even keynotes. Along the way I went from dreading the stage to genuinely enjoying the opportunity to share and connect. Don’t get me wrong. I still get butterflies before a talk, and I still have much to learn. But the fact that I can now stand in front of hundreds of people and tell a story about technology (and actually have fun doing it) is something my younger self would have never believed.
+
+If you take one thing from this guide, I hope it’s the confidence that you have something valuable to say and that you can say it in a public forum. Tech industry needs exchange of ideas. We need voices from all backgrounds: developers, testers, managers, newbies, veterans - people of all genders and cultures sharing their unique experiences.
+
+It’s okay to start small. You don’t have to aim for a major conference right away. Perhaps begin with an internal presentation at your company or a casual talk at a local meetup. These smaller settings are fantastic for trying out your material and getting comfortable. In fact, practicing at meetups or in front of teammates is how I built up to conference speaking. Celebrate those small wins. Each one will make you more ready for a bigger stage.
+
+Also, don’t hesitate to seek out mentors or allies. In my case, I had colleagues and friends who give me feedback and cheer me on. There are also speaker mentorship programs (some conferences have them for first-time speakers) and communities where you can find support. Many experienced speakers are happy to help newcomers with proposals and practice sessions. You’re not alone in this.
+
+One of the wonderful things I discovered is that the act of presenting often gives back more than you put in. I’ve learned new ideas from audience questions, received feedback that improved my own work, gained broader perspective from discussions after my talks. Speaking has made me a better listener and teacher. It’s even improved my regular work communications. If you can explain something clearly on stage, you’ll be better at explaining things in meetings or emails too. In short, the benefits echo into many areas of professional and personal life.
+
+Now, you might still have some doubts or fears. You might think, “What if I fail? What if people think I’m not expert enough?”. These thoughts are natural. Doing it, even if it’s not perfect – is infinitely better than not trying at all. Every speaker you admire started somewhere, probably with an awkward or average talk. They improved by doing it again. And if you give a talk that doesn’t go as well as you hoped, it’s not a failure. It’s a draft for your next, better talk.
+
+To conclude, I want to encourage you to take that leap. If an opportunity arises to speak – be it a short talk at a meetup or a conference presentation – say yes. Or better yet, create an opportunity: propose a topic to an event or start a knowledge-sharing session at work. It will be nerve-wracking the first time, no doubt. But it will also be empowering. You’ll likely come off the stage thinking, “Wow, I actually did it!” and that feeling is awesome.
+
+I hope the insights and tips I’ve shared in this book help demystify the process of public speaking in tech. It’s not reserved for geniuses or extroverts. It’s for anyone with a passion to share and a willingness to learn. Your talks don’t have to be grand or groundbreaking. Some of the most impactful talks are simple stories of a problem and a solution, told honestly. As long as you speak with sincerity and keep the audience in mind, you will do well.
+
+Thank you for reading through and allowing me to share my story. Now it’s your turn to write the next chapter of your story. What message do you have for the world of tech? What experience could you share that might help others? I’m certain there is something. I encourage you to step up and let your voice be heard. Who knows – maybe someday I’ll be in the audience at a conference, listening to your talk and nodding along.
+
+Happy speaking, and see you on stage!
+
 
 ## Resources
 Discussion on GitHub where you can find original answers, ask your questions and connect with the author and collaborators: https://github.com/BeyondQuality/beyondquality/discussions/11 
