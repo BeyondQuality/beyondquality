@@ -83,6 +83,8 @@ Marko Rytkonen: Get to know people and get people to know me. When you deliver t
 
 Marko Rytkonen: Boost my book sales. Book sales is not about money, but it may open interesting opportunities (trainings, jobs, study groups...). Book and public talks will boost your career, in a unique and personal way.
 
+Nicola Lindgren: You get to go to a conference and learn from others as well.
+
 
 ### 4. Increase diversity of thought & exposure to trends
 
