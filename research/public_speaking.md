@@ -83,7 +83,7 @@ Nicola Lindgren: You get to go to a conference and learn from others as well.
 
 Leandro Melendez (aka Señor Performo): Also you have the expected recognition for being a thought leader talking about a topic, even if you are an expert or not, but I think more than recognition it will open you to say hello to everyone approaching you as you get off of stage and help them more directly and, who knows, maybe establish a new connection or even a friendship!
 
-
+Emna Ayadi: You become known as expert when you speak and share new ideas
 
 
 ### 4. Increase diversity of thought & exposure to trends
@@ -223,6 +223,7 @@ Vitaly Sharovatov: In my first three-four years of public speaking I was always 
 
 Attila Fekete: Delivering a great talk is more of a mental challenge than a technical one. Beyond knowing your material, you need to be mentally prepared: learn how to manage stress, handle unexpected situations, and peak at the right time.
 
+Dorothy Graham: What about nerves? As far as I know, everyone gets nervous about their talk. One phrase I saw somewhere: “It’s not that you don’t have butterflies, you get them to fly in unison.” Translate the nervousness into excitement to support you in your talk, and try to appear relaxed - this will also relax and reassure your audience (even if you are only pretending!).
 
 ### 2. Don't focus on slides, focus on story
 
@@ -238,6 +239,8 @@ Pablo Garcia Munos: When people ask me "What should I talk about" I always reply
 
 Leandro Melendez (aka Señor Performo): Start with a brief intro to the topic, then leave a hook for the audience to look forward getting to the end of the talk expecting to solve the mystery or data tip you left, and in the end give it to the audience. Try to not to open too many story branches and then you won't have gaps in it.
 
+Dorothy Graham: Focus on the message to you want to get across. Like a sermon, 3 points is good, but not a rigid rule. What is it that you are really passionate about? What do you see that you think people could do better, based on what you have done? Do you have an interesting experience where you learned the hard way?
+
 
 ### 3. Plan for interaction
 
@@ -250,6 +253,8 @@ Kari Kakkonen: Ask questions, ask for interaction during and after the talk.
 Bas Dijkstra: I like to involve the crowd a little bit, maybe asking some questions to specific individuals, but maybe not everybody is comfortable doing that.
 
 Leandro Melendez (aka Señor Performo): Speaking of the audience, involve them in your talk. Make them participate by polling, asking direct questions, picking a sparring partner from the audience who you could establish conversations from the stage and might make feel everyone else as if they are about to participate if you look at them. Well, do it if you want. Make it as interactive as you can, it is a show on stage and not just a boring lecture from a stage.
+
+Emna Ayadi: Use examples, small stories, or funny moments to make it interesting
 
 
 ### 4. Admit what you don't know
@@ -277,6 +282,9 @@ If the presentation goes really, really well, I remember almost nothing of what 
 Kari Kakkonen: Memorize the main point in each slide, make the point, don't read all the slide content, or verbalize it differently.
 
 Marko Rytkonen: Know how to start, everything else will follow
+
+Dorothy Graham: Rehearse often and time yourself. Especially rehearse the start, because that's when you are most nervous, so it your first words need to come out smoothly. And make sure the end is
+good, as people remember the beginning and end more than the middle. 
 
 
 ### 6. Practice timing & pacing
@@ -310,6 +318,8 @@ Rudolf Groetz: If I enjoy myself on stage, the audience usually does too
 
 Attila Fekete: Slides and visuals are just as important. They should support your message, not overload it. Use graphics, examples, or illustrations that make your point clearer and keep the audience’s attention. A talk that’s both meaningful and enjoyable is always the one people remember.
 
+Dorothy Graham: People like to be entertained, but you don’t have to be a comedian. Interesting anecdotes, or stories about unexpected bugs, can raise a smile and get your audience “on your side”.
+
 
 ### 8. Be honest & authentic (don't sell)
 
@@ -324,6 +334,8 @@ Rikard Edgren: Over time I found that my style was a mix of very abstract things
 Bas Dijkstra: I think the best talks speak from the heart and from experience. I've seen and delivered some dreadful talks that were basically regurgitating literature, platitudes and/or tutorials. If I want to get that kind of information, I'll read an article or a tutorial.
 
 Viviane Hennecke: I feel when you can free yourself from expectations to fit into a norm how a talk should be delivered, the chances are high to develop your own style. In my experience, humans want to see humans. That means imperfection is not only allowed, but welcomed. If you have something to share, it does not matter if you are a fullblown actress or actor. Just be yourself.
+
+Dorothy Graham: Do share both the good and the bad, the successes and the failures. Often the best learning comes from the worst experiences. There can be a reluctance to share things that went wrong, but this is how everyone learns, and the lessons will probably be better remembered as they are more believable.
 
 
 ### 9. Overcome self-doubt (I don't have anything to say”)
@@ -455,9 +467,10 @@ Kari Kakkonen: Talk in general, understandable terms, and explain yourself if ne
 
 Marko Rytkonen: Know your audience, talk for them (e.g. talking for leadership is different to testers/developers).
 
+Emna Ayadi: Know your audience and make it simple for beginners
 
  ### 6. Keep the rythm
- Attila Fekete: A strong talk has a clear rhythm: a powerful start, a solid middle, and a memorable finish. Remember, people often judge a presentation less by its content and more by how it made them feel. They want something relatable, something that sticks. Your job is to capture their attention — and keep it until the very last word.
+Attila Fekete: A strong talk has a clear rhythm: a powerful start, a solid middle, and a memorable finish. Remember, people often judge a presentation less by its content and more by how it made them feel. They want something relatable, something that sticks. Your job is to capture their attention — and keep it until the very last word.
 
 Anupam Krishnamurthy: I try and get my audience to pay attention with a hook... situation, complication, solution.
 
@@ -469,14 +482,16 @@ Bas Dijkstra: With me, it's typically 'if you give me 10 minutes, I'll talk for 
 
 Marko Rytkonen: Use humor, if possible and fits to your personality/style
 
-Don't introduce yourself at the start, they've read that in the program, get straight into and at the end say if you want to hear more from me, hear are my socials etc.
-
-Delivering a presentation is as much about mindset as it is about technique. If you believe in your message and care about helping the audience understand it, that intent will shine through. Don’t aim for a “perfect” talk; aim for a useful and authentic one. In most cases, people won’t remember minor stumbles, but they will remember your attitude and the value they got from your talk. After it’s over, congratulate yourself. You did something that most people find daunting.
+Richard Bradshaw:  Don't introduce yourself at the start, they've read that in the program, get straight into and at the end say if you want to hear more from me, hear are my socials etc.
 
 Richard Bradshaw: Every presentation is a learning experience. No matter how it went, reflect on what you did well and what you could improve next time. I often collect down a couple of notes after a talk (“went too fast on slide X” or “live demo took longer than expected”). This helps me adjust for future talks. Speaking is a continuous journey. Even veterans seek to get better each time.
 
 Leandro Melendez (aka Señor Performo): Avoid stillness like the pest. Either in your body, your voice volume and your tone. Move around a lot in the stage (when possible). Raise your voice, make it low volume, high pitched, low pitched, mix it all in a single sentence. I would say almost sing the talk to the audience.
 
+Dorothy Graham: Slides or no slides? A short talk may be better without slides. With no slides, you may have a more direct connection with your audience, since there‘s only you to look at, though you may need something to help you remember what you are planning to say, e.g. index cards. However, there is nothing for your listeners to review or look back on other than a full
+recording or their own (or others’) notes. Prune the slides. Even a really great slide, if not related to the main story or in the flow of the main message, should be deleted! (It took me a while to realise this!)
+
+Delivering a presentation is as much about mindset as it is about technique. If you believe in your message and care about helping the audience understand it, that intent will shine through. Don’t aim for a “perfect” talk; aim for a useful and authentic one. In most cases, people won’t remember minor stumbles, but they will remember your attitude and the value they got from your talk. After it’s over, congratulate yourself. You did something that most people find daunting.
 
 
  ## Final Thoughts
@@ -518,6 +533,8 @@ Discussion on GitHub where you can find original answers, ask your questions and
 
 
 ### Articles
+
+https://www.lisihocke.com/p/speaking-at-conferences.html
 
 https://www.softwaretester.blog/how-to-speak-at-conferences-the-procrastinators-approach
 
