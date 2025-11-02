@@ -71,13 +71,9 @@ José Díaz: For some, it’s a step toward greater recognition within their com
 
 Maaret Pyhäjärvi: Finding new jobs and career opportunities: introductions from the stage done right turn into higher career progression if you manage the time at work vs time at conferences. My jobs have come from networks speaking cultivates.
 
-Maaret Pyhäjärvi: Entrepreneurial side gigs: Teaching can be a way of making a living too and conferences are ways of introducing you as someone with knowledge to teach or consult on.
-
 Attila Fekete: There are many  reasons: building your reputation, increasing your visibility, strengthening your personal brand, and opening doors to new opportunities.
 
 Kari Kakkonen: It is a natural step forward in growing as a professional - sharing with others. It gives you credibility as a professional.
-
-Bas Dijkstra: It is a great form of shameless self-promotion. As an independent consultant, I'm always looking for ways to get my name out there, and public speaking is a great way of doing that. You won't see / hear me sell my services directly during a talk, but I've had plenty of people coming up to me after a talk or a conference workshop asking if I was open to coming into their company. Well, of course!
 
 Marko Rytkonen: Get to know people and get people to know me. When you deliver talk, people will come and talk "naturally".
 
@@ -87,11 +83,16 @@ Nicola Lindgren: You get to go to a conference and learn from others as well.
 
 Leandro Melendez (aka Señor Performo): Also you have the expected recognition for being a thought leader talking about a topic, even if you are an expert or not, but I think more than recognition it will open you to say hello to everyone approaching you as you get off of stage and help them more directly and, who knows, maybe establish a new connection or even a friendship!
 
+
+
+
 ### 4. Increase diversity of thought & exposure to trends
 
 Mesut Durukal: Even just seeing the topics helps you understand the most common problems other people are facing, which tools are becoming popular, and the latest trends.
 
 Maaret Pyhäjärvi: Represent Finland, represent women, represent people speaking from experiences.
+
+Dorothy Graham: Conferences have always been a way for me to learn new things, see how the software testing world is evolving, to explore technical innovations, and to stretch and feed my mind. I have made many good friends at conferences, especially among fellow speakers, and it’s great to meet up with them and renew the friendships at later conferences. I have also met and learned from delegates and attendees whose experiences illuminate how knowledge is put into practice, and the very real problems they have encountered.
 
 
 ### 5. Teaching is the best learning / deepen expertise
@@ -108,10 +109,13 @@ Richard Bradshaw: The act of creating a conference talks, significantly helps yo
 
 Leandro Melendez (aka Señor Performo): And speaking of learning, as Richard Feynman said, paraphrasing, one doesn't truly understand a topic until you have to explain it. Or in this case present it. I think that giving a talk helps you cover any knowledge gaps you might have had around the presented topic. Not to forget that probably the topic is important for you or that you might feel that it is important for the world to know and learn more about it.
 
+
+
 ### 6. Fixing social awkwardness and increasing self/confidence
 
 Maaret Pyhäjärvi: Fixing sociall awkwardness: when you speak, they come talk to you. Meeting strangers is hard except when introducing yourself with a talk on stage.
 Maile Rohiväli: Speaking in public helps to grow self confidence and therefore makes everything at everyday work also much easier. All the talks between dev-s and testers - piece of cake ;). Public speaking also helps to get connections, it helps to make one self visible and career growth can be much more interesting: there are more options available, not just one or two directions. Getting to know and talk to other speakers gives good ideas how to do something better, create more value, maybe even just how to have more fun with everyday job. [5]
+
 
 ### 7. Happiness & self-esteem (eudaimonia)
 
@@ -143,6 +147,8 @@ Kari Kakkonen: It is sharing for the common good; why keep your ideas to your ow
 
 Viviane Hennecke: Personally, I started for the wrong reasons. Colleagues of mine asked me to jump in when one of their speakers unexpectedly dropped out for health reasons. But I would say, for me I continued for the right reasons. When I discovered that I am neurodivergent (autism and ADHD), it changed my life. I had a sudden urge to help others realizing that they might be too and to educate on the topic in the general. Now, every submission has a personal message I want to spread.
 
+Dorothy Graham: As a specialist in software testing, I wanted to share with others who could benefit from things I had learned; I have always felt that this was my calling - to help people in testing.
+
 
 ### 10. Authentic expression / theatre roots
 
@@ -158,6 +164,16 @@ Benjamin Bischoff: Let's not forget that as a conference speaker you not only ge
 Kari Kakkonen: It is a way to attend more conferences, and thus learn and network more effectively.
 
 Marko Rytkonen: It enables participation to the conferences. Some employers do not support that, and some supports (So happy that current ones encourages and supports)
+
+
+### 11. Business promotion
+
+Dorothy Graham: When I first began, speaking was a way to publicise myself, as a self-employed software testing consultant and trainer, and later a small partnership. If people liked my
+presentation, they were more likely to want me to do some training for them.
+
+Bas Dijkstra: It is a great form of shameless self-promotion. As an independent consultant, I'm always looking for ways to get my name out there, and public speaking is a great way of doing that. You won't see / hear me sell my services directly during a talk, but I've had plenty of people coming up to me after a talk or a conference workshop asking if I was open to coming into their company. Well, of course!
+
+Maaret Pyhäjärvi: Entrepreneurial side gigs: Teaching can be a way of making a living too and conferences are ways of introducing you as someone with knowledge to teach or consult on.
 
 
 Take a moment to think about which of these resonate with you, or add your own. Your story and perspective are unique.  No one else has lived your exact experiences. Even if a topic has been talked about before, your take on it can bring value. I used to worry “I have nothing new to add”, but remember: you have a story to share too! Your viewpoint, whether as a beginner or expert, is always unique and can shine a new light on a subject. Once you find a reason that excites you, hold onto it. It will keep you going through the work of creating and delivering a presentation.
