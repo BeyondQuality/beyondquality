@@ -83,7 +83,7 @@ Nicola Lindgren: You get to go to a conference and learn from others as well.
 
 Leandro Melendez (aka Señor Performo): Also you have the expected recognition for being a thought leader talking about a topic, even if you are an expert or not, but I think more than recognition it will open you to say hello to everyone approaching you as you get off of stage and help them more directly and, who knows, maybe establish a new connection or even a friendship!
 
-Emna Ayadi: You become known as expert when you speak and share new ideas
+Emna Ayadi: You become known as expert when you speak and share new ideas.
 
 
 ### 4. Increase diversity of thought & exposure to trends
