@@ -85,6 +85,7 @@ Marko Rytkonen: Boost my book sales. Book sales is not about money, but it may o
 
 Nicola Lindgren: You get to go to a conference and learn from others as well.
 
+Leandro Melendez (aka Señor Performo): Also you have the expected recognition for being a thought leader talking about a topic, even if you are an expert or not, but I think more than recognition it will open you to say hello to everyone approaching you as you get off of stage and help them more directly and, who knows, maybe establish a new connection or even a friendship!
 
 ### 4. Increase diversity of thought & exposure to trends
 
@@ -218,6 +219,8 @@ Kari Kakkonen: Balanced slides with enough content (for notes) but not too much 
 Bas Dijkstra: The less text there is on your slides, the better - people either read the slide or listen to you, not both
 
 Pablo Garcia Munos: When people ask me "What should I talk about" I always reply, what part of testing do you burn the most for right now, that is what you have to speak about.
+
+Leandro Melendez (aka Señor Performo): First of all, I think you must have a big passion about a relevant topic to create a great talk, a topic that the audience might be interested in. Second you must have experience around the topic, even if it is not much, you must have some dirt in your hands from working a bit with it so you can present with more passion and improvise truthfully if needed.
 
 
 ### 3. Plan for interaction
