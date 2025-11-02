@@ -220,7 +220,7 @@ Bas Dijkstra: The less text there is on your slides, the better - people either 
 
 Pablo Garcia Munos: When people ask me "What should I talk about" I always reply, what part of testing do you burn the most for right now, that is what you have to speak about.
 
-Leandro Melendez (aka Señor Performo): First of all, I think you must have a big passion about a relevant topic to create a great talk, a topic that the audience might be interested in. Second you must have experience around the topic, even if it is not much, you must have some dirt in your hands from working a bit with it so you can present with more passion and improvise truthfully if needed.
+Leandro Melendez (aka Señor Performo): Start with a brief intro to the topic, then leave a hook for the audience to look forward getting to the end of the talk expecting to solve the mystery or data tip you left, and in the end give it to the audience. Try to not to open too many story branches and then you won't have gaps in it.
 
 
 ### 3. Plan for interaction
@@ -232,6 +232,8 @@ Jonas Hermansson: Think of it as entertainment with added value: knowledge.
 Kari Kakkonen: Ask questions, ask for interaction during and after the talk.
 
 Bas Dijkstra: I like to involve the crowd a little bit, maybe asking some questions to specific individuals, but maybe not everybody is comfortable doing that.
+
+Leandro Melendez (aka Señor Performo): Speaking of the audience, involve them in your talk. Make them participate by polling, asking direct questions, picking a sparring partner from the audience who you could establish conversations from the stage and might make feel everyone else as if they are about to participate if you look at them. Well, do it if you want. Make it as interactive as you can, it is a show on stage and not just a boring lecture from a stage.
 
 
 ### 4. Admit what you don't know
@@ -313,6 +315,8 @@ Viviane Hennecke: I feel when you can free yourself from expectations to fit int
 Benjamin Bischoff: Don't let the thought ‘I don't have anything to add' hold you back. 
 
 Richard Bradshaw: When new, focus only on your experiences. They are yours. No one can tell you, your experiences are wrong!
+
+Leandro Melendez (aka Señor Performo): First of all, I think you must have a big passion about a relevant topic to create a great talk, a topic that the audience might be interested in. Second you must have experience around the topic, even if it is not much, you must have some dirt in your hands from working a bit with it so you can present with more passion and improvise truthfully if needed.
 
 
 ### 10. Design for imperfection / accept failure
@@ -455,7 +459,7 @@ Delivering a presentation is as much about mindset as it is about technique. If 
 
 Richard Bradshaw: Every presentation is a learning experience. No matter how it went, reflect on what you did well and what you could improve next time. I often collect down a couple of notes after a talk (“went too fast on slide X” or “live demo took longer than expected”). This helps me adjust for future talks. Speaking is a continuous journey. Even veterans seek to get better each time.
 
-
+Leandro Melendez (aka Señor Performo): Avoid stillness like the pest. Either in your body, your voice volume and your tone. Move around a lot in the stage (when possible). Raise your voice, make it low volume, high pitched, low pitched, mix it all in a single sentence. I would say almost sing the talk to the audience.
 
 
 
