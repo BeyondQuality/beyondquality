@@ -105,6 +105,7 @@ Marko Rytkonen: When you create talk you really need to think it. Not just the c
 
 Richard Bradshaw: The act of creating a conference talks, significantly helps you understand your own learning and journey.
 
+Leandro Melendez (aka Señor Performo): And speaking of learning, as Richard Feynman said, paraphrasing, one doesn't truly understand a topic until you have to explain it. Or in this case present it. I think that giving a talk helps you cover any knowledge gaps you might have had around the presented topic. Not to forget that probably the topic is important for you or that you might feel that it is important for the world to know and learn more about it.
 
 ### 6. Fixing social awkwardness and increasing self/confidence
 
