@@ -16,73 +16,26 @@ Whether you’re a QA tester who’s never spoken beyond team meetings, a junior
 
 ## The "whys"
 
-Why would a busy tech professional bother to prepare a talk and speak in front of an audience? The answers will vary for everyone, but understanding the “why” is important. In my case, I stumbled into public speaking almost by accident. I was attending a testing meetup where I heard an inspiring talk about a new automation approach. After the session, I ended up in a conversation with the speaker. He encouraged me to share my experiences in testing, saying that even as a newcomer I had valuable insights. My first reaction was, “Who, me? What do I have to talk about?” But his encouragement planted a seed. Over the next few weeks, I realized I did have a story to tell.  A recent project where I introduced a QA lab. I decided to turn that experience into a short presentation. That small meetup talk changed my perspective, and it was the first step on my speaking journey.
+Everyone’s reasons for speaking are a little different. Maybe you want to advocate for a cause, like encouraging more diversity in tech. Maybe you’ve discovered a testing approach you’re excited to share with the world. Or maybe you simply want to step outside your comfort zone and grow.
 
-One big reason people present is to share knowledge and passion. Perhaps you’ve solved a tricky problem, mastered a tool, or learned a lesson the hard way. By speaking about it, you can help others in the community. In the tech world, we thrive on shared learning. By teaching others, we also deepen our own understanding. In fact, trying to explain a topic to an audience will quickly reveal what you truly know and what you don’t. It’s a fantastic learning experience for the speaker as well. I’ve found that preparing a talk forces me to research and organize my thoughts, which makes me more expert on the subject. As the saying goes, the best way to learn something is to teach it. [3] [4]
+There’s no wrong reason to speak. Only YOUR reason. What matters is that you find it. Because once you understand why you want to speak, that purpose becomes your anchor. It’s what keeps people motivated through the late nights of preparation and helps steady nerves when the spotlight hits.
 
-Another motivation is professional growth. Public speaking is a great way to develop leadership and communication skills. Many engineers (my past self included) aren’t naturally comfortable speaking to groups. But in leadership roles or customer-facing situations, being able to present confidently is a huge advantage. Even if you’re not aiming for management, being known as someone who can articulate ideas clearly can open up career opportunities. I’ve had conferences and webinars lead to job offers and consulting inquiries, simply because speaking increases visibility. It helps establishing personal brand as a knowledgeable professional in your field.
-
-Community and networking are also major benefits. When you speak at a conference, you often get free access to the whole event. You can attend other sessions, learn from fellow speakers, meet people you wouldn’t otherwise meet. I quickly learned that tech conferences are as much about hallway conversations as the formal talks. By standing on that stage, you become part of the conversation. Other attendees will come up to you afterward to ask questions or continue the discussion. I’ve made wonderful connections this way. In fact, as an introvert, I found that speaking actually made networking easier. It gave me a common talking point with others. Joining as a speaker made it easier to connect, because attendees will naturally start conversations with “I liked your talk…”. Those post-talk chats have inspired new ideas and even friendships. The tech community is full of bright people, and speaking puts you right in the middle of it.
-
-There is a real satisfaction in contributing to the community. Throughout my career I’ve learned so much from blogs, open-source projects, guides and talks that others have given. At some point I realized I wanted to “give back” and share what I could, to repay that karma. When someone comes up and says “Your talk helped me”, it’s an amazing feeling. Moreover, taking the stage can boost the confidence tremendously. It’s scary, yes. I won’t pretend it isn’t. The first few times I spoke, my nerves were through the roof. But doing something scary and surviving it is how you grow. Public speaking was one of the scariest things I’d ever done, but pushing beyond my comfort zone proved to be immensely rewarding. Each successful talk made me more confident not just in speaking, but in tackling other challenges too. It’s a virtuous cycle: the more you stretch yourself, the more you realize you’re capable of.
-
-Lastly, there are some fun perks! If you speak at out-of-town conferences, you might get to travel to new places (often with expenses covered). I’ve visited cities and countries I might never have seen otherwise. It turns those business trips into mini-adventures. I explore local sights, try new foods, gain fresh perspectives, learn new culture along the way. Conferences are an escape from daily work and an opportunity to recharge creativity. Some of my conference trips have been as memorable as vacations.
-
-Everyone’s reasons to speak will be a bit different. Maybe you want to advocate for a cause, like encouraging more diversity in tech. Maybe you have a unique testing technique you’re excited to popularize. Or maybe you simply want to challenge yourself. There’s no wrong reason. What matters is that you have one. When you know what you want to get out of speaking, it gives motivation to push through the hard work of preparation and the butterflies on stage.
+Knowing your “why” turns public speaking from something intimidating into something meaningful. It transforms the stage from a place of fear into a platform for impact.
 
 
 
 
 
-### 1. Challenge yourself / build courage
-
-Mesut Durukal: Challenge myself. Public speaking is not easy; it requires social courage. Once you start, it gets easier, but the first step is scary. I just wanted to close my eyes and push myself into the sea.
-
-Marko Rytkonen: To overcome my fear of talk. I'm nervous when speaking, but I enjoy it! The feeling afterwards is "winner" or "rock star" type, I suppose (not sure as I'm NOT a rock star :).. The same is when I organize testing seminar in Finland. The feeling is something you do not get easily from other hobbies.
-
-
-### 2. Travel & fun
-
-Lisa Crispin: I started speaking at conferences in order to GO to conferences, so I could learn and meet people. I also volunteered and did everything I could to get to them, because my employers couldn't or wouldn't pay for me to go.
-
-Lisa Crispin: Instead of being totally stressed out every workshop, I started to have fun. It's still stressful for me, and I'm exhausted at the end. But I get to recharge by getting to attend other sessions and meet awesome people.
-
-Mesut Durukal: Since I'm already in a new country or a beautiful city, why not spare a few days for sightseeing?
-
-Jonas Hermansson: I speak at conferences because I truly enjoy it ... most importantly — it's fun! It's an opportunity to strengthen both my own and my company's brand ... and most importantly — it's fun!
-
-Michal Buczko: I love the confereces. The vibe, atmosphere… Smile beats the fear, have a story to tell and share it with the room.
-
-
-### 3. Networking, visibility, personal brand & career growth
-
-Mesut Durukal: Increasing visibility and meeting new people. It helps grow your network.
-
-Anupam Krishnamurthy: Speaking at a conference also lends credibility to my work.
-
-Benjamin Bischoff: Speaking at a conference has a lot of benefits for your personal development and your career ... you expose both your personal and your company brand.
-
-Oren Reshef: One of the requirements for senior level is public speaking.
+### Personal brand
 
 Vitaly Sharovatov: Public reputation or a clear personal brand is a great proactive signal which is almost always received and considered at the earliest hiring stage, at the CV selection stage. This is why I believe it's clearly beneficial to invest in public speaking (presenting at conferences, meetups, etc).
 
-José Díaz: For some, it’s a step toward greater recognition within their company or professional life, or even a way to connect with a new employer.
-
-Maaret Pyhäjärvi: Finding new jobs and career opportunities: introductions from the stage done right turn into higher career progression if you manage the time at work vs time at conferences. My jobs have come from networks speaking cultivates.
-
 Attila Fekete: There are many  reasons: building your reputation, increasing your visibility, strengthening your personal brand, and opening doors to new opportunities.
-
-Kari Kakkonen: It is a natural step forward in growing as a professional - sharing with others. It gives you credibility as a professional.
-
-Marko Rytkonen: Get to know people and get people to know me. When you deliver talk, people will come and talk "naturally".
-
-Marko Rytkonen: Boost my book sales. Book sales is not about money, but it may open interesting opportunities (trainings, jobs, study groups...). Book and public talks will boost your career, in a unique and personal way.
-
-Nicola Lindgren: You get to go to a conference and learn from others as well.
 
 Leandro Melendez (aka Señor Performo): Also you have the expected recognition for being a thought leader talking about a topic, even if you are an expert or not, but I think more than recognition it will open you to say hello to everyone approaching you as you get off of stage and help them more directly and, who knows, maybe establish a new connection or even a friendship!
 
 Emna Ayadi: You become known as expert when you speak and share new ideas.
+
 
 
 ### 4. Increase diversity of thought & exposure to trends
@@ -110,9 +63,11 @@ Leandro Melendez (aka Señor Performo): And speaking of learning, as Richard Fey
 
 
 
+
 ### 6. Fixing social awkwardness and increasing self/confidence
 
 Maaret Pyhäjärvi: Fixing sociall awkwardness: when you speak, they come talk to you. Meeting strangers is hard except when introducing yourself with a talk on stage.
+
 Maile Rohiväli: Speaking in public helps to grow self confidence and therefore makes everything at everyday work also much easier. All the talks between dev-s and testers - piece of cake ;). Public speaking also helps to get connections, it helps to make one self visible and career growth can be much more interesting: there are more options available, not just one or two directions. Getting to know and talk to other speakers gives good ideas how to do something better, create more value, maybe even just how to have more fun with everyday job. [5]
 
 
@@ -125,44 +80,15 @@ Kari Kakkonen: It is a great way to attend a conference in a more central role t
 Bas Dijkstra: Because I enjoy it. I think public speaking doesn't make a lot of sense if you're not enjoying it. I myself like to share what I've learned with others, and maybe prevent them from making the same mistakes I made.
 
 
-### 8. Giving back to and being part of the community
-
-Anupam Krishnamurthy: Sharing my learnings at a conference is a small opportunity for me to give back.
-
-José Díaz: Some people want to share their knowledge and experiences. Others see speaking as a way to get more involved in the community.
-
-Maaret Pyhäjärvi: Speakers dinners and the connections in the speaker community: you learn a bit from talks, but you learn tons from other speakers. And speakers hang out together.
-
-Attila Fekete: Speaking can be as much about giving back to the community as it is about shaping your own professional journey.
-
-
-### 9. Pedagogical urge / ethical drive
-
-Vitaly Sharovatov: I have this ethical belief that if I can make the world a little better by sharing what I know, then I should.
-
-Attila Fekete: People have many reasons for stepping on stage. For me, it has always been about sharing what I know and teaching others—there’s a special joy in passing on knowledge. On top of that, I’ve always loved being on stage, so speaking is both fun and personally rewarding.
-
-Kari Kakkonen: It is sharing for the common good; why keep your ideas to your own?
-
-Viviane Hennecke: Personally, I started for the wrong reasons. Colleagues of mine asked me to jump in when one of their speakers unexpectedly dropped out for health reasons. But I would say, for me I continued for the right reasons. When I discovered that I am neurodivergent (autism and ADHD), it changed my life. I had a sudden urge to help others realizing that they might be too and to educate on the topic in the general. Now, every submission has a personal message I want to spread.
-
-Dorothy Graham: As a specialist in software testing, I wanted to share with others who could benefit from things I had learned; I have always felt that this was my calling - to help people in testing.
-
-
-### 10. Authentic expression / theatre roots
-
-Rahul Verma: I grew up on stage as a theatre actor. Conferences became the closest thing to theatre while staying a testing professional.
-
-
 ### 10. Free access to conferences
-
-Maaret Pyhäjärvi: At least you did not have to pay full price to attend if you deliver a talk.
 
 Benjamin Bischoff: Let's not forget that as a conference speaker you not only get to visit conferences for free, but you also make a lot of new friends there.
 
 Kari Kakkonen: It is a way to attend more conferences, and thus learn and network more effectively.
 
 Marko Rytkonen: It enables participation to the conferences. Some employers do not support that, and some supports (So happy that current ones encourages and supports)
+
+Nicola Lindgren: You get to go to a conference and learn from others as well.
 
 
 ### 11. Business promotion
@@ -174,6 +100,7 @@ Bas Dijkstra: It is a great form of shameless self-promotion. As an independent 
 
 Maaret Pyhäjärvi: Entrepreneurial side gigs: Teaching can be a way of making a living too and conferences are ways of introducing you as someone with knowledge to teach or consult on.
 
+Marko Rytkonen: Boost my book sales. Book sales is not about money, but it may open interesting opportunities (trainings, jobs, study groups...). Book and public talks will boost your career, in a unique and personal way. 
 
 Take a moment to think about which of these resonate with you, or add your own. Your story and perspective are unique.  No one else has lived your exact experiences. Even if a topic has been talked about before, your take on it can bring value. I used to worry “I have nothing new to add”, but remember: you have a story to share too! Your viewpoint, whether as a beginner or expert, is always unique and can shine a new light on a subject. Once you find a reason that excites you, hold onto it. It will keep you going through the work of creating and delivering a presentation.
 
@@ -518,7 +445,8 @@ Happy speaking, and see you on stage!
 
 ## Resources
 
-Discussion on GitHub where you can find original answers, ask your questions and connect with the author and collaborators: https://github.com/BeyondQuality/beyondquality/discussions/11 
+Discussion on GitHub where you can find original answers, ask your questions and connect with the author and collaborators: 
+https://github.com/BeyondQuality/beyondquality/discussions/11 
 
 [1] https://www.crossrivertherapy.com/public-speaking-statistics
 
@@ -544,7 +472,7 @@ https://nicolalindgren.com/11-public-speaking-tips-that-you-might-not-know/
 
 ### Books
 
-Sharon Bowman's book Training from the Back of the Room
+Sharon Bowman's book "Training from the Back of the Room"
 
 Presentation Zen: Simple Ideas on Presentation Design and Delivery (Voices That Matter) 
 
