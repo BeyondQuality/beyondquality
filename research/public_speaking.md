@@ -14,7 +14,7 @@ This guide is organized into three parts. In Part 1, we’ll explore the "Why’
 
 Whether you’re a QA tester who’s never spoken beyond team meetings, a junior developer thinking of giving a lightning talk, or a manager asked to present at an industry conference, this guide is for you. By the end, I hope you’ll feel that public speaking in tech is not only doable, but possibly even enjoyable. It’s okay to be nervous. Feeling that way just means you care about doing a good job. With that, let’s start by examining the big question: why even do public speaking in the first place?
 
-## The "whys"
+## Purpose
 
 Everyone’s reasons for speaking are a little different. Maybe you want to advocate for a cause, like encouraging more diversity in tech. Maybe you’ve discovered a testing approach you’re excited to share with the world. Or maybe you simply want to step outside your comfort zone and grow.
 
@@ -33,11 +33,11 @@ Now that we’ve covered the motivations behind public speaking, let’s get int
 
 
 
-## How to prepare a presentation
+## Preparation
 
 Preparing for a talk can feel overwhelming, especially if you’re new to it. I remember staring at a blank page while planning my first conference presentation, not sure where to begin. The key is to break the process into manageable steps. In this section, I’ll share a step-by-step approach to crafting a great presentation, from selecting your topic all the way to rehearsing your finished talk. We’ll also discuss some tips specific to technical talks (like slide design and demos) and ways to get feedback as you prepare. By the end of this part, you should have a checklist of preparation tasks to guide you.
 
-Choose a topic you care about. The best talks come from a place of passion or genuine interest. Think about what energizes you in your work. It could be a project you’re proud of, a tool or framework you love, a challenge you overcame, a lesson you learned. If you speak about something you truly care about, your enthusiasm will shine through and engage the audience. The best talks are ones where the presenter is passionate about the topic. It is also much easier to put in the hours of preparation if you enjoy the subject matter. So pick a topic that lights you up and that you think will interest others in your field.
+
 
 If you’re unsure what to talk about, try a brainstorming exercise. Jot down all the topics or projects you’ve been involved with. Which of these had interesting problems or insights? Another trick: friends and colleagues often see our “expertise” more clearly than we do. I initially thought I had nothing special to share until a colleague said, “What about exploratory sessions you introduced in your team recently? That was cool!” Don’t discount things that seem basic to you. Unique experience with a common technology or process can still teach others something new. And remember, you don’t have to be the world’s foremost expert. If you’re a beginner, you can share a beginner’s perspective; if you’re a professional with many years of experience, you can share hard-earned wisdom. Every level has an audience. The key is to find a story within your context that others can learn from.
 
@@ -70,7 +70,7 @@ With preparation done, you’ve already won half the battle. At this point, you 
 
 
 
-## How to deliver a good presentation
+## Presentation
 
 The big day has arrived. You’ve prepared a solid presentation and practiced it well. Now comes the part that most first-time speakers find the scariest: actually delivering the talk in front of a live audience. In this section, we’ll cover techniques to help doing presentation with confidence and clarity. This includes managing stage fright, engaging with your audience during the talk, handling any hiccups that arise, and navigating the Q&A session if there is one. Even the best-prepared talk can fall flat if delivered poorly, so it’s worth focusing on these delivery skills. The good news is, you don’t need to be an entertainer, a clown or have a golden voice. Being clear, authentic, empathetic to audience’s needs goes a long way.
 
@@ -150,6 +150,8 @@ https://nicolalindgren.com/speaking-at-a-conference-a-practical-guide-for-first-
 
 https://nicolalindgren.com/11-public-speaking-tips-that-you-might-not-know/ 
 
+https://www.linkedin.com/posts/vincent-angelo-coach_how-do-i-give-a-30-min-talk-without-being-activity-7358861173716373505-MqC6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAvKlJsB5kZwp8Hfbol__wiSPTcfXZgUgNA
+
 
 ### Books
 
@@ -168,6 +170,9 @@ https://www.youtube.com/watch?v=1sOgYNgq88E
 https://www.youtube.com/watch?v=Unzc731iCUY 
 
 https://www.ted.com/playlists/324/the_official_ted_talk_guide_pl 
+
+https://www.linkedin.com/learning/shane-snow-on-storytelling/become-a-powerful-storyteller
+
 
 
 
