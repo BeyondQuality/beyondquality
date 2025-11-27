@@ -236,13 +236,3 @@ Fewer parallel roles create faster, clearer feedback loops.
 Managing WIP is process control. When each stage operates within capacity, signals become clearer, feedback is faster, and quality stabilises. WIP limits don't slow hiring down, but rather make flow predictable and quality measurable.
 
 
-**TODO**: add the process map and visualise interventions
-
----
-
-
-# Talk version
-
----
-
-...
