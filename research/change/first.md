@@ -10,7 +10,7 @@ One plausible mechanism is that a consultant role creates external legitimacy an
 
 We are using [Consolidated Framework for Implementation Research (CFIR)](https://cfirguide.org/) as an organising lens because it is a widely used, research-based taxonomy synthesised from multiple implementation theories and repeatedly applied in empirical studies. It provides a formal structure for mapping barriers.
 
-It organises determinants into 5 domains (intervention characteristics, outer setting, inner setting, characteristics of individuals, process). Here is CFIR's construct example on [Implementation Climate](https://cfirguide.org/constructs/implementation-climate/)
+It organises determinants into 5 domains (intervention characteristics, outer setting, inner setting, characteristics of individuals, process).
 
 Mapped sources by CFIR domain:
 
