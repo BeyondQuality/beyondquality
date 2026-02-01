@@ -12,8 +12,6 @@ We are using [Consolidated Framework for Implementation Research (CFIR)](https:/
 
 It organises determinants into 5 domains (intervention characteristics, outer setting, inner setting, characteristics of individuals, process). Here is CFIR's construct example on [Implementation Climate](https://cfirguide.org/constructs/implementation-climate/)
 
-Note: I am using the CFIR Guide presentation of the classic domains; newer CFIR updates use slightly different labels (e.g., "Innovation").
-
 Mapped sources by CFIR domain:
 
 **Intervention characteristics**
@@ -25,12 +23,12 @@ Even when the change is rational, perceived complexity, cost, and disruption can
 The economics of testing model predicts long‑term gains in quality (and can indirectly improve delivery speed under some conditions), but managers might still face _immediate_ delivery risk, visible budget costs, and accountability to current KPIs. That local short‑term pressure can outweigh the broader long‑term gains, especially if ownership of quality and benefits is unclear or not mapped to their current KPIs and team context.
 
 Relevant constructs and sources:
-- **[Evidence strength and quality (CFIR)](https://cfirguide.org/constructs/evidence-strength-quality/)**
-- **[Relative advantage (CFIR)](https://cfirguide.org/constructs/relative-advantage/)**
-- **[Complexity (CFIR)](https://cfirguide.org/constructs/complexity/)**
-- **[Adaptability (CFIR)](https://cfirguide.org/constructs/adaptability/)**
-- **[Design quality and packaging (CFIR)](https://cfirguide.org/constructs/design-quality-packaging/)**
-- **[Cost (CFIR)](https://cfirguide.org/constructs/cost/)**
+- [Evidence strength and quality (CFIR)](https://cfirguide.org/constructs/evidence-strength-quality/)
+- [Relative advantage (CFIR)](https://cfirguide.org/constructs/relative-advantage/)
+- [Complexity (CFIR)](https://cfirguide.org/constructs/complexity/)
+- [Adaptability (CFIR)](https://cfirguide.org/constructs/adaptability/)
+- [Design quality and packaging (CFIR)](https://cfirguide.org/constructs/design-quality-packaging/)
+- [Cost (CFIR)](https://cfirguide.org/constructs/cost/)
 
 
 **Outer setting**
@@ -42,10 +40,10 @@ If external signals are weak or not salient, the change can still stall even whe
 How this applies to the economics of testing: if buyers are not churning because of defects, competitors ship faster with fewer checks, or external incentives value velocity over reliability, managers may feel pressure to keep the status quo despite the long‑term case for testing.
 
 Relevant constructs and sources:
-- **[Patient needs and resources (CFIR)](https://cfirguide.org/constructs/patient-needs-and-resources/)** (in this context, customer/user needs)
-- **[Cosmopolitanism (CFIR)](https://cfirguide.org/constructs/cosmopolitanism/)**
-- **[Peer pressure (CFIR)](https://cfirguide.org/constructs/peer-pressure/)**
-- **[External policies and incentives (CFIR)](https://cfirguide.org/constructs/external-policies-and-incentives/)**
+- [Patient needs and resources (CFIR)](https://cfirguide.org/constructs/patient-needs-and-resources/) (in this context, customer/user needs)
+- [Cosmopolitanism (CFIR)](https://cfirguide.org/constructs/cosmopolitanism/)
+- [Peer pressure (CFIR)](https://cfirguide.org/constructs/peer-pressure/)
+- [External policies and incentives (CFIR)](https://cfirguide.org/constructs/external-policies-and-incentives/)
 
 **Inner setting**
 
@@ -57,20 +55,20 @@ How this applies to the economics of testing: the long‑term gains can be outwe
 
 - Klein & Sorra in their [The Challenge of Innovation Implementation](https://www.jstor.org/stable/259164) paper define implementation climate as whether innovation use is **expected, supported, and rewarded**, and link it to outcomes like avoidance vs commitment. Also related "[meaning and measurement of implementation climate](https://link.springer.com/article/10.1186/1748-5908-6-78)"
 
-- **[Psychological safety](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Group_Performance/Edmondson%20Psychological%20safety.pdf)** — safety predicts learning behaviours (speaking up, reporting errors, experimentation). **[Organisational silence](https://www.jstor.org/stable/259200)** — silence is a systemic barrier to change and development.
+- [Psychological safety](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Group_Performance/Edmondson%20Psychological%20safety.pdf) — safety predicts learning behaviours (speaking up, reporting errors, experimentation). [Organisational silence](https://www.jstor.org/stable/259200) — silence is a systemic barrier to change and development.
 - These constructs are related but distinct: threat‑rigidity is about how threat changes information processing and control; psychological safety/silence are about whether people surface concerns and errors; implementation climate is about whether use of the new practice is expected, supported, and rewarded.
 
-- **[Threat-rigidity](https://www.jstor.org/stable/2392337)** — under threat, information processing restricts and control constricts (bad for learning/rebudgeting).
+- [Threat-rigidity](https://www.jstor.org/stable/2392337) — under threat, information processing restricts and control constricts (bad for learning/rebudgeting).
 
-- **[Kerr: "Rewarding A while hoping for B"](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Motivation/Kerr_Folly_of_rewarding_A_while_hoping_for_B.pdf)**, **[Campbell's warning about indicator corruption](https://www.jstor.org/stable/pdf/27521792.pdf) / [Goodhart](https://en.wikipedia.org/wiki/Goodhart%27s_law)'s law** — reward systems can reinforce the opposite of what is intended. For instance, if managers are rewarded for velocity, they wouldn't agree to slow down short-term to get preventive measures done right so that they could increase speed and quality later.
+- [Kerr: "Rewarding A while hoping for B"](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Motivation/Kerr_Folly_of_rewarding_A_while_hoping_for_B.pdf), [Campbell's warning about indicator corruption](https://www.jstor.org/stable/pdf/27521792.pdf) / [Goodhart](https://en.wikipedia.org/wiki/Goodhart%27s_law)'s law** — reward systems can reinforce the opposite of what is intended. For instance, if managers are rewarded for velocity, they wouldn't agree to slow down short-term to get preventive measures done right so that they could increase speed and quality later.
 
 Additional supporting theories relevant to this domain:
 
-- **[Weick: Sensemaking](https://uk.sagepub.com/en-gb/eur/sensemaking-in-organizations/book4988)** — under ambiguity, organisations coordinate via shared narratives; misaligned frames stall action.
+- [Weick: Sensemaking](https://uk.sagepub.com/en-gb/eur/sensemaking-in-organizations/book4988) — under ambiguity, organisations coordinate via shared narratives; misaligned frames stall action.
 
-- **[Hannan & Freeman structural inertia](https://www.jstor.org/stable/2095567)** — organisations are biased towards stability; change constrained by entrenched structures/routines.
+- [Hannan & Freeman structural inertia](https://www.jstor.org/stable/2095567) — organisations are biased towards stability; change constrained by entrenched structures/routines.
 
-- **[Armenakis et al. readiness](https://www.researchgate.net/profile/Achilles-Armenakis/publication/211381460_Creating_Readiness_for_Organizational_Change/links/00b7d51bc166dd4dce000000/Creating-Readiness-for-Organizational-Change.pdf)** — readiness is a precursor to resistance/adoption; assess/build readiness before rollout.
+- [Armenakis et al. readiness](https://www.researchgate.net/profile/Achilles-Armenakis/publication/211381460_Creating_Readiness_for_Organizational_Change/links/00b7d51bc166dd4dce000000/Creating-Readiness-for-Organizational-Change.pdf) — readiness is a precursor to resistance/adoption; assess/build readiness before rollout.
 
 **Characteristics of individuals**
 
@@ -80,17 +78,17 @@ Even when the change is rational, individual fears, identity threats, or low sel
 
 How this applies to the economics of testing: engineers or managers may feel that testing changes undermine their current identity as "fast shippers", or they may doubt their ability to implement testing practices without slowing delivery, leading them to resist despite the rational case.
 
-- **[Prospect theory](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Behavioral_Decision_Theory/Kahneman_Tversky_1979_Prospect_theory.pdf)** — loss aversion/reference dependence: immediate certain losses outweigh probabilistic future gains.
+- [Prospect theory](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Behavioral_Decision_Theory/Kahneman_Tversky_1979_Prospect_theory.pdf) — loss aversion/reference dependence: immediate certain losses outweigh probabilistic future gains.
 
-- **[Status quo bias](https://web.mit.edu/curhan/www/docs/Articles/biases/1_J_Risk_Uncertainty_7_%28Samuelson%29.pdf)** — people disproportionately stick with the current allocation ("do nothing" default).
+- [Status quo bias](https://web.mit.edu/curhan/www/docs/Articles/biases/1_J_Risk_Uncertainty_7_%28Samuelson%29.pdf) — people disproportionately stick with the current allocation ("do nothing" default).
 
-- **[Hovland & Weiss: source credibility](https://doi.org/10.1086/266350)** — low-credibility sources reduce immediate persuasion, and source discounting can fade over time (content/source dissociation); relevant to why external consultants can be "better listened to".
+- [Hovland & Weiss: source credibility](https://doi.org/10.1086/266350) — low-credibility sources reduce immediate persuasion, and source discounting can fade over time (content/source dissociation); relevant to why external consultants can be "better listened to".
 
-- **[Oreg (2006)](https://bschool-en.huji.ac.il/sites/default/files/businesshe/files/oreg_2006_ejwop.pdf)** — resistance is multifaceted and associated with both personality and organisational context.
+- [Oreg (2006)](https://bschool-en.huji.ac.il/sites/default/files/businesshe/files/oreg_2006_ejwop.pdf) — resistance is multifaceted and associated with both personality and organisational context.
 
 **Supplementary sources (relevant but not CFIR constructs)**
 
-- **[Suchman: legitimacy](https://www.jstor.org/stable/258788)** — organisations grant/withhold legitimacy; perceived legitimacy shapes who gets heard and what actions feel acceptable.
+- [Suchman: legitimacy](https://www.jstor.org/stable/258788) — organisations grant/withhold legitimacy; perceived legitimacy shapes who gets heard and what actions feel acceptable.
 
 **Process**
 
@@ -102,9 +100,9 @@ How this applies to the economics of testing: the case may be strong, but if no 
 
 - [Normalization Process Theory](https://link.springer.com/article/10.1186/1748-5908-4-29) focuses on the work people do to **embed and sustain** a new practice as "how we do things here".
 
-- **[Pfeffer: Managing with Power](https://books.google.com/books/about/Managing_with_Power.html?id=xbEN74KGZgsC)** — implementation is influence + overcoming resistance; "good decision" != behaviour change.
+- [Pfeffer: Managing with Power](https://books.google.com/books/about/Managing_with_Power.html?id=xbEN74KGZgsC) — implementation is influence + overcoming resistance; "good decision" != behaviour change.
 
-- **[Kotter](https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2)** — recurring reasons transformations fail (urgency, coalition, barriers, reinforcement, etc.).
+- [Kotter](https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2) — recurring reasons transformations fail (urgency, coalition, barriers, reinforcement, etc.).
 
 CFIR gives a systematic checklist of where blockage can occur: the change itself, the external context, the internal context, individual beliefs, or the implementation process. This makes diagnosis less anecdotal and more structured.
 
