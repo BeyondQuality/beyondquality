@@ -1,4 +1,4 @@
-# Social resistance to rational change
+# Social resistance to rational change in QA
 
 I tried applying the same QA improvement approach (described in [the economics of testing research](https://beyondquality.org/research/testing_economics/testing_economics)) in different companies, with mixed results. As a consultant, the change landed and scaled; as an internal QA engineer, the effort stalled. This contrast is why I want to study the social nature of resistance to change and give practical advice for engineers who want to improve QA processes in their companies.
 
