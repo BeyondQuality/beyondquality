@@ -14,7 +14,7 @@ It organises determinants into 5 domains (intervention characteristics, outer se
 
 Mapped sources by CFIR domain:
 
-**Intervention characteristics**
+### Intervention characteristics
 
 _What the change is like: evidence strength, relative advantage, complexity, adaptability, cost, and how it is packaged._
 
@@ -30,8 +30,7 @@ Relevant constructs and sources:
 - [Design quality and packaging (CFIR)](https://cfirguide.org/constructs/design-quality-packaging/)
 - [Cost (CFIR)](https://cfirguide.org/constructs/cost/)
 
-
-**Outer setting**
+### Outer setting
 
 _External context: customer needs, market pressures, peer influence, and external policy or regulatory incentives._
 
@@ -45,7 +44,7 @@ Relevant constructs and sources:
 - [Peer pressure (CFIR)](https://cfirguide.org/constructs/peer-pressure/)
 - [External policies and incentives (CFIR)](https://cfirguide.org/constructs/external-policies-and-incentives/)
 
-**Inner setting**
+### Inner setting
 
 _Internal context: structural characteristics, networks/communication, culture, implementation climate (including incentives), and organisational readiness for change._
 
@@ -70,7 +69,7 @@ Additional supporting theories relevant to this domain:
 
 - [Armenakis et al. readiness](https://www.researchgate.net/profile/Achilles-Armenakis/publication/211381460_Creating_Readiness_for_Organizational_Change/links/00b7d51bc166dd4dce000000/Creating-Readiness-for-Organizational-Change.pdf) — readiness is a precursor to resistance/adoption; assess/build readiness before rollout.
 
-**Characteristics of individuals**
+### Characteristics of individuals
 
 _Individual-level factors: beliefs, knowledge, self‑efficacy, stage of change, identity, and personal attitudes towards the change._
 
@@ -88,7 +87,7 @@ How this applies to the economics of testing: engineers or managers may feel tha
 
 - [Suchman: legitimacy](https://www.jstor.org/stable/258788) — organisations grant/withhold legitimacy; perceived legitimacy shapes who gets heard and what actions feel acceptable.
 
-**Process**
+### Process
 
 _How change is enacted: planning, engaging, executing, and reflecting/evaluating over time._
 
