@@ -16,7 +16,7 @@ Mapped sources by CFIR domain:
 
 **Intervention characteristics**
 
-What the change is like: evidence strength, relative advantage, complexity, adaptability, cost, and how it is packaged.
+_What the change is like: evidence strength, relative advantage, complexity, adaptability, cost, and how it is packaged._
 
 Even when the change is rational, perceived complexity, cost, and disruption can make it look risky, while evidence strength and relative advantage can be discounted under short‑term pressure or low salience.
 
@@ -33,7 +33,7 @@ Relevant constructs and sources:
 
 **Outer setting**
 
-External context: customer needs, market pressures, peer influence, and external policy or regulatory incentives.
+_External context: customer needs, market pressures, peer influence, and external policy or regulatory incentives._
 
 If external signals are weak or not salient, the change can still stall even when it is rational. For example, markets may reward short‑term speed, customers may not demand quality improvements, and regulations may not incentivise prevention.
 
@@ -47,7 +47,7 @@ Relevant constructs and sources:
 
 **Inner setting**
 
-Internal context: structural characteristics, networks/communication, culture, implementation climate (including incentives), and organisational readiness for change.
+_Internal context: structural characteristics, networks/communication, culture, implementation climate (including incentives), and organisational readiness for change._
 
 Even when the change is rational, internal structures and incentives can still block it if teams are optimised for delivery speed, cross‑team coordination is weak, or the climate does not reward preventive work.
 
@@ -72,7 +72,7 @@ Additional supporting theories relevant to this domain:
 
 **Characteristics of individuals**
 
-Individual-level factors: beliefs, knowledge, self‑efficacy, stage of change, identity, and personal attitudes towards the change.
+_Individual-level factors: beliefs, knowledge, self‑efficacy, stage of change, identity, and personal attitudes towards the change._
 
 Even when the change is rational, individual fears, identity threats, or low self‑efficacy can lead people to discount it or avoid the effort required to implement it.
 
@@ -86,13 +86,11 @@ How this applies to the economics of testing: engineers or managers may feel tha
 
 - [Oreg (2006)](https://bschool-en.huji.ac.il/sites/default/files/businesshe/files/oreg_2006_ejwop.pdf) — resistance is multifaceted and associated with both personality and organisational context.
 
-**Supplementary sources (relevant but not CFIR constructs)**
-
 - [Suchman: legitimacy](https://www.jstor.org/stable/258788) — organisations grant/withhold legitimacy; perceived legitimacy shapes who gets heard and what actions feel acceptable.
 
 **Process**
 
-How change is enacted: planning, engaging, executing, and reflecting/evaluating over time.
+_How change is enacted: planning, engaging, executing, and reflecting/evaluating over time._
 
 Even when the change is rational, poor engagement, weak coalition‑building, or inconsistent execution can stall it, especially when there is no clear owner or feedback loop to sustain momentum.
 
@@ -108,9 +106,7 @@ CFIR gives a systematic checklist of where blockage can occur: the change itself
 
 These domains can overlap in practice. That does not make the categorisation useless; it makes it diagnostic. The goal is not to put every cause into a single box, but to ensure all major sources of resistance are considered and to see which ones dominate in a given case.
 
-Using CFIR to analyse the consultant vs QA story:
-
-Two alternative explanations to keep in mind: a selection effect (companies hire consultants when urgency and leadership buy‑in are already high) and sponsorship/accountability (consultant engagements often have an executive sponsor with reputational skin in the game).
+## Applying CFIR categorisation to analyse the "consultant vs QA" story
 
 **Intervention characteristics**: in the consultant role, prior "success cases" were requested as proof, which increased perceived evidence strength despite potentially limited transferability across companies. As internal QA, the same proposal was more likely to be judged by its immediate complexity and cost without a clear short‑term payoff.
 
