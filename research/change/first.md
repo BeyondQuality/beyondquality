@@ -108,6 +108,8 @@ How this applies to the economics of testing: the case may be strong, but if no 
 
 CFIR gives a systematic checklist of where blockage can occur: the change itself, the external context, the internal context, individual beliefs, or the implementation process. This makes diagnosis less anecdotal and more structured.
 
+These domains can overlap in practice. That does not make the categorisation useless; it makes it diagnostic. The goal is not to put every cause into a single box, but to ensure all major sources of resistance are considered and to see which ones dominate in a given case.
+
 Using CFIR to analyse the consultant vs QA story:
 
 Two alternative explanations to keep in mind: a selection effect (companies hire consultants when urgency and leadership buy‑in are already high) and sponsorship/accountability (consultant engagements often have an executive sponsor with reputational skin in the game).
