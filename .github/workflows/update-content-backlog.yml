@@ -65,20 +65,21 @@ jobs:
 
           for topic in $TOPICS; do
             if grep -q "^### $topic" "$BACKLOG"; then
-              # Topic exists — add a progress note under the Unscheduled entry
+              # Topic exists — add a progress note
               sed -i "/^### $topic$/a\\
           - _Research updated $TODAY_" "$BACKLOG"
               echo "Updated existing topic: $topic"
             else
-              # Topic is new — append to Unscheduled section
-              # Find the line number of "## Done" and insert before it
-              done_line=$(grep -n "^## Done" "$BACKLOG" | head -1 | cut -d: -f1)
-              sed -i "${done_line}i\\
-          ### $topic\\
-          - [ ] Video (Qase YouTube)\\
-          - [ ] Blog post (Qase blog)\\
-          - [ ] LinkedIn post\\
-          " "$BACKLOG"
+              # Topic is new — append at end of file with all derivative slots
+              cat >> "$BACKLOG" <<EOF
+
+          ### $topic
+          - [ ] Video (Qase YouTube)
+          - [ ] Blog post (Qase blog)
+          - [ ] LinkedIn post
+          - [ ] Conference talk
+          - [ ] Podcast (BeyondQuality)
+          EOF
               echo "Added new topic: $topic"
             fi
           done
