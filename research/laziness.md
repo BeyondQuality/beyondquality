@@ -126,3 +126,4 @@ The alternative is clear: rather than controlling harder, managers must address 
 - Brooks, F. P. (1975). The Mythical Man-Month. Addison-Wesley.
 - DeMarco, T. (1997). The Deadline: A Novel About Project Management. Dorset House.
 - Dingsøyr et al., 2012. A decade of agile methodologies: Towards explaining agile software development
+-
