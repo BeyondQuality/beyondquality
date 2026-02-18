@@ -1,0 +1,92 @@
+name: Update Content Backlog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/**'
+
+jobs:
+  update-backlog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout BeyondQuality repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed research topics
+        id: topics
+        run: |
+          # Get files changed in this push
+          changed=$(git diff --name-only HEAD~1 HEAD -- research/)
+
+          # Extract unique topic names from paths
+          topics=""
+          for file in $changed; do
+            # Strip the research/ prefix
+            rel="${file#research/}"
+
+            # If it's in a subdirectory, topic = directory name
+            # If it's a file at research root, topic = filename without extension
+            if [[ "$rel" == */* ]]; then
+              topic="${rel%%/*}"
+            else
+              topic="${rel%.*}"
+            fi
+
+            # Add to list if not already there
+            if [[ -n "$topic" && ! " $topics " =~ " $topic " ]]; then
+              topics="$topics $topic"
+            fi
+          done
+
+          topics=$(echo "$topics" | xargs)
+          echo "topics=$topics" >> "$GITHUB_OUTPUT"
+          echo "Changed topics: $topics"
+
+      - name: Update content backlog
+        if: steps.topics.outputs.topics != ''
+        env:
+          CONTENT_BACKLOG_PAT: ${{ secrets.CONTENT_BACKLOG_PAT }}
+        run: |
+          set -e
+
+          # Clone the content-backlog repo
+          git clone "https://x-access-token:${CONTENT_BACKLOG_PAT}@github.com/sharovatov/content-backlog.git" /tmp/content-backlog
+          cd /tmp/content-backlog
+
+          git config user.name "BeyondQuality Bot"
+          git config user.email "bot@beyondquality.org"
+
+          BACKLOG="backlog.md"
+          TODAY=$(date +%Y-%m-%d)
+          TOPICS="${{ steps.topics.outputs.topics }}"
+
+          for topic in $TOPICS; do
+            if grep -q "^### $topic" "$BACKLOG"; then
+              # Topic exists — add a progress note under the Unscheduled entry
+              sed -i "/^### $topic$/a\\
+          - _Research updated $TODAY_" "$BACKLOG"
+              echo "Updated existing topic: $topic"
+            else
+              # Topic is new — append to Unscheduled section
+              # Find the line number of "## Done" and insert before it
+              done_line=$(grep -n "^## Done" "$BACKLOG" | head -1 | cut -d: -f1)
+              sed -i "${done_line}i\\
+          ### $topic\\
+          - [ ] Video (Qase YouTube)\\
+          - [ ] Blog post (Qase blog)\\
+          - [ ] LinkedIn post\\
+          " "$BACKLOG"
+              echo "Added new topic: $topic"
+            fi
+          done
+
+          git add "$BACKLOG"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update backlog: $TOPICS ($TODAY)"
+            git push
+          fi
