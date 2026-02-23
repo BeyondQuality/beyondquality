@@ -27,3 +27,5 @@ vendor
 
 # Local working files (not for the repo)
 local/
+
+CLAUDE.md
