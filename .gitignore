@@ -24,3 +24,6 @@ Thumbs.db
 *.log
 
 vendor
+
+# Local working files (not for the repo)
+local/
