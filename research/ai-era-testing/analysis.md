@@ -2,6 +2,8 @@
 
 Research by Lilia Abdulina (Head of QA at JetBrains), with Vitaly Sharovatov.
 
+Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
+
 ---
 
 ## 1. Problem Statement
