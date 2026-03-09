@@ -10,6 +10,15 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 Agentic AI accelerates code production, but the team's ability to understand, verify, and maintain the resulting system does not accelerate at the same rate. This creates a growing gap between what is being built and what is being comprehended. If this gap widens unchecked, the codebase becomes progressively less governable — changes carry unknown risks, defects accumulate silently, and the team loses the ability to evolve the product with confidence. The existing quality assurance model — which relies on inspecting code after it's produced — may not scale to close this gap, and we don't yet know what does.
 
+<!--- 
+Earlier, the onus was on the human developer to
+- Write the code by hand
+- Understand the code and how it behaves in detail
+
+While AI generated code largely eliminates the first step, it doesn’t change the second one. This is true both of committing code written by an AI agent, as well as reviewing it. AI generating code faster merely pushes the bottle-neck from code-generation to code understanding & alignment with good coding principles during development and review. 
+--->
+
+<!--- Right now, I find the scope of this study to be too broad. We need to nail down a few assumptions to be able to conduct a feasible research activity and draw reasonable conclusions--->
 ---
 
 ## 2. Pre-AI Baseline: How Development and QA Worked Before Agents
@@ -24,6 +33,7 @@ Testing was done in a few ways:
 - Fully manually (a human interprets the decision and the implementation, "tries it") and reports
 - Manually and automatically (same as previous, but also humans write automated tests)
 - A mixture of the two
+<!--- What is meant by 'a mixture of the two'? Isn't that what the second point is as well? --->
 
 ### Two types of companies
 
@@ -35,12 +45,19 @@ Practices like pair programming and mob programming serve the function of **shar
 
 Scaling characteristics when adding *n* teams:
 
+<!--- It isn't clear to me why you're discussing the scaling of QA costs within the topic of AI-assisted development. Are you assuming that since AI-assisted coding makes teams faster, there will be a larger number of teams working within a project? It will help to spell out the assumption that makes this discussion relevant in the first place --->
+
+<!--- It might help to explain here that you're calculating a QA cost function here, where QA cost is the total amount of effort invested in quality assurance activities. --->
+
 Per-team costs (the "linear" part):
+<!--- I'd suggest renaming this to intra-team costs, which contrasts nicely with cross-team costs. --->
 - QA prevention practices (TDD, pairing, etc.) are per-team — each team bears its own QA cost. Adding a team adds a roughly constant marginal cost.
 - Automated tests are written as part of development — no additional load on testers when teams are added.
+<!--- This statement isn't clear to me. Are testers embedding within the teams, or external to them? --->
 
 Cross-team costs (the "hidden superlinear" part):
 - **CI infrastructure pressure**: tests run in a shared pipeline. CI run time grows with total test count. Flaky test probability compounds: if each test has independent flake probability *p*, probability of at least one flake per run is 1-(1-p)^n, which approaches 1 quickly. Flaky test investigation is a shared cost, not per-team.
+<!--- Assuming my test set has 'n' tests, without retries. --->
 - **Cross-team test conflicts**: team A's change breaks team B's tests. Investigation cost grows with the number of team pairs = O(n^2).
 - **Shared test utilities/fixtures**: maintenance becomes a coordination problem as more teams depend on them.
 - **Architectural coherence**: the system becomes harder to reason about as a whole. Coordination mechanisms (architecture reviews, platform teams, interface contracts) are needed.
@@ -52,6 +69,7 @@ Cross-team costs (the "hidden superlinear" part):
 - *ε* is never zero — the "linearity" of proactive QA companies means they've invested in making the quadratic term's coefficient small, not that the quadratic term is absent
 
 The difference between proactive QA and reactive QC companies is not linear vs. superlinear — it's **small ε vs. large ε**.
+<!--- I think that good architectural practices are more a determinant of ε than QA proactiveness. But QA proactiveness also makes a contribution to ε by minimizing rework of the cross-team kind. --->
 
 #### Reactive QC companies
 
@@ -69,11 +87,13 @@ Using the same framework as proactive QA: cost is also **O(n + εn^2)**, but ε 
 
 Even before AI, as systems grew more complex, deterministic testing repeatedly hit combinatorial walls. Each time, the industry responded by inventing a new paradigm that accepted incompleteness. Each paradigm is a historical marker of a specific scaling wall being hit:
 
-| Paradigm | Year | What hit the wall | The wall | Response |
-|---|---|---|---|---|
-| Fuzzing | 1988 | **Input space** | Can't enumerate all inputs to a program | Sample randomly from input space, observe what breaks |
-| Property-based testing | 2000 | **Scenario space** | Can't enumerate all combinations of valid inputs and states | Specify invariants, let the framework generate cases automatically |
-| Chaos engineering | 2011 | **Interaction/failure space** | Can't enumerate all failure combinations in distributed systems | Inject random failures in production, observe emergent behavior |
+| Paradigm               | Year | What hit the wall             | The wall                                                        | Response                                                           |
+| ---------------------- | ---- | ----------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Fuzzing                | 1988 | **Input space**               | Can't enumerate all inputs to a program                         | Sample randomly from input space, observe what breaks              |
+| Property-based testing | 2000 | **Scenario space**            | Can't enumerate all combinations of valid inputs and states     | Specify invariants, let the framework generate cases automatically |
+| Chaos engineering      | 2011 | **Interaction/failure space** | Can't enumerate all failure combinations in distributed systems | Inject random failures in production, observe emergent behavior    |
+
+<!--- Perhaps an example could be added here that is more readily relatable. The fact that we only test critical user-flows in UI-Tests (E2E tests) using a risk based approach is due to it being infeasible to test every possible user journey. --->
 
 **The common move**: when enumeration becomes intractable, shift from **deterministic verification** to **probabilistic exploration**. This is the Monte Carlo method applied to testing — when you can't compute the integral analytically, you sample.
 
@@ -86,6 +106,8 @@ All three paradigms, despite accepting incompleteness in *enumeration*, still re
 
 This is the critical setup for the AI transition: the pre-AI testing world was already evolving toward probabilistic approaches because deterministic enumeration couldn't scale — but every new paradigm still assumed that humans understood the system deeply enough to design the tests, interpret the results, and act on the findings. AI-accelerated development threatens precisely this foundation.
 
+<!--- I love this statement above, and agree with it philosophically. --->
+
 ---
 
 ## 3. With Agents: How the Process Works Now
@@ -94,13 +116,18 @@ This is the critical setup for the AI transition: the pre-AI testing world was a
 
 1. **Decision**: Humans still decide what to build. But the specification now serves two audiences — humans and agents. The agent has no shared understanding, no history with the codebase, no tacit knowledge. The specification becomes simultaneously **more critical** (the agent can only work from what it's given) and **more insufficient** (the compensation mechanism — shared understanding — is absent on the agent side).
 
+<!--- General feedback. Statements like this apply better to vibe-coding as opposed to AI-assisted engineering. The biggest difference between the two is that AI-assisted engineering requires the human to be intimately involved in the development process, and use the AI agent only as a tool. In this case, they will fill tacit knowledge gaps and ensure that they retain a deep enough knowledge of the codebase even while coding with AI-agents. --->
+
 2. **Implementation**: Agents produce code dramatically faster, but several things break:
    - **Comprehension inversion**: before, the implementer understood the code best. Now, the implementer (agent) has no persistent understanding. The code exists, but nobody has the deep understanding the author traditionally had. This is qualitatively new — not "more code" but "code with less understanding per line."
    - **Comprehensible artifact degrades**: AI-generated code is syntactically fluent but its "intent" is derivative of the prompt, not of deep design reasoning. It may look idiomatic while being subtly wrong.
+<!--- This is why vibe coding doesn't work on large codebases. Under these circumstances, I think that AI-generated break easily in obvious rather than subtle ways, thereby limiting the damage done. --->
    - **Shared understanding doesn't accumulate**: a human developer builds a mental model over months. An agent starts roughly fresh each session. Each generation episode is somewhat context-free.
+<!--- With good AI-human collaboration, I believe that tasks can be broken down into smaller, more manageable chunks, for which agents can be given the relevant context. --->
 
-3. **Testing**: Three functions are stressed differently:
+1. **Testing**: Three functions are stressed differently:
    - **Verdict function is overwhelmed**: more code to verify, same (or fewer) humans to do it.
+<!--- A good antidote here could be to further reduce batch sizes. --->
    - **Learning function is broken**: testing produces learning, but the agent has no persistent mental model to update. The feedback loop from testing → implementation is severed. The same class of bug can recur indefinitely.
    - **Feedback to decision still works**: humans still learn from testing. But the loop that improved *implementation quality over time* is gone.
    - **AI-generated tests have a bootstrap problem**: if AI generates both code and tests, they can share the same blind spots. A human tester brings independent domain understanding. An AI generating tests from the same spec as the code can produce tests that pass precisely because they share the same misunderstanding.
@@ -113,6 +140,7 @@ This is the critical setup for the AI transition: the pre-AI testing world was a
 Prevention practices partially break:
 - **TDD** still works if the human writes tests first and the agent implements. But writing good tests requires understanding the system — the specification problem returns.
 - **Pair programming** with an agent is fundamentally different: the agent doesn't push back on design, doesn't bring independent domain knowledge. It's a powerful tool, not a thinking partner.
+<!--- An astute observation here. I wonder how AI-assisted pair programming with two humans would look like. --->
 - **Shared understanding amplifiers** were designed for human-to-human knowledge transfer. They don't directly apply when one "pair" is an agent.
 
 Architectural coherence cost increases — agents don't inherently respect architectural boundaries unless explicitly constrained.
@@ -144,13 +172,28 @@ All three terms move in the wrong direction simultaneously. The compounding is m
 
 ### What is qualitatively new (not just "more of the same")
 
-| Factor | Pre-AI | With agents |
-|---|---|---|
-| Code volume | — | Accelerated (quantitative change) |
-| Comprehension per line of code | Constant | **Degraded** — nobody deeply understands agent-written code |
-| Feedback loop (testing → implementation) | Works | **Severed** — agent has no persistent model to update |
-| Shared understanding | Fills specification gaps | **Absent on agent side** — gaps stay unfilled |
-| Test independence | Human testers bring independent perspective | **AI tests can share code's blind spots** |
-| Failure modes | Predictable, heuristic-detectable | **Novel** — plausible-looking but subtly wrong |
+| Factor                                   | Pre-AI                                      | With agents                                                 |
+| ---------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- |
+| Code volume                              | —                                           | Accelerated (quantitative change)                           |
+| Comprehension per line of code           | Constant                                    | **Degraded** — nobody deeply understands agent-written code |
+| Feedback loop (testing → implementation) | Works                                       | **Severed** — agent has no persistent model to update       |
+| Shared understanding                     | Fills specification gaps                    | **Absent on agent side** — gaps stay unfilled               |
+| Test independence                        | Human testers bring independent perspective | **AI tests can share code's blind spots**                   |
+| Failure modes                            | Predictable, heuristic-detectable           | **Novel** — plausible-looking but subtly wrong              |
 
 Row 1 is quantitative change. Rows 2-6 are qualitative changes. This is why "just add more wardens" (Lilia's Directions 1+2) has a structural ceiling — it addresses row 1 but not rows 2-6.
+
+<!--- Overall, I feel like you're making too many implicit assumptions here. For example,
+- **Effective *n* increases**: agents multiply code output per team, so the equivalent "team count" in terms of code volume grows.
+  - Why differentiate between intra-team and cross-team costs? That implies a certain shared degree of understanding within a team. If I consider the statement above, you're implying that this shared understanding is diluted when agents are used to generate code. 
+  - "Agent-generated code is less comprehensible" is another implicit assumption. In fact, a study disproved this. See: "https://arxiv.org/pdf/2507.00788
+  - Agent generated code may look idiomatic while being subtly wrong.
+- The degree of human involvement in the programming process is not explicitly stated. 
+- Facts like architectural considerations are mixed in with proactive vs. reactive QA, muddling the analysis. 
+
+My main tension while reading this draft is with the vibe-coding vs. AI-assisted engineering distinction I mentioned earlier. I think that needs to be clarified upfront. Right now, it reads like a philosophical exploration, which is fine for the first draft. 
+
+As I mentioned earlier, I'd recommend a tighter scope for the analysis with explicit assumptions. Right now, I see too much happening all at once.  
+--->
+
+<!--- An unrelated note. I am quite excited to learn about the relevance of smaller batch sizes with AI-assisted development. As such, smaller PRs are widely recommended. I sense that with AI-assisted development, PR size should be reduced even further. This might form the basis for a separate study. --->
