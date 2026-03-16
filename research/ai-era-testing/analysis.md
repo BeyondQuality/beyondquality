@@ -69,7 +69,7 @@ Cross-team costs (the "hidden superlinear" part):
 - In proactive QA companies, architectural practices (clear module boundaries, APIs, contracts) exist specifically to keep *ε* small
 - *ε* is never zero — the "linearity" of proactive QA companies means they've invested in making the quadratic term's coefficient small, not that the quadratic term is absent
 
-The difference between proactive QA and reactive QC companies is not linear vs. superlinear — it's **small ε vs. large ε**.
+The difference between proactive QA and reactive QC companies is not just the size of ε — it's **small ε and no rework multiplier vs. large ε compounded by the rework feedback loop** (see reactive QC below).
 
 #### Reactive QC companies
 
@@ -126,6 +126,8 @@ This is the critical setup for the AI transition: the pre-AI testing world was a
    - **AI-generated tests have a bootstrap problem**: if AI generates both code and tests, they can share the same blind spots. A human tester brings independent domain understanding. An AI generating tests from the same spec as the code can produce tests that pass precisely because they share the same misunderstanding.
    - **Failure modes are novel**: human-written bugs are in predictable places (off-by-one, missing edge cases). AI-generated bugs are different — code "reads right" but implements subtly wrong logic. Existing testing heuristics may systematically miss these.
 
+4. **Business domain understanding is absent by default.** The agent has no knowledge of the business domain, risk profile, product lifecycle, or consciously accepted tradeoffs. It can be given some context via prompts or configuration files, but it doesn't accumulate domain understanding over time the way a human does. A human developer who fixes a production incident in the payment flow carries that experience into every subsequent decision. An agent starts roughly fresh each session. Even when explicitly provided with domain context, the agent lacks the judgment that comes from having lived through the consequences of getting it wrong.
+
 ### Two types of companies — now with agents
 
 #### Proactive QA companies
@@ -172,7 +174,7 @@ All three terms move in the wrong direction simultaneously. The compounding is m
 | Shared understanding | Fills specification gaps | **Absent on agent side** — gaps stay unfilled |
 | Test independence | Human testers bring independent perspective | **AI tests can share code's blind spots** |
 | Failure modes | Predictable, heuristic-detectable | **Novel** — plausible-looking but subtly wrong |
-| Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure | **Absent** — agent treats every line of code as equally important, cannot judge what matters |
+| Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure | **Absent by default, not accumulated even when partially provided** — agent can be given context via prompts/config but doesn't build judgment from experience |
 
 Row 1 is quantitative change. Rows 2-7 are qualitative changes. This is why "just add more wardens" (Lilia's Directions 1+2) has a structural ceiling — it addresses row 1 but not rows 2-7.
 

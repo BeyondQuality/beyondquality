@@ -18,7 +18,7 @@ The [analysis](analysis.md) identified six factors that change qualitatively whe
 | 4 | Shared understanding | Fills specification gaps | Absent on agent side — gaps stay unfilled |
 | 5 | Test independence | Human testers bring independent perspective | AI tests can share code's blind spots |
 | 6 | Failure modes | Predictable, heuristic-detectable | Novel — plausible-looking but subtly wrong |
-| 7 | Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure | Absent — agent treats every line of code as equally important, cannot judge what matters |
+| 7 | Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure | Absent by default, not accumulated even when partially provided — agent can be given context via prompts/config but doesn't build judgment from experience |
 
 Row 1 is a quantitative change. Rows 2-7 are qualitative. Any proposed solution can be evaluated by asking: **which rows does it address?**
 
