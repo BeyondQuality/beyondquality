@@ -28,6 +28,21 @@ We also use the cost model from the analysis:
 
 Agents increase effective n, increase ε, and (in reactive QC companies) increase r(n). A solution that only addresses row 1 (volume) without addressing rows 2-7 will hit a structural ceiling.
 
+### The economic argument: CoQ and Direction 1/2
+
+The [Economics of Testing](../testing_economics/testing_economics.md) research frames testing as an investment within the Cost of Quality (CoQ) framework, which categorizes quality-related costs into four types: prevention, appraisal, internal failure, and external failure. These map directly to our cost models:
+
+| CoQ Category | Maps to |
+|---|---|
+| Prevention costs | What proactive QA companies invest in to keep ε small |
+| Appraisal costs | The warden — inspection after the fact (Direction 1/2) |
+| Internal failure costs | The rework feedback loop — the r(n) factor |
+| External failure costs | The escape rate — what gets past the warden |
+
+The economic insight is that **prevention costs less than appraisal, which costs less than failure**. The industry responses evaluated below are all appraisal activities — they optimize inspection, not prevention. The economics say this is structurally suboptimal: you can make the warden faster and more thorough, but you're still paying appraisal prices to catch what cheaper prevention could have avoided.
+
+The deeper problem: prevention requires exactly the capabilities that agents lack — business domain understanding (row 7), shared understanding (row 4), and the feedback loops that improve quality over time (row 3). You cannot do risk-based testing investment without knowing what risks exist, what failure costs, and what the product lifecycle demands. This is why Direction 1/2 products dominate the market: appraisal can be automated without domain understanding, prevention cannot.
+
 ---
 
 ## 1. JiTTests — Meta (Harman, 2026)

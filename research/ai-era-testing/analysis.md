@@ -27,7 +27,7 @@ Testing was done in a few ways:
 - Manually and automatically (same as previous, but also humans write automated tests)
 - Only automatically
 
-### Business domain understanding: the invisible load-bearing resource
+### Business domain understanding
 
 In all three steps above, humans carry business domain understanding — and they accumulate it for free, just by doing their jobs.
 
@@ -43,6 +43,8 @@ This is why the absence of domain understanding with agents is so easy to miss �
 
 ### Two types of companies
 
+Some people talk about "QA cultures" or maturity models with multiple levels, but for simplicity I see two types of companies on the market:
+
 #### Proactive QA companies
 
 Humans design the processes within steps 1-3 so that each step's probability of creating something of good quality is higher, and that the system stays in this regime. Practices include: Kaizen, zero bug policy, pair/mob programming, TDD, shift-left testing, continuous training, etc. Quality control measures (testing at different stages) are also present and act as inspection/verification (appraisal) activities, but the balance of effort is shifted towards **prevention over appraisal**.
@@ -50,6 +52,8 @@ Humans design the processes within steps 1-3 so that each step's probability of 
 Practices like pair programming and mob programming serve the function of **shared understanding amplifiers**. They keep mental models aligned across the team.
 
 Domain knowledge is embedded in their prevention practices: risk-based testing, quality gates calibrated to component criticality, architecture decisions shaped by business risk — all of these are domain understanding made structural.
+
+The operational version of this is a risk-based investment model: identify business risks, prioritize by exposure (likelihood × impact), select testing approaches that produce credible evidence at minimal cost, and review periodically to rebalance. This is described in detail in the [Economics of Testing](../testing_economics/testing_economics.md) research, which frames testing as an economic investment within the Cost of Quality (CoQ) framework. The key economic insight is that prevention costs less than appraisal, which costs less than failure — so proactive QA companies invest heavily in prevention and use appraisal (testing) deliberately where it produces the highest marginal risk reduction. Every step of this model depends on business domain understanding: what risks exist, what failure costs, what the product lifecycle demands, what tradeoffs are acceptable.
 
 Scaling characteristics when adding *n* teams:
 
@@ -73,7 +77,7 @@ The difference between proactive QA and reactive QC companies is not just the si
 
 #### Reactive QC companies
 
-Little to no proactive QA. Quality is mostly controlled, not assured. Testing is often done "after" development and frequently struggles to cope with delivery. Dev and tester mental models drift apart — testing becomes "guess what the developer meant" rather than "verify what we all agreed on."
+Little to no proactive QA. Quality is mostly controlled, not assured. Testing is often done "after" development and frequently struggles to cope with delivery. Dev and tester mental models drift apart — testing becomes "guess what the developer meant" rather than "verify what we all agreed on".
 
 Domain knowledge still exists in people's heads, even if processes don't leverage it formally. The individual tester still knows "this area is risky" — they just can't act on it structurally.
 
@@ -115,7 +119,7 @@ This is the critical setup for the AI transition: the pre-AI testing world was a
 1. **Decision**: Humans still decide what to build. But the specification now serves two audiences — humans and agents. The agent has no shared understanding, no history with the codebase, no tacit knowledge. The specification becomes simultaneously **more critical** (the agent can only work from what it's given) and **more insufficient** (the compensation mechanism — shared understanding — is absent on the agent side).
 
 2. **Implementation**: Agents produce code dramatically faster, but several things break:
-   - **Comprehension inversion**: before, the implementer understood the code best. Now, the implementer (agent) has no persistent understanding. The code exists, but nobody has the deep understanding the author traditionally had. This is qualitatively new — not "more code" but "code with less understanding per line."
+   - **Comprehension inversion**: before, the implementer understood the code best. Now, the implementer (agent) has no persistent understanding. The code exists, but nobody has the deep understanding the author traditionally had. This is qualitatively new — not "more code" but "code with less understanding per line".
    - **Comprehensible artifact degrades**: AI-generated code is syntactically fluent but its "intent" is derivative of the prompt, not of deep design reasoning. It may look idiomatic while being subtly wrong.
    - **Shared understanding doesn't accumulate**: a human developer builds a mental model over months. An agent starts roughly fresh each session. Each generation episode is somewhat context-free.
 
@@ -128,6 +132,32 @@ This is the critical setup for the AI transition: the pre-AI testing world was a
 
 4. **Business domain understanding is absent by default.** The agent has no knowledge of the business domain, risk profile, product lifecycle, or consciously accepted tradeoffs. It can be given some context via prompts or configuration files, but it doesn't accumulate domain understanding over time the way a human does. A human developer who fixes a production incident in the payment flow carries that experience into every subsequent decision. An agent starts roughly fresh each session. Even when explicitly provided with domain context, the agent lacks the judgment that comes from having lived through the consequences of getting it wrong.
 
+### The economics shift: Boehm's curve in the AI era
+
+Pre-AI, Boehm's cost-of-change curve showed that fixing a defect grows exponentially more expensive as you move from requirements → design → code → testing → production. The driver: the later you find a flaw, the more work products are built on top of it, and all need rework.
+
+In the AI era, code generation and rewriting become cheap. An agent can regenerate a function in seconds. This might suggest the curve flattens — but it doesn't. The cost driver shifts from **rework volume** to **comprehension debt**, and the curve gets steeper:
+
+| Activity | Pre-AI | AI era |
+|---|---|---|
+| Writing code | Expensive (human time) | Cheap (agent generates it) |
+| Understanding code | Free (the author understands it) | Expensive (nobody deeply understands agent-written code) |
+| Rewriting code | Expensive (human time) | Cheap (agent regenerates it) |
+| Finding what to rewrite | Moderate (humans trace through code they understand) | Very expensive (comprehension gap) |
+
+The consequences:
+
+- **Wrong ideas get amplified faster.** A flawed specification used to produce one developer writing wrong code at human speed. Now it produces volumes of wrong code at machine speed. More wrong artifacts to find and correct.
+- **Diagnosis is more expensive.** When you find a production defect in human-written code, the author can often fix it quickly — they understand it. In agent-written code, nobody deeply understands it. Diagnosis cost goes UP even though rewrite cost goes DOWN.
+- **Integration costs are unchanged or worse.** Rewriting a function is cheap. Understanding how that function interacts with the rest of the system, what else breaks, what the ripple effects are — that's the expensive part, and it's worse because comprehension is degraded.
+- **Production failure costs are completely unchanged.** Customer churn, outages, regulatory fines, reputational damage — these have nothing to do with how cheaply you can rewrite code. They're business costs.
+
+The AI-era Boehm curve: the "coding" section collapses (cheap to write and rewrite), but the "idea → specification" section becomes MORE critical (wrong ideas amplified at machine speed), and the "testing → production" section becomes steeper (diagnosis harder, comprehension degraded). The total cost of defects may increase even though the cost of writing code decreases.
+
+The pre-AI curve was driven by "how much work was built on top of the flaw". The AI-era curve is driven by "how little anyone understands what was built on top of the flaw". The exponential cost driver shifts from rework volume to comprehension debt.
+
+This has a direct economic implication: the [Cost of Quality framework](../testing_economics/testing_economics.md) says prevention is cheaper than appraisal, which is cheaper than failure. In the AI era, this gap widens — prevention (getting the idea and specification right) becomes even more critical relative to appraisal (inspecting the code after generation), because the amplification from wrong ideas to volumes of wrong code is faster and the comprehension debt makes late-stage diagnosis more expensive.
+
 ### Two types of companies — now with agents
 
 #### Proactive QA companies
@@ -139,7 +169,7 @@ Prevention practices partially break:
 
 Architectural coherence cost increases — agents don't inherently respect architectural boundaries unless explicitly constrained.
 
-**But** — proactive QA companies are better positioned. Their mindset is already "embed quality into the process." They'll naturally try to embed quality constraints into agent workflows (better prompts, architectural guardrails, specification-level testing). They experience this as "we need to adapt our practices" rather than "everything is breaking."
+**But** — proactive QA companies are better positioned. Their mindset is already "embed quality into the process". They'll naturally try to embed quality constraints into agent workflows (better prompts, architectural guardrails, specification-level testing). They experience this as "we need to adapt our practices" rather than "everything is breaking".
 
 Scaling with agents — using the O(n + εn^2) framework, agents cause two simultaneous effects:
 1. **Effective *n* increases**: agents multiply code output per team, so the equivalent "team count" in terms of code volume grows. Even a small ε starts to bite at higher *n*.
