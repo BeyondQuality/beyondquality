@@ -45,6 +45,7 @@ GEM
       logger
     faraday-net_http (3.4.1)
       net-http (>= 0.5.0)
+    ffi (1.17.2-arm64-darwin)
     ffi (1.17.2-x86_64-linux-musl)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
@@ -234,6 +235,8 @@ GEM
     minitest (5.25.5)
     net-http (0.6.0)
       uri
+    nokogiri (1.18.10-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -271,6 +274,7 @@ GEM
     webrick (1.9.1)
 
 PLATFORMS
+  arm64-darwin-25
   x86_64-linux-musl
 
 DEPENDENCIES
