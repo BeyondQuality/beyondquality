@@ -10,6 +10,8 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 Agentic AI accelerates code production, but the team's ability to understand, verify, and maintain the resulting system does not accelerate at the same rate. This creates a growing gap between what is being built and what is being comprehended. If this gap widens unchecked, the codebase becomes progressively less governable — changes carry unknown risks, defects accumulate silently, and the team loses the ability to evolve the product with confidence. The existing quality assurance model — which relies on inspecting code after it's produced — may not scale to close this gap, and we don't yet know what does.
 
+**A foundational premise: quality is not a property of code in isolation**. Whether code is "good enough" depends on what business problem it solves, what the consequences of failure are, what lifecycle stage the product is in, and what tradeoffs the team has consciously accepted. A prototype and a payment system have different quality requirements even if the code looks identical. This means that any quality assessment — human or automated — that operates only on the code surface without access to this context can only catch superficial issues. The deeper question ("does this code do the right thing?") is unanswerable without domain understanding.
+
 ---
 
 ## 2. Pre-AI Baseline: How Development and QA Worked Before Agents
@@ -23,7 +25,21 @@ Agentic AI accelerates code production, but the team's ability to understand, ve
 Testing was done in a few ways:
 - Fully manually (a human interprets the decision and the implementation, "tries it") and reports
 - Manually and automatically (same as previous, but also humans write automated tests)
-- A mixture of the two
+- Only automatically
+
+### Business domain understanding: the invisible load-bearing resource
+
+In all three steps above, humans carry business domain understanding — and they accumulate it for free, just by doing their jobs.
+
+In **decisions**, domain knowledge shapes what gets specified and what gets left implicit. "We need to handle refunds" means very different things depending on whether you know the business processed 3 months of chargebacks last quarter.
+
+In **implementation**, domain knowledge shapes design choices — what to optimize, where to be paranoid, where "good enough" is fine. A developer who's been on the payment team for a year doesn't write the same code as a contractor who just joined.
+
+In **testing**, domain knowledge shapes risk-based prioritization. The tester who knows users constantly misuse the export feature tests it harder. This is invisible in the process — nobody writes "test this harder because of domain risk" — the human just does it.
+
+This matters because **business domain understanding was mostly not an explicit activity — it was a byproduct of humans being in the loop**. It didn't appear as a line item in anyone's cost model. Nobody budgeted for "domain knowledge accumulation" because it happened automatically. Some companies did make parts of it explicit — risk registers, architecture decision records (ADRs), component criticality classifications — but these captured a fraction of the domain knowledge that humans carried implicitly. The explicit artifacts were supplements to human judgment, not substitutes for it.
+
+This is why the absence of domain understanding with agents is so easy to miss — you don't notice the loss of something you never fully tracked.
 
 ### Two types of companies
 
@@ -32,6 +48,8 @@ Testing was done in a few ways:
 Humans design the processes within steps 1-3 so that each step's probability of creating something of good quality is higher, and that the system stays in this regime. Practices include: Kaizen, zero bug policy, pair/mob programming, TDD, shift-left testing, continuous training, etc. Quality control measures (testing at different stages) are also present and act as inspection/verification (appraisal) activities, but the balance of effort is shifted towards **prevention over appraisal**.
 
 Practices like pair programming and mob programming serve the function of **shared understanding amplifiers**. They keep mental models aligned across the team.
+
+Domain knowledge is embedded in their prevention practices: risk-based testing, quality gates calibrated to component criticality, architecture decisions shaped by business risk — all of these are domain understanding made structural.
 
 Scaling characteristics when adding *n* teams:
 
@@ -56,6 +74,8 @@ The difference between proactive QA and reactive QC companies is not linear vs. 
 #### Reactive QC companies
 
 Little to no proactive QA. Quality is mostly controlled, not assured. Testing is often done "after" development and frequently struggles to cope with delivery. Dev and tester mental models drift apart — testing becomes "guess what the developer meant" rather than "verify what we all agreed on."
+
+Domain knowledge still exists in people's heads, even if processes don't leverage it formally. The individual tester still knows "this area is risky" — they just can't act on it structurally.
 
 Scaling characteristics when adding *n* teams — **much harder**:
 
@@ -152,8 +172,9 @@ All three terms move in the wrong direction simultaneously. The compounding is m
 | Shared understanding | Fills specification gaps | **Absent on agent side** — gaps stay unfilled |
 | Test independence | Human testers bring independent perspective | **AI tests can share code's blind spots** |
 | Failure modes | Predictable, heuristic-detectable | **Novel** — plausible-looking but subtly wrong |
+| Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure | **Absent** — agent treats every line of code as equally important, cannot judge what matters |
 
-Row 1 is quantitative change. Rows 2-6 are qualitative changes. This is why "just add more wardens" (Lilia's Directions 1+2) has a structural ceiling — it addresses row 1 but not rows 2-6.
+Row 1 is quantitative change. Rows 2-7 are qualitative changes. This is why "just add more wardens" (Lilia's Directions 1+2) has a structural ceiling — it addresses row 1 but not rows 2-7.
 
 
 See also: [evaluation.md](evaluation.md) — industry responses evaluated against this framework. [references.md](references.md) — annotated link collection.
