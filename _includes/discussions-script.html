@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const discussions = await response.json();
 
             if (Array.isArray(discussions) && discussions.length > 0) {
+                discussions.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
                 renderDiscussions(discussions);
             } else {
                 throw new Error('No discussions data found');
