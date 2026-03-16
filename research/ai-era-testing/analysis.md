@@ -154,3 +154,6 @@ All three terms move in the wrong direction simultaneously. The compounding is m
 | Failure modes | Predictable, heuristic-detectable | **Novel** — plausible-looking but subtly wrong |
 
 Row 1 is quantitative change. Rows 2-6 are qualitative changes. This is why "just add more wardens" (Lilia's Directions 1+2) has a structural ceiling — it addresses row 1 but not rows 2-6.
+
+
+See also: [evaluation.md](evaluation.md) — industry responses evaluated against this framework. [references.md](references.md) — annotated link collection.
