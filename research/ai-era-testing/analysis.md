@@ -8,7 +8,7 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 ## 1. Problem Statement
 
-Agentic AI accelerates code production, but the team's ability to understand, verify, and maintain the resulting system does not accelerate at the same rate. This creates a growing gap between what is being built and what is being comprehended. If this gap widens unchecked, the codebase becomes progressively less governable — changes carry unknown risks, defects accumulate silently, and the team loses the ability to evolve the product with confidence. The existing quality assurance model — which relies on inspecting code after it's produced — may not scale to close this gap, and we don't yet know what does.
+Many companies are hitting the same wall: as teams adopt agentic AI for code generation, code output accelerates — but existing testing, both manual and automated, cannot cope with the volume and diversity of code being produced. This situation is new, and nobody has a clear answer for what to do about it.
 
 **A foundational premise: quality is not a property of code in isolation**. Whether code is "good enough" depends on what business problem it solves, what the consequences of failure are, what lifecycle stage the product is in, and what tradeoffs the team has consciously accepted. A prototype and a payment system have different quality requirements even if the code looks identical. This means that any quality assessment — human or automated — that operates only on the code surface without access to this context can only catch superficial issues. The deeper question ("does this code do the right thing?") is unanswerable without domain understanding.
 
