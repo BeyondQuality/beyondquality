@@ -10,6 +10,8 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 Many companies are hitting the same wall: as teams adopt agentic AI for code generation, code output accelerates — but existing testing, both manual and automated, cannot cope with the volume and diversity of code being produced. This situation is new, and nobody has a clear answer for what to do about it.
 
+But the testing bottleneck is a symptom, not the root cause. Before AI, writing code was expensive and understanding it was cheap — the author carried a mental model of what they built and why. AI inverts this: writing code becomes cheap, but the cost of diagnosing defects, tracing dependencies, and verifying correctness goes up — because nobody carries the deep knowledge that the human author used to have. At the same time, the feedback loops that improved quality over time (testing finds a bug → developer learns → fewer similar bugs next cycle) are weakened when the implementer is an agent that starts roughly fresh each session. The result is not just "more code to test" but a shift in where costs accumulate and which quality mechanisms still function.
+
 **A foundational premise: quality is not a property of code in isolation**. Whether code is "good enough" depends on what business problem it solves, what the consequences of failure are, what lifecycle stage the product is in, and what tradeoffs the team has consciously accepted. A prototype and a payment system have different quality requirements even if the code looks identical. This means that any quality assessment — human or automated — that operates only on the code surface without access to this context can only catch superficial issues. The deeper question ("does this code do the right thing?") is unanswerable without domain understanding.
 
 ---
@@ -43,7 +45,7 @@ This is why the absence of domain understanding with agents is so easy to miss �
 
 ### Two types of companies
 
-Some people talk about "QA cultures" or maturity models with multiple levels, but for simplicity I see two types of companies on the market:
+Some people talk about "QA cultures" or maturity models with multiple levels, but for simplicity I see two types of companies on the market. To understand how different QA approaches scale — and why agents make the difference matter more — we need to model QA costs at the team level:
 
 #### Proactive QA companies
 
@@ -57,12 +59,12 @@ The operational version of this is a risk-based investment model: identify busin
 
 Scaling characteristics when adding *n* teams:
 
-Per-team costs (the "linear" part):
+Intra-team costs (the "linear" part):
 - QA prevention practices (TDD, pairing, etc.) are per-team — each team bears its own QA cost. Adding a team adds a roughly constant marginal cost.
-- Automated tests are written as part of development — no additional load on testers when teams are added.
+- Automated tests are written by developers as part of development — they scale with the team, not as a separate coordination overhead.
 
 Cross-team costs (the "hidden superlinear" part):
-- **CI infrastructure pressure**: tests run in a shared pipeline. CI run time grows with total test count. Flaky test probability compounds: if each test has independent flake probability *p*, probability of at least one flake per run is 1-(1-p)^n, which approaches 1 quickly. Flaky test investigation is a shared cost, not per-team.
+- **CI infrastructure pressure**: tests run in a shared pipeline. CI run time grows with total test count. Flaky test probability compounds: if each of *t* tests has independent flake probability *p*, probability of at least one flake per run is 1-(1-p)^t, which approaches 1 quickly. Flaky test investigation is a shared cost, not per-team.
 - **Cross-team test conflicts**: team A's change breaks team B's tests. Investigation cost grows with the number of team pairs = O(n^2).
 - **Shared test utilities/fixtures**: maintenance becomes a coordination problem as more teams depend on them.
 - **Architectural coherence**: the system becomes harder to reason about as a whole. Coordination mechanisms (architecture reviews, platform teams, interface contracts) are needed.
@@ -99,6 +101,8 @@ Even before AI, as systems grew more complex, deterministic testing repeatedly h
 | Property-based testing | 2000 | **Scenario space** | Can't enumerate all combinations of valid inputs and states | Specify invariants, let the framework generate cases automatically |
 | Chaos engineering | 2011 | **Interaction/failure space** | Can't enumerate all failure combinations in distributed systems | Inject random failures in production, observe emergent behavior |
 
+This is the same principle behind risk-based E2E testing: it's infeasible to test every user journey, so teams prioritize critical flows — accepting incompleteness in exchange for tractability.
+
 **The common move**: when enumeration becomes intractable, shift from **deterministic verification** to **probabilistic exploration**. This is the Monte Carlo method applied to testing — when you can't compute the integral analytically, you sample.
 
 These paradigms did not *replace* traditional testing — they *supplemented* it. Companies still write unit tests AND do chaos testing. Each paradigm emerged as a new layer because the previous layers couldn't reach certain kinds of defects. The testing stack keeps growing.
@@ -130,7 +134,7 @@ This is the critical setup for the AI transition: the pre-AI testing world was a
    - **AI-generated tests have a bootstrap problem**: if AI generates both code and tests, they can share the same blind spots. A human tester brings independent domain understanding. An AI generating tests from the same spec as the code can produce tests that pass precisely because they share the same misunderstanding.
    - **Failure modes are novel**: human-written bugs are in predictable places (off-by-one, missing edge cases). AI-generated bugs are different — code "reads right" but implements subtly wrong logic. Existing testing heuristics may systematically miss these.
 
-4. **Business domain understanding is absent by default.** The agent has no knowledge of the business domain, risk profile, product lifecycle, or consciously accepted tradeoffs. It can be given some context via prompts or configuration files, but it doesn't accumulate domain understanding over time the way a human does. A human developer who fixes a production incident in the payment flow carries that experience into every subsequent decision. An agent starts roughly fresh each session. Even when explicitly provided with domain context, the agent lacks the judgment that comes from having lived through the consequences of getting it wrong.
+**Business domain understanding is absent by default.** The agent has no knowledge of the business domain, risk profile, product lifecycle, or consciously accepted tradeoffs. It can be given some context via prompts or configuration files, but it doesn't accumulate domain understanding over time the way a human does. A human developer who fixes a production incident in the payment flow carries that experience into every subsequent decision. An agent starts roughly fresh each session. Even when explicitly provided with domain context, the agent lacks the judgment that comes from having lived through the consequences of getting it wrong.
 
 ### The economics shift: Boehm's curve in the AI era
 
@@ -175,7 +179,7 @@ Scaling with agents — using the O(n + εn^2) framework, agents cause two simul
 1. **Effective *n* increases**: agents multiply code output per team, so the equivalent "team count" in terms of code volume grows. Even a small ε starts to bite at higher *n*.
 2. **ε itself increases**: the cross-team coordination cost assumed humans could read each other's code and resolve conflicts. When agent-generated code is less comprehensible, the coordination cost per team-pair rises — i.e., ε grows.
 
-Agents attack both the coefficient and the base simultaneously. Outcome: **uncertain but plausibly manageable** if prevention practices can be adapted to constrain both effects.
+Combined effect on O(n + εn²): if agents raise effective team count to n' and coordination coefficient to ε', the quadratic term grows by (ε'/ε)·(n'/n)² — both multipliers compound. Outcome: **uncertain but plausibly manageable** if prevention practices can be adapted to constrain both effects.
 
 #### Reactive QC companies
 
@@ -206,7 +210,7 @@ All three terms move in the wrong direction simultaneously. The compounding is m
 | Failure modes | Predictable, heuristic-detectable | **Novel** — plausible-looking but subtly wrong |
 | Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure | **Absent by default, not accumulated even when partially provided** — agent can be given context via prompts/config but doesn't build judgment from experience |
 
-Row 1 is quantitative change. Rows 2-7 are qualitative changes. This is why "just add more wardens" (Lilia's Directions 1+2) has a structural ceiling — it addresses row 1 but not rows 2-7.
+Row 1 is quantitative change. Rows 2-7 are qualitative changes. This is why "just add more wardens" has a structural ceiling — it addresses row 1 but not rows 2-7.
 
 
 See also: [evaluation.md](evaluation.md) — industry responses evaluated against this framework. [references.md](references.md) — annotated link collection.
