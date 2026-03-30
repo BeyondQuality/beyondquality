@@ -8,7 +8,7 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 ## Evaluation framework
 
-The [analysis](analysis.md) identified six factors that change qualitatively when agents enter the development process:
+The [analysis](analysis.md) identified seven factors that change qualitatively when agents enter the development process:
 
 | # | Factor | Pre-AI | With agents |
 |---|--------|--------|-------------|
@@ -19,14 +19,15 @@ The [analysis](analysis.md) identified six factors that change qualitatively whe
 | 5 | Test independence | Human testers bring independent perspective | AI tests can share code's blind spots |
 | 6 | Failure modes | Predictable, heuristic-detectable | Novel — plausible-looking but subtly wrong |
 | 7 | Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure. Also transferable professional heuristics (oracle concept) | Qualitatively different — LLMs have broad pattern recognition but lack consequence-grounded calibration, contextual exception recognition, and project-specific accumulated knowledge. Open research question |
+| 8 | Intent preservation | Humans carry the "why" — business rationale, design decisions, consciously accepted tradeoffs | Eroding — agents don't retain intent; humans who made decisions rotate, forget, or leave. Manifests not when things break, but when decisions need to be made |
 
-Row 1 is a quantitative change. Rows 2-7 are qualitative. Any proposed solution can be evaluated by asking: **which rows does it address?**
+Row 1 is a quantitative change. Rows 2-8 are qualitative. Any proposed solution can be evaluated by asking: **which rows does it address?**
 
 We also use the cost model from the analysis:
 - Proactive QA: **O(n + εn²)** where ε is the cross-team coordination coefficient
 - Reactive QC: **O((n + εn²) / (1-r(n)))** where r(n) is the rework defect injection rate
 
-Agents increase effective n, increase ε, and (in reactive QC companies) increase r(n). A solution that only addresses row 1 (volume) without addressing rows 2-7 will hit a structural ceiling.
+Agents increase effective n, increase ε, and (in reactive QC companies) increase r(n). A solution that only addresses row 1 (volume) without addressing rows 2-8 will hit a structural ceiling.
 
 ### The economic argument: CoQ and Direction 1/2
 
@@ -67,6 +68,7 @@ The deeper problem: prevention requires exactly the capabilities that agents lac
 | 5 | Test independence | **Partially** — mutation testing provides some independence (testing against behavioral changes, not against the spec). But the LLM inferring "change intention" can share the code-generating LLM's assumptions |
 | 6 | Novel failure modes | **Partially** — mutation-based approach can catch some novel failures (behavioral regressions), but not "code looks right but implements the wrong thing" since it only detects changes from previous behavior, not deviations from intended behavior |
 | 7 | Business domain understanding | **No** — mutation testing treats all code changes as equally important. It cannot distinguish a subtle bug in a payment flow from a cosmetic issue in a settings page. No access to risk profile, product lifecycle, or business tradeoffs |
+| 8 | Intent preservation | **No** — no mechanism for preserving or assessing business rationale. Tests are generated per-change with no access to why the code exists |
 
 **Effect on cost model:**
 - Reduces the linear term (no per-team test maintenance cost)
@@ -76,7 +78,7 @@ The deeper problem: prevention requires exactly the capabilities that agents lac
 
 **Cost transparency note:** Unlike the Anthropic approach (where per-review pricing is published), Meta has not published cost figures for JiTTests infrastructure — LLM inference for mutation generation, test generation, and assessment per code change. Without these numbers, direct economic comparison between the two approaches is incomplete.
 
-**Assessment:** The strongest possible version of Direction 1/2 — automate and optimize the warden. Addresses row 1, partially addresses rows 2, 5, 6, misses rows 3, 4, and 7 entirely. This is a significant engineering contribution but it cannot close the comprehension gap on its own. It makes the "inspect after the fact" approach as good as it can be, which clarifies where the remaining problems lie: specification, learning, shared understanding, and business domain context.
+**Assessment:** The strongest possible version of Direction 1/2 — automate and optimize the warden. Addresses row 1, partially addresses rows 2, 5, 6, misses rows 3, 4, 7, and 8 entirely. This is a significant engineering contribution but it cannot close the comprehension gap on its own. It makes the "inspect after the fact" approach as good as it can be, which clarifies where the remaining problems lie: specification, learning, shared understanding, and business domain context.
 
 However, eliminating maintained test suites also eliminates one of the few places where domain knowledge is encoded in machine-readable form. A test that exists because the team learned that users misuse a feature in a specific way is organisational memory crystallised into code. JiTTests, by generating tests per-change from scratch, eliminate this accumulated knowledge along with the maintenance cost. Each generation episode has no memory of what the team learned before. The tradeoff — lower maintenance cost in exchange for lost organisational memory — should be evaluated explicitly, not treated as a pure win.
 
@@ -131,6 +133,7 @@ Even with full enrichment, the Direction 1/2 classification holds: a smarter war
 | 5 | Test independence | **Partially** — the review agents are separate from the code-generating agent, providing some independence. But both are LLMs working from the same code surface, so shared blind spots are possible |
 | 6 | Novel failure modes | **No** — "code looks right but implements the wrong thing" is precisely what another LLM will also think looks right. To catch subtly wrong logic, you need to know what "right" means — which requires understanding intent, not just inspecting code |
 | 7 | Business domain understanding | **No** — the reviewer has no access to business context, risk profile, or product lifecycle stage. A REVIEW.md file can encode a thin slice of this, but it's a fraction of what a human reviewer carries. The tool cannot distinguish a critical payment flow bug from a cosmetic settings page issue unless explicitly told to |
+| 8 | Intent preservation | **No** — the reviewer inspects code surface, not business rationale. It cannot assess whether the code serves the right purpose, only whether it appears correct |
 
 **Effect on cost model:**
 - Does not reduce the linear term — in fact, adds a per-PR cost ($15-25) that scales linearly with code volume. The faster agents generate code, the more reviews are needed.
@@ -141,4 +144,6 @@ Even with full enrichment, the Direction 1/2 classification holds: a smarter war
 
 At $25 per review and 20 PRs/day, a team pays ~$10K/month for automated inspection alone. This is the trust tax made visible — and it scales linearly with code velocity, which is the one thing agents are designed to increase.
 
-**Assessment:** A pure Direction 1/2 product. Addresses row 1 and partially row 5. Does not address rows 2, 3, 4, 6, or 7. The product confirms the problem our analysis describes — its very existence is evidence that AI-generated code creates a quality gap that inspection alone cannot close. The pricing model makes the cost of the warden approach explicit and demonstrates that it scales linearly with the problem it's trying to solve.
+**A nuance: review as agent calibration.** There is one practice enabled by this tool that crosses the Direction 1/2 boundary. When teams use review findings not just to fix individual PRs but to identify recurring agent failure patterns and refine the agent's instructions, they are doing prevention — improving the production process, not just inspecting output. Microsoft's .NET/Copilot data illustrates this: their PR success rate jumped from 38% to 69% after establishing detailed `copilot-instructions.md`, a direct result of humans reviewing early output, identifying patterns, and calibrating the agent. This is testing the agent, not the code — a meta-level shift that is genuinely Direction 3. However, the feedback loop operates at human review speed while generation operates at machine speed, so it is inherently lagging. It is also a manual version of what persistent agent memory should eventually automate. Worth recognising as a transitional practice — real prevention, but with pace limitations.
+
+**Assessment:** Primarily a Direction 1/2 product. Addresses row 1 and partially row 5. Does not address rows 2, 3, 4, 6, 7, or 8. The review-as-agent-calibration practice described above is the one exception — a Direction 3 activity enabled by the tool but not inherent to it. The product confirms the problem our analysis describes — its very existence is evidence that AI-generated code creates a quality gap that inspection alone cannot close. The pricing model makes the cost of the warden approach explicit and demonstrates that it scales linearly with the problem it's trying to solve.
