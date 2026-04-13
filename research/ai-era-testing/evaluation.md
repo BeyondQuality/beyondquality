@@ -8,7 +8,7 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 ## Evaluation framework
 
-The [analysis](analysis.md) identified seven factors that change qualitatively when agents enter the development process:
+The [analysis](analysis-agents.md) identified eight factors that change when agents enter the development process: one quantitative (code volume) and seven qualitative.
 
 | # | Factor | Pre-AI | With agents |
 |---|--------|--------|-------------|
@@ -29,6 +29,16 @@ We also use the cost model from the analysis:
 
 Agents increase effective n, increase ε, and (in reactive QC companies) increase r(n). A solution that only addresses row 1 (volume) without addressing rows 2-8 will hit a structural ceiling.
 
+### Three solution directions
+
+Three broad families of response exist in the industry and research community:
+
+- **Direction 1** — improve **inspection**. Better automated review, smarter static analysis, richer contextual tooling for human reviewers. Evaluates the code after the fact.
+- **Direction 2** — improve the **AI-generated test layer**. Better test generation, better oracle construction, mutation testing to catch regressions. Evaluates the code's behaviour after the fact.
+- **Direction 3** — change the **construction process** so the debts don't accumulate in the first place. Prevention rather than appraisal.
+
+Directions 1 and 2 are both appraisal approaches; they optimise inspection, not prevention. This evaluation assesses one representative product per appraisal Direction. Direction 3 is the subject of the [proposal](proposal.md) and is not evaluated here because no mature off-the-shelf product currently exists.
+
 ### The economic argument: CoQ and Direction 1/2
 
 The [Economics of Testing](../testing_economics/testing_economics.md) research frames testing as an investment within the Cost of Quality (CoQ) framework, which categorizes quality-related costs into four types: prevention, appraisal, internal failure, and external failure. These map directly to our cost models:
@@ -36,55 +46,23 @@ The [Economics of Testing](../testing_economics/testing_economics.md) research f
 | CoQ Category | Maps to |
 |---|---|
 | Prevention costs | What proactive QA companies invest in to keep ε small |
-| Appraisal costs | The warden — inspection after the fact (Direction 1/2) |
+| Appraisal costs | Testing-after (Direction 1/2 activities) |
 | Internal failure costs | The rework feedback loop — the r(n) factor |
-| External failure costs | The escape rate — what gets past the warden |
+| External failure costs | The escape rate — what gets past testing-after |
 
-The economic insight is that **prevention costs less than appraisal, which costs less than failure**. The industry responses evaluated below are all appraisal activities — they optimize inspection, not prevention. The economics say this is structurally suboptimal: you can make the warden faster and more thorough, but you're still paying appraisal prices to catch what cheaper prevention could have avoided.
+The economic insight is that **prevention costs less than appraisal, which costs less than failure**. The industry responses evaluated below are all appraisal activities — they optimize inspection, not prevention. The economics say this is structurally suboptimal: you can make testing-after faster and more thorough, but you're still paying appraisal prices to catch what cheaper prevention could have avoided.
 
 The deeper problem: prevention requires exactly the capabilities that agents lack or have only in degraded form — the judgment components of business domain understanding (row 7), shared understanding (row 4), and the feedback loops that improve quality over time (row 3). Agents have broad statistical pattern recognition, but prevention demands consequence-grounded calibration, contextual exception recognition, and project-specific knowledge — the parts that are missing. You cannot do risk-based testing investment without knowing what risks exist, what failure costs, and what the product lifecycle demands. This is why Direction 1/2 products dominate the market: appraisal can be automated without deep domain understanding, prevention cannot.
 
----
+### A kit, not just a scaffold
 
-## 1. JiTTests — Meta (Harman, 2026)
-
-**Source:** [Meta Engineering Blog](https://engineering.fb.com/2026/02/11/developer-tools/the-death-of-traditional-testing-agentic-development-jit-testing-revival/)
-
-**What it proposes:** Replace maintained test suites with Just-in-Time Tests — LLM-generated tests created on the fly for each code change. The process: new code lands → system infers change intention → creates mutants (intentionally faulty code) → generates and runs tests to catch faults → rule-based and LLM-based assessors filter true positives → engineers get reports on unexpected changes.
-
-**What it gets right:**
-- Eliminates the test maintenance scaling problem. No suite to maintain means no superlinear maintenance cost as n grows.
-- Per-change testing is inherently adaptive — each test is tailored to what actually changed, not to what someone predicted might change years ago.
-- The mutation testing approach is clever because it sidesteps the comprehension problem partially: it asks "did this change break observable behavior?" rather than "do I understand what this code does?". This is a behaviorist approach — verify the output, not the reasoning.
-
-**Which rows does it address?**
-
-| # | Factor | Addressed? |
-|---|--------|-----------|
-| 1 | Code volume | **Yes** — automated, scales with code output |
-| 2 | Comprehension per line | **Partially** — mutation testing doesn't require comprehension of intent, but the "infer change intention" step does |
-| 3 | Feedback loop | **No** — catches regressions but doesn't update anyone's mental model. The agent that produced the code still starts fresh next session |
-| 4 | Shared understanding | **No** — tests are generated, not designed from shared understanding of what the system should do |
-| 5 | Test independence | **Partially** — mutation testing provides some independence (testing against behavioral changes, not against the spec). But the LLM inferring "change intention" can share the code-generating LLM's assumptions |
-| 6 | Novel failure modes | **Partially** — mutation-based approach can catch some novel failures (behavioral regressions), but not "code looks right but implements the wrong thing" since it only detects changes from previous behavior, not deviations from intended behavior |
-| 7 | Business domain understanding | **No** — mutation testing treats all code changes as equally important. It cannot distinguish a subtle bug in a payment flow from a cosmetic issue in a settings page. No access to risk profile, product lifecycle, or business tradeoffs |
-| 8 | Intent preservation | **No** — no mechanism for preserving or assessing business rationale. Tests are generated per-change with no access to why the code exists |
-
-**Effect on cost model:**
-- Reduces the linear term (no per-team test maintenance cost)
-- May reduce ε slightly (less cross-team test conflict since there's no shared suite)
-- Does not affect r(n) — rework defect injection rate stays the same because the comprehension gap is unaddressed
-- Does not affect the rework multiplier 1/(1-r(n))
-
-**Cost transparency note:** Unlike the Anthropic approach (where per-review pricing is published), Meta has not published cost figures for JiTTests infrastructure — LLM inference for mutation generation, test generation, and assessment per code change. Without these numbers, direct economic comparison between the two approaches is incomplete.
-
-**Assessment:** The strongest possible version of Direction 1/2 — automate and optimize the warden. Addresses row 1, partially addresses rows 2, 5, 6, misses rows 3, 4, 7, and 8 entirely. This is a significant engineering contribution but it cannot close the comprehension gap on its own. It makes the "inspect after the fact" approach as good as it can be, which clarifies where the remaining problems lie: specification, learning, shared understanding, and business domain context.
-
-However, eliminating maintained test suites also eliminates one of the few places where domain knowledge is encoded in machine-readable form. A test that exists because the team learned that users misuse a feature in a specific way is organisational memory crystallised into code. JiTTests, by generating tests per-change from scratch, eliminate this accumulated knowledge along with the maintenance cost. Each generation episode has no memory of what the team learned before. The tradeoff — lower maintenance cost in exchange for lost organisational memory — should be evaluated explicitly, not treated as a pure win.
+The framework above is a reader's kit, not just an evaluation scaffold. When new products appear claiming to solve AI-accelerated testing, the same questions apply: which rows does the tool address? Which Direction (1, 2, or 3) does it belong to? What does CoQ say about where it sits in the prevention-appraisal-failure chain? These lenses are tool-agnostic; the two products assessed below are an illustration, not the framework's scope.
 
 ---
 
-## 2. Claude Code Review — Anthropic (2026)
+## Direction 1: Inspection
+
+### Claude Code Review — Anthropic (2026)
 
 **Source:** [Anthropic announcement](https://techcrunch.com/2026/03/09/anthropic-launches-code-review-tool-to-check-flood-of-ai-generated-code/), [documentation](https://code.claude.com/docs/en/code-review)
 
@@ -120,7 +98,7 @@ However, treating multiple document channels as inputs carries two significant r
 
 *Testing theatre.* Without an economic foundation — where testing measures are derived from risk registers and economic analysis (see [Economics of Testing](../testing_economics/testing_economics.md)) — consuming documents as inputs gives the appearance of thorough analysis without the reasoning that makes it meaningful. Even companies without formal risk management benefit from humans' implicit *feeling* of risks, derived from sources far beyond any document system. An enriched automated reviewer that "checked Jira, read the PRDs, and consulted Slack" looks comprehensive — so no one is prompted to ask the foundational question: "are we testing the right things at the right investment level?" This could be worse than the non-enriched version, where the limitation is at least visible.
 
-Even with full enrichment, the Direction 1/2 classification holds: a smarter warden with better context is still a warden. The economic insight — prevention costs less than appraisal — remains unchanged.
+Even with full enrichment, the Direction 1 classification holds: better-informed testing-after is still testing-after. The economic insight — prevention costs less than appraisal — remains unchanged.
 
 **Which rows does it address?**
 
@@ -140,10 +118,64 @@ Even with full enrichment, the Direction 1/2 classification holds: a smarter war
 - Does not affect ε — cross-team coordination requires understanding, not inspection.
 - Does not affect r(n) — the comprehension gap that causes rework is unaddressed.
 
-**The economic structure:** The same company sells tools that accelerate code production (Claude Code) and tools that inspect the resulting output (Claude Code Review). Whether intentional or not, this is commercially significant evidence that the industry recognizes the comprehension gap as real and costly. The economic incentive is to optimize the warden (Direction 1/2), not to prevent the gap from forming (Direction 3) — because prevention reduces the demand for inspection.
+**The economic structure:** The same company sells tools that accelerate code production (Claude Code) and tools that inspect the resulting output (Claude Code Review). Whether intentional or not, this is commercially significant evidence that the industry recognizes the comprehension gap as real and costly. The economic incentive is to optimize testing-after (Direction 1/2), not to prevent the gap from forming (Direction 3) — because prevention reduces the demand for inspection.
 
 At $25 per review and 20 PRs/day, a team pays ~$10K/month for automated inspection alone. This is the trust tax made visible — and it scales linearly with code velocity, which is the one thing agents are designed to increase.
 
-**A nuance: review as agent calibration.** There is one practice enabled by this tool that crosses the Direction 1/2 boundary. When teams use review findings not just to fix individual PRs but to identify recurring agent failure patterns and refine the agent's instructions, they are doing prevention — improving the production process, not just inspecting output. Microsoft's .NET/Copilot data illustrates this: their PR success rate jumped from 38% to 69% after establishing detailed `copilot-instructions.md`, a direct result of humans reviewing early output, identifying patterns, and calibrating the agent. This is testing the agent, not the code — a meta-level shift that is genuinely Direction 3. However, the feedback loop operates at human review speed while generation operates at machine speed, so it is inherently lagging. It is also a manual version of what persistent agent memory should eventually automate. Worth recognising as a transitional practice — real prevention, but with pace limitations.
+**A nuance: review as agent calibration.** There is one practice enabled by this tool that crosses the appraisal-prevention boundary. When teams use review findings not just to fix individual PRs but to identify recurring agent failure patterns and refine the agent's instructions, they are doing prevention — improving the production process, not just inspecting output. Microsoft's .NET/Copilot data illustrates this: their PR success rate jumped from 38% to 69% after establishing detailed `copilot-instructions.md`, a direct result of humans reviewing early output, identifying patterns, and calibrating the agent. This is testing the agent, not the code — a meta-level shift that is genuinely Direction 3. However, the feedback loop operates at human review speed while generation operates at machine speed, so it is inherently lagging. It is also a manual version of what persistent agent memory should eventually automate. Worth recognising as a transitional practice — real prevention, but with pace limitations.
 
-**Assessment:** Primarily a Direction 1/2 product. Addresses row 1 and partially row 5. Does not address rows 2, 3, 4, 6, 7, or 8. The review-as-agent-calibration practice described above is the one exception — a Direction 3 activity enabled by the tool but not inherent to it. The product confirms the problem our analysis describes — its very existence is evidence that AI-generated code creates a quality gap that inspection alone cannot close. The pricing model makes the cost of the warden approach explicit and demonstrates that it scales linearly with the problem it's trying to solve.
+**Assessment:** Primarily a Direction 1 product. Addresses row 1 and partially row 5. Does not address rows 2, 3, 4, 6, 7, or 8. The review-as-agent-calibration practice described above is the one exception — a Direction 3 activity enabled by the tool but not inherent to it. The product confirms the problem our analysis describes — its very existence is evidence that AI-generated code creates a quality gap that inspection alone cannot close. The pricing model makes the cost of the testing-after approach explicit and demonstrates that it scales linearly with the problem it's trying to solve.
+
+---
+
+## Direction 2: AI-generated tests
+
+### JiTTests — Meta (Harman, 2026)
+
+**Source:** [Meta Engineering Blog](https://engineering.fb.com/2026/02/11/developer-tools/the-death-of-traditional-testing-agentic-development-jit-testing-revival/)
+
+**What it proposes:** Replace maintained test suites with Just-in-Time Tests — LLM-generated tests created on the fly for each code change. The process: new code lands → system infers change intention → creates mutants (intentionally faulty code) → generates and runs tests to catch faults → rule-based and LLM-based assessors filter true positives → engineers get reports on unexpected changes.
+
+**What it gets right:**
+- Eliminates the test maintenance scaling problem. No suite to maintain means no superlinear maintenance cost as n grows.
+- Per-change testing is inherently adaptive — each test is tailored to what actually changed, not to what someone predicted might change years ago.
+- The mutation testing approach is clever because it sidesteps the comprehension problem partially: it asks "did this change break observable behavior?" rather than "do I understand what this code does?". This is a behaviorist approach — verify the output, not the reasoning.
+
+**Which rows does it address?**
+
+| # | Factor | Addressed? |
+|---|--------|-----------|
+| 1 | Code volume | **Yes** — automated, scales with code output |
+| 2 | Comprehension per line | **Partially** — mutation testing doesn't require comprehension of intent, but the "infer change intention" step does |
+| 3 | Feedback loop | **No** — catches regressions but doesn't update anyone's mental model. The agent that produced the code still starts fresh next session |
+| 4 | Shared understanding | **No** — tests are generated, not designed from shared understanding of what the system should do |
+| 5 | Test independence | **Partially** — mutation testing provides some independence (testing against behavioral changes, not against the spec). But the LLM inferring "change intention" can share the code-generating LLM's assumptions |
+| 6 | Novel failure modes | **Partially** — mutation-based approach can catch some novel failures (behavioral regressions), but not "code looks right but implements the wrong thing" since it only detects changes from previous behavior, not deviations from intended behavior |
+| 7 | Business domain understanding | **No** — mutation testing treats all code changes as equally important. It cannot distinguish a subtle bug in a payment flow from a cosmetic issue in a settings page. No access to risk profile, product lifecycle, or business tradeoffs |
+| 8 | Intent preservation | **No** — no mechanism for preserving or assessing business rationale. Tests are generated per-change with no access to why the code exists |
+
+**Effect on cost model:**
+- Reduces the linear term (no per-team test maintenance cost)
+- May reduce ε slightly (less cross-team test conflict since there's no shared suite)
+- Does not affect r(n) — rework defect injection rate stays the same because the comprehension gap is unaddressed
+- Does not affect the rework multiplier 1/(1-r(n))
+
+**Cost transparency note:** Unlike the Anthropic approach (where per-review pricing is published), Meta has not published cost figures for JiTTests infrastructure — LLM inference for mutation generation, test generation, and assessment per code change. Without these numbers, direct economic comparison between the two approaches is incomplete.
+
+**Assessment:** The strongest possible Direction 2 approach — automate and optimize the test-generation layer. Addresses row 1, partially addresses rows 2, 5, 6, misses rows 3, 4, 7, and 8 entirely. This is a significant engineering contribution but it cannot close the comprehension gap on its own. It makes the "inspect after the fact" approach as good as it can be, which clarifies where the remaining problems lie: specification, learning, shared understanding, and business domain context.
+
+However, eliminating maintained test suites also eliminates one of the few places where domain knowledge is encoded in machine-readable form. A test that exists because the team learned that users misuse a feature in a specific way is organisational memory crystallised into code. JiTTests, by generating tests per-change from scratch, eliminate this accumulated knowledge along with the maintenance cost. Each generation episode has no memory of what the team learned before. The tradeoff — lower maintenance cost in exchange for lost organisational memory — should be evaluated explicitly, not treated as a pure win.
+
+There is a sharper version of the same critique. JiTTests generates tests *from* the code change. If the code change is wrong, the tests it generates pass on the wrong behaviour, ratifying the implementation as if it were intentional. This is one half of what we describe in [analysis: lifecycle drift](analysis-lifecycle.md) as the generative ratification loop: AI-generated tests cannot catch the case where the AI implementation drifted from the team's actual intent, because the tests have no access to that intent (only to the code). A behavioural-regression catch ("did this change break observable behaviour?") requires that the previous behaviour was correct, which JiTTests cannot establish.
+
+---
+
+## Direction 3: Prevention at construction time
+
+What the Direction 1 and Direction 2 evaluations above show, separately and together, is that appraisal optimisation hits a structural ceiling. Both products address row 1 (code volume) and partially a few others, but miss the qualitative rows (2, 3, 4, 6, 7, 8) precisely because those rows *are* the debts the analysis identifies. More appraisal products can improve inspection throughput; none of them are prevention.
+
+Direction 3 is not evaluated here because no mature off-the-shelf product currently exists. The [proposal](proposal.md) advances a Direction 3 hypothesis (AI-enabled collaborative building) against the [four research-question conditions](analysis-research-question.md). It is not a settled answer; it is a candidate.
+
+---
+
+← [Proposal](proposal.md) | [Back to hub](analysis.md)

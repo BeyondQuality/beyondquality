@@ -10,15 +10,15 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 ## Context
 
-The [analysis](analysis.md) identifies two debts that accumulate when AI agents enter the development process: comprehension debt (loss of the "how") and intent debt (loss of the "why"); and how this accumulation negatively affects the business. The [evaluation](evaluation.md) shows that current industry responses (JiTTests, Claude Code Review) are Direction 1/2: they optimise inspection of agent output without addressing the debts. Section 4 of the analysis poses the central research question: what is the relationship between intent preservation, comprehension level, and agent learning capability?
+The [analysis](analysis.md) identifies two debts that accumulate when AI agents enter the development process: comprehension debt (loss of the "how") and intent debt (loss of the "why"); and how this accumulation negatively affects the business. The [evaluation](evaluation.md) shows that current industry responses (JiTTests, Claude Code Review) optimise inspection of agent output without addressing the debts. Section 4 of the analysis poses the central research question: is there a configuration of people, process, and AI agents that can prevent both debts from accumulating during construction, keep comprehension sufficient for supervision and evolution, produce human-authored anchors for lifecycle artifacts, and keep those anchors coherent as the system is maintained and teams rotate?
 
-This document proposes a Direction 3 approach that addresses the root causes directly.
+This document proposes a Direction 3 approach: AI-enabled collaborative building. It aims to satisfy the first three research-question conditions directly and to partially address the fourth.
 
 ---
 
 ## Scope
 
-This proposal is **one** Direction 3 hypothesis, not the only one. It addresses the first two variables from the analysis (intent preservation, comprehension level) through a process change: collaborative building. It does not address the third (agent learning capability). Agent learning is not assumed solved, deferred, or unimportant; it is out of scope here so that the intent/comprehension hypothesis can be developed and tested without entanglement.
+This proposal is **one** Direction 3 hypothesis, not the only one. It addresses three of the four research-question conditions (preventing intent debt during construction, keeping comprehension sufficient, producing human-authored anchors for lifecycle artifacts) through a single process change: collaborative building. The fourth condition (maintaining those anchors over turnover and extension) is partially addressed via session-captured inputs feeding downstream artifact generation, but remains open (see §6). Agent learning and reliability are separate levers, out of scope here so that the process-change hypothesis can be tested without entanglement.
 
 The proposal is also a hypothesis, not a settled answer. The collaborative pattern is already happening in practice in some teams, but the claim that it meaningfully reduces comprehension and intent debt at the team and lifecycle level has not been empirically validated. Section 5 sketches what such validation would look like. Section 6 lists what remains genuinely open even if the hypothesis is validated.
 
@@ -26,11 +26,12 @@ The proposal is also a hypothesis, not a settled answer. The collaborative patte
 
 ## 1. The core hypothesis
 
-The hypothesis: when two or more people collaborate while delegating implementation to an AI agent, the debt dynamics change fundamentally.
+The hypothesis: when two or more people collaborate at small iteration grain while delegating implementation to an AI agent, three things change at once: intent debt stops accumulating, comprehension debt is structurally minimised, and lifecycle artifacts can be generated from human-authored inputs rather than reverse-engineered from code.
 
 - **Intent debt does not accumulate during construction.** The people making the decisions are in the room while the thing is being built. Intent is never delegated during the session, so it cannot be lost there. (Lifecycle persistence is a separate problem; see §6.)
 - **Comprehension debt is structurally minimised.** The engineer participates in incremental construction: they help decide what to build, they see each small step emerge in the context of decisions they just made, they are in a dialogue with the agent. The comprehension they maintain comes from participation in the decisions, not from reading code. This is consistent with the Shen & Tamkin (2026) finding that conceptual engagement with AI preserves comprehension while passive delegation does not, though that study examined individual conceptual questions rather than multi-person construction sessions.
-- **Granularity is the load-bearing parameter.** Both claims above depend on the iteration grain staying small enough that the team participates in each step. If the team prompts the agent to plan and execute large autonomous blocks ("plan this and build it all, no questions asked"), the working mode reverts to delegation: intent gets handed off in one shot, comprehension never builds, and the debt dynamics return to those of the solo-with-AI baseline. The threshold at which this collapse happens is itself an empirical question (see §5).
+- **Lifecycle artifacts have a human-authored anchor.** The same collaborative session produces clean inputs of intent, risk, and design rationale. Downstream artifacts (docs, ADRs, tests, onboarding) generated from these inputs carry the *why* and the *what-we-decided* from the human side of the session rather than being reverse-engineered from AI-generated code, breaking the generative ratification loop from [analysis: lifecycle drift](analysis-lifecycle.md). (Mechanism developed in §3.)
+- **Granularity is the load-bearing parameter.** The three claims above depend on the iteration grain staying small enough that the team participates in each step. If the team prompts the agent to plan and execute large autonomous blocks ("plan this and build it all, no questions asked"), the working mode reverts to delegation: intent gets handed off in one shot, comprehension never builds, session outputs no longer capture the decisions that would anchor lifecycle artifacts, and the debt dynamics return to those of the solo-with-AI baseline. The threshold at which this collapse happens is itself an empirical question (see §5).
 
 This pattern is already happening in practice (see discussion thread), and the mechanism is consistent with the cognitive science evidence in the analysis (generation effect, desirable difficulties). What has not yet been empirically validated is whether the collaborative configuration produces the predicted reduction in comprehension and intent debt at the team and lifecycle level. Section 5 sketches what such validation would look like.
 
@@ -40,7 +41,7 @@ This pattern is already happening in practice (see discussion thread), and the m
 
 ### Minimum viable team
 
-Three roles, each contributing something the others cannot:
+The baseline is three roles, each contributing something the others cannot. Q #2 in §6 considers when fewer may suffice for lower-risk features.
 
 **Product person** (or domain expert): carries the "why". Knows the business problem, the user needs, the tradeoffs the team has consciously accepted. Without them, the team builds the wrong thing.
 
@@ -129,6 +130,20 @@ A residual asymmetry on row 5: the inputs are independent of the code (because t
 
 This does not replace all appraisal. System-level integration testing, performance testing, and chaos engineering still operate at a level above individual features. But for feature-level verification, the collaborative model produces both better code (prevention) and better tests (informed appraisal).
 
+### From tests to all lifecycle artifacts
+
+The same logic generalises beyond tests. The collaborative session produces clean inputs of intent, risk, and design rationale. AI generates downstream artifacts well from clean intent. The session's outputs can therefore feed:
+
+- **Documentation.** What the system does, and why each major design choice was made. Generated from session decisions, with the *why* anchored in human-authored intent rather than reverse-engineered from code.
+- **Architecture Decision Records (ADRs).** The reasons for significant design choices, captured in the agent's context during the session and persisted as the canonical record.
+- **Onboarding material.** New joiners need to know *how* the system works and *why* it was built that way. The session output is essentially a structured record of both. Generated onboarding material derived from session capture has the property pre-AI documentation had at its best: it tells you what was wanted, not just what is.
+
+A possible follow-on, beyond the scope of this proposal: AI-based mentors for new joiners that can answer "why" questions from the session record. Speculative, but a natural extension of the same mechanism.
+
+This matters specifically because we are QA. Quality begins long before code is written. Employee onboarding is itself a quality investment: a new joiner who learns the system correctly, including the *why*, makes better decisions later, even if their work is guiding agents in collaborative sessions rather than writing code themselves. They will still need to know properly what the hows and whys were. Lifecycle artifacts are how that knowledge transfers.
+
+This is a candidate mechanism for rebuilding the lifecycle bridge (as defined in [analysis: lifecycle drift](analysis-lifecycle.md)), not a solved problem. We have translated the lifecycle persistence question from "no mechanism exists" to "we have a candidate mechanism that needs to be developed and tested". The format, the tooling, and the discipline required to capture session outputs in a form AI can reliably use downstream are themselves an open research direction (see Q #4 in §6).
+
 ---
 
 ## 4. The economics argument
@@ -147,6 +162,8 @@ The comparison should not be headcount on a feature. It should be total cost of 
 | Diagnosis cost | High (nobody understands the code) | Low (engineer participated in building, has context) |
 
 The [economics of testing](../testing_economics/testing_economics.md) framework predicts this: prevention costs less than appraisal, which costs less than failure. The collaborative model shifts effort from appraisal and failure (expensive) to prevention (cheaper). Whether the total cost is lower is an empirical question that needs measurement, but the economic structure favours prevention.
+
+The economics argument above is about dollar cost. It does not address the logistical cost of synchronous collaboration: timezone alignment, calendar overhead, opportunity cost of pulling three people off other work during the session. This is a real operational constraint and does not disappear even when the rework math favours the collaborative model. Teams adopting the model need to solve the synchronous-coordination problem in parallel with the economic one. Whether async variants of the pattern exist (staged collaboration, pre-session capture followed by review cycles, partial-attendance formats) is an open question that the experimental program in §5 can begin to address.
 
 ---
 
@@ -185,11 +202,13 @@ Any of these results would be informative. The third in particular would refine 
 - **The 5:1 ratio problem.** One tester, five developers. The tester cannot participate in five concurrent building sessions. Two possible mitigations: (a) reorganise into fewer concurrent workstreams, each with a mini-team, fewer things in parallel but each done right the first time; (b) tester's leverage increases because collaborative building produces less rework, freeing tester time faster. Both need economic modelling to validate.
 - **What is the minimum viable team composition?** Is three roles always needed? Can a skilled engineer who understands the business domain do it with just a product person? Can two roles suffice for low-risk features?
 - **Does this work at scale?** The examples are small teams and individual features. How does this model apply to platform-level work, cross-team coordination, or large architectural changes?
-- **How to capture the session outputs for future use?** The collaborative session produces rich context (intent, risks, decisions). How much of this should be persisted for future sessions, and in what form? This connects to the agentic learning discussion.
+- **How to capture the session outputs for future use?** The collaborative session produces rich context (intent, risks, decisions, design rationale). How much of this should be persisted, in what format, with what tooling, and through what team discipline? This is the open problem that determines whether the generative ratification loop ([analysis: lifecycle drift](analysis-lifecycle.md)) can be broken at the lifecycle scale. Now that we have a candidate hypothesis (Direction 3 plus capture plus AI-generated downstream artifacts), the research direction is concrete: build a system that captures session outputs, generates downstream artifacts from them, and measures the resulting lifecycle outcomes (extension cost, defect rates, onboarding time).
 - **How to measure the difference?** Finding metrics that specifically capture comprehension and intent debt is itself an open research question (see metrics discussion in the GH thread). Comparing solo-with-AI vs team-with-AI on total cost of delivery would require controlled studies.
 - **What happens when the agent becomes more reliable?** If agent reliability increases over time, does the engineer's role in the collaborative session change? Does the minimum viable team shrink?
-- **Does collaborative building substitute for agent learning?** At the moment of creation, plausibly yes: the intent and comprehension that agent learning would provide are already present in the humans guiding the session. Across the system lifecycle (maintenance, team turnover, scaling), the answer is unclear. Some persistence mechanism is still needed to carry intent and comprehension forward; whether that mechanism looks like "agent learning" as currently conceived, or like something else (richer session-output capture, structured handoff artifacts, hybrid memory systems), is an open question. This connects directly to the analysis distinction between information recall and judgment updating.
+- **Does collaborative building substitute for agent learning?** At the moment of creation, plausibly yes: the intent and comprehension that agent learning would provide are already present in the humans guiding the session. Across the system lifecycle (maintenance, team turnover, scaling), a candidate mechanism exists but needs to be built and tested: session capture produces clean human-authored intent, from which AI generates lifecycle artifacts (docs, ADRs, tests, onboarding) that carry the bridge across team turnover. This works precisely because the artifacts' anchor is human-authored rather than AI-derived (avoiding the generative ratification loop in [analysis: lifecycle drift](analysis-lifecycle.md)). The lifecycle persistence problem is therefore no longer "no mechanism exists" but "candidate mechanism exists, needs validation". Whether it delivers in practice depends on solving Q #4 (capture format and discipline) and on the analysis distinction between information recall and judgment updating.
 
 ---
 
-See also: [analysis.md](analysis.md) (problem identification), [evaluation.md](evaluation.md) (industry response evaluation), [references.md](references.md) (annotated sources).
+← [Research Question](analysis-research-question.md) | Next: [Evaluation](evaluation.md) →
+
+See also: [analysis.md](analysis.md) (problem identification), [references.md](references.md) (annotated sources).
