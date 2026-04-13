@@ -30,6 +30,7 @@ The hypothesis: when two or more people collaborate while delegating implementat
 
 - **Intent debt does not accumulate during construction.** The people making the decisions are in the room while the thing is being built. Intent is never delegated during the session, so it cannot be lost there. (Lifecycle persistence is a separate problem; see §6.)
 - **Comprehension debt is structurally minimised.** The engineer participates in incremental construction: they help decide what to build, they see each small step emerge in the context of decisions they just made, they are in a dialogue with the agent. The comprehension they maintain comes from participation in the decisions, not from reading code. This is consistent with the Shen & Tamkin (2026) finding that conceptual engagement with AI preserves comprehension while passive delegation does not, though that study examined individual conceptual questions rather than multi-person construction sessions.
+- **Granularity is the load-bearing parameter.** Both claims above depend on the iteration grain staying small enough that the team participates in each step. If the team prompts the agent to plan and execute large autonomous blocks ("plan this and build it all, no questions asked"), the working mode reverts to delegation: intent gets handed off in one shot, comprehension never builds, and the debt dynamics return to those of the solo-with-AI baseline. The threshold at which this collapse happens is itself an empirical question (see §5).
 
 This pattern is already happening in practice (see discussion thread), and the mechanism is consistent with the cognitive science evidence in the analysis (generation effect, desirable difficulties). What has not yet been empirically validated is whether the collaborative configuration produces the predicted reduction in comprehension and intent debt at the team and lifecycle level. Section 5 sketches what such validation would look like.
 
@@ -45,7 +46,7 @@ Three roles, each contributing something the others cannot:
 
 **Engineer**: participates in incremental construction. Does not "review code" in the traditional sense (code review is a very weak appraisal method, particularly when code changes volume is big). Instead, helps decide what to build, sees each small step emerge in the context of decisions just made, dialogues with the agent ("build this part", "now handle this edge case", "why did you do it this way?"). Tracks whether the implementation is heading in the right direction technically. Without the engineer, the rest of the team can tell the agent what to build but nobody can keep it technically on track.
 
-**QA engineer**: contributes risk thinking during construction. Raises edge cases ("what if the user submits twice?"), challenges assumptions ("the spec says X but users actually do Y"), brings user behaviour knowledge that shapes implementation in real time. Their edge cases become building instructions, not post-hoc bug reports.
+**QA engineer**: contributes risk thinking before and during construction. Before the session: maps the work to the risk register and compliance landscape, chooses verification strategy fit for the consequence-of-failure profile. During construction: raises edge cases ("what if the user submits twice?"), challenges assumptions ("the spec says X but users actually do Y"), brings user behaviour knowledge that shapes implementation in real time. Edge cases become building instructions, not post-hoc bug reports. (See §2.3 for both layers in detail.)
 
 **AI agent**: handles implementation. Writes the code based on the team's collective guidance.
 
@@ -53,18 +54,32 @@ Three roles, each contributing something the others cannot:
 
 Pre-AI, the three amigos model was a *planning* meeting: discuss requirements, then split up and build separately. The developer coded alone. The tester tested after. Sequential handoffs (spec, dev, test, deploy) with all the information loss that entails.
 
-AI changes this because implementation no longer requires everyone to be a developer. The skill barrier that excluded non-developers from the building process is lowered. Anyone with domain knowledge can participate in construction, provided an engineer is in the loop to keep the agent technically on track. The three amigos can now be a *building* session, not just a planning session.
+AI changes this in two ways. The first is the skill barrier: implementation no longer requires everyone to be a developer, so anyone with domain knowledge can participate in construction (provided an engineer is in the loop to keep the agent technically on track). The second is speed: the agent generates code fast enough that the rest of the team is not waiting on the implementer. Pre-AI, the developer would type for hours while the others sat idle; in a collaborative session with an agent, code emerges at a pace that lets the team stay engaged and respond to each step as it lands. Together these turn the three amigos pattern from a *planning* session into a *building* session.
 
 ### The QA engineer role
 
-In this model, the QA engineer is not testing. They are preventing. They embed quality thinking into the construction process in real time:
+In this model, the QA engineer is not testing. They are preventing. They embed quality thinking into the construction process at two layers.
+
+**Strategic layer: at the framing of the work.**
+
+Before the building session starts (or as it opens), the QA engineer maps the work to the risk register and compliance landscape. What categories of risk does this feature touch (data handling, financial transactions, security boundaries, regulatory scope)? What compliance frameworks apply (GDPR, PCI-DSS, SOC 2)? What is the consequence-of-failure profile, and what verification strategy fits that profile (lightweight unit tests, property-based testing, chaos engineering, formal methods)? What lifecycle stage is the product in, and what quality bar is appropriate? These are not edge-case questions; they shape what gets built and how the building session is constrained from the start. This is the [economics of testing](../testing_economics/testing_economics.md) framework operating at the QA engineer's seat: risk-based investment decisions applied to a single feature.
+
+**Tactical layer: during construction.**
 
 1. **Risk thinking during construction.** "What if the user submits twice?" "What happens when this input is empty?" "This payment flow needs to handle concurrent requests." These become immediate instructions to the agent, not bug reports discovered weeks later.
 2. **Challenging assumptions.** "The spec says X but users actually do Y." "Why are we assuming this input is always valid?" The QA engineer questions what the developer and product person take for granted.
 3. **Edge cases as specifications.** The tester's edge cases become part of the building instructions. Essentially TDD driven by risk thinking rather than developer intuition alone.
 4. **User behaviour knowledge.** "Users always misuse the export feature for regulatory reporting, not for the convenience use case you are building for." This shapes implementation in real time.
 
+Both layers are necessary. The tactical layer without the strategic layer produces tests with good local fidelity but the wrong overall risk allocation. The strategic layer without the tactical layer produces a well-prioritised feature with mediocre execution.
+
 This is what "QA engineer" always meant. Quality *assurance*: assuring quality is built in. The industry drifted into using "QA" to mean "person who tests after dev is done," which is quality *control*. The collaborative model does not invent a new role. It makes the existing name accurate.
+
+### Secondary effect: T-shaping by exposure
+
+The collaborative session has a side effect that mob programming practitioners have long observed: each role's expertise becomes visible to the others by exposure. The product person, listening to the QA engineer raise consequence-of-failure questions, develops risk intuitions. The engineer, watching the product person make tradeoff decisions, absorbs business context. The QA engineer, dialoguing with the agent on technical details, picks up architectural reasoning. Over time, each role may develop a flatter T: deep in their primary specialism, with usable competence in the others.
+
+This matters for two reasons. First, it partially addresses the 5:1 ratio problem (Q #1 in §6): if QA risk thinking diffuses into the engineer over time, low-risk features may not need a dedicated QA engineer present. Second, the operational cost of the collaborative session may be partly an investment in cross-skilling rather than pure overhead. Whether T-shaping actually appears, at what rate, and how much it offsets session cost, is itself empirically testable (see §5).
 
 ---
 
@@ -137,7 +152,7 @@ Three families of outcome variables:
 
 ### Conditions to compare
 
-At minimum: solo-developer-with-AI vs collaborative-team-with-AI. A third arm (solo developer without AI) would clarify whether observed effects are about the team configuration or about the AI-vs-no-AI baseline.
+At minimum: solo-developer-with-AI vs collaborative-team-with-AI. A third arm (solo developer without AI) would clarify whether observed effects are about the team configuration or about the AI-vs-no-AI baseline. Iteration grain should also be manipulated within the collaborative arm (small step-by-step prompts vs large autonomous "plan and build" blocks) to find the threshold at which the model collapses back into delegation.
 
 ### Unit and time horizon
 
