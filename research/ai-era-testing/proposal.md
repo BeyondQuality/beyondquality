@@ -16,14 +16,22 @@ This document proposes a Direction 3 approach that addresses the root causes dir
 
 ---
 
-## 1. The core observation
+## Scope
 
-When two or more people collaborate while delegating implementation to an AI agent, the debt dynamics change fundamentally:
+This proposal is **one** Direction 3 hypothesis, not the only one. It addresses the first two variables from the analysis (intent preservation, comprehension level) through a process change: collaborative building. It does not address the third (agent learning capability). Agent learning is not assumed solved, deferred, or unimportant; it is out of scope here so that the intent/comprehension hypothesis can be developed and tested without entanglement.
 
-- **Intent debt does not accumulate.** The people making the decisions are in the room while the thing is being built. Intent is never delegated, so it cannot be lost. This is not "intent debt minimised"; the working model does not produce it.
-- **Comprehension debt is structurally minimised.** The engineer participates in incremental construction: they help decide what to build, they see each small step emerge in the context of decisions they just made, they are in a dialogue with the agent. The comprehension they maintain comes from participation in the decisions, not from reading code. This is the Shen & Tamkin (2026) finding in practice: conceptual engagement with AI preserves comprehension, passive review does not.
+The proposal is also a hypothesis, not a settled answer. The collaborative pattern is already happening in practice in some teams, but the claim that it meaningfully reduces comprehension and intent debt at the team and lifecycle level has not been empirically validated. Section 5 sketches what such validation would look like. Section 6 lists what remains genuinely open even if the hypothesis is validated.
 
-This is not a theoretical proposal. It is already happening in practice (see discussion thread), and the mechanism is consistent with the cognitive science evidence in the analysis (generation effect, desirable difficulties).
+---
+
+## 1. The core hypothesis
+
+The hypothesis: when two or more people collaborate while delegating implementation to an AI agent, the debt dynamics change fundamentally.
+
+- **Intent debt does not accumulate during construction.** The people making the decisions are in the room while the thing is being built. Intent is never delegated during the session, so it cannot be lost there. (Lifecycle persistence is a separate problem; see §6.)
+- **Comprehension debt is structurally minimised.** The engineer participates in incremental construction: they help decide what to build, they see each small step emerge in the context of decisions they just made, they are in a dialogue with the agent. The comprehension they maintain comes from participation in the decisions, not from reading code. This is consistent with the Shen & Tamkin (2026) finding that conceptual engagement with AI preserves comprehension while passive delegation does not, though that study examined individual conceptual questions rather than multi-person construction sessions.
+
+This pattern is already happening in practice (see discussion thread), and the mechanism is consistent with the cognitive science evidence in the analysis (generation effect, desirable difficulties). What has not yet been empirically validated is whether the collaborative configuration produces the predicted reduction in comprehension and intent debt at the team and lifecycle level. Section 5 sketches what such validation would look like.
 
 ---
 
@@ -35,7 +43,7 @@ Three roles, each contributing something the others cannot:
 
 **Product person** (or domain expert): carries the "why". Knows the business problem, the user needs, the tradeoffs the team has consciously accepted. Without them, the team builds the wrong thing.
 
-**Engineer**: participates in incremental construction. Does not "review code" in the traditional sense (the analysis shows that is a weak appraisal method). Instead, helps decide what to build, sees each small step emerge in the context of decisions just made, dialogues with the agent ("build this part", "now handle this edge case", "why did you do it this way?"). Tracks whether the implementation is heading in the right direction technically. Without the engineer, the rest of the team can tell the agent what to build but nobody can keep it technically on track.
+**Engineer**: participates in incremental construction. Does not "review code" in the traditional sense (code review is a very weak appraisal method, particularly when code changes volume is big). Instead, helps decide what to build, sees each small step emerge in the context of decisions just made, dialogues with the agent ("build this part", "now handle this edge case", "why did you do it this way?"). Tracks whether the implementation is heading in the right direction technically. Without the engineer, the rest of the team can tell the agent what to build but nobody can keep it technically on track.
 
 **QA engineer**: contributes risk thinking during construction. Raises edge cases ("what if the user submits twice?"), challenges assumptions ("the spec says X but users actually do Y"), brings user behaviour knowledge that shapes implementation in real time. Their edge cases become building instructions, not post-hoc bug reports.
 
@@ -115,7 +123,37 @@ The [economics of testing](../testing_economics/testing_economics.md) framework 
 
 ---
 
-## 5. Open questions
+## 5. Experimental program
+
+The hypothesis predicts that collaborative building reduces comprehension and intent debt relative to solo-with-AI development, and that the reduction is large enough to offset the operational cost of multi-person sessions. This is empirically testable.
+
+### What to measure
+
+Three families of outcome variables:
+
+- **Comprehension debt proxies.** Time to diagnose a fault in code produced under each condition. Correctness of fault localisation when team members debug code their team produced. Ability to predict behaviour on novel inputs without re-reading the code in detail.
+- **Intent debt proxies.** Ability of team members (including those who joined after the session) to articulate why each major design choice was made. Alignment of system behaviour with originally stated business intent over time, as the system evolves.
+- **Total cost of delivery.** Implementation time plus rework cost plus diagnosis cost plus maintenance cost, measured per feature or per sprint.
+
+### Conditions to compare
+
+At minimum: solo-developer-with-AI vs collaborative-team-with-AI. A third arm (solo developer without AI) would clarify whether observed effects are about the team configuration or about the AI-vs-no-AI baseline.
+
+### Unit and time horizon
+
+Feature-level measurement is tractable but may underestimate lifecycle effects. Sprint-level captures rework but not turnover. Quarter-level captures both but is operationally hard. A staged programme starting feature-level and extending to sprint and quarter is more realistic than a single-shot study.
+
+### What would falsify the hypothesis
+
+- Collaborative-with-AI shows no statistically meaningful difference from solo-with-AI on the comprehension and intent proxies.
+- The measured difference exists but is too small for the operational cost of collaborative sessions to be justified.
+- The reduction at the moment of creation is real, but does not survive into the maintenance phase, suggesting the proposal addresses creation but not lifecycle.
+
+Any of these results would be informative. The third in particular would refine the proposal rather than reject it: it would tell us that collaborative building solves part of the problem but needs to be paired with persistence mechanisms (which connects to the open question on agent learning, §6).
+
+---
+
+## 6. Open questions
 
 - **The 5:1 ratio problem.** One tester, five developers. The tester cannot participate in five concurrent building sessions. Two possible mitigations: (a) reorganise into fewer concurrent workstreams, each with a mini-team, fewer things in parallel but each done right the first time; (b) tester's leverage increases because collaborative building produces less rework, freeing tester time faster. Both need economic modelling to validate.
 - **What is the minimum viable team composition?** Is three roles always needed? Can a skilled engineer who understands the business domain do it with just a product person? Can two roles suffice for low-risk features?
@@ -123,6 +161,7 @@ The [economics of testing](../testing_economics/testing_economics.md) framework 
 - **How to capture the session outputs for future use?** The collaborative session produces rich context (intent, risks, decisions). How much of this should be persisted for future sessions, and in what form? This connects to the agentic learning discussion.
 - **How to measure the difference?** Finding metrics that specifically capture comprehension and intent debt is itself an open research question (see metrics discussion in the GH thread). Comparing solo-with-AI vs team-with-AI on total cost of delivery would require controlled studies.
 - **What happens when the agent becomes more reliable?** If agent reliability increases over time, does the engineer's role in the collaborative session change? Does the minimum viable team shrink?
+- **Does collaborative building substitute for agent learning?** At the moment of creation, plausibly yes: the intent and comprehension that agent learning would provide are already present in the humans guiding the session. Across the system lifecycle (maintenance, team turnover, scaling), the answer is unclear. Some persistence mechanism is still needed to carry intent and comprehension forward; whether that mechanism looks like "agent learning" as currently conceived, or like something else (richer session-output capture, structured handoff artifacts, hybrid memory systems), is an open question. This connects directly to the analysis distinction between information recall and judgment updating.
 
 ---
 
