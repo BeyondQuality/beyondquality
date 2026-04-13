@@ -10,7 +10,7 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 ## Context
 
-The [analysis](analysis.md) identifies two debts that accumulate when AI agents enter the development process: comprehension debt (loss of the "how") and intent debt (loss of the "why"). The [evaluation](evaluation.md) shows that current industry responses (JiTTests, Claude Code Review) are Direction 1/2: they optimise inspection of agent output without addressing the root causes. Section 4 of the analysis poses the central research question: what is the relationship between intent preservation, comprehension level, and agent learning capability?
+The [analysis](analysis.md) identifies two debts that accumulate when AI agents enter the development process: comprehension debt (loss of the "how") and intent debt (loss of the "why"); and how this accumulation negatively affects the business. The [evaluation](evaluation.md) shows that current industry responses (JiTTests, Claude Code Review) are Direction 1/2: they optimise inspection of agent output without addressing the debts. Section 4 of the analysis poses the central research question: what is the relationship between intent preservation, comprehension level, and agent learning capability?
 
 This document proposes a Direction 3 approach that addresses the root causes directly.
 
@@ -81,6 +81,16 @@ The collaborative session has a side effect that mob programming practitioners h
 
 This matters for two reasons. First, it partially addresses the 5:1 ratio problem (Q #1 in §6): if QA risk thinking diffuses into the engineer over time, low-risk features may not need a dedicated QA engineer present. Second, the operational cost of the collaborative session may be partly an investment in cross-skilling rather than pure overhead. Whether T-shaping actually appears, at what rate, and how much it offsets session cost, is itself empirically testable (see §5).
 
+### What this asks of orgs
+
+Implementing the model is not a process change a single team can adopt unilaterally. The QA engineer's strategic-layer responsibilities require alignment across hiring, measurement, and reporting:
+
+- **Hiring profiles** widen. The role now requires business and architectural literacy alongside testing skill. Candidates whose CV is "ten years in test automation" may not match the strategic layer; candidates with mixed test, product, and architecture backgrounds become more valuable.
+- **Performance review systems** measure different things. "Bugs found post-development" is the wrong metric for someone whose job is preventing them at construction time. Risks prevented, edge cases caught at the right point, and quality investments calibrated to consequence-of-failure are harder to count and easier to undervalue.
+- **Reporting structure** matters. QA functions that report through dedicated QA management often have incentive structures that pull back toward inspection-after-the-fact. Engineering, product, or matrixed reporting makes the strategic-layer responsibilities easier to exercise.
+
+Without these alignments, the QA engineer in a collaborative session has the wrong incentives to push back: they are still being measured on bugs found post-deploy, so spending the session preventing bugs reduces their measurable output. The model can be tried by a single team. It is unlikely to scale without the org-level changes.
+
 ---
 
 ## 3. From prevention to better appraisal
@@ -110,10 +120,12 @@ All of this is in the agent's context during the session. The agent can generate
 
 Tests generated from a collaborative session are qualitatively different from tests generated from code alone:
 
-- They have **genuine independence** (the QA engineer's risk thinking is independent of the code, addressing row 5)
+- They have **input-stage independence** (the QA engineer's risk thinking is independent of the code, addressing row 5 at the input)
 - They encode **intent** (the product person's business rules, addressing row 8)
 - They reflect **local risk calibration** (the team's assessment of what matters most, addressing row 7)
 - They carry **domain knowledge** that population-level AI test generation cannot access
+
+A residual asymmetry on row 5: the inputs are independent of the code (because they come from the QA engineer's reasoning), but the output is still LLM-generated. The agent's test code shares LLM-level blindspots in the test-generation step. If the same model family generates both code and tests, model-level shared blindspots remain regardless of how independent the inputs are. Independence is restored where it matters most (in *what* gets tested), but it is not absolute (in *how* the tests are written). This is partial restoration of row 5, not full restoration.
 
 This does not replace all appraisal. System-level integration testing, performance testing, and chaos engineering still operate at a level above individual features. But for feature-level verification, the collaborative model produces both better code (prevention) and better tests (informed appraisal).
 
