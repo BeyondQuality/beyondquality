@@ -16,7 +16,8 @@ That gap is what this research addresses.
 6. [Self-containment](06-setting-up-a-folder.md) — third principle: self-containment (encapsulation)
 7. [Reviewing changes](07-git.md) — fourth principle: always verify non-deterministic output (git)
 8. [One session, one task](08-sessions.md) — fifth principle: scope sessions to a task, not to time
+9. [Risks](09-risks.md) — sixth principle: least privilege, give the agent only the access it needs and can reliably handle
 
 ## Status
 
-Early draft, chapters 1-8 published. More chapters planned.
+Early draft, chapters 1-9 published. More chapters planned.
