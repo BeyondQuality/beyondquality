@@ -15,7 +15,8 @@ That gap is what this research addresses.
 5. [One agent, one job](05-one-agent-one-job.md) — second principle: one agent, one job (Unix philosophy)
 6. [Self-containment](06-setting-up-a-folder.md) — third principle: self-containment (encapsulation)
 7. [Reviewing changes](07-git.md) — fourth principle: always verify non-deterministic output (git)
+8. [One session, one task](08-sessions.md) — fifth principle: scope sessions to a task, not to time
 
 ## Status
 
-Early draft, chapters 1-7 published. More chapters planned.
+Early draft, chapters 1-8 published. More chapters planned.
