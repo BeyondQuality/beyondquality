@@ -17,7 +17,8 @@ That gap is what this research addresses.
 7. [Reviewing changes](07-git.md) — fourth principle: always verify non-deterministic output (git)
 8. [One session, one task](08-sessions.md) — fifth principle: scope sessions to a task, not to time
 9. [Risks](09-risks.md) — sixth principle: least privilege, give the agent only the access it needs and can reliably handle
+10. [Memory](10-global-memory.md) — tattoos in the folder, and why Claude Code's automatic memory is an anti-pattern
 
 ## Status
 
-Early draft, chapters 1-9 published. More chapters planned.
+Early draft, chapters 1-10 published. More chapters planned.
