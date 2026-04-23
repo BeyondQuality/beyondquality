@@ -12,7 +12,7 @@ The instruction in my `CLAUDE.md` is simple:
 
 > **End-of-session routine:** Update `MEMORY.md` in this folder with what was done, decisions made, and what's next. Append, don't rewrite.
 
-That memory lives inside the folder where it belongs (chapter 6). Claude Code also ships with an automatic memory system. For each project, it keeps a memory folder at `~/.claude/projects/<project-path>/memory/`, writing to it mid-session, across sessions. For a while, I didn't think about it. Then I started noticing something strange in the agent's output. The agent would remember an offhand remark as a hard rule, and enforce this preference with more strictness than I had ever asked for. Each occurrence was small on its own, but consistent enough that I went looking for where the agent was learning these things.
+That memory lives inside the folder where it belongs (chapter 6). Claude Code also ships with an automatic memory system. For each project, it keeps a memory folder at `~/.claude/projects/<project-path>/memory/`, writing to it mid-session, across sessions. I didn't pay attention to it until I started noticing something strange in the agent's output. The agent would remember an offhand remark as a hard rule, and enforce this preference with more strictness than I had ever asked for. Each occurrence was small on its own, but consistent enough that I went looking for where the agent was learning these things.
 
 I found the project's auto-memory folder. One of its files looked like this:
 
@@ -26,13 +26,13 @@ The folder itself looks like this:
 
 ![many auto-memory files](img/global-memory-many-files.png)
 
-The folder is a flat namespace. There are a dozen `feedback_*` files, each holding a single rule, plus a few `project_*` files with specific project state. One of them, `feedback_rag_venv.md`, is a technical note about Python virtual environments, stored as "feedback" because one session decided it was worth remembering forever. The index `MEMORY.md` is 10 KB, loaded into every session before I have typed a word.
+There are a dozen `feedback_*` files, each holding a single rule, plus a few `project_*` files with specific project state. One of them, `feedback_rag_venv.md`, is a technical note about Python virtual environments, stored as "feedback" because one session decided it was worth remembering forever. The index `MEMORY.md` is 10 KB, loaded into every session before I have typed a word.
 
 Every rule in this folder arrived without my review. None of it has ever been cleaned.
 
 Auto-memory breaks a few principles we established earlier:
 
-- **Chapters [1](01-what-is-an-llm.md) and [5](05-one-agent-one-job.md) (attention competition)**. Ten kilobytes of rules, many of them drift or stale, competing for the LLM's attention before work even begins. A rule the agent never needed today fires anyway, because it is right there in the context.
+- **Chapters [1](01-what-is-an-llm.md) and [5](05-one-agent-one-job.md) (attention competition)**. Ten kilobytes of rules, many of them stale or outdated, competing for the LLM's attention before work even begins. A rule the agent never needed today fires anyway, because it is right there in the context.
 - **Chapter [6](06-setting-up-a-folder.md) (self-containment)**. The agent's folder is supposed to be its world: working files, instructions, and memory all in one place, where I can see them. Auto-memory lives outside the project folder, under `~/.claude/projects/`. I never see it, git never tracks it, it is not part of the world I review.
 - **Chapter [7](07-git.md) (review)**. `git diff` is the review checkpoint. Writes to the auto-memory folder bypass it: they happen mid-session, in a folder I don't look at, in files I didn't know existed.
 - **Chapter [9](09-risks.md) (least privilege)**. The closing test was: can I review before it acts, and can I undo it without consequences? Auto-memory fails both. I cannot review a write I do not see, and I cannot undo "this rule shaped every session for a month" by deleting the file now.
