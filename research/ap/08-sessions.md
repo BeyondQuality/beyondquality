@@ -26,4 +26,4 @@ To keep track, type `/context`.
 
 This session is at 20%, with 77% of the context window still free. That's healthy. When the number climbs past the midpoint, the task is either too big or it's time to save progress and continue in a fresh session.
 
-The end-of-session routine from chapter 6 is what makes this work. Update the files, save the state, close the session. The next task starts fresh, with full context available for actual work instead of leftover material from the previous task.
+When you switch sessions, save anything you want to carry forward to files first. Nothing else survives.
