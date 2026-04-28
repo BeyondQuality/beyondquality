@@ -28,6 +28,8 @@ For each problem, software engineering has built a response. For each, the skill
 
 There are no widely-known malicious skills today, but that may be because nobody is looking. The skills ecosystem has none of the audit infrastructure that exposes npm attacks: no advisory databases, no automated scanners, no third-party reviewers. Attacks could already be happening, and nobody would surface them. And nothing in the publication process would stop the next `right9ctrl` from arriving.
 
+**upd**: I was wrong about the first sentence above. Academic researchers have already documented malicious skills in production marketplaces; see [the corrections file](12-using-skills-correction.md).
+
 Degradation is already the dominant problem. The model that interprets the skill keeps changing, your context keeps changing, and the imported skill follows whatever guardrails its author thought to put in, which is usually very few. Without a harness, neither the author nor you can prove the skill works on your setup, and neither of you can detect when it stops working. The skill will quietly start producing wrong numbers, wrong dates, wrong tone. You won't know the import is the cause.
 
 Nobody ships skills with an evaluation harness. Some authors test their skills informally, on their own input, on whatever model they have at the time, but that is one trial run captured in the author's memory, not verification you could run yourself.
