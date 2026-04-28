@@ -19,7 +19,8 @@ That gap is what this research addresses.
 9. [Risks](09-risks.md) — sixth principle: least privilege, give the agent only the access it needs and can reliably handle
 10. [Memory](10-global-memory.md) — tattoos in the folder, and why Claude Code's automatic memory is an anti-pattern
 11. [Skills and scripts](11-skills-not-instructions.md) — seventh principle: reduce the surface where non-determinism can act (attack surface reduction)
+12. [Using third-party skills](12-using-skills.md) — eighth principle: practise supply-chain hygiene
 
 ## Status
 
-Early draft, chapters 1-11 published. More chapters planned.
+Early draft, chapters 1-12 published. More chapters planned.
