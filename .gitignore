@@ -31,3 +31,5 @@ local/
 CLAUDE.md
 MEMORY.md
 TODO.md
+
+.bundle/

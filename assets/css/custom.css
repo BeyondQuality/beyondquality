@@ -329,6 +329,11 @@ a:hover {
   height: 2.6rem;
 }
 
+.testsolutions .sponsor-logo {
+  height: 2.6rem;
+  max-width: 240px;
+}
+
 .sponsor-logo:hover {
   opacity: 1;
 }
