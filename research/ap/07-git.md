@@ -30,3 +30,9 @@ The review checkpoint only works if the agent doesn't skip it. If the agent comm
 
 > **Never commit**. Vitaly handles all git commits himself.
 
+## Evidence
+
+[DELEGATE-52](https://arxiv.org/abs/2604.15597) is a Microsoft Research benchmark from April 2026 that ran 19 LLMs through 20 consecutive editing tasks on the same document across 52 professional domains, with no review or revert between rounds. Frontier models (Claude 4.6 Opus, GPT 5.4, Gemini 3.1 Pro) corrupted 25% of document content on average; the cross-model average was 50%.
+
+That is the rate without the review checkpoint this chapter introduces. The paper also found that 80–98% of the damage comes from rare catastrophic rounds (10–30 point drops in a single edit) hidden among many clean ones, so sampling doesn't catch them. And in the strongest models, errors arrive as subtle corruption rather than obvious deletion, like the em-dash example in this chapter. The git diff checkpoint works because it forces every change through review, which is the only way to catch failures that are both sparse and plausible-looking.
+
