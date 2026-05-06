@@ -41,6 +41,8 @@ The risk knowledge that actually drives testing decisions is always project-spec
 
 Human business domain understanding was *enabling* development and testing. It worked implicitly, as a side effect of humans collaborating. It had real issues (the recurring industry debates about keeping documentation up to date are one symptom), but it worked better, and scaled better, in companies that leaned more heavily on collaborative practices and proactive QA. The more collaboration there was, the stronger the shared domain understanding, and the more structurally that understanding could be embedded in how the company produced quality.
 
+Knowledge could still fade as people quit or transferred, but the rate was bounded: new joiners absorbed the same context implicitly through participation, so the system replenished what it lost. The [next chapter](analysis-agents.md) is where that bounded fade becomes unbounded, and where we name it: **comprehension debt** (loss of the *how*) and **intent debt** (loss of the *why*).
+
 ## Two types of companies
 
 Some people talk about "QA cultures" or maturity models with multiple levels, but for simplicity I see two types of companies on the market. To understand how different QA approaches scale, and why agents make the difference matter more, we need to model QA costs at the team level:
@@ -63,17 +65,17 @@ Intra-team costs (the "linear" part):
 
 Cross-team costs (the "hidden superlinear" part):
 - **CI infrastructure pressure**: tests run in a shared pipeline. CI run time grows with total test count. Flaky test probability compounds: if each of *t* tests has independent flake probability *p*, probability of at least one flake per run is 1-(1-p)^t, which approaches 1 quickly. Flaky test investigation is a shared cost, not per-team.
-- **Cross-team test conflicts**: team A's change breaks team B's tests. Investigation cost grows with the number of team pairs = O(n^2).
+- **Cross-team test conflicts**: team A's change breaks team B's tests. Investigation cost grows with the number of team pairs = O(n²).
 - **Shared test utilities/fixtures**: maintenance becomes a coordination problem as more teams depend on them.
 - **Architectural coherence**: the system becomes harder to reason about as a whole. Coordination mechanisms (architecture reviews, platform teams, interface contracts) are needed.
 
-**Actual cost function: O(n + εn^2)** where:
+**Actual cost function: O(n + εn²)** where:
 - *n* = number of teams
 - *ε* = cross-team coordination coefficient
 - In proactive QA companies, architectural practices (clear module boundaries, APIs, contracts) exist specifically to keep *ε* small
 - *ε* is never zero, the "linearity" of proactive QA companies means they've invested in making the quadratic term's coefficient small, not that the quadratic term is absent
 
-The difference between proactive QA and reactive QC companies is not just the size of ε — it's **small ε and no rework multiplier vs. large ε compounded by the rework feedback loop** (see reactive QC below).
+The difference between proactive QA and reactive QC companies is not just the size of ε; it's **small ε and no rework multiplier vs. large ε compounded by the rework feedback loop** (see reactive QC below).
 
 ### Reactive QC companies
 
@@ -83,11 +85,11 @@ Domain knowledge still exists in people's heads, even if processes don't leverag
 
 Scaling characteristics when adding *n* teams is **much harder**:
 
-- **Rework feedback loop** (superlinear): defects found → rework → rework introduces new defects at rate *r*. Total defect resolution effort is multiplied by ~1/(1-r). As system complexity grows, *r* increases (fixes are more likely to break something else), so the multiplier itself grows. This is a positive feedback loop: scaling is between linear and quadratic depending on defect injection rate. Formally: if base defect count scales as O(n) and each fix injects *r* new defects, total effort ≈ O(n / (1-r)). Since *r* is itself an increasing function of system complexity (which grows with *n*), the denominator shrinks as *n* grows, making the effective scaling superlinear.
-- **Automated test maintenance** (superlinear): *writing* new tests may be O(n), but *maintenance* grows with system interconnectedness. Each new feature can break existing tests due to changing assumptions, not bugs. The fragility grows with the number of cross-module dependencies, which scales as O(n^2) in the worst case.
+- **Rework feedback loop** (superlinear): defects found → rework → rework introduces new defects at rate *r*. Total defect resolution effort is multiplied by ~1/(1-r). As system complexity grows, *r* increases (fixes are more likely to break something else), so the multiplier itself grows. This is a positive feedback loop: scaling is superlinear and can blow up as *r* approaches 1. Formally: if base defect count scales as O(n) and each fix injects *r* new defects, total effort ≈ O(n / (1-r)). Since *r* is itself an increasing function of system complexity (which grows with *n*), the denominator shrinks as *n* grows, making the effective scaling superlinear.
+- **Automated test maintenance** (superlinear): *writing* new tests may be O(n), but *maintenance* grows with system interconnectedness. Each new feature can break existing tests due to changing assumptions, not bugs. The fragility grows with the number of cross-module dependencies, which scales as O(n²) in the worst case.
 - **Manual testing** (superlinear): combinatorial state explosion. If the system has *k* interacting features, the state space grows combinatorially. Each new team adds features that interact with existing ones; testing the interactions grows faster than the number of features.
 
-Using the same framework as proactive QA: cost is also **O(n + εn^2)**, but ε is **much larger** because there are no architectural or process investments to suppress the quadratic term. Additionally, the rework loop adds a **multiplicative factor** 1/(1-r(n)) on top, making the actual cost closer to **O((n + εn^2) / (1-r(n)))** — which accelerates sharply as *r* approaches 1.
+Using the same framework as proactive QA: cost is also **O(n + εn²)**, but ε is **much larger** because there are no architectural or process investments to suppress the quadratic term. Additionally, the rework loop adds a **multiplicative factor** 1/(1-r(n)) on top, making the actual cost closer to **O((n + εn²) / (1-r(n)))**, which accelerates sharply as *r* approaches 1.
 
 Scaling walls don't just appear in team cost structures; they also appear inside testing itself.
 

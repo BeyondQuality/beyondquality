@@ -4,7 +4,7 @@ Part of [QA in the Age of AI-Accelerated Development](analysis.md). Pre-requisit
 
 ---
 
-In the [previous page](analysis-agents.md) we saw the two debts emerge wherever agents replace humans in code generation. Now let's look at what happens to the pre-AI compensation layer (docs, ADRs, tests, runbooks) when those artifacts themselves start being derived from agent-generated code.
+In the [previous page](analysis-agents.md), the two debts emerged wherever agents replace humans in code generation. The pre-AI compensation layer (docs, ADRs, tests, runbooks) was supposed to absorb that loss. When those artifacts themselves start being derived from agent-generated code, the layer fails in a specific way.
 
 Pre-AI, comprehension and intent debt accumulated whenever people quit, transferred, or simply forgot. The industry response evolved over decades into a layered set of compensation mechanisms:
 

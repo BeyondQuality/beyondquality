@@ -47,7 +47,7 @@ The baseline is three roles, each contributing something the others cannot. Q #2
 
 **Engineer**: participates in incremental construction. Does not "review code" in the traditional sense (code review is a very weak appraisal method, particularly when code changes volume is big). Instead, helps decide what to build, sees each small step emerge in the context of decisions just made, dialogues with the agent ("build this part", "now handle this edge case", "why did you do it this way?"). Tracks whether the implementation is heading in the right direction technically. Without the engineer, the rest of the team can tell the agent what to build but nobody can keep it technically on track.
 
-**QA engineer**: contributes risk thinking before and during construction. Before the session: maps the work to the risk register and compliance landscape, chooses verification strategy fit for the consequence-of-failure profile. During construction: raises edge cases ("what if the user submits twice?"), challenges assumptions ("the spec says X but users actually do Y"), brings user behaviour knowledge that shapes implementation in real time. Edge cases become building instructions, not post-hoc bug reports. (See §2.3 for both layers in detail.)
+**QA engineer**: contributes risk thinking before and during construction. Before the session: maps the work to the risk register and compliance landscape, chooses verification strategy fit for the consequence-of-failure profile. During construction: raises edge cases ("what if the user submits twice?"), challenges assumptions ("the spec says X but users actually do Y"), brings user behaviour knowledge that shapes implementation in real time. Edge cases become building instructions, not post-hoc bug reports. (See "The QA engineer role" below for both layers in detail.)
 
 **AI agent**: handles implementation. Writes the code based on the team's collective guidance.
 
@@ -67,14 +67,14 @@ Before the building session starts (or as it opens), the QA engineer maps the wo
 
 **Tactical layer: during construction.**
 
-1. **Risk thinking during construction.** "What if the user submits twice?" "What happens when this input is empty?" "This payment flow needs to handle concurrent requests." These become immediate instructions to the agent, not bug reports discovered weeks later.
-2. **Challenging assumptions.** "The spec says X but users actually do Y." "Why are we assuming this input is always valid?" The QA engineer questions what the developer and product person take for granted.
+1. **Risk thinking during construction.** "What if the user submits twice?" "What happens when this input is empty?" "This payment flow needs to handle concurrent requests". These become immediate instructions to the agent, not bug reports discovered weeks later.
+2. **Challenging assumptions.** "The spec says X but users actually do Y". "Why are we assuming this input is always valid?" The QA engineer questions what the developer and product person take for granted.
 3. **Edge cases as specifications.** The tester's edge cases become part of the building instructions. Essentially TDD driven by risk thinking rather than developer intuition alone.
-4. **User behaviour knowledge.** "Users always misuse the export feature for regulatory reporting, not for the convenience use case you are building for." This shapes implementation in real time.
+4. **User behaviour knowledge.** "Users always misuse the export feature for regulatory reporting, not for the convenience use case you are building for". This shapes implementation in real time.
 
 Both layers are necessary. The tactical layer without the strategic layer produces tests with good local fidelity but the wrong overall risk allocation. The strategic layer without the tactical layer produces a well-prioritised feature with mediocre execution.
 
-This is what "QA engineer" always meant. Quality *assurance*: assuring quality is built in. The industry drifted into using "QA" to mean "person who tests after dev is done," which is quality *control*. The collaborative model does not invent a new role. It makes the existing name accurate.
+This is what "QA engineer" always meant. Quality *assurance*: assuring quality is built in. The industry drifted into using "QA" to mean "person who tests after dev is done", which is quality *control*. The collaborative model does not invent a new role. It makes the existing name accurate.
 
 ### Secondary effect: T-shaping by exposure
 
@@ -110,10 +110,10 @@ JiTTests (evaluation) generate tests per-change from scratch. Each generation ep
 
 During the collaborative building session, the team produces:
 
-- **Business rules articulated by the product person.** "Refunds over $500 require manager approval." "The export must include all transactions from the fiscal year, not the calendar year." These are acceptance criteria expressed in natural language, in the agent's context.
+- **Business rules articulated by the product person.** "Refunds over $500 require manager approval". "The export must include all transactions from the fiscal year, not the calendar year". These are acceptance criteria expressed in natural language, in the agent's context.
 - **Edge cases raised by the QA engineer.** "What if the user submits the form twice?" "What happens when the payment gateway times out?" "What if the export file exceeds the email attachment limit?" These are test cases grounded in real risk thinking, not generated from code patterns.
-- **Risk assessments.** "This payment flow is critical, test it exhaustively." "The settings page is low-risk, basic coverage is fine." This is the local risk calibration (layer 3 from the analysis) that population-level AI test generation cannot provide.
-- **Design decisions and their rationale.** "We chose eventual consistency here because the latency budget is 50ms." "We deliberately skip validation on this internal API because the upstream service already validates." These are constraints that tests should respect, not flag as bugs.
+- **Risk assessments.** "This payment flow is critical, test it exhaustively". "The settings page is low-risk, basic coverage is fine". This is the local risk calibration (layer 3 from the analysis) that population-level AI test generation cannot provide.
+- **Design decisions and their rationale.** "We chose eventual consistency here because the latency budget is 50ms". "We deliberately skip validation on this internal API because the upstream service already validates". These are constraints that tests should respect, not flag as bugs.
 
 All of this is in the agent's context during the session. The agent can generate tests that are grounded in actual intent, actual risk assessment, and actual edge cases from domain experts, not just code patterns.
 
@@ -148,7 +148,7 @@ This is a candidate mechanism for rebuilding the lifecycle bridge (as defined in
 
 ## 4. The economics argument
 
-The objection to team-based building: "it is expensive to have multiple people working on one thing."
+The objection to team-based building: "it is expensive to have multiple people working on one thing".
 
 The comparison should not be headcount on a feature. It should be total cost of delivery:
 

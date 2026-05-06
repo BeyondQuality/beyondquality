@@ -4,7 +4,7 @@ Part of [QA in the Age of AI-Accelerated Development](analysis.md). Pre-requisit
 
 ---
 
-In the [previous pages](analysis-agents.md) we saw both debts emerging at the generation point, and the pre-AI compensation layer turning into ratification rather than correction. Now let's ask what any solution would have to achieve, and the research question that follows.
+In the [previous pages](analysis-agents.md), both debts emerge at the generation point, and the pre-AI compensation layer turns into ratification rather than correction. The shape of any solution depends on the asymmetry between the two debts.
 
 **The two debts are not equally non-negotiable.**
 

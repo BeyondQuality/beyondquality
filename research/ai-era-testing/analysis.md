@@ -28,11 +28,11 @@ Whether code is "good enough" depends on what business problem it solves, what t
 
 ---
 
-## 3. Analysis:
+## 3. Analysis
 
 - **[Pre-AI baseline](analysis-pre-ai.md)**: how development and QA worked before agents, the "testing-after" ceiling was imminent.
 - **[With agents](analysis-agents.md)**: how the testing and learning process changes when agents take over implementation; why delegating test generation to AI is not an option.
-- **[Lifecycle drift](analysis-lifecycle.md)**: how pre-AI compensation mechanisms (docs, tests, ADRs, onboarding material) break when artifacts are generated from AI-generated code. The **generative ratification loop**. 
+- **[Lifecycle drift](analysis-lifecycle.md)**: how pre-AI compensation mechanisms (docs, tests, ADRs, onboarding material) break when artifacts are generated from AI-generated code, producing the **generative ratification loop**.
 
 ## 4. Research question and next steps
 

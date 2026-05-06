@@ -4,7 +4,7 @@ Part of [QA in the Age of AI-Accelerated Development](analysis.md). Pre-requisit
 
 ---
 
-In the [pre-AI baseline](analysis-pre-ai.md) we saw that "testing-after" was already doomed under scale, and that what kept the process working at all was business domain understanding, required by every step and accumulated implicitly through human collaboration. Now let's review what happens when code generation is delegated to agents.
+In the [pre-AI baseline](analysis-pre-ai.md), "testing-after" was already doomed under scale, and what kept the process working at all was business domain understanding, required by every step and accumulated implicitly through human collaboration. When code generation is delegated to agents, that compensation mechanism breaks.
 
 ## The general process: same steps, different dynamics
 
@@ -73,11 +73,11 @@ Architectural coherence cost increases: agents don't inherently respect architec
 
 **But** proactive QA companies are better positioned. Their mindset is already "embed quality into the process". They'll naturally try to embed quality constraints into agent workflows (better prompts, architectural guardrails, specification-level testing). They experience this as "we need to adapt our practices" rather than "everything is breaking".
 
-Scaling with agents: using the O(n + εn^2) framework, agents cause two simultaneous effects:
+Scaling with agents: using the O(n + εn²) framework, agents cause two simultaneous effects:
 1. **Effective *n* increases**: agents multiply code output per team, so the equivalent "team count" in terms of code volume grows. Even a small ε starts to bite at higher *n*.
-2. **ε itself increases**: the cross-team coordination cost assumed humans could read each other's code and resolve conflicts. When agent-generated code is less comprehensible, the coordination cost per team-pair rises — i.e., ε grows.
+2. **ε itself increases**: the cross-team coordination cost assumed humans could read each other's code and resolve conflicts. When agent-generated code is less comprehensible, the coordination cost per team-pair rises (i.e., ε grows).
 
-Combined effect on O(n + εn²): if agents raise effective team count to n' and coordination coefficient to ε', the quadratic term grows by (ε'/ε)·(n'/n)² — both multipliers compound. Outcome: **uncertain but plausibly manageable** if prevention practices can be adapted to constrain both effects.
+Combined effect on O(n + εn²): if agents raise effective team count to n' and coordination coefficient to ε', the quadratic term grows by (ε'/ε)·(n'/n)², so both multipliers compound. Outcome: **uncertain but plausibly manageable** if prevention practices can be adapted to constrain both effects.
 
 ### Reactive QC companies
 
@@ -89,7 +89,7 @@ Already struggling with superlinear scaling, now compounded:
 
 This is what Lilia describes at JetBrains (which sits somewhere between the two types, making the signal more alarming).
 
-Scaling with agents: using the O((n + εn^2) / (1-r(n))) framework:
+Scaling with agents: using the O((n + εn²) / (1-r(n))) framework:
 1. **Effective *n* increases** dramatically (same as proactive QA case)
 2. **ε is already large** and grows further (agent code is less comprehensible, coordination harder)
 3. **r(n) increases**: with more agent-generated code, rework introduces defects at a higher rate because the humans doing the rework understand the surrounding code less well. The denominator (1-r(n)) shrinks faster.
@@ -100,14 +100,14 @@ All three terms move in the wrong direction simultaneously. The compounding is m
 
 | Factor | Pre-AI | With agents |
 |---|---|---|
-| Code volume | — | Accelerated (quantitative change) |
-| Comprehension per line of code | Constant | **Degraded** — nobody deeply understands agent-written code |
-| Feedback loop (testing → implementation) | Works | **Severely degraded** — persistence mechanisms (memory, CLAUDE.md), fine-tuning, and LoRA exist but provide information recall, not the process of judgment updating. The pace mismatch (human-speed documentation vs. machine-speed risk emergence) widens the gap over time |
-| Shared understanding | Fills specification gaps | **Absent on agent side** — gaps stay unfilled |
+| Code volume | n/a | Accelerated (quantitative change) |
+| Comprehension per line of code | Constant | **Degraded**: nobody deeply understands agent-written code |
+| Feedback loop (testing → implementation) | Works | **Severely degraded**: persistence mechanisms (memory, CLAUDE.md), fine-tuning, and LoRA exist but provide information recall, not the process of judgment updating. The pace mismatch (human-speed documentation vs. machine-speed risk emergence) widens the gap over time |
+| Shared understanding | Fills specification gaps | **Absent on agent side**, so gaps stay unfilled |
 | Test independence | Human testers bring independent perspective | **AI tests can share code's blind spots** |
-| Failure modes | Predictable, heuristic-detectable | **Novel** — plausible-looking but subtly wrong |
-| Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure. Also transferable professional heuristics — reasoning by analogy from other systems and domains (the "oracle concept") | **Qualitatively different** — LLMs have broad statistical pattern recognition from training data, but lack consequence-grounded calibration, contextual exception recognition, and project-specific accumulated knowledge. The easy half is present; the hard half — the parts prevention depends on — is missing. The comparison is an open research question |
-| Intent preservation | Humans carry the "why" — business rationale, design decisions, consciously accepted tradeoffs. Accumulated implicitly through participation in decisions and shared understanding | **Eroding** — agents don't retain intent; humans who made the decisions rotate, forget, or leave. Intent debt accumulates invisibly and manifests not when things break, but when decisions need to be made: should we build this feature? Is this product still serving its purpose? |
+| Failure modes | Predictable, heuristic-detectable | **Novel**: plausible-looking but subtly wrong |
+| Business domain understanding | Humans carry context: risk profile, product lifecycle, tradeoffs, consequences of failure. Also transferable professional heuristics, reasoning by analogy from other systems and domains (the "oracle concept") | **Qualitatively different**: LLMs have broad statistical pattern recognition from training data, but lack consequence-grounded calibration, contextual exception recognition, and project-specific accumulated knowledge. The easy half is present; the hard half (the parts prevention depends on) is missing. The comparison is an open research question |
+| Intent preservation | Humans carry the "why": business rationale, design decisions, consciously accepted tradeoffs. Accumulated implicitly through participation in decisions and shared understanding | **Eroding**: agents don't retain intent; humans who made the decisions rotate, forget, or leave. Intent debt accumulates invisibly and manifests not when things break, but when decisions need to be made: should we build this feature? Is this product still serving its purpose? |
 
 Row 1 is quantitative change. Rows 2-8 are qualitative changes. This is why "just scale testing-after" has a structural ceiling: it addresses row 1 but not rows 2-8.
 
