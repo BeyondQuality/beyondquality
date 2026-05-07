@@ -21,7 +21,8 @@ That gap is what this research addresses.
 11. [Skills and scripts](11-skills-not-instructions.md) — seventh principle: reduce the surface where non-determinism can act (attack surface reduction)
 12. [Using third-party skills](12-using-skills.md) — eighth principle: practise supply-chain hygiene
 13. [Hooks and linters](13-hooks.md) — automating mechanical checks
+14. [Tokens and costs](14-tokens-and-costs.md) — billing models, why long sessions cost disproportionately more, and watching the meter
 
 ## Status
 
-Early draft, chapters 1-13 published. More chapters planned.
+Early draft, chapters 1-14 published. More chapters planned.
