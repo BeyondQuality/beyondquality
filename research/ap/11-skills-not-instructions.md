@@ -80,3 +80,7 @@ Every few weeks, two reviews:
 2. Look at the skills. Ask the agent whether any skill's logic could be rewritten as a deterministic script.
 
 Each instruction that moves out of CLAUDE.md reduces how much loads by default. Each skill that becomes a script removes an LLM from the loop. Neither prevents non-determinism; both change the odds.
+
+---
+
+Previous: [Memory](10-global-memory.md) | Next: [Using third-party skills](12-using-skills.md)

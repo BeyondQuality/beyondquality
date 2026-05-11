@@ -45,3 +45,7 @@ Building a skill is fast; building one that holds up under non-determinism is wh
 Evaluation harnesses for skills are a big enough topic that I'll come back to them in a later chapter.
 
 The alternative is to install a stranger's package and hope. With event-stream, the silent compromise ran for two and a half months before someone filed a GitHub issue. With an imported skill, the failure looks like ordinary LLM mistakes: a wrong number here, a misformatted output there, a procedure that worked last week and now doesn't. You won't file an issue; you'll quietly stop trusting the agent, and you won't know why.
+
+---
+
+Previous: [Skills and scripts](11-skills-not-instructions.md) | Next: [Hooks and linters](13-hooks.md)

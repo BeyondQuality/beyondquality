@@ -18,3 +18,7 @@ This is the second engineering principle: **one agent, one job**. Software engin
 
 Fewer instructions in the context means less competition, which means more reliable behaviour. An agent with five rules will follow all five more consistently than an agent with thirty rules will follow any of them.
 
+
+---
+
+Previous: [Getting started](04-getting-started.md) | Next: [Self-containment](06-setting-up-a-folder.md)

@@ -33,3 +33,7 @@ From one hook, the rest follow. Banned phrases. Dates not in ISO format. Currenc
 The hook can be extended later. As your manual review uncovers new patterns worth enforcing, ask Claude Code to add them to the existing script. In a fresh session, point the agent at the file: "Open the hook script in `.claude/hooks/` and extend it to also block dates not in ISO format." Or: "Modify the script in `.claude/hooks/` to reject these banned phrases too: [list]." The agent reads the current script, adds the new check, and saves. Test the new behavior the same way you tested the original.
 
 With the hook in place, em-dashes get caught every time, whether the LLM remembered the rule or not. A CLAUDE.md instruction is a request the agent can ignore. A hook running a linter is a check the agent has to pass. Manual review still happens; git diff is the safety net for everything that needs eyes. With hooks, we can automate some of those mechanical checks.
+
+---
+
+Previous: [Using third-party skills](12-using-skills.md) | Next: [Tokens and costs](14-tokens-and-costs.md)

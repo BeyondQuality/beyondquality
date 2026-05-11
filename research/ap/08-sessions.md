@@ -27,3 +27,7 @@ To keep track, type `/context`.
 This session is at 20%, with 77% of the context window still free. That's healthy. When the number climbs past the midpoint, the task is either too big or it's time to save progress and continue in a fresh session.
 
 When you switch sessions, save anything you want to carry forward to files first. Nothing else survives.
+
+---
+
+Previous: [Reviewing changes](07-git.md) | Next: [Risks](09-risks.md)
