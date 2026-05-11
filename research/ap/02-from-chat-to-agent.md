@@ -40,3 +40,7 @@ The same back-and-forth applies to running commands. I had two vertical screensh
 Search, edit, run commands: these are just a few of Claude Code's tools. It can also fetch web pages, read PDFs, create files, run scripts.
 
 With ChatGPT, the LLM does everything. You paste your files in, and the LLM produces a response. There is no file search, no file editing, no commands running on your machine. Everything is text generation, with all the problems from the previous chapter: non-determinism, degradation, the risk of plausible but wrong results. With an agent, the LLM only generates the instructions: which tool to call and with what parameters. The actual work is done by programs that either succeed or fail, with nothing generated or guessed. The LLM is still non-deterministic, but the surface area where that matters shrinks to a thin layer of coordination.
+
+---
+
+Previous: [What is an LLM](01-what-is-an-llm.md) | Next: [A real workflow](03-lil-demo.md)

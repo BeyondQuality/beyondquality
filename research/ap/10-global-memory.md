@@ -51,3 +51,7 @@ The fix is to stop the system from writing. Open `~/.claude/settings.json` and a
 Substitute your own home path. From now on the agent cannot add to auto-memory in any project, and nothing gets written without you seeing it.
 
 The tattoos stay, but only the ones you choose to keep.
+
+---
+
+Previous: [Risks](09-risks.md) | Next: [Skills and scripts](11-skills-not-instructions.md)

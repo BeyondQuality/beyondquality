@@ -10,3 +10,7 @@ If the folder contains files that don't belong to this job, the agent will read 
 
 This is the third engineering principle: **self-containment**. Everything the agent needs must be in its folder, and nothing else. The folder bundles the data (working files) with the instructions that operate on it (`CLAUDE.md`). In software engineering, this is called [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
 
+
+---
+
+Previous: [One agent, one job](05-one-agent-one-job.md) | Next: [Reviewing changes](07-git.md)

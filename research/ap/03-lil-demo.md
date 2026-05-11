@@ -63,3 +63,7 @@ Every process I care about is written down in `CLAUDE.md`:
 All of this across six sponsored conferences, four speaking engagements (and more to come!), and nine meetups. Not a single dollar unaccounted for, not a single deadline missed.
 
 You could try doing all of this in ChatGPT by pasting the contents of every file into one chat. But with dozens of event files, budgets, travel plans, and instructions, you'd hit the context limit from chapter 1 long before you covered everything. The agent doesn't have this problem: it reads only the files it needs for the current task, not all of them at once.
+
+---
+
+Previous: [From chat to agent](02-from-chat-to-agent.md) | Next: [Getting started](04-getting-started.md)

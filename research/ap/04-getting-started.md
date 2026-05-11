@@ -25,3 +25,7 @@ But pain alone isn't enough. You also need to be an expert at the process.
 If you can't define the steps precisely, you can't write good instructions for the agent, and you can't validate whether the agent followed them properly.
 
 
+
+---
+
+Previous: [A real workflow](03-lil-demo.md) | Next: [One agent, one job](05-one-agent-one-job.md)

@@ -36,3 +36,7 @@ The review checkpoint only works if the agent doesn't skip it. If the agent comm
 
 That is the rate without the review checkpoint this chapter introduces. The paper also found that 80–98% of the damage comes from rare catastrophic rounds (10–30 point drops in a single edit) hidden among many clean ones, so sampling doesn't catch them. And in the strongest models, errors arrive as subtle corruption rather than obvious deletion, like the em-dash example in this chapter. The git diff checkpoint works because it forces every change through review, which is the only way to catch failures that are both sparse and plausible-looking.
 
+
+---
+
+Previous: [Self-containment](06-setting-up-a-folder.md) | Next: [One session, one task](08-sessions.md)

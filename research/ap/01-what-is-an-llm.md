@@ -27,3 +27,7 @@ What we call hallucination comes from non-determinism: the LLM generates plausib
 ChatGPT, Claude, Gemini, and every other chat assistant you've used has an LLM underneath. The chat interface is just a wrapper.
 
 This is the foundation everything else builds on.
+
+---
+
+Next: [From chat to agent](02-from-chat-to-agent.md)

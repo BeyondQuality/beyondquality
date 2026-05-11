@@ -46,3 +46,7 @@ Glance at `/cost` while you work, the way you glance at `/context`. The meter on
 
 The cost lens doesn't add new principles. It adds a second reason for the ones already in place. Minimal CLAUDE.md was already good for attention ([ch11](11-skills-not-instructions.md)); it's also good for cost. Short sessions were already good for focus ([ch8](08-sessions.md)); they're also good for cost. The `/context` meter you already watch doubles as a cost meter when paired with `/cost`. The cheap workflow and the reliable workflow are the same workflow.
 
+---
+
+Previous: [Hooks and linters](13-hooks.md)
+

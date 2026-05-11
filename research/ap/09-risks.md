@@ -19,3 +19,7 @@ This is the sixth engineering principle: **the principle of least privilege**. G
 My conference planning agent can draft an email but not send it. It can modify files in its folder but not outside it. Since the agent is non-deterministic (chapter 1) and I am the one accountable for its output, I stay in control of what it does.
 
 When you give an agent access to something, ask two questions: can I review what it's about to do before it does it? And if it gets it wrong, can I undo it with no consequences? If the answer to either is no, don't give the agent that access.
+
+---
+
+Previous: [One session, one task](08-sessions.md) | Next: [Memory](10-global-memory.md)
