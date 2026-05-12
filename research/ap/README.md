@@ -23,6 +23,8 @@ That gap is what this research addresses.
 13. [Hooks and linters](13-hooks.md) — automating mechanical checks
 14. [Tokens and costs](14-tokens-and-costs.md) — billing models, why long sessions cost disproportionately more, and watching the meter
 
+- [Summary](summary.md) — all engineering principles and antipatterns in one table
+
 ## Status
 
 Early draft, chapters 1-14 published. More chapters planned.
