@@ -48,5 +48,5 @@ The cost lens doesn't add new principles. It adds a second reason for the ones a
 
 ---
 
-Previous: [Hooks and linters](13-hooks.md)
+Previous: [Hooks and linters](13-hooks.md) | Next: [Change one thing at a time](15-change-one-thing-at-a-time.md)
 

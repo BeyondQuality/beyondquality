@@ -22,7 +22,8 @@ That gap is what this research addresses.
 12. [Using third-party skills](12-using-skills.md) — eighth principle: practise supply-chain hygiene
 13. [Hooks and linters](13-hooks.md) — automating mechanical checks
 14. [Tokens and costs](14-tokens-and-costs.md) — billing models, why long sessions cost disproportionately more, and watching the meter
+15. [Change one thing at a time](15-change-one-thing-at-a-time.md) — ninth principle: change one thing at a time (OVAT, bisection), the maintenance principle
 
 ## Status
 
-Early draft, chapters 1-14 published. More chapters planned.
+Early draft, chapters 1-15 published. More chapters planned.
