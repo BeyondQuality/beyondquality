@@ -2,7 +2,7 @@
 
 [Chapter 14](14-tokens-and-costs.md) showed that an agent's cost is invisible by default. It adds up turn after turn, and a session left running can spend far more than you intended, so the advice was to run `/cost` regularly to see how much the session had already spent. If you don't, you might get unlucky, like the team that left two agents looping for eleven days and came back to a bill tens of thousands of dollars higher than expected.
 
-That was two agents on a single team, but even big companies often miss this, [as happened with Uber](https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/), which burned through its entire 2026 budget for AI coding tools in just four months.
+That was two agents on a single team. The same thing happens at the largest companies, on a much bigger scale: [Uber](https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/) burned through its entire 2026 budget for AI coding tools in just four months.
 
 In both cases the cost climbed faster than anyone was watching.
 
@@ -18,7 +18,7 @@ The `$7.55` is everything this session has cost so far, and it goes up as I keep
 
 When you drive, you do not pop the hood to check the oil or dip the tank for fuel. You glance at the gauges and react. The cost meter is the same: always in front of you, no command to run. Turn it on by default, in every project, for everyone. It costs nothing to show, and it fixes the one problem with `/cost`, which is that you have to remember it exists.
 
-The status line is a small script you control, so it can do more than show a number. You can have it change colour as the cost climbs: mine turns the figure yellow once a session passes $30 and red once it passes $50. The colour catches your eye, so you notice without having to read the number, and when it goes red you stop and look at what the agent is doing. Pick thresholds that mean "pay attention" and "stop" for your own budget.
+The status line is a small script you control, so it can do more than show a number. You can have it change colour as the cost climbs: mine turns the figure yellow once a session passes $30 and red once it passes $50. The colour catches your eye, so you notice without having to read the number, and when it goes red you stop and look at what the agent is doing.
 
 You do not have to write the script yourself. Paste this into a Claude Code session and it will fetch my version, explain in plain language what it does and what installing it changes, and set it up only if you agree:
 
@@ -27,7 +27,8 @@ Fetch this status line script: https://gist.github.com/sharovatov/082362b3b7c002
 
 1. Read it and explain to me, in plain language, what it does and what each part is for. I am not a programmer.
 2. Tell me exactly what installing it would change on my machine.
-3. If I agree, install it: save it to ~/.claude/statusline.sh, make it executable, and register it as my status line in ~/.claude/settings.json without touching my other settings. Then show me how to check it works.
+3. The script turns the cost yellow, then red, at two dollar amounts. Ask me what those should be for my budget.
+4. If I agree, install it with my amounts: save it to ~/.claude/statusline.sh, make it executable, and register it as my status line in ~/.claude/settings.json without touching my other settings. Then show me how to check it works.
 ```
 
 Making Claude explain the script before it installs is the same habit [chapter 12](12-using-skills.md) urged for skills: read what you are about to run, then decide.
@@ -59,9 +60,9 @@ I want to see how much I have spent in Claude Code, broken down by day. There is
 
 For teams, Claude Code can export its usage as OpenTelemetry metrics into a monitoring dashboard (turned on with the `CLAUDE_CODE_ENABLE_TELEMETRY` setting), and the Anthropic Console shows spend across a whole account or organisation. It is the same path any company takes with a cost it cares about: a number on one screen, then a shared dashboard the team can watch. Setting it up is engineering work; as a non-engineer, ask whoever runs your team's tooling to turn it on, or to give you access to the dashboard they already have.
 
-## The cheap workflow is the safe workflow
+## Nothing climbs unseen
 
-Chapter 14 argued that the cheap workflow and the reliable workflow are the same workflow, and the first move in both is simply seeing what you spend. The status line keeps it in front of you turn by turn; ccusage shows where it went across days and weeks. A cost you can always see is a cost that will not surprise you.
+Watching the cost does not lower it; it removes the surprise. The status line catches a runaway within the session, ccusage catches the slower drift across the week, and either way the spend shows up while you can still do something about it. The bills that surprise people are the ones nobody was watching.
 
 ---
 
