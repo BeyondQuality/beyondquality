@@ -42,13 +42,13 @@ The fix is to stop the system from writing. Open `~/.claude/settings.json` and a
 ```json
 "permissions": {
   "deny": [
-    "Write(/Users/vitaliysharovatov/.claude/projects/**/memory/**)",
-    "Edit(/Users/vitaliysharovatov/.claude/projects/**/memory/**)"
+    "Write(~/.claude/projects/**/memory/**)",
+    "Edit(~/.claude/projects/**/memory/**)"
   ]
 }
 ```
 
-Substitute your own home path. From now on the agent cannot add to auto-memory in any project, and nothing gets written without you seeing it.
+From now on the agent cannot add to auto-memory in any project, and nothing gets written without you seeing it.
 
 The tattoos stay, but only the ones you choose to keep.
 
