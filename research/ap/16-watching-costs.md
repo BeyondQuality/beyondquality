@@ -8,13 +8,19 @@ In both cases the cost climbed faster than anyone was watching.
 
 ## The meter you don't have to ask for
 
-You can see the spend with `/cost`, but you have to remember to run it, and a check you have to remember is a check you will skip.
+You can see the spend with `/cost` or `/usage`, but you have to remember to run it, and a check you have to remember is a check you will skip. 
 
-Claude Code can show the running cost in a status line at the bottom of the screen, updated on every turn. Mine looks like this:
+Claude Code can show the running cost along with usage limits in a status line at the bottom of the screen, updated on every turn. Mine looks like this:
 
-![The status line showing the live session cost](img/session-cost-meter.jpg)
+![The status line showing the live session cost](img/session-cost-meter.png)
 
-The `$7.55` is everything this session has cost so far, and it goes up as I keep working. I never type a command to see it, because it is always there at the bottom of the screen.
+The `$21.50` is everything this session has cost so far, and it goes up as I keep working. I never type a command to see it, because it is always there at the bottom of the screen.
+
+The `ctx 30%` indicates that I have used 30% of my context window (See [sessions](./08-sessions.md)). 
+
+The `5h 4% @19:20` indicates that I have used 4% of my 5-hour window limit, which will reset at 19:20. 
+
+The `7d 1% @Jun 11 10:00` indicates that I have used 1% of my 7-day usage limit, which will reset on 11 June, at 10:00.  
 
 When you drive, you do not pop the hood to check the oil or dip the tank for fuel. You glance at the gauges and react. The cost meter is the same: always in front of you, no command to run. Turn it on by default, in every project, for everyone. It costs nothing to show, and it fixes the one problem with `/cost`, which is that you have to remember it exists.
 
