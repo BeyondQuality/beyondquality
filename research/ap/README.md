@@ -24,9 +24,10 @@ That gap is what this research addresses.
 14. [Tokens and costs](14-tokens-and-costs.md) — billing models, why long sessions cost disproportionately more, and watching the meter
 15. [Change one thing at a time](15-change-one-thing-at-a-time.md) — ninth principle: change one thing at a time (OVAT, bisection), the maintenance principle
 16. [Watching the cost](16-watching-costs.md) — the status line as an always-on cost meter, and ccusage for daily and monthly totals
+17. [Analysing your own work](17-analysing-your-own-work.md) — the strategic payoff: contained work becomes a complete, queryable record, for self-assessment, job analysis, and delegation
 
 - [Summary](summary.md) — all engineering principles and antipatterns in one table
 
 ## Status
 
-Early draft, chapters 1-16 published. More chapters planned.
+Early draft, chapters 1-17 published. More chapters planned.

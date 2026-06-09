@@ -4,6 +4,7 @@
 
 | Property | Description |
 |---|---|
+| Statelessness | The LLM remembers nothing between turns. The whole conversation is reassembled and resent on every message, so anything the agent must keep has to live on disk. |
 | Non-determinism | The same input always produces different output. The LLM generates plausible text, not correct text. |
 | Degradation | The longer the input, the less precisely the LLM attends to each part. Earlier instructions get buried. |
 | Truncation | When input exceeds the context limit, older content is summarised or dropped. Information is silently lost. |
@@ -20,6 +21,7 @@
 | 6 | Principle of least privilege | [9](09-risks.md) | [Least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) | Give the agent only the access it needs and can reliably handle. |
 | 7 | Reduce the surface where non-determinism can act | [11](11-skills-not-instructions.md) | [Attack surface reduction](https://en.wikipedia.org/wiki/Attack_surface) | Move procedures into skills, data into separate files, and mechanical work into scripts. |
 | 8 | Practise supply-chain hygiene | [12](12-using-skills.md) | [Supply-chain security](https://en.wikipedia.org/wiki/Supply_chain_attack) | Every dependency you import is a trust decision. Read, learn, then build your own. |
+| 9 | Change one thing at a time | [15](15-change-one-thing-at-a-time.md) | One Variable at a Time (OVAT) / bisection | When you want to know what caused a change in behaviour, only one thing should change between the working state and the broken one. |
 
 ## Antipatterns
 
@@ -33,4 +35,12 @@
 | Giving the agent irreversible access | [9](09-risks.md) | Letting the agent send emails, post to APIs, or interact with services where mistakes can't be undone. A sent email has no `git revert`. |
 | Desktop agents with full system access | [9](09-risks.md) | Tools like Claude Cowork that access the entire computer, browser, and email. The blast radius is not one folder but everyone the agent can reach. |
 | Importing third-party skills directly | [12](12-using-skills.md) | Installing someone else's skill without review. No audit gate, no test harness, and the same skill produces different output on different machines due to non-determinism. |
-| No bounds or circuit breakers for costs | [14](14-tokens-and-costs.md), [16](16-meters-and-circuit-breakers.md) | Without spending limits or automatic stops, costs compound silently. In one case, two agents in a multi-agent setup got trapped in a dialogue loop for eleven days, running up tens of thousands of dollars before anyone noticed. |
+| No bounds or circuit breakers for costs | [14](14-tokens-and-costs.md), [16](16-watching-costs.md) | Without spending limits or automatic stops, costs compound silently. In one case, two agents in a multi-agent setup got trapped in a dialogue loop for eleven days, running up tens of thousands of dollars before anyone noticed. |
+
+## Payoff
+
+The principles above limit what non-determinism can damage. One chapter covers what the discipline gives back: once your work is contained in agents, the accumulated record lets you analyse your own work.
+
+| Payoff | Chapter | What it enables |
+|---|---|---|
+| Analysing your own work | [17](17-analysing-your-own-work.md) | The contained work becomes a complete, version-stamped record of inputs, processing and outputs. It supports self-assessment, job analysis, delegation decisions, and period-over-period comparison. The agent assembles the record; you supply the judgment. |
