@@ -50,6 +50,8 @@ The fix is to stop the system from writing. Open `~/.claude/settings.json` and a
 
 Substitute your own home path. From now on the agent cannot add to auto-memory in any project, and nothing gets written without you seeing it.
 
+Killing auto-memory leaves only the memory I keep on purpose. `MEMORY.md` is one part of it, the summary the agent reads back every session, which is why it stays short ([chapter 8](08-sessions.md)). The other part is the full record: I keep the entire conversation, appended verbatim as we work, in a file the agent does not read back. The summary records what I decided; the transcript records why, in the words we used. It sits in the folder as an archive that costs nothing until the day I need it, and that day comes in [chapter 17](17-analysing-your-own-work.md).
+
 The tattoos stay, but only the ones you choose to keep.
 
 ---
