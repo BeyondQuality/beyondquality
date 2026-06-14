@@ -84,16 +84,6 @@ The collaborative session has a side effect that mob programming practitioners h
 
 This matters for two reasons. First, it partially addresses the 5:1 ratio problem (Q #1 in §6): if QA risk thinking diffuses into the engineer over time, low-risk features may not need a dedicated QA engineer present. Second, the operational cost of the collaborative session may be partly an investment in cross-skilling rather than pure overhead. Whether T-shaping actually appears, at what rate, and how much it offsets session cost, is itself empirically testable (see §5).
 
-### What this asks of orgs
-
-Implementing the model is not a process change a single team can adopt unilaterally. The QA engineer's strategic-layer responsibilities require alignment across hiring, measurement, and reporting:
-
-- **Hiring profiles** widen. The role now requires business and architectural literacy alongside testing skill. Candidates whose CV is "ten years in test automation" may not match the strategic layer; candidates with mixed test, product, and architecture backgrounds become more valuable.
-- **Performance review systems** measure different things. "Bugs found post-development" is the wrong metric for someone whose job is preventing them at construction time. Risks prevented, edge cases caught at the right point, and quality investments calibrated to consequence-of-failure are harder to count and easier to undervalue.
-- **Reporting structure** matters. QA functions that report through dedicated QA management often have incentive structures that pull back toward inspection-after-the-fact. Engineering, product, or matrixed reporting makes the strategic-layer responsibilities easier to exercise.
-
-Without these alignments, the QA engineer in a collaborative session has the wrong incentives to push back: they are still being measured on bugs found post-deploy, so spending the session preventing bugs reduces their measurable output. The model can be tried by a single team. It is unlikely to scale without the org-level changes.
-
 ---
 
 ## 3. From prevention to better appraisal
