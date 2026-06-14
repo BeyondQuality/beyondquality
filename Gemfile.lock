@@ -274,6 +274,7 @@ GEM
     webrick (1.9.1)
 
 PLATFORMS
+  arm64-darwin-23
   arm64-darwin-25
   x86_64-linux-musl
 
@@ -282,4 +283,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.3.25
+   2.3.26

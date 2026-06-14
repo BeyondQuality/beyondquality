@@ -51,6 +51,8 @@ The baseline is three roles, each contributing something the others cannot. Q #2
 
 **AI agent**: handles implementation. Writes the code based on the team's collective guidance.
 
+What the ensemble has to hold, the why and the how, is not confined to the feature: it extends to how the change fits the wider system, which is the whole team's responsibility, brought out by the diversity of the three roles rather than owned by any one of them.
+
 ### What changes from pre-AI
 
 Pre-AI, the three amigos model was a *planning* meeting: discuss requirements, then split up and build separately. The developer coded alone. The tester tested after. Sequential handoffs (spec, dev, test, deploy) with all the information loss that entails.
