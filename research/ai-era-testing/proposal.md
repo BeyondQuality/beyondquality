@@ -187,6 +187,15 @@ Three families of outcome variables:
 
 At minimum: solo-developer-with-AI vs collaborative-team-with-AI. A third arm (solo developer without AI) would clarify whether observed effects are about the team configuration or about the AI-vs-no-AI baseline. Iteration grain should also be manipulated within the collaborative arm (small step-by-step prompts vs large autonomous "plan and build" blocks) to find the threshold at which the model collapses back into delegation.
 
+### What to hold fixed
+
+Two things stay constant across the collaborative arm, or the experiment measures more than one variable at once.
+
+**Artifact form.** Differing formats would confound the collaboration mechanism with the format. Fix a defined set drawn from common practice: conventional commits, an ADR template for the comprehension docs, a PRD-style template for the intent docs, and the team's existing test framework.
+<!-- TODO: this fixed artifact-format set is provisional; define it properly (which formats, what granularity, what counts as a conforming artifact) before running the experiment. -->
+
+**Team composition.** Require the full three roles in every collaborative-arm team, so composition does not move with the outcome. The roles are defined by what is present, not by job title (§2).
+
 ### Unit and time horizon
 
 Feature-level measurement is tractable but may underestimate lifecycle effects. Sprint-level captures rework but not turnover. Quarter-level captures both but is operationally hard. A staged programme starting feature-level and extending to sprint and quarter is more realistic than a single-shot study.
