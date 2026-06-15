@@ -167,6 +167,8 @@ The [economics of testing](../testing_economics/testing_economics.md) framework 
 
 The economics argument above is about dollar cost. It does not address the logistical cost of synchronous collaboration: timezone alignment, calendar overhead, opportunity cost of pulling three people off other work during the session. This is a real operational constraint and does not disappear even when the rework math favours the collaborative model. Teams adopting the model need to solve the synchronous-coordination problem in parallel with the economic one. Whether async variants of the pattern exist (staged collaboration, pre-session capture followed by review cycles, partial-attendance formats) is an open question that the experimental program in §5 can begin to address.
 
+This comparison also leaves out the AI cost itself, tokens and inference. That is deliberate: the proposal does not claim this cost is equal across the two models, it simply does not address it. A full cost decomposition (tokens, human time, rework, diagnosis) belongs with the [economics of testing](../testing_economics/testing_economics.md) work, where the four can be weighed together within the Cost of Quality framework; pricing tokens alone, without the rest, would mislead.
+
 ---
 
 ## 5. Experimental program
