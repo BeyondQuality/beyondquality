@@ -43,7 +43,7 @@ This pattern is already happening in practice (see discussion thread), and the m
 
 The baseline is three roles, each contributing something the others cannot. Q #2 in §6 considers when fewer may suffice for lower-risk features.
 
-**Product person** (or domain expert): carries the "why". Knows the business problem, the user needs, the tradeoffs the team has consciously accepted. Without them, the team builds the wrong thing.
+**Product person** (or domain expert): carries the "why". Knows the business problem, the user needs, the tradeoffs the team has consciously accepted. Without them, the team builds the wrong thing. This is a role, not a job title. It needs someone who holds the business context, so the team knows the intent well enough to shape it as they build: enriching it, narrowing it, or changing it as the work surfaces things. A QA engineer or a developer who holds that context can carry the role. It also needs that person able to settle tradeoffs in the session itself; if each call has to go up for approval, the session stalls while they wait, and the speed that justified assembling the team is gone.
 
 **Engineer**: participates in incremental construction. Does not "review code" in the traditional sense (code review is a very weak appraisal method, particularly when code changes volume is big). Instead, helps decide what to build, sees each small step emerge in the context of decisions just made, dialogues with the agent ("build this part", "now handle this edge case", "why did you do it this way?"). Tracks whether the implementation is heading in the right direction technically. Without the engineer, the rest of the team can tell the agent what to build but nobody can keep it technically on track.
 
