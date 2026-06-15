@@ -90,7 +90,7 @@ This matters for two reasons. First, it partially addresses the 5:1 ratio proble
 
 The collaborative building model is prevention. But prevention does not eliminate the need for appraisal. Integration testing, system-level behaviour, and emergent properties at scale still require verification after the fact.
 
-The key insight: **the collaborative session produces exactly the inputs that make agent-generated tests good.**
+The key idea, still a hypothesis: **the collaborative session produces exactly the inputs that make agent-generated tests good.**
 
 ### Why current AI-generated tests are weak
 
