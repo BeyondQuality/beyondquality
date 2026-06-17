@@ -41,7 +41,7 @@ This pattern is already happening in practice (see discussion thread), and the m
 
 ### Minimum viable team
 
-The baseline is three roles, each contributing something the others cannot. Q #2 in §6 considers when fewer may suffice for lower-risk features.
+The baseline is three roles, each contributing something the others cannot. The minimum-viable-team question in §6 considers when fewer may suffice for lower-risk features.
 
 **Product person** (or domain expert): carries the "why". Knows the business problem, the user needs, the tradeoffs the team has consciously accepted. Without them, the team builds the wrong thing. This is a role, not a job title. It needs someone who holds the business context, so the team knows the intent well enough to shape it as they build: enriching it, narrowing it, or changing it as the work surfaces things. A QA engineer or a developer who holds that context can carry the role. It also needs that person able to settle tradeoffs in the session itself; if each call has to go up for approval, the session stalls while they wait, and the speed that justified assembling the team is gone.
 
@@ -82,7 +82,7 @@ This is what "QA engineer" always meant. Quality *assurance*: assuring quality i
 
 The collaborative session has a side effect that mob programming practitioners have long observed: each role's expertise becomes visible to the others by exposure. The product person, listening to the QA engineer raise consequence-of-failure questions, develops risk intuitions. The engineer, watching the product person make tradeoff decisions, absorbs business context. The QA engineer, dialoguing with the agent on technical details, picks up architectural reasoning. Over time, each role may develop a flatter T: deep in their primary specialism, with usable competence in the others.
 
-This matters for two reasons. First, it partially addresses the 5:1 ratio problem (Q #1 in §6): if QA risk thinking diffuses into the engineer over time, low-risk features may not need a dedicated QA engineer present. Second, the operational cost of the collaborative session may be partly an investment in cross-skilling rather than pure overhead. Whether T-shaping actually appears, at what rate, and how much it offsets session cost, is itself empirically testable (see §5).
+This matters for two reasons. First, it partially addresses the 5:1 ratio problem (§6): if QA risk thinking diffuses into the engineer over time, low-risk features may not need a dedicated QA engineer present. Second, the operational cost of the collaborative session may be partly an investment in cross-skilling rather than pure overhead. Whether T-shaping actually appears, at what rate, and how much it offsets session cost, is itself empirically testable (see §5).
 
 ---
 
@@ -94,7 +94,7 @@ The key idea, still a hypothesis: **the collaborative session produces exactly t
 
 ### Why current AI-generated tests are weak
 
-The analysis (row 5) identifies the bootstrap problem: if AI generates both code and tests, they can share the same blind spots. An AI generating tests from the same spec as the code can produce tests that pass precisely because they share the same misunderstanding.
+The analysis ([row 5 of the eight-factor framework](evaluation.md#evaluation-framework)) identifies the bootstrap problem: if AI generates both code and tests, they can share the same blind spots. An AI generating tests from the same spec as the code can produce tests that pass precisely because they share the same misunderstanding.
 
 JiTTests (evaluation) generate tests per-change from scratch. Each generation episode has no memory of what the team learned before. The tests catch regressions in observable behaviour but cannot test intent ("does this code do the right thing?") because they have no access to intent.
 
@@ -144,7 +144,7 @@ A possible follow-on, beyond the scope of this proposal: AI-based mentors for ne
 
 This matters specifically because we are QA. Quality begins long before code is written. Employee onboarding is itself a quality investment: a new joiner who learns the system correctly, including the *why*, makes better decisions later, even if their work is guiding agents in collaborative sessions rather than writing code themselves. They will still need to know properly what the hows and whys were. Lifecycle artifacts are how that knowledge transfers.
 
-This is a candidate mechanism for rebuilding the lifecycle bridge (as defined in [analysis: lifecycle drift](analysis-lifecycle.md)), not a solved problem. We have translated the lifecycle persistence question from "no mechanism exists" to "we have a candidate mechanism that needs to be developed and tested". The format, the tooling, and the discipline required to capture session outputs in a form AI can reliably use downstream are themselves an open research direction (see Q #4 in §6).
+This is a candidate mechanism for rebuilding the lifecycle bridge (as defined in [analysis: lifecycle drift](analysis-lifecycle.md)), not a solved problem. We have translated the lifecycle persistence question from "no mechanism exists" to "we have a candidate mechanism that needs to be developed and tested". The format, the tooling, and the discipline required to capture session outputs in a form AI can reliably use downstream are themselves an open research direction (see the open question on capturing session outputs in §6).
 
 ---
 
@@ -218,7 +218,7 @@ Any of these results would be informative. The third in particular would refine 
 - **How to capture the session outputs for future use?** The collaborative session produces rich context (intent, risks, decisions, design rationale). How much of this should be persisted, in what format, with what tooling, and through what team discipline? This is the open problem that determines whether the generative ratification loop ([analysis: lifecycle drift](analysis-lifecycle.md)) can be broken at the lifecycle scale. Now that we have a candidate hypothesis (Direction 3 plus capture plus AI-generated downstream artifacts), the research direction is concrete: build a system that captures session outputs, generates downstream artifacts from them, and measures the resulting lifecycle outcomes (extension cost, defect rates, onboarding time).
 - **How to measure the difference?** Finding metrics that specifically capture comprehension and intent debt is itself an open research question (see metrics discussion in the GH thread). Comparing solo-with-AI vs team-with-AI on total cost of delivery would require controlled studies.
 - **What happens when the agent becomes more reliable?** If agent reliability increases over time, does the engineer's role in the collaborative session change? Does the minimum viable team shrink?
-- **Does collaborative building substitute for agent learning?** At the moment of creation, plausibly yes: the intent and comprehension that agent learning would provide are already present in the humans guiding the session. Across the system lifecycle (maintenance, team turnover, scaling), a candidate mechanism exists but needs to be built and tested: session capture produces clean human-authored intent, from which AI generates lifecycle artifacts (intent docs, comprehension docs, tests, onboarding) that carry the bridge across team turnover. This works precisely because the artifacts' anchor is human-authored rather than AI-derived (avoiding the generative ratification loop in [analysis: lifecycle drift](analysis-lifecycle.md)). The lifecycle persistence problem is therefore no longer "no mechanism exists" but "candidate mechanism exists, needs validation". Whether it delivers in practice depends on solving Q #4 (capture format and discipline) and on the analysis distinction between information recall and judgment updating.
+- **Does collaborative building substitute for agent learning?** At the moment of creation, plausibly yes: the intent and comprehension that agent learning would provide are already present in the humans guiding the session. Across the system lifecycle (maintenance, team turnover, scaling), a candidate mechanism exists but needs to be built and tested: session capture produces clean human-authored intent, from which AI generates lifecycle artifacts (intent docs, comprehension docs, tests, onboarding) that carry the bridge across team turnover. This works precisely because the artifacts' anchor is human-authored rather than AI-derived (avoiding the generative ratification loop in [analysis: lifecycle drift](analysis-lifecycle.md)). The lifecycle persistence problem is therefore no longer "no mechanism exists" but "candidate mechanism exists, needs validation". Whether it delivers in practice depends on solving the §6 question on capture format and discipline and on the analysis distinction between information recall and judgment updating.
 
 ---
 
