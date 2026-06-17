@@ -49,7 +49,7 @@ The baseline is three roles, each contributing something the others cannot. Q #2
 
 **QA engineer**: contributes risk thinking before and during construction. Before the session: maps the work to the risk register and compliance landscape, chooses verification strategy fit for the consequence-of-failure profile. During construction: raises edge cases ("what if the user submits twice?"), challenges assumptions ("the spec says X but users actually do Y"), brings user behaviour knowledge that shapes implementation in real time. Edge cases become building instructions, not post-hoc bug reports. (See "The QA engineer role" below for both layers in detail.)
 
-**AI agent**: handles implementation. Writes the code based on the team's collective guidance.
+**AI agent**: handles implementation, writing the code from the team's collective guidance. There is a single agent by design: one stream of work is what all three people can watch and steer together, and watching it together is what keeps comprehension and intent shared across the ensemble.
 
 What the ensemble has to hold, the why and the how, is not confined to the feature: it extends to how the change fits the wider system, which is the whole team's responsibility, brought out by the diversity of the three roles rather than owned by any one of them.
 
