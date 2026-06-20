@@ -394,73 +394,55 @@ a:hover {
   margin: 2.5rem 0 0.75rem 0;
 }
 
-/* Enquiries list (merged discussions + linked artifacts).
-   Standard list pattern: title on the left, metadata (artifact tag + comment
-   count) aligned in a column on the right, a single hairline BETWEEN rows
-   (not a box around each), subtle full-row hover. */
+/* Enquiries: a real <ul> list of links. Native markers keep the bullets
+   aligned; the ARTIFACT tag sits inline after the link of the enquiries that
+   produced one. */
+.enquiry-list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
 .enquiry-item {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  /* Horizontal padding + matching negative margin lets the hover tint bleed
-     past the text while the hairline still spans the full content width. */
-  padding: 0.6rem 0.75rem;
-  margin: 0 -0.75rem;
-  border-bottom: 1px solid #ece9e4;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
+  padding: 0.4rem 0;
+  line-height: 1.45;
 }
 
-.enquiry-item:last-child {
-  border-bottom: none;
+.enquiry-item::marker {
+  color: hsl(var(--muted-foreground));
 }
 
-.enquiry-item:hover {
-  background-color: #faf8f5;
-}
-
-.enquiry-title {
-  flex: 1 1 auto;
-  min-width: 0;
+.enquiry-link {
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.enquiry-title a {
   color: hsl(var(--foreground));
-  text-decoration: none;
-  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(15, 23, 42, 0.3);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-.enquiry-item:hover .enquiry-title a {
+.enquiry-item:hover .enquiry-link {
   color: #ed6736;
+  text-decoration-color: #ed6736;
 }
 
-/* Stretched link: the title anchor covers the whole row, so the entire
-   row is clickable to the discussion. The artifact pill sits above it. */
-.enquiry-title a::after {
+/* Stretched link: the title anchor covers the whole row so it is all
+   clickable to the discussion. The artifact pill (z-index) stays separate. */
+.enquiry-link::after {
   content: "";
   position: absolute;
   inset: 0;
-}
-
-.enquiry-meta {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.75rem;
-  flex: 0 0 auto;
 }
 
 /* Artifact pill: marks an enquiry that produced an artifact; links to it */
 .enquiry-artifact {
   position: relative;
   z-index: 1;
+  margin-left: 0.5rem;
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -470,29 +452,14 @@ a:hover {
   padding: 0.1rem 0.5rem;
   border-radius: 1rem;
   text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
   transition: background-color 0.2s ease;
 }
 
 .enquiry-artifact:hover {
   background-color: rgba(237, 103, 54, 0.2);
   color: #ed6736;
-}
-
-.enquiry-comments {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.3rem;
-  min-width: 2.75rem;
-  font-size: 0.8125rem;
-  color: hsl(var(--muted-foreground));
-}
-
-.enquiry-comments-icon {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-  opacity: 0.85;
 }
 
 /* GitHub Discussions Integration */
