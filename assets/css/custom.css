@@ -11,9 +11,14 @@
   --card-background: 0 0% 100%;
   --hover-border: 214.3 31.8% 78.4%;
   
-  /* Typography */
+  /* Typography
+     Two families, strict roles:
+     - display (Fraunces): the wordmark ONLY — the one serif on the page
+     - sans (Inter): everything else, hierarchy by size/weight/colour */
+  --font-display: 'Fraunces', 'Georgia', serif;
   --font-serif: 'Georgia', 'Times New Roman', serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --accent: #ed6736;
   
   /* Spacing */
   --container-max-width: 896px;
@@ -54,9 +59,9 @@ body {
 }
 
 .nav-brand {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
   color: hsl(var(--foreground));
   text-decoration: none;
   transition: color 0.2s ease;
@@ -100,16 +105,17 @@ body {
 }
 
 .hero-title {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.1;
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   margin: 0 0 0.4rem 0;
 }
 
 .hero-tagline {
   font-family: var(--font-sans);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.5;
   color: hsl(var(--muted-foreground));
@@ -128,12 +134,9 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--foreground));
 }
 
-/* Serif for the brand and major section headings; sans for everything finer. */
-h1, h2 {
-  font-family: var(--font-serif);
-}
-
-h3, h4, h5, h6 {
+/* Sans for all headings. The one serif on the page is the wordmark
+   (.hero-title / .nav-brand), set explicitly to var(--font-display). */
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
 }
 
@@ -329,10 +332,11 @@ a:hover {
 }
 
 .footer-title {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #ed6736;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
   margin-bottom: 1.5rem;
 }
 
@@ -379,31 +383,46 @@ a:hover {
   margin-bottom: 0;
 }
 
+/* Section heading: plain bold sans — same family as body and the list,
+   distinguished only by weight. No uppercase, no tracking, no exotic treatment. */
 .enquiries-heading {
-  margin-bottom: 1rem;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+  margin: 2.5rem 0 0.75rem 0;
 }
 
 /* Enquiries list (merged discussions + linked artifacts).
-   Meta (artifact tag + comment count) sits right after the title, left-aligned,
-   so there is no dead space. No dividers; rows are separated by spacing + hover. */
+   Standard list pattern: title on the left, metadata (artifact tag + comment
+   count) aligned in a column on the right, a single hairline BETWEEN rows
+   (not a box around each), subtle full-row hover. */
 .enquiry-item {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.85rem;
-  padding: 0.45rem 0.5rem;
-  border-radius: var(--radius);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  /* Horizontal padding + matching negative margin lets the hover tint bleed
+     past the text while the hairline still spans the full content width. */
+  padding: 0.6rem 0.75rem;
+  margin: 0 -0.75rem;
+  border-bottom: 1px solid #ece9e4;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.15s ease;
+}
+
+.enquiry-item:last-child {
+  border-bottom: none;
 }
 
 .enquiry-item:hover {
-  background-color: hsl(0 0% 96%);
+  background-color: #faf8f5;
 }
 
 .enquiry-title {
-  flex: 0 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -423,7 +442,7 @@ a:hover {
 }
 
 /* Stretched link: the title anchor covers the whole row, so the entire
-   item is clickable to the discussion. The artifact pill sits above it. */
+   row is clickable to the discussion. The artifact pill sits above it. */
 .enquiry-title a::after {
   content: "";
   position: absolute;
@@ -432,23 +451,23 @@ a:hover {
 
 .enquiry-meta {
   display: flex;
-  align-items: baseline;
-  gap: 0.85rem;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
   flex: 0 0 auto;
-  white-space: nowrap;
 }
 
 /* Artifact pill: marks an enquiry that produced an artifact; links to it */
 .enquiry-artifact {
   position: relative;
   z-index: 1;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ed6736;
   background-color: rgba(237, 103, 54, 0.1);
-  padding: 0.15rem 0.55rem;
+  padding: 0.1rem 0.5rem;
   border-radius: 1rem;
   text-decoration: none;
   transition: background-color 0.2s ease;
@@ -460,8 +479,20 @@ a:hover {
 }
 
 .enquiry-comments {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  min-width: 2.75rem;
   font-size: 0.8125rem;
   color: hsl(var(--muted-foreground));
+}
+
+.enquiry-comments-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 /* GitHub Discussions Integration */
@@ -502,27 +533,6 @@ a:hover {
 .discussion-date {
   color: hsl(var(--muted-foreground));
   font-size: 0.75rem;
-}
-
-#github-discussions .discussion-title {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.125rem;
-  font-weight: 400;
-  font-family: var(--font-serif) !important;
-}
-
-#github-discussions .discussion-title a {
-  color: hsl(var(--foreground));
-  text-decoration: none;
-  transition: color 0.2s ease;
-  font-family: var(--font-serif) !important;
-  font-weight: 400 !important;
-  font-size: 1.125rem !important;
-}
-
-.discussion-title a:hover {
-  color: hsl(var(--muted-foreground));
-  text-decoration: underline;
 }
 
 .discussion-body {
