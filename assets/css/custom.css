@@ -385,13 +385,49 @@ a:hover {
 
 /* Section heading: plain bold sans — same family as body and the list,
    distinguished only by weight. No uppercase, no tracking, no exotic treatment. */
+/* Enquiries header: heading on the left, the primary CTA on the right.
+   On narrow screens the button drops below the heading (left-aligned). */
+.enquiries-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 2.5rem 0 0.75rem 0;
+}
+
 .enquiries-heading {
   font-family: var(--font-sans);
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: hsl(var(--foreground));
-  margin: 2.5rem 0 0.75rem 0;
+  margin: 0;
+}
+
+/* Primary call to action — the one bold element on the page. */
+.cta-button {
+  display: inline-block;
+  flex: 0 0 auto;
+  background-color: rgba(237, 103, 54, 0.12);
+  color: #b04a20;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: rgba(237, 103, 54, 0.2);
+  color: #9a3f18;
+}
+
+.cta-button:active {
+  transform: translateY(1px);
 }
 
 /* Enquiries: a real <ul> list of links. Native markers keep the bullets
