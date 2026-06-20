@@ -13,7 +13,7 @@
   
   /* Typography */
   --font-serif: 'Georgia', 'Times New Roman', serif;
-  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
   /* Spacing */
   --container-max-width: 896px;
@@ -41,9 +41,6 @@ body {
 .nav {
   border-bottom: 1px solid hsl(var(--border));
   background-color: hsl(var(--background));
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .nav-container {
@@ -94,15 +91,50 @@ body {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 1.5rem 1rem 1.5rem;
-  
+
+}
+
+/* Hero / masthead (homepage opening) */
+.hero {
+  padding: 1.75rem 0 1.25rem 0;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 0.4rem 0;
+}
+
+.hero-tagline {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .hero-title { font-size: 1.6rem; }
+  .hero-tagline { font-size: 1rem; }
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
   font-weight: 400;
   margin: 0 0 1.5rem 0;
   color: hsl(var(--foreground));
+}
+
+/* Serif for the brand and major section headings; sans for everything finer. */
+h1, h2 {
+  font-family: var(--font-serif);
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--font-sans);
 }
 
 h2 {
@@ -201,7 +233,7 @@ a:hover {
 .about-content {
   font-size: 1rem;
   line-height: 1.7;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 .about-content p {
@@ -336,6 +368,100 @@ a:hover {
 
 .sponsor-logo:hover {
   opacity: 1;
+}
+
+/* Home page stacked sections (no tabs) */
+.home-section {
+  margin-bottom: 3rem;
+}
+
+.home-section:last-child {
+  margin-bottom: 0;
+}
+
+.enquiries-heading {
+  margin-bottom: 1rem;
+}
+
+/* Enquiries list (merged discussions + linked artifacts).
+   Meta (artifact tag + comment count) sits right after the title, left-aligned,
+   so there is no dead space. No dividers; rows are separated by spacing + hover. */
+.enquiry-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.45rem 0.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enquiry-item:hover {
+  background-color: hsl(0 0% 96%);
+}
+
+.enquiry-title {
+  flex: 0 1 auto;
+  min-width: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.enquiry-title a {
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.enquiry-item:hover .enquiry-title a {
+  color: #ed6736;
+}
+
+/* Stretched link: the title anchor covers the whole row, so the entire
+   item is clickable to the discussion. The artifact pill sits above it. */
+.enquiry-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.enquiry-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* Artifact pill: marks an enquiry that produced an artifact; links to it */
+.enquiry-artifact {
+  position: relative;
+  z-index: 1;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ed6736;
+  background-color: rgba(237, 103, 54, 0.1);
+  padding: 0.15rem 0.55rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.enquiry-artifact:hover {
+  background-color: rgba(237, 103, 54, 0.2);
+  color: #ed6736;
+}
+
+.enquiry-comments {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
 }
 
 /* GitHub Discussions Integration */

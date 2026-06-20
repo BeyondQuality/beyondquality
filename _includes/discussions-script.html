@@ -1,92 +1,75 @@
-<!-- GitHub Discussions Script -->
+<!-- GitHub Discussions (Enquiries) Script -->
 <script>
-// Cache bust: v2.0
+// Cache bust: v3.0 — minimal enquiry cards, artifacts joined from _data/artifacts.yml
 document.addEventListener('DOMContentLoaded', function() {
     const discussionsContainer = document.getElementById('github-discussions');
     if (!discussionsContainer) return;
 
+    // Discussion number -> artifact, rendered from _data/artifacts.yml by Jekyll.
+    const ARTIFACTS = {{ site.data.artifacts | jsonify }};
+
     // GitHub REST API endpoint for discussions
     const GITHUB_API_URL = 'https://api.github.com/repos/BeyondQuality/beyondquality/discussions';
 
-    // Function to format date
-    function formatDate(dateString) {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-        });
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
     }
 
-    // Function to truncate text
-    function truncateText(text, maxLength = 150) {
-        if (text.length <= maxLength) return text;
-        return text.substring(0, maxLength) + '...';
-    }
-
-    // Function to render discussions
+    // Render the enquiries list. Each enquiry is one discussion. If the
+    // discussion produced an artifact, an extra link is shown on the card.
     function renderDiscussions(discussions) {
         if (discussions.length === 0) {
-            discussionsContainer.innerHTML = '<p>No discussions found.</p>';
+            discussionsContainer.innerHTML = '<p>No enquiries found.</p>';
             return;
         }
 
-        const discussionsHTML = discussions.map(discussion => `
-            <div class="discussion-item">
-                <div class="discussion-header">
-                    <span class="discussion-category">${discussion.category.emoji || '💬'} ${discussion.category.name}</span>
-                    <span class="discussion-date">${formatDate(discussion.created_at)}</span>
-                </div>
-                <h3 class="discussion-title">
-                    <a href="${discussion.html_url}" target="_blank" rel="noopener noreferrer">
-                        ${discussion.title}
-                    </a>
-                </h3>
-                <div class="discussion-body">
-                    ${truncateText(discussion.body.replace(/<[^>]*>/g, ''), 200)}
-                </div>
-                <div class="discussion-footer">
-                    <div class="discussion-author">
-                        <img src="${discussion.user.avatar_url}" alt="${discussion.user.login}" class="author-avatar">
-                        <span>${discussion.user.login}</span>
-                    </div>
-                    <div class="discussion-stats">
-                        <span class="upvotes">👍 ${discussion.reactions['+1'] || 0}</span>
-                        <span class="answers">💬 ${discussion.comments || 0}</span>
-                    </div>
-                </div>
-            </div>
-        `).join('');
+        const html = discussions.map(discussion => {
+            const artifact = ARTIFACTS[discussion.number];
+            const artifactLink = artifact
+                ? `<a class="enquiry-artifact" href="${artifact.url}" title="${escapeHtml(artifact.title)}">Artifact</a>`
+                : '';
 
-        discussionsContainer.innerHTML = discussionsHTML;
+            return `
+                <div class="enquiry-item">
+                    <h3 class="enquiry-title">
+                        <a href="${discussion.html_url}" target="_blank" rel="noopener noreferrer">${escapeHtml(discussion.title)}</a>
+                    </h3>
+                    <div class="enquiry-meta">
+                        ${artifactLink}
+                        <span class="enquiry-comments">💬 ${discussion.comments || 0}</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        discussionsContainer.innerHTML = html;
     }
 
-    // Function to show error
     function showError(message) {
         let errorMessage = message;
         let isRateLimit = message.includes('rate limit') || message.includes('API rate limit');
-        
+
         if (isRateLimit) {
             errorMessage = "Rate limit reached. Please try again later or visit GitHub directly.";
         }
-        
+
         discussionsContainer.innerHTML = `
             <div class="discussions-error">
                 <p>❌ ${errorMessage}</p>
                 <p><a href="https://github.com/BeyondQuality/beyondquality/discussions" target="_blank" rel="noopener noreferrer">
-                    View discussions on GitHub
+                    View enquiries on GitHub
                 </a></p>
                 ${isRateLimit ? '<p><small>Rate limit resets every hour. You can refresh the page later.</small></p>' : ''}
             </div>
         `;
     }
 
-    // Function to show loading
     function showLoading() {
-        discussionsContainer.innerHTML = '<div class="discussions-loading">🔄 Loading discussions...</div>';
+        discussionsContainer.innerHTML = '<div class="discussions-loading">🔄 Loading enquiries...</div>';
     }
 
-    // Fetch discussions from GitHub API
     async function fetchDiscussions() {
         showLoading();
 
@@ -117,8 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Start fetching discussions
     fetchDiscussions();
 });
 </script>
-
