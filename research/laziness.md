@@ -1,3 +1,6 @@
+---
+discussion: 3
+---
 # Belief in laziness as a self-fulfilling prophecy
 
 - Author: [Vitaly Sharovatov](https://sharovatov.github.io)

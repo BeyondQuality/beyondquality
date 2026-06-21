@@ -1,3 +1,6 @@
+---
+discussion: 8
+---
 # RAG evaluation using Ragas - A proof-of-concept
 
 - Author: [Anupam Krishnamurthy](https://github.com/anupamck)

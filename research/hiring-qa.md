@@ -1,3 +1,6 @@
+---
+discussion: 22
+---
 # QA Approaches in Hiring: From Shift-Left Testing to Shewhart's Control Charts
 
 - Author: [Vitaly Sharovatov](https://github.com/sharovatov)

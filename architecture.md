@@ -85,15 +85,36 @@ Scheduled workflows auto-disable after 60 days of repo inactivity.
 
 ## Research artifacts ↔ discussions
 
-`_data/artifacts.yml` maps a **discussion number → `{url, title}`** for the research artifact it
-produced. GitHub discussions are the source of truth; artifacts link *to* them. This map is currently
-**maintained by hand**, which is a known limitation (artifacts must be added manually, and the
-`/research/` directory has no uniform naming). Automating it is under discussion.
+An enquiry shows an "Artifact" pill when a research artifact is linked to its discussion. GitHub
+discussions are the source of truth; artifacts link *to* them, and **each artifact declares which
+discussion it belongs to in its own front matter** (see `_includes/tabbed-content.html`):
 
-Artifacts in `/research/` come in three URL shapes:
+```yaml
+---
+discussion: 33
+---
+```
+
+At build time the template finds the page whose `discussion` matches the enquiry number
+(`site.pages | where: "discussion", enquiry.number`) and reads the **URL and title straight from
+Jekyll**. The artifact can be any shape — a single file, a file in a subdirectory, or a directory
+with a `README.md` index — its only job is to declare the number. There is no central list to
+maintain (an earlier hand-written `_data/artifacts.yml` map has been retired in favour of this).
+
+Adding `discussion:` front matter is **URL-safe** — it does not change a file's slug, so existing
+inbound links keep working. To link an artifact, add the front matter to its entry file (e.g.
+`research/ap/README.md` for discussion 33) and the pill appears on the next build. The pill points
+only at on-site research pages; there is no mapping for off-site artifact URLs.
+
+Artifacts in `/research/` come in three URL shapes, all handled automatically because Jekyll computes
+each page's URL:
 - single file: `research/laziness.md` → `/research/laziness`
 - file in a subdirectory: `research/testing_economics/testing_economics.md` → `/research/testing_economics/testing_economics`
 - directory with a `README.md` index: `research/ap/README.md` → `/research/ap/`
+
+For the third shape, `_config.yml` sets `readme_index: { with_frontmatter: true }` — without it,
+`jekyll-readme-index` silently skips READMEs that have front matter, which would break the clean
+`/research/<dir>/` URL once a `discussion:` key is added.
 
 Pages under `research/` render with global typography via `jekyll-optional-front-matter` +
 `jekyll-titles-from-headings` + `jekyll-default-layout` (titles come from each file's `# H1`).

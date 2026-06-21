@@ -1,3 +1,6 @@
+---
+discussion: 5
+---
 # Economics of testing
 
 ## Testing as a risk-mitigation investment

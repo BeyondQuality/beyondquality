@@ -1,3 +1,6 @@
+---
+discussion: 28
+---
 # QA in the Age of AI-Accelerated Development
 
 Research by Lilia Abdulina (Head of QA at JetBrains), with Vitaly Sharovatov.

@@ -1,3 +1,6 @@
+---
+discussion: 33
+---
 # Agentic Workflows: Engineering Principles for Non-Engineers
 
 ## Background

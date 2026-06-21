@@ -1,3 +1,6 @@
+---
+discussion: 11
+---
 # Public speaking: why and how?
 
 - Author: [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/)

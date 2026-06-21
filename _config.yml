@@ -8,6 +8,12 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
 
+# Keep turning research/<dir>/README.md into that directory's index page even when
+# the README carries front matter (e.g. `discussion: N`). Without this, jekyll-readme-index
+# silently skips READMEs that have front matter, breaking the clean /research/<dir>/ URL.
+readme_index:
+  with_frontmatter: true
+
 # What Jekyll must NOT process or publish. Setting `exclude` REPLACES Jekyll's
 # built-in list, so the gem/vendor entries are repeated here. `local/` holds
 # gitignored working files (drafts, transcripts, session logs) — it must never
