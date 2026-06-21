@@ -7,8 +7,11 @@ Visit our main website: **[beyondquality.org](https://beyondquality.org)**
 
 ## 📁 Repository Contents
 - **Research artifacts** in `/research/` - completed studies and findings
-- **Website source** - Jekyll-based site with dynamic content
+- **Website source** - static Jekyll site; the homepage enquiries list is server-rendered at build time from open GitHub Discussions (no client-side JavaScript)
 - **Community discussions** - ongoing collaboration and research
+
+## 🏗️ Architecture
+See **[architecture.md](architecture.md)** for how the site is built and deployed (the build-time discussions fetch, the GitHub Actions workflow, local development, and configuration).
 
 ## 🤝 Contributing
 Join our discussions on GitHub or visit our website to learn more about our community and research activities.
