@@ -17,6 +17,7 @@ exclude:
   - local
   - bin
   - README.md
+  - architecture.md
   - docker-run.sh
   - CLAUDE.md
   - MEMORY.md
