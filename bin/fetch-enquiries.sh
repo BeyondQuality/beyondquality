@@ -17,6 +17,10 @@
 set -e
 cd "$(dirname "$0")/.."
 
+# _data/ may not exist in a fresh checkout: enquiries.json is gitignored, and there
+# are no other tracked files in _data/, so the directory is absent on CI runners.
+mkdir -p _data
+
 # GraphQL supports state filtering (states: OPEN), unlike the REST list endpoint.
 # Ordered most-recently-updated first. first:100 covers current volume; add
 # cursor pagination here if open discussions ever exceed 100.
