@@ -1,29 +1,24 @@
-/* Custom CSS for Beyond Quality - Recreating the Lovable design */
-/* Cache bust: v9.0 - Removed date functionality completely */
+/* Beyond Quality — site styles */
 
-/* CSS Variables for Design System */
+/* Design tokens */
 :root {
-  /* Colors */
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
   --muted-foreground: 215.4 16.3% 46.9%;
   --border: 214.3 31.8% 91.4%;
-  --card-background: 0 0% 100%;
-  --hover-border: 214.3 31.8% 78.4%;
-  
-  /* Typography */
-  --font-serif: 'Georgia', 'Times New Roman', serif;
-  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  
-  /* Spacing */
+
+  /* Two families, strict roles:
+     - display (Fraunces): the wordmark ONLY — the one serif on the page
+     - sans (Inter): everything else, hierarchy by size/weight/colour */
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --accent: #ed6736;
+
   --container-max-width: 896px;
-  --section-spacing: 3rem;
-  
-  /* Border radius */
   --radius: 0.5rem;
 }
 
-/* Reset and Base Styles */
+/* Reset */
 * {
   box-sizing: border-box;
 }
@@ -37,13 +32,10 @@ body {
   padding: 0;
 }
 
-/* Navigation */
+/* Navigation (sub-pages only; the homepage uses the hero as its identity) */
 .nav {
   border-bottom: 1px solid hsl(var(--border));
   background-color: hsl(var(--background));
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .nav-container {
@@ -57,9 +49,9 @@ body {
 }
 
 .nav-brand {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
   color: hsl(var(--foreground));
   text-decoration: none;
   transition: color 0.2s ease;
@@ -69,37 +61,87 @@ body {
   color: hsl(var(--muted-foreground));
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.nav-link {
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
-  text-decoration: none;
-  transition: color 0.2s ease;
-  font-weight: 400;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: hsl(var(--foreground));
-  color: #ed6736;
-}
-
-/* Main Content */
+/* Main content */
 .main-content {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 1.5rem 1rem 1.5rem;
-  
 }
 
-/* Typography */
+/* Hero / masthead (homepage opening). Intro on the left; a small, monochrome
+   podcast icon cluster on the right (discovery without weight). */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  padding: 1.75rem 0 1.25rem 0;
+}
+
+.hero-intro {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.hero-podcast {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 0.6rem;
+}
+
+.hero-podcast-label {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.podcast-icon {
+  display: inline-flex;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.podcast-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
+}
+
+.podcast-icon:hover {
+  color: #c2562f;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem 0;
+}
+
+.hero-tagline {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .hero-title { font-size: 1.6rem; }
+  .hero-tagline { font-size: 1rem; }
+}
+
+/* Typography. Sans for all headings; the one serif on the page is the wordmark
+   (.hero-title / .nav-brand), set explicitly to var(--font-display). */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 400;
   margin: 0 0 1.5rem 0;
   color: hsl(var(--foreground));
@@ -109,12 +151,6 @@ h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   margin-top: 2.2rem;
-}
-
-/* Section headings - consistent smaller size */
-.section h2,
-.grid h2 {
-  font-size: 1.25rem;
 }
 
 h3 {
@@ -140,147 +176,15 @@ a:hover {
   color: hsl(var(--muted-foreground));
 }
 
-/* Cards */
-.card {
-  background-color: hsl(var(--card-background));
-  border: 1px solid hsl(var(--border));
-  border-radius: var(--radius);
-  transition: border-color 0.2s ease;
-  margin-bottom: 1rem;
-}
-
-.card:hover {
-  border-color: hsl(var(--hover-border));
-}
-
-.card-content {
-  padding: 1rem 0 1rem 1.2rem;
-}
-
-.card-header {
-  padding: 1.5rem 1.5rem 0.75rem 1.5rem;
-}
-
-.card-title {
-  font-size: 1.125rem;
-  font-weight: 400;
-  color: hsl(var(--foreground));
-  margin: 0;
-}
-
-.card-description {
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
-  margin: 0;
-}
-
-.card-author {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
-  margin: 0.75rem 0 0 0;
-}
-
-/* Sections */
-.section {
-  margin-bottom: var(--section-spacing);
-}
-
-.section-large {
-  margin-bottom: 2.5rem;
-}
-
-/* Apply section styles to tab panels */
-.tab-panel.section-large {
-  margin-bottom: 0;
-}
-
-/* About Section */
+/* About / intro */
 .about-content {
   font-size: 1rem;
   line-height: 1.7;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 .about-content p {
   margin-bottom: 1rem;
-}
-
-/* Episode Description */
-.episode-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: hsl(var(--muted-foreground));
-  font-style: italic;
-  font-weight: 500;
-}
-
-/* Podcast Section */
-.podcast-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  /*padding: 0.5rem;*/
-}
-
-/* Podcast Links */
-.podcast-links {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
-  margin-bottom: 1.5rem;
-}
-
-.podcast-links a {
-  text-decoration: underline;
-  transition: color 0.2s ease;
-}
-
-.podcast-links a:hover {
-  color: hsl(var(--foreground));
-}
-
-/* Embedded YouTube Player */
-.podcast-player {
-  width: 100%;
-  margin-bottom: 0;
-}
-
-#episode-description {
-  margin-top: 1rem;
-}
-
-.youtube-embed-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  overflow: hidden;
-  border-radius: var(--radius);
-  border: 1px solid hsl(var(--border));
-}
-
-.youtube-embed-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-
-
-
-/* Research Cards */
-.research-title {
-  font-size: 1.125rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -297,10 +201,11 @@ a:hover {
 }
 
 .footer-title {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #ed6736;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
   margin-bottom: 1.5rem;
 }
 
@@ -338,107 +243,146 @@ a:hover {
   opacity: 1;
 }
 
-/* GitHub Discussions Integration */
+/* Home page stacked sections */
+.home-section {
+  margin-bottom: 3rem;
+}
+
+.home-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Enquiries header: heading on the left, the primary CTA on the right.
+   On narrow screens the button drops below the heading (left-aligned). */
+.enquiries-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 2.5rem 0 0.75rem 0;
+}
+
+.enquiries-heading {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+/* Primary call to action. Soft-tonal terracotta — present, on-palette,
+   not loud. */
+.cta-button {
+  display: inline-block;
+  flex: 0 0 auto;
+  background-color: rgba(237, 103, 54, 0.12);
+  color: #b04a20;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: rgba(237, 103, 54, 0.2);
+  color: #9a3f18;
+}
+
+.cta-button:active {
+  transform: translateY(1px);
+}
+
+/* Enquiries: a real <ul> list of links. Native markers keep the bullets
+   aligned; the ARTIFACT tag sits inline after the link of the enquiries that
+   produced one. */
 #github-discussions {
   margin-top: 1rem;
 }
 
-.discussion-item {
-  background-color: hsl(var(--card-background));
-  border: 1px solid hsl(var(--border));
-  border-radius: var(--radius);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: border-color 0.2s ease;
+.enquiry-list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.2rem;
 }
 
-.discussion-item:hover {
-  border-color: hsl(var(--hover-border));
+.enquiry-item {
+  position: relative;
+  padding: 0.4rem 0;
+  line-height: 1.45;
 }
 
-.discussion-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.discussion-category {
-  display: none;
-  background-color: #f8fafc;
+.enquiry-item::marker {
   color: hsl(var(--muted-foreground));
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 500;
 }
 
-.discussion-date {
-  color: hsl(var(--muted-foreground));
-  font-size: 0.75rem;
-}
-
-#github-discussions .discussion-title {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.125rem;
+.enquiry-link {
+  font-family: var(--font-sans);
+  font-size: 1rem;
   font-weight: 400;
-  font-family: var(--font-serif) !important;
-}
-
-#github-discussions .discussion-title a {
   color: hsl(var(--foreground));
-  text-decoration: none;
-  transition: color 0.2s ease;
-  font-family: var(--font-serif) !important;
-  font-weight: 400 !important;
-  font-size: 1.125rem !important;
-}
-
-.discussion-title a:hover {
-  color: hsl(var(--muted-foreground));
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(15, 23, 42, 0.3);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-.discussion-body {
-  color: hsl(var(--muted-foreground));
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 0.75rem;
+.enquiry-item:hover .enquiry-link {
+  color: #ed6736;
+  text-decoration-color: #ed6736;
 }
 
-.discussion-footer {
-  display: flex;
-  justify-content: space-between;
+/* Stretched link: the title anchor covers the whole row so it is all
+   clickable to the discussion. The artifact pill (z-index) stays separate. */
+.enquiry-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Artifact link: marks an enquiry that produced an artifact and links to it.
+   A small document icon signals it is an openable resource (not just a tag). */
+.enquiry-artifact {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
   align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #b04a20;
+  background-color: rgba(237, 103, 54, 0.1);
+  padding: 0.15rem 0.55rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.discussion-author {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
+.enquiry-artifact:hover {
+  background-color: rgba(237, 103, 54, 0.22);
+  color: #8f3915;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
-.author-avatar {
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 50%;
+.enquiry-artifact-icon {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
 }
 
-.discussion-stats {
-  display: flex;
-  gap: 0.75rem;
-  font-size: 0.75rem;
-  color: hsl(var(--muted-foreground));
-}
-
-.upvotes, .answers {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
+/* Loading / error states injected by the discussions script */
 .discussions-loading,
 .discussions-error {
   text-align: center;
@@ -463,176 +407,15 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive design for discussions */
-@media (max-width: 768px) {
-  .discussion-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  
-  .discussion-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-}
-
-/* Tabbed Interface */
-.tabbed-interface {
-  margin-bottom: 2rem;
-}
-
-.tab-nav {
-  display: flex;
-  border-bottom: 1px solid hsl(var(--border));
-  margin-bottom: 2rem;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.tab-button {
-  background: none;
-  border: none;
-  padding: 1rem 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: hsl(var(--muted-foreground));
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border-bottom: 2px solid transparent;
-  white-space: nowrap;
-  font-family: var(--font-sans);
-}
-
-.tab-button:hover {
-  color: hsl(var(--foreground));
-  background-color: hsl(var(--background));
-}
-
-.tab-button.active {
-  color: hsl(var(--foreground));
-  /*border-bottom-color: hsl(var(--foreground));*/
-  border-bottom-color: #ed6736;
-  background-color: hsl(var(--background));
-}
-
-.tab-content {
-  position: relative;
-  background-color: hsl(0 0% 98%);
-  border-radius: var(--radius);
-  padding: 1rem 2rem 1rem 1rem;
-  margin-top: 0;
-}
-
-.tab-panel {
-  display: none;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.tab-panel.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* Responsive Design */
-@media (min-width: 768px) {
-  .tab-nav {
-    overflow-x: visible;
-    margin-bottom: 0;
-  }
-}
-
-
+/* Mobile */
 @media (max-width: 767px) {
   .nav-container {
     flex-direction: column;
     height: auto;
     padding: 1rem 1.5rem;
   }
-  
-  .nav-links {
-    margin-top: 1rem;
-    gap: 1.5rem;
-  }
-  
-  /* Mobile navigation text replacement */
-  .nav-link[data-mobile] {
-    font-size: 0;
-  }
 
-  .card-content { padding-right: 1rem; }
-  
-  .nav-link[data-mobile]::after {
-    content: attr(data-mobile);
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: hsl(var(--muted-foreground));
-    transition: color 0.2s ease;
-  }
-  
-  .nav-link[data-mobile]:hover::after,
-  .nav-link[data-mobile].active::after {
-    color: hsl(var(--foreground));
-    font-weight: 500;
-  }
-  
   .footer-sponsors {
     gap: 2rem;
   }
-  
-  
-  /* Mobile tabbed interface optimizations */
-  .tab-nav {
-    padding: 0 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .tab-button {
-    padding: 0.75rem 1rem;
-    font-size: 0.8rem;
-    min-width: auto;
-  }
-  
-  .tabbed-interface {
-    margin-bottom: 3rem;
-  }
-  
-  /* Mobile optimizations */
-  .youtube-embed-container {
-    margin-bottom: 1rem;
-  }
-  
-  /* Keep podcast links in one line on mobile with better spacing */
-  .podcast-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .podcast-links span {
-    margin-right: 0.5rem;
-  }
-  
-  .podcast-links a {
-    display: inline;
-    padding: 0;
-    border-bottom: none;
-    width: auto;
-    text-align: left;
-    white-space: nowrap;
-  }
-  
 }

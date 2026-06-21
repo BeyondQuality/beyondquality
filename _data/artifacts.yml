@@ -1,0 +1,20 @@
+# Maps a GitHub discussion number to the artifact it produced.
+# GitHub discussions are the source of truth; artifacts link TO them.
+# Most discussions have no artifact, so they simply won't appear here.
+# Add a line when an enquiry yields an artifact.
+
+3:
+  url: /research/laziness
+  title: "Belief in laziness as a self-fulfilling prophecy"
+5:
+  url: /research/testing_economics/testing_economics
+  title: "Economics of testing"
+8:
+  url: /research/rag-evaluation
+  title: "RAG evaluation using Ragas"
+11:
+  url: /research/public_speaking
+  title: "Public speaking: why and how?"
+22:
+  url: /research/hiring-qa
+  title: "QA Approaches in Hiring"

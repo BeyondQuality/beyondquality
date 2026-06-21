@@ -4,44 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
-    
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <link rel="canonical" href="{{ page.url | absolute_url }}" />
-    <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <meta property="og:site_name" content="{{ site.title }}" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <!-- End Jekyll SEO tag -->
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/jpeg" href="/bq.jpeg">
+    <link rel="apple-touch-icon" href="/bq.jpeg">
+
+    <!-- SEO: title, description, canonical, Open Graph, Twitter card, JSON-LD -->
+    {% seo %}
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/custom.css?v3">
+    <link rel="stylesheet" href="/assets/css/custom.css?v={{ site.time | date: '%s' }}">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- Navigation (sub-pages only; the homepage uses the hero as its identity) -->
+    {% unless page.url == '/' %}
     <nav class="nav">
       <div class="nav-container">
         <a href="/" class="nav-brand">Beyond Quality</a>
-        
-               <div class="nav-links">
-                 <a href="/whoweare" class="nav-link {% if page.url contains '/whoweare' %}active{% endif %}" data-mobile="About">Who we are</a>
-                 <a href="/talk" class="nav-link {% if page.url contains '/talk' %}active{% endif %}">Talk Prep</a>
-                 <a href="/research" class="nav-link {% if page.url contains '/research' %}active{% endif %}">Research</a>
-                 <a href="/coc" class="nav-link {% if page.url contains '/coc' %}active{% endif %}" data-mobile="CoC">Code of Conduct</a>
-               </div>
       </div>
     </nav>
+    {% endunless %}
 
     <!-- Main Content -->
     <main class="main-content">
@@ -56,6 +43,9 @@
           <div class="sponsor"><a target="_blank" href="https://qase.io"><img src="/assets/images/qase_logo.png" alt="Qase" class="sponsor-logo"></a></div>
           <div class="sponsor regent"><a target="_blank" href="https://regent.se"><img src="/assets/images/regent_logo.png" alt="Regent AB" class="sponsor-logo"></a></div>
           <div class="sponsor testsolutions"><a target="_blank" href="https://testsolutions.de"><img src="/assets/images/testsolutions_logo.png" alt="TestSolutions" class="sponsor-logo"></a></div>
+        </div>
+        <div class="footer-meta">
+          <a href="/coc" class="footer-link">Code of Conduct</a>
         </div>
       </div>
     </footer>
