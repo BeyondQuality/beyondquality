@@ -1,20 +1,20 @@
 # Beyond Quality
 
-A collaborative research community focused on advancing software quality practices through open discussion and shared knowledge.
+An open-source community for deeper enquiry. We dig deeper, collaborate in public, and care and appreciate. We invite open enquiries, promote public speaking, and facilitate hands-on projects.
 
-## 🌐 Website
+## Website
 Visit our main website: **[beyondquality.org](https://beyondquality.org)**
 
-## 📁 Repository Contents
-- **Research artifacts** in `/research/` - completed studies and findings
-- **Website source** - static Jekyll site; the homepage enquiries list is server-rendered at build time from open GitHub Discussions (no client-side JavaScript)
-- **Community discussions** - ongoing collaboration and research
+## Repository Contents
+- **Enquiry artifacts** in `/research/` - the outputs of completed enquiries
+- **Website source** - static Jekyll site; the homepage enquiries list is generated at build time from open GitHub Discussions
+- **Community discussions** - where we discuss enquiries, and the source of truth for the site's enquiries list
 
-## 🏗️ Architecture
-See **[architecture.md](architecture.md)** for how the site is built and deployed (the build-time discussions fetch, the GitHub Actions workflow, local development, and configuration).
+## Architecture
+See **[architecture.md](architecture.md)** for how the site is built and deployed.
 
-## 🤝 Contributing
-Join our discussions on GitHub or visit our website to learn more about our community and research activities.
+## Get involved
+Everything starts as an enquiry. [Start one](https://github.com/BeyondQuality/beyondquality/discussions/new/choose), or join an existing [discussion](https://github.com/BeyondQuality/beyondquality/discussions): observe, share a link or an idea, or partner on someone else's enquiry.
 
-## 📋 Code of Conduct
+## Code of Conduct
 We follow our [Code of Conduct](coc.md) in all activities.
