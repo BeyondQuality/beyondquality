@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const ARTIFACTS = {{ site.data.artifacts | jsonify }};
 
     // GitHub REST API endpoint for discussions
-    const GITHUB_API_URL = 'https://api.github.com/repos/BeyondQuality/beyondquality/discussions';
+    const GITHUB_API_URL = 'https://api.github.com/repos/BeyondQuality/beyondquality/discussions?per_page=100';
+
+    // Small document icon: signals the artifact is an openable resource (link).
+    const ARTIFACT_ICON = '<svg class="enquiry-artifact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>';
 
     function escapeHtml(text) {
         const div = document.createElement('div');
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const html = discussions.map(discussion => {
             const artifact = ARTIFACTS[discussion.number];
             const artifactLink = artifact
-                ? `<a class="enquiry-artifact" href="${artifact.url}" title="${escapeHtml(artifact.title)}">Artifact</a>`
+                ? `<a class="enquiry-artifact" href="${artifact.url}" title="${escapeHtml(artifact.title)}">${ARTIFACT_ICON}Artifact</a>`
                 : '';
 
             return `
@@ -80,10 +83,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            const discussions = await response.json();
+            const all = await response.json();
 
-            if (Array.isArray(discussions) && discussions.length > 0) {
-                discussions.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+            if (Array.isArray(all) && all.length > 0) {
+                // GitHub is the source of truth: only show OPEN discussions.
+                // Closing a discussion (resolved/outdated/duplicate) drops it
+                // from the list. The REST list endpoint can't filter by state,
+                // so we filter client-side.
+                const discussions = all
+                    .filter(d => d.state === 'open')
+                    .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
                 renderDiscussions(discussions);
             } else {
                 throw new Error('No discussions data found');

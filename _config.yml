@@ -1,4 +1,20 @@
 title: Beyond Quality
-description: Collaborative community of practice
+description: An open-source community for deeper enquiry.
+url: https://beyondquality.org
 theme: jekyll-theme-cayman
 markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+
+# Default social-share image for jekyll-seo-tag (og:image / twitter:image)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /bq.jpeg
+
+logo: /bq.jpeg
+
+twitter:
+  card: summary_large_image

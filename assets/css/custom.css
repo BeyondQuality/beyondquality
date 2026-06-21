@@ -99,9 +99,51 @@ body {
 
 }
 
-/* Hero / masthead (homepage opening) */
+/* Hero / masthead (homepage opening). Intro on the left; a small, monochrome
+   podcast icon cluster on the right (discovery without weight). */
 .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
   padding: 1.75rem 0 1.25rem 0;
+}
+
+.hero-intro {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.hero-podcast {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 0.6rem;
+}
+
+.hero-podcast-label {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.podcast-icon {
+  display: inline-flex;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.podcast-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
+}
+
+.podcast-icon:hover {
+  color: #c2562f;
 }
 
 .hero-title {
@@ -474,28 +516,40 @@ a:hover {
   inset: 0;
 }
 
-/* Artifact pill: marks an enquiry that produced an artifact; links to it */
+/* Artifact link: marks an enquiry that produced an artifact and links to it.
+   A small document icon signals it is an openable resource (not just a tag). */
 .enquiry-artifact {
   position: relative;
   z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   margin-left: 0.5rem;
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ed6736;
+  color: #b04a20;
   background-color: rgba(237, 103, 54, 0.1);
-  padding: 0.1rem 0.5rem;
+  padding: 0.15rem 0.55rem;
   border-radius: 1rem;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .enquiry-artifact:hover {
-  background-color: rgba(237, 103, 54, 0.2);
-  color: #ed6736;
+  background-color: rgba(237, 103, 54, 0.22);
+  color: #8f3915;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.enquiry-artifact-icon {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
 }
 
 /* GitHub Discussions Integration */
