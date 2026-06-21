@@ -1,11 +1,33 @@
 title: Beyond Quality
 description: An open-source community for deeper enquiry.
 url: https://beyondquality.org
+baseurl: ""   # site is served at the domain root (via CNAME); pin so local builds match CI
 theme: jekyll-theme-cayman
 markdown: kramdown
 
 plugins:
   - jekyll-seo-tag
+
+# What Jekyll must NOT process or publish. Setting `exclude` REPLACES Jekyll's
+# built-in list, so the gem/vendor entries are repeated here. `local/` holds
+# gitignored working files (drafts, transcripts, session logs) — it must never
+# be rendered or published; a fresh `jekyll build`/`serve` also crashes on raw
+# Liquid inside those drafts unless it's excluded.
+exclude:
+  - local
+  - bin
+  - README.md
+  - docker-run.sh
+  - CLAUDE.md
+  - MEMORY.md
+  - TODO.md
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
 
 # Default social-share image for jekyll-seo-tag (og:image / twitter:image)
 defaults:

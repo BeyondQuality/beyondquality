@@ -33,3 +33,6 @@ MEMORY.md
 TODO.md
 
 .bundle/
+
+# Generated at build time by bin/fetch-enquiries.sh (Action / local)
+_data/enquiries.json

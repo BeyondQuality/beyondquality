@@ -4,8 +4,23 @@
     <h2 class="enquiries-heading">Enquiries</h2>
     <a class="cta-button" href="https://github.com/BeyondQuality/beyondquality/discussions/new/choose" target="_blank" rel="noopener noreferrer">Start an enquiry</a>
   </div>
-  <div id="github-discussions">
-    <!-- Enquiries (discussions + linked artifacts) loaded here by JavaScript -->
-  </div>
-  {% include discussions-script.html %}
+
+  {% if site.data.enquiries and site.data.enquiries.size > 0 %}
+  <ul class="enquiry-list">
+    {% for enquiry in site.data.enquiries %}
+    {% assign artifact = site.data.artifacts[enquiry.number] %}
+    <li class="enquiry-item">
+      <a class="enquiry-link" href="{{ enquiry.url }}" target="_blank" rel="noopener noreferrer">{{ enquiry.title | escape }}</a>
+      {% if artifact %}
+      <a class="enquiry-artifact" href="{{ artifact.url }}" title="{{ artifact.title | escape }}">
+        <svg class="enquiry-artifact-icon" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+        Artifact
+      </a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No open enquiries right now. <a href="https://github.com/BeyondQuality/beyondquality/discussions" target="_blank" rel="noopener noreferrer">See discussions on GitHub</a>.</p>
+  {% endif %}
 </section>
