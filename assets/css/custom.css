@@ -68,6 +68,13 @@ body {
   padding: 0 1.5rem 1rem 1.5rem;
 }
 
+/* Article images: contain to the content column — research figures can be far
+   wider than the column and otherwise overflow the page. */
+.main-content img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Hero / masthead (homepage opening). Intro on the left; a small, monochrome
    podcast icon cluster on the right (discovery without weight). */
 .hero {
@@ -124,6 +131,18 @@ body {
   margin: 0 0 0.4rem 0;
 }
 
+/* The wordmark links home; keep it looking exactly like the heading (no
+   underline, inherit colour) with a subtle hover. */
+.hero-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero-title a:hover {
+  color: hsl(var(--muted-foreground));
+}
+
 .hero-tagline {
   font-family: var(--font-sans);
   font-size: 1.05rem;
@@ -136,26 +155,35 @@ body {
 @media (max-width: 600px) {
   .hero-title { font-size: 1.6rem; }
   .hero-tagline { font-size: 1rem; }
+  /* Keep article headings below the (now smaller) wordmark on mobile too. */
+  h1 { font-size: 1.375rem; }
+  h2 { font-size: 1.2rem; }
 }
 
 /* Typography. Sans for all headings; the one serif on the page is the wordmark
    (.hero-title / .nav-brand), set explicitly to var(--font-display). */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 0 0 1.5rem 0;
   color: hsl(var(--foreground));
 }
 
+h1 {
+  font-size: 1.625rem;
+  line-height: 1.2;
+  margin: 0.5rem 0 1rem 0;
+}
+
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   margin-top: 2.2rem;
 }
 
 h3 {
   font-size: 1.125rem;
-  font-weight: 400;
   margin-bottom: 0.5rem;
 }
 

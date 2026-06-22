@@ -1,6 +1,10 @@
 <header class="hero">
   <div class="hero-intro">
+    {% if page.url == '/' %}
     <h1 class="hero-title">Beyond Quality</h1>
+    {% else %}
+    <h1 class="hero-title"><a href="/">Beyond Quality</a></h1>
+    {% endif %}
     <p class="hero-tagline">An open-source community for deeper enquiry.</p>
   </div>
   <div class="hero-podcast">

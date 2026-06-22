@@ -21,17 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Navigation (sub-pages only; the homepage uses the hero as its identity) -->
-    {% unless page.url == '/' %}
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="/" class="nav-brand">Beyond Quality</a>
-      </div>
-    </nav>
-    {% endunless %}
-
-    <!-- Main Content -->
+    <!-- Main content. Every page opens with the same hero header (wordmark +
+         tagline + podcast cluster); the wordmark links home. -->
     <main class="main-content">
+      {% include hero.html %}
       {{ content }}
     </main>
 
