@@ -26,6 +26,8 @@
     <main class="main-content">
       {% include hero.html %}
       {% if page.discussion %}
+      <hr class="article-rule">
+      <h1 class="article-title">{{ page.title }}</h1>
       <div class="artifact-meta">
         {% if page.author %}<span>{{ page.author }}{% if page.collaborators %}, with {{ page.collaborators }}{% endif %}</span>{% endif %}
         {% assign updated = site.data.artifact_dates[page.discussion] %}
@@ -34,8 +36,12 @@
         {% if page.repo %}<span><a href="{{ page.repo }}" target="_blank" rel="noopener noreferrer">Repository</a></span>{% endif %}
         <span><a href="https://github.com/BeyondQuality/beyondquality/discussions/{{ page.discussion }}" target="_blank" rel="noopener noreferrer">Discussion</a></span>
       </div>
-      {% endif %}
+      <div class="article-body">
       {{ content }}
+      </div>
+      {% else %}
+      {{ content }}
+      {% endif %}
     </main>
 
     <!-- Footer -->

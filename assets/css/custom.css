@@ -75,9 +75,26 @@ body {
   height: auto;
 }
 
-/* Artifact meta line (author · last updated · discussion link). Shown only on
-   artifact pages, just under the hero; small and muted so it sits below the
-   title in the hierarchy. Items are separated by a middot. */
+/* Artifact header: a hairline rule separates the site hero (above) from the
+   article's own header (title + meta), so the two zones stop blurring. */
+.article-rule {
+  border: 0;
+  border-top: 1px solid hsl(var(--border));
+  margin: 0.25rem 0 1.5rem 0;
+}
+
+.article-title {
+  margin: 0 0 0.6rem 0;
+}
+
+/* The title is rendered from the layout (above the meta). The markdown keeps its
+   own H1 so the artifact still reads well on GitHub; hide that duplicate here. */
+.article-body > h1:first-child {
+  display: none;
+}
+
+/* Artifact meta line (author · collaborators · updated · DOI · repository ·
+   discussion). Sits under the title as a byline; small and muted. */
 .artifact-meta {
   font-size: 0.875rem;
   color: hsl(var(--muted-foreground));
