@@ -1,3 +1,7 @@
+---
+discussion: 25
+author: Vitaly Sharovatov
+---
 # Social resistance to rational change in QA
 
 I tried applying the same QA improvement approach (described in [the economics of testing research](https://beyondquality.org/research/testing_economics/testing_economics)) in different companies, with mixed results. As a consultant, the change landed and scaled; as an internal QA engineer, the effort stalled. This contrast is why I want to study the social nature of resistance to change and give practical advice for engineers who want to improve QA processes in their companies.
@@ -126,3 +130,7 @@ There can also be status or role‑threat dynamics: a highly active QA engineer 
 **Process**: a consultant role makes it easier to secure a sponsor, build a coalition, and create explicit ownership and milestones. The work gets a formal process: discovery, agreement on scope, explicit commitments, and regular progress reviews. Reflecting/evaluating is expected, often contractually, and people are more likely to support data collection and measurement. As a QA engineer, I may lack the mandate and support to drive planning, execution, and feedback loops across teams.
 
 In practice, this means the change can die in the "everyone agrees in principle" stage. Without a named owner, a timeline, or shared accountability, the rational case does not translate into sustained action. Cost also shapes perception: a consultant is a visible investment, often sponsored by a director who is personally accountable, which can raise attention and follow‑through compared to an internal QA‑led initiative.
+
+## From analysis to action
+
+This document maps *why* rational testing improvements stall. The companion guide, [Implementing rational QA improvements: a companion guide for engineers](companion-guide.md), turns that diagnosis into practical strategies for getting such a proposal adopted.

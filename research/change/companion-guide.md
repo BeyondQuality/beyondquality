@@ -1,6 +1,11 @@
+---
+part_of: 25
+author: Vitaly Sharovatov
+title: "Implementing rational QA improvements: a companion guide for engineers"
+---
 # Implementing rational QA improvements: a companion guide for engineers
 
-This guide is a companion to the [economics of testing](https://beyondquality.org/research/testing_economics/testing_economics) research and the [social resistance to rational change](first.md) analysis. The economics of testing tells you _what_ to propose; the resistance analysis tells you _why_ rational proposals get rejected; this guide tells you _how_ to land the proposal.
+This guide is a companion to the [economics of testing](https://beyondquality.org/research/testing_economics/testing_economics) research and the [social resistance to rational change](analysis.md) analysis. The economics of testing tells you _what_ to propose; the resistance analysis tells you _why_ rational proposals get rejected; this guide tells you _how_ to land the proposal.
 
 **Audience**: engineers who have identified a rational, justified improvement to their organisation's testing strategy and want to implement it.
 
@@ -18,7 +23,7 @@ The manager's rejection is often locally rational given their constraints:
 - **Incentive misalignment**: the manager may be measured on delivery velocity, headcount, or feature throughput. A testing improvement that reduces rework in Q3 does not help their Q1 OKR review. Worse, if the improvement succeeds and reduces the need for manual testing effort, the manager may fear headcount reduction.
 - **Identity and role threat**: an engineer proposing organisational change can be perceived as overstepping their role, implying that current leadership is insufficient, or advocating for their own function rather than business outcomes.
 
-These are not personal failings. They are predictable consequences of how organisations structure incentives, accountability, and decision-making. The [CFIR-based resistance analysis](first.md) maps these forces systematically.
+These are not personal failings. They are predictable consequences of how organisations structure incentives, accountability, and decision-making. The [CFIR-based resistance analysis](analysis.md) maps these forces systematically.
 
 The implication: **the technical quality of the proposal is necessary but not sufficient. Engineers must also address the social, political, and structural conditions that determine whether a rational proposal gets adopted.**
 
@@ -153,7 +158,7 @@ The common thread: **shift from presenting a rational argument to creating the s
 ## References
 
 - [Economics of testing](https://beyondquality.org/research/testing_economics/testing_economics) — the model for identifying and justifying testing improvements.
-- [Social resistance to rational change in QA](first.md) — CFIR-based analysis of why rational proposals get rejected.
+- [Social resistance to rational change in QA](analysis.md) — CFIR-based analysis of why rational proposals get rejected.
 - [Consolidated Framework for Implementation Research (CFIR)](https://cfirguide.org/) — the organising taxonomy for resistance factors.
 - [Klein & Sorra (1996). The Challenge of Innovation Implementation.](https://www.jstor.org/stable/259164) — implementation climate: whether innovation use is expected, supported, and rewarded.
 - [Kerr (1975). On the Folly of Rewarding A, While Hoping for B.](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Motivation/Kerr_Folly_of_rewarding_A_while_hoping_for_B.pdf) — incentive misalignment.

@@ -8,7 +8,7 @@
 
 **Research base**:
 - [Economics of testing](https://beyondquality.org/research/testing_economics/testing_economics) — the model for building a rational proposal
-- [Social resistance to rational change](first.md) — CFIR-based analysis of why rational proposals get rejected
+- [Social resistance to rational change](analysis.md) — CFIR-based analysis of why rational proposals get rejected
 - [Companion guide](companion-guide.md) — practical strategies for overcoming resistance
 
 ---
