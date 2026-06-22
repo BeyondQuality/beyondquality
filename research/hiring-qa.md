@@ -2,6 +2,7 @@
 discussion: 22
 author: Vitaly Sharovatov
 collaborators: Anupam Krishnamurthy
+video: T73sSlT-1u0
 ---
 # QA Approaches in Hiring: From Shift-Left Testing to Shewhart's Control Charts
 

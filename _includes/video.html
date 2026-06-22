@@ -1,0 +1,12 @@
+<!-- Companion video: one responsive 16:9 YouTube frame. Rendered when a page
+     declares `video: <id>` in front matter. The id is the YouTube watch id
+     (the v= value). youtube-nocookie keeps it from setting cookies until play. -->
+<div class="video-wrap">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/{{ include.id }}"
+    title="Companion video"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+</div>

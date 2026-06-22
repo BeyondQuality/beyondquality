@@ -1,3 +1,10 @@
+---
+part_of: 5
+author: Vitaly Sharovatov
+title: "Complete Testing Taxonomy"
+---
+# Complete Testing Taxonomy
+
 ## Table of contents
 
 - [Step 1 — Identify & quantify risks](step1.md)
@@ -5,8 +12,6 @@
 - [Step 3 — Decide where, how and how much to test](step3.md)
 - [Step 4 — Review and rebalance the portfolio](step4.md)
 - Complete testing taxonomy
-
-# Complete Testing Taxonomy
 
 This document aims to provide full taxonomy of testing types, levels, approaches and methods.
 

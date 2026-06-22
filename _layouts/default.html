@@ -25,21 +25,27 @@
          tagline + podcast cluster); the wordmark links home. -->
     <main class="main-content">
       {% include hero.html %}
-      {% if page.discussion %}
+      {% comment %} `discussion:` marks an artifact entry page (also drives the homepage pill);
+         `part_of:` marks a section of a multi-page artifact (its thread, but not a pill).
+         Either one renders the article header; `thread` is whichever applies. {% endcomment %}
+      {% assign thread = page.discussion | default: page.part_of %}
+      {% if thread %}
       <hr class="article-rule">
       <h1 class="article-title">{{ page.title }}</h1>
       <div class="artifact-meta">
         {% if page.author %}<span>{{ page.author }}{% if page.collaborators %}, with {{ page.collaborators }}{% endif %}</span>{% endif %}
-        {% assign updated = site.data.artifact_dates[page.discussion] %}
+        {% assign updated = site.data.artifact_dates[thread] %}
         {% if updated %}<span>Updated {{ updated | date: "%B %-d, %Y" }}</span>{% endif %}
         {% if page.doi %}<span><a href="https://doi.org/{{ page.doi }}" target="_blank" rel="noopener noreferrer">DOI</a></span>{% endif %}
         {% if page.repo %}<span><a href="{{ page.repo }}" target="_blank" rel="noopener noreferrer">Repository</a></span>{% endif %}
-        <span><a href="https://github.com/BeyondQuality/beyondquality/discussions/{{ page.discussion }}" target="_blank" rel="noopener noreferrer">Discussion</a></span>
+        <span><a href="https://github.com/BeyondQuality/beyondquality/discussions/{{ thread }}" target="_blank" rel="noopener noreferrer">Discussion</a></span>
       </div>
+      {% if page.video %}{% include video.html id=page.video %}{% endif %}
       <div class="article-body">
       {{ content }}
       </div>
       {% else %}
+      {% if page.video %}{% include video.html id=page.video %}{% endif %}
       {{ content }}
       {% endif %}
     </main>

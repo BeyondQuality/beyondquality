@@ -1,3 +1,11 @@
+---
+part_of: 5
+author: Vitaly Sharovatov
+title: "Step 4 — Review and rebalance the portfolio"
+video: iv6liHJiEtY
+---
+# Step 4 — Review and rebalance the portfolio
+
 ## Table of contents
 
 - [Step 1 — Identify & quantify risks](step1.md)
@@ -5,8 +13,6 @@
 - [Step 3 — Decide where, how and how much to test](step3.md)
 - Step 4 — Review and rebalance the portfolio
 - [Complete testing taxonomy](taxonomy.md)
-
-## Step 4 — Review and rebalance the portfolio
 
 Once a testing strategy is defined and implemented, we must plan for its evaluation. Like any investment portfolio, the strategy should be reviewed to confirm that the chosen mix of testing approaches is still reducing the most important risks in a cost-effective way.
 

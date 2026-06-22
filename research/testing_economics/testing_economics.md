@@ -1,6 +1,7 @@
 ---
 discussion: 5
 author: Vitaly Sharovatov
+video: Wv6no4j68tE
 ---
 # Economics of testing
 

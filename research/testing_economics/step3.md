@@ -1,3 +1,11 @@
+---
+part_of: 5
+author: Vitaly Sharovatov
+title: "Step 3 — Decide where, how and how much to test"
+video: 2kl79NuIBQ8
+---
+# Step 3 — Decide where, how and how much to test
+
 ## Table of contents
 
 - [Step 1 — Identify & quantify risks](step1.md)
@@ -5,8 +13,6 @@
 - Step 3 — Decide where, how and how much to test
 - [Step 4 — Review and rebalance the portfolio](step4.md)
 - [Complete testing taxonomy](taxonomy.md)
-
-## Step 3 — Decide where, how and how much to test
 
 With prioritised risks mapped to quality characteristics from Step 2, we now select the controls that produce credible evidence at minimal cost. The principle is to prefer the lowest-cost test level and the earliest feasible point in the lifecycle that can produce credible evidence.
 

@@ -1,3 +1,11 @@
+---
+part_of: 5
+author: Vitaly Sharovatov
+title: "Step 1 — Identify & quantify risks"
+video: DooZD44oi84
+---
+# Step 1 — Identify & quantify risks
+
 ## Table of contents
 
 - Step 1 — Identify & quantify risks
@@ -5,8 +13,6 @@
 - [Step 3 — Decide where, how and how much to test](step3.md)
 - [Step 4 — Review and rebalance the portfolio](step4.md)
 - [Complete testing taxonomy](taxonomy.md)
-
-## Step 1 — Identify & quantify risks
 
 ISO/IEC/IEEE 29119 supports risk-based testing and includes risk considerations as part of test planning. In practice, risks often begin as unstructured concerns or "fears" from managers, engineers, and other stakeholders. These fears may be emotional, vague, or context-specific, but they still signal real uncertainty about what could go wrong.
 

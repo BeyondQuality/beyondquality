@@ -75,6 +75,26 @@ body {
   height: auto;
 }
 
+/* Companion video: one responsive 16:9 YouTube frame, full content width. On
+   artifact pages it sits under the meta line; on step pages, at the top of the
+   content. aspect-ratio holds the shape; the iframe fills it. */
+.video-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 1.75rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Artifact header: a hairline rule separates the site hero (above) from the
    article's own header (title + meta), so the two zones stop blurring. */
 .article-rule {

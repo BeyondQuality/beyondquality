@@ -1,3 +1,11 @@
+---
+part_of: 5
+author: Vitaly Sharovatov
+title: "Step 2 — Categorize & prioritize risks"
+video: sudmIeiVe_w
+---
+# Step 2 — Categorize & prioritize risks
+
 ## Table of contents
 
 - [Step 1 — Identify & quantify risks](step1.md)
@@ -5,8 +13,6 @@
 - [Step 3 — Decide where, how and how much to test](step3.md)
 - [Step 4 — Review and rebalance the portfolio](step4.md)
 - [Complete testing taxonomy](taxonomy.md)
-
-## Step 2 — Categorize & prioritize risks
 
 With explicit, quantified risks from Step 1, we now categorize them and prioritize them by risk exposure. The SQuaRE quality models provide a useful taxonomy for this: ISO/IEC 25010 defines the product quality model (quality characteristics of the system itself), and related SQuaRE standards define quality-in-use models (user outcomes in context). We use these characteristics as a consistent vocabulary to describe what "good" looks like, and what could go wrong.
 
