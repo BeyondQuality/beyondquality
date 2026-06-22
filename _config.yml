@@ -2,7 +2,6 @@ title: Beyond Quality
 description: An open-source community for deeper enquiry.
 url: https://beyondquality.org
 baseurl: ""   # site is served at the domain root (via CNAME); pin so local builds match CI
-theme: jekyll-theme-cayman
 markdown: kramdown
 
 plugins:
