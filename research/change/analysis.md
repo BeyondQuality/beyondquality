@@ -1,6 +1,7 @@
 ---
 discussion: 25
 author: Vitaly Sharovatov
+video: COE1r4TSRF0
 ---
 # Social resistance to rational change in QA
 
