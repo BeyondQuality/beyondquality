@@ -1,12 +1,9 @@
 ---
 discussion: 22
+author: Vitaly Sharovatov
+collaborators: Anupam Krishnamurthy
 ---
 # QA Approaches in Hiring: From Shift-Left Testing to Shewhart's Control Charts
-
-- Author: [Vitaly Sharovatov](https://github.com/sharovatov)
-- Collaborators: [Anupam Krishnamurthy](https://github.com/anupamck)
-- Date: 8 October, 2025
-- [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/22)
 
 ## How QA principles can be applied to hiring.
 

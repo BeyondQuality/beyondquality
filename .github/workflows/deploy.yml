@@ -25,10 +25,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0          # full history so bin/fetch-artifact-dates.sh can read each file's last commit
       - name: Fetch open enquiries
         env:
           GH_TOKEN: ${{ github.token }}
         run: bash bin/fetch-enquiries.sh
+      - name: Compute artifact last-updated dates
+        run: bash bin/fetch-artifact-dates.sh
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'

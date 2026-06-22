@@ -1,13 +1,10 @@
 ---
 discussion: 3
+author: Vitaly Sharovatov
+collaborators: Anupam Krishnamurthy
+doi: 10.5281/zenodo.17085989
 ---
 # Belief in laziness as a self-fulfilling prophecy
-
-- Author: [Vitaly Sharovatov](https://sharovatov.github.io)
-- Collaborators: [Anupam Krishnamurthy](https://github.com/anupamck)
-- Start date: 20 August 2025
-- [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/3)
-- DOI: 10.5281/zenodo.17085989
 
 ## Abstract
 

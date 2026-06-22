@@ -34,5 +34,6 @@ TODO.md
 
 .bundle/
 
-# Generated at build time by bin/fetch-enquiries.sh (Action / local)
+# Generated at build time (Action / local) by the bin/ scripts
 _data/enquiries.json
+_data/artifact_dates.yml

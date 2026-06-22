@@ -1,5 +1,6 @@
 ---
 discussion: 33
+author: Vitaly Sharovatov
 ---
 # Agentic Workflows: Engineering Principles for Non-Engineers
 

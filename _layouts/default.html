@@ -25,6 +25,16 @@
          tagline + podcast cluster); the wordmark links home. -->
     <main class="main-content">
       {% include hero.html %}
+      {% if page.discussion %}
+      <div class="artifact-meta">
+        {% if page.author %}<span>{{ page.author }}{% if page.collaborators %}, with {{ page.collaborators }}{% endif %}</span>{% endif %}
+        {% assign updated = site.data.artifact_dates[page.discussion] %}
+        {% if updated %}<span>Updated {{ updated | date: "%B %-d, %Y" }}</span>{% endif %}
+        {% if page.doi %}<span><a href="https://doi.org/{{ page.doi }}" target="_blank" rel="noopener noreferrer">DOI</a></span>{% endif %}
+        {% if page.repo %}<span><a href="{{ page.repo }}" target="_blank" rel="noopener noreferrer">Repository</a></span>{% endif %}
+        <span><a href="https://github.com/BeyondQuality/beyondquality/discussions/{{ page.discussion }}" target="_blank" rel="noopener noreferrer">Discussion</a></span>
+      </div>
+      {% endif %}
       {{ content }}
     </main>
 

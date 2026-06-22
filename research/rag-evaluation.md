@@ -1,13 +1,10 @@
 ---
 discussion: 8
+author: Anupam Krishnamurthy
+collaborators: Vitaly Sharovatov
+repo: https://github.com/anupamck/rag-evaluation
 ---
 # RAG evaluation using Ragas - A proof-of-concept
-
-- Author: [Anupam Krishnamurthy](https://github.com/anupamck)
-- Collaborators: [Vitaly Sharovatov](https://sharovatov.github.io/)
-- Date: 11 September, 2025
-- [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/8)
-- [Repository](https://github.com/anupamck/rag-evaluation)
 
 ## Summary
 One of the most promising use-cases for Large Language Models (LLMs) is  Retrieval Augmented Generation (RAG). RAG helps LLMs handle large amounts of contextual data by helping them overcome the limitations of context stuffing by augmenting the text generation capabilities of an LLM with the ability to retrieve the relevant part of a larger context to the corresponding user query. Qualifying an LLM using automated testing is a challenge, given the non-deterministic nature of their responses. To tackle this challenge, several LLM assessment frameworks are on the rise, one of which is Ragas (RAG Assessment). The aim of this research task is to build a RAG model, qualify it using Ragas as a proof-of-concept, and share the findings with the community. 

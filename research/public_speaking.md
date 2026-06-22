@@ -1,12 +1,8 @@
 ---
 discussion: 11
+author: Maryia Tuleika
 ---
 # Public speaking: why and how?
-
-- Author: [Maryia Tuleika](https://www.linkedin.com/in/maryia-tuleika/)
-- Date: 19 September, 2025
-- [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/11)
-
 
 ## Resources
 

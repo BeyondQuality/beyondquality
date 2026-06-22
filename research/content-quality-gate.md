@@ -1,11 +1,10 @@
+---
+discussion: 27
+author: Vitaly Sharovatov
+collaborators: Anupam Krishnamurthy
+repo: https://github.com/sharovatov/rag_content_pipeline
+---
 # Applying QA Thinking to Content: Building a Quality Gate with RAG
-
-- Author: [Vitaly Sharovatov](https://sharovatov.github.io/)
-- Collaborators: [Anupam Krishnamurthy](https://github.com/anupamck)
-- Date: March 2026
-- [Discussion thread](https://github.com/BeyondQuality/beyondquality/discussions/27)
-- [Repository](https://github.com/sharovatov/rag_content_pipeline)
-- Building on: [Anupam's RAG evaluation research](https://beyondquality.org/research/rag-evaluation)
 
 ## The problem
 

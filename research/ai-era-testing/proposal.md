@@ -1,7 +1,5 @@
 # Direction 3: AI-Enabled Collaborative Building
 
-Research by Lilia Abdulina (Head of QA at JetBrains), with Vitaly Sharovatov.
-
 Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 **Status: early draft. Emerging from discussion, not yet polished.**

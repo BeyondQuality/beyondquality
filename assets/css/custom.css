@@ -75,6 +75,36 @@ body {
   height: auto;
 }
 
+/* Artifact meta line (author · last updated · discussion link). Shown only on
+   artifact pages, just under the hero; small and muted so it sits below the
+   title in the hierarchy. Items are separated by a middot. */
+.artifact-meta {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 1.25rem 0;
+  line-height: 1.7;
+}
+
+/* Separator dots: muted, and never underlined. The colour is set explicitly so
+   the dot stays grey even when it sits inside a coloured link element. */
+.artifact-meta > * + *::before {
+  content: "·";
+  margin: 0 0.6rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Resource links read as links by colour (the accessible terracotta used for
+   the pills/CTA), with the underline reserved for hover. */
+.artifact-meta a {
+  color: #b04a20;
+  text-decoration: none;
+}
+
+.artifact-meta a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 /* Hero / masthead (homepage opening). Intro on the left; a small, monochrome
    podcast icon cluster on the right (discovery without weight). */
 .hero {
