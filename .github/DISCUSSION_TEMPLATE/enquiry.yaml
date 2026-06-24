@@ -1,0 +1,17 @@
+title: "[Enquiry Title]"
+
+body:
+  - type: textarea
+    attributes:
+      label: Describe the enquiry
+      description: What is the enquiry about and what motivates it?
+      placeholder: Summarize the enquiry, its context, and what you hope to explore or understand.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Collaboration
+      description: What input do you need from others? (feedback, suggestions, ideas etc.).
+    validations:
+      required: false
