@@ -68,4 +68,4 @@ This is the benefit I would now refuse to give up. For the first time I can see 
 
 ---
 
-Previous: [Watching the cost](16-watching-costs.md)
+Previous: [Watching the cost](16-watching-costs.md) | Next: [When every check passes](18-when-every-check-passes.md)
