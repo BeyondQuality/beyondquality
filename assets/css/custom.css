@@ -5,6 +5,7 @@
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
   --muted-foreground: 215.4 16.3% 46.9%;
+  --muted: 210 40% 96.1%;
   --border: 214.3 31.8% 91.4%;
 
   /* Two families, strict roles:
@@ -12,6 +13,7 @@
      - sans (Inter): everything else, hierarchy by size/weight/colour */
   --font-display: 'Fraunces', 'Georgia', serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
   --accent: #ed6736;
 
   --container-max-width: 896px;
@@ -269,6 +271,41 @@ a {
 
 a:hover {
   color: hsl(var(--muted-foreground));
+}
+
+/* Code. Blocks in the research chapters are mostly prompts (plain English the
+   reader pastes into an agent), so long lines wrap like prose instead of
+   forcing a horizontal scroll; real newlines and indentation are preserved.
+   overflow-x is a safety net for anything unbreakable. A quiet tint sets the
+   blocks off from body text. */
+pre {
+  background-color: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.875rem 1rem;
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  overflow-x: auto;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background-color: hsl(var(--muted));
+  padding: 0.125rem 0.3rem;
+  border-radius: calc(var(--radius) / 2);
+}
+
+/* Inside a block the pre carries the tint and sizing; the code element adds
+   nothing on top. */
+pre code {
+  font-size: inherit;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 /* About / intro */
