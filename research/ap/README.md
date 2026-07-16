@@ -30,9 +30,10 @@ That gap is what this research addresses.
 16. [Watching the cost](16-watching-costs.md) — the status line as an always-on cost meter, and ccusage for daily and monthly totals
 17. [Analysing your own work](17-analysing-your-own-work.md) — the strategic payoff: contained work becomes a complete, queryable record, for self-assessment, job analysis, and delegation
 18. [When every check passes](18-when-every-check-passes.md) — why manual review and deterministic checks are not enough: consistency is not correctness, and once proves nothing
+19. [The bug earns its test](19-the-bug-earns-its-test.md) — building the first eval: a regression test adapted to non-determinism, where the verdict is a rate and the bug gets measured before the fix
 
 - [Summary](summary.md) — all engineering principles and antipatterns in one table
 
 ## Status
 
-Early draft, chapters 1-18 published. More chapters planned.
+Early draft, chapters 1-19 published. More chapters planned.

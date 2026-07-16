@@ -104,4 +104,4 @@ Software engineering has a name for this kind of verification, and [chapter 12](
 
 ---
 
-Previous: [Analysing your own work](17-analysing-your-own-work.md)
+Previous: [Analysing your own work](17-analysing-your-own-work.md) | Next: [The bug earns its test](19-the-bug-earns-its-test.md)
