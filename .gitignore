@@ -37,3 +37,6 @@ TODO.md
 # Generated at build time (Action / local) by the bin/ scripts
 _data/enquiries.json
 _data/artifact_dates.yml
+
+AGENTS.md
+.codex
