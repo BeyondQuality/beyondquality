@@ -4,7 +4,7 @@ status: stub
 ---
 # Value first, risk second
 
-Part of [Governance of quality](quality-governance.md); the meat is not yet written.
+Part of [Governance of quality](quality-governance.md).
 
 This section states the ordering thesis, which is definitional rather than good practice: risk is the "effect of uncertainty on objectives" (ISO 31000:2018, 3.1), so until value work has set the objectives, there is nothing for a risk to be a risk to.
 

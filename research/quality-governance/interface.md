@@ -4,7 +4,7 @@ status: stub
 ---
 # The governance-management interface for quality
 
-Part of [Governance of quality](quality-governance.md); the meat is not yet written.
+Part of [Governance of quality](quality-governance.md).
 
 This section applies the evaluate-direct-monitor cycle plus stakeholder engagement to the quality domain.
 

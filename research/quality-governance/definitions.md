@@ -4,7 +4,7 @@ status: stub
 ---
 # Definitions
 
-Part of [Governance of quality](quality-governance.md); the meat is not yet written.
+Part of [Governance of quality](quality-governance.md).
 
 - **Governance vs management**, per ISO/IEC 38500: governance is the human-based system of directing, overseeing and holding to account (3.3); management fulfils the objectives within the authority and accountability that governance establishes (3.7). Accountability cannot be delegated, whether to a manager or to an AI system.
 - **Governance is not compliance.** The section also covers the failure mode where management structures absorb governance functions (building on the argument in discussion #43).

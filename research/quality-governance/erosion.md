@@ -4,7 +4,7 @@ status: stub
 ---
 # The erosion thesis
 
-Part of [Governance of quality](quality-governance.md); the meat is not yet written.
+Part of [Governance of quality](quality-governance.md).
 
 This section carries the research's own claim, the step §1 does not take: the problem statement establishes that the two debts grow; this section argues what their growth does to the governance system. It is also where the purpose statement's "maintain" is defended: the [interface](interface.md) loop keeps the clarity current, and this section argues what keeps the loop's own preconditions, comprehension and intent, alive.
 

@@ -4,7 +4,7 @@ status: stub
 ---
 # The management-layer implementations
 
-Part of [Governance of quality](quality-governance.md); the meat is not yet written.
+Part of [Governance of quality](quality-governance.md).
 
 The two linked researches are not special cases of risk management; they are implementations of this governance system for the quality domain, and each instantiates different parts of it. Reinertsen's flow economics is the neighboring implementation for the product domain: the same move (one currency, quantified trade-offs) applied to flow and delay. It presupposes exactly what this research supplies: an owner above the silos who mandates the single objective function.
 

@@ -4,7 +4,7 @@ status: stub
 ---
 # Putting it to work
 
-Part of [Governance of quality](quality-governance.md); the meat is not yet written.
+Part of [Governance of quality](quality-governance.md).
 
 The practice layer: the per-role expansion of §1's four capabilities, what each role gains next to what each must do, since no single role can implement the system alone.
 
