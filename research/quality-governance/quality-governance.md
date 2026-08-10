@@ -36,77 +36,31 @@ Repairing the four deficiencies buys four capabilities, one per deficiency, stat
 - **Structure:** the governing body sees one exposure picture in comparable units and sets its appetite vector deliberately; it can answer what it tolerates and why.
 - **Adoption:** AI adoption at a pace the organization can sustain: the debts named and watched, the countermeasures mandated and funded, the capacity to supervise, intervene and evolve retained.
 
-The capabilities land differently per role, and no single reader can implement them alone; the practice page (listed in §7) will carry the per-role version: what each role gains next to what each must do.
+The capabilities land differently per role, and no single reader can implement them alone; the [practice page](practice.md) will carry the per-role version: what each role gains next to what each must do.
 
 ## 2. Definitions
 
-- **Governance vs management**, per ISO/IEC 38500: governance is the human-based system of directing, overseeing and holding to account (3.3); management fulfils the objectives within the authority and accountability that governance establishes (3.7). Accountability cannot be delegated, whether to a manager or to an AI system.
-- **Governance is not compliance.** The section also covers the failure mode where management structures absorb governance functions (building on the argument in discussion #43).
-- **Quality**, per ISO 9000 / ISO/IEC 25010: the degree to which what is produced matches the stated and implied needs of users and customers. Because it is a degree, "how well" is a decision variable, and that is what makes quality governable at all.
-- **The one-liner the research builds on:** governance is the company-wide human system of direction, oversight and accountability; risk appetite is one of its instruments and value generation another; QA, security and product management operate within the parameters it sets.
+What governance is and is not: governance vs management per ISO/IEC 38500, why governance is not compliance, quality as a degree (which is what makes it governable at all), and the one-liner the research builds on. Page: [definitions.md](definitions.md).
 
 ## 3. Value first, risk second
 
-This section states the ordering thesis, which is definitional rather than good practice: risk is the "effect of uncertainty on objectives" (ISO 31000:2018, 3.1), so until value work has set the objectives, there is nothing for a risk to be a risk to.
-
-- The value work has two halves: target degrees of quality (how well we intend to satisfy which needs, per characteristic and per segment) and the payoff function (what achieving each target is worth: retention, win rate, price premium, deals unblocked). Two organizations can set identical targets with entirely different value at stake.
-- The payoff function is time-dependent: what achieving and holding a target is worth over time. Priced that way, the cost of delay falls out of it as the time term (Reinertsen's flow economics supplies the method and the single-currency discipline), and "ship now vs test more" stops being a fight between intuitions: it becomes cost of delay compared against expected failure cost, checked against the risk appetite governance set.
-- The operational ordering: do the value work first, define what you want to achieve and keep achieving, and only then derive the risks that can stop you.
-- "Keep achieving" is extremely important: it is viability and performance over time (38500 5.12), and it is where the erosion thesis (§6) plugs in.
-- The channels and measures of the value model get their own page in this research (to be linked when it lands); this section states the ordering and the two halves.
+The ordering thesis, definitional rather than good practice: risk is the effect of uncertainty on objectives, so the value work sets objectives before risks can be derived. The value model (target degrees plus a time-dependent payoff function, with cost of delay as the time term) lives on the same page. Page: [value.md](value.md).
 
 ## 4. The governance-management interface for quality
 
-This section applies the evaluate-direct-monitor cycle plus stakeholder engagement to the quality domain.
-
-- Flows down: purpose, value objectives, quality targets, risk appetite and acceptance thresholds, policy, delegation limits.
-- Flows up: evidence from testing and reviews, current exposures, acceptance decisions with their sign-offs, breaches and escapes. The upward flow exists for two reasons: recalibration (evidence updates the policy and the appetite) and accountability (the body must be able to answer for what it tolerates).
-- One conversation at the top, three functions below: where QA, security and product management sit, and why the interface is the same for all three.
-- Economic decision rules are the operable form of policy and delegation: governance publishes the exchange rates (what a day of delay costs, what a unit of exposure reduction is worth), and teams decide locally within them without escalation. This is Reinertsen's device serving 38500's delegation element.
-- The interface runs as a never-ending loop: governance sets the policy (value objectives, risk appetite) from the whole picture; management turns it into the prioritized risk register and the work that holds the value-risk balance, deciding locally inside the published parameters; evidence and exposures flow back up; the policy gets updated. Economically, the loop is constrained optimization sustained over time: maximize value, subject to exposures staying within appetite.
-- Why the parameters are set at the top and nowhere else: the whole economic picture (the value side plus all three functions' exposures) can exist only at the level above all three, and any lower placement puts the owner of one term in charge of the sum: each silo's appetite would emerge from its own budget fights, and exchange rates would bend toward the function that sets them. Decisions are delegated inside the published parameters; parameter-setting and answerability are not.
-
-<!-- Interface diagram placeholder. -->
+What flows down (purpose, value objectives, quality targets, risk appetite, policy, delegation limits), what flows up (evidence, exposures, acceptance decisions, breaches) and why, the never-ending loop the interface runs as, and why the parameters are set at the top and nowhere else. Page: [interface.md](interface.md).
 
 ## 5. The management-layer implementations
 
-The two linked researches are not special cases of risk management; they are implementations of this governance system for the quality domain, and each instantiates different parts of it. Reinertsen's flow economics is the neighboring implementation for the product domain: the same move (one currency, quantified trade-offs) applied to flow and delay. It presupposes exactly what this research supplies: an owner above the silos who mandates the single objective function.
-
-### 5.1 Economics of testing: risk governance, oversight and performance
-
-- The four-step loop is an evaluate-direct-monitor cycle for the quality portfolio: Step 2 consumes the risk appetite governance sets (acceptance thresholds); Step 4 produces the performance evidence oversight needs; risk-acceptance sign-offs and the risk-to-evidence traceability chain are accountability records.
-- Breadth caveat: this covers the product-quality slice of risk governance; cyber, financial and legal risk governance sit outside it.
-- Once the value model exists, the framework also implements value generation for quality.
-
-<!-- Mapping table placeholder: four-step loop to 38500 principles and framework elements. -->
-
-### 5.2 AI-era testing: maintaining governance when AI writes the software
-
-- Implements the standards' own question (38507 4.2 "Maintaining governance when introducing AI" and 4.3 "Maintaining accountability when introducing AI") for the case where the AI writes the software.
-- Intent debt is losing the capacity to direct. Comprehension debt is losing the capacity to evaluate and monitor. Human-authored anchors are what keep accountability demonstrable. The standard already names the mechanism: "agent atrophy" (38507 6.7.4).
-
-<!-- Mapping table placeholder: the two debts and four conditions to 38500 tasks and 38507 clauses. -->
+The two linked researches as implementations of this governance system, each instantiating different parts: economics implements risk governance, oversight and performance; ai-era-testing implements maintaining governance and accountability when AI writes the software. Page: [implementations.md](implementations.md).
 
 ## 6. The erosion thesis
 
-This section carries the research's own claim, the step §1 does not take: the problem statement establishes that the two debts grow; this section argues what their growth does to the governance system. It is also where the purpose statement's "maintain" is defended: §4's loop keeps the clarity current, and this section argues what keeps the loop's own preconditions, comprehension and intent, alive.
+The research's own claim: AI-accelerated development erodes the capacity to run the machinery above unless countermeasures are mandated and funded, and this is where the purpose statement's "maintain" is defended. Page: [erosion.md](erosion.md).
 
-- AI-accelerated development does not merely add rows to the risk register. It erodes the organization's capacity to run the register at all: each step of the machinery depends on what the debts deplete. Risk identification needs intent (what could fail, and what failure would cost, cannot be named without knowing what the system is for); evidence evaluation needs comprehension (whether a check is credible evidence, and whether two checks are independent, cannot be judged without understanding what they exercise); review and rebalancing need both. The erosion reaches §3's value work too: intent debt manifests when decisions need to be made, and the value model is made of decisions.
-- The erosion holds only in the absence of countermeasures. Those are partly formulated in the ai-era-testing research (human-authored anchors, collaborative construction, the four conditions); this research states who mandates them, and its findings will feed back into updating ai-era-testing.
-- Knowledge that used to be a free byproduct of humans doing the work becomes a priced input. Someone has to decide to pay for it (human-authored anchors, collaborative construction, oversight skills), and that decision is a governance act: policy, delegation limits, and the human-oversight conditions of 38507 6.2 (understanding, authority, the ability to intervene). These are the same instruments §1's fourth observation shows arriving late or not at all: governed adoption is the countermeasure funded from the start.
-- The erosion also has a price in flow-economics vocabulary: comprehension debt raises the cost of change, and the cost of change is what makes future delay expensive. An organization that can no longer change fast and safely carries a higher effective cost of delay on everything it will ever ship. Cost of Quality accounting alone does not capture this term.
-- The consequence for the governing body: the question is no longer only "what are our risks" but "can our organization still know its risks".
+## 7. Putting it to work
 
-## 7. Research pages
-
-Each section of this research gets its own page; the meat lands there, and links land here as the pages are written. Filenames are settled when drafting starts.
-
-- Definitions.
-- Value first, risk second, including the value model (channels and measures).
-- The governance-management interface.
-- The management-layer implementations, with the two mapping tables.
-- The erosion thesis.
-- Putting it to work, per role (what each role gains next to what each must do): for governing bodies and executives, the parameters to set (value objectives for quality, risk appetite, oversight cadence, AI delegation limits) and the assurance to demand; for QA and engineering leadership, what to supply upward and how to run the two linked researches underneath those parameters; possibly a short diagnostic, the signs that an organization has no quality governance.
+The practice layer, per role: what each role gains next to what each must do; the parameters governing bodies set, what QA and engineering leadership supply upward, possibly a short diagnostic. Page: [practice.md](practice.md).
 
 ## 8. Scope and non-goals
 
@@ -116,8 +70,9 @@ Each section of this research gets its own page; the meat lands there, and links
 ## 9. Reading order
 
 1. This hub.
-2. [Economics of Testing](../testing_economics/testing_economics.md): the risk-governance and oversight machinery. Its AI-era addendum is planned; the value model gets its own page in this research.
-3. [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md): the two debts, the generative ratification loop, the four conditions, and the Direction 3 proposal.
+2. The section pages in order: [definitions.md](definitions.md), [value.md](value.md), [interface.md](interface.md), [implementations.md](implementations.md), [erosion.md](erosion.md), [practice.md](practice.md).
+3. [Economics of Testing](../testing_economics/testing_economics.md): the risk-governance and oversight machinery. Its AI-era addendum is planned.
+4. [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md): the two debts, the generative ratification loop, the four conditions, and the Direction 3 proposal.
 
 ## References
 
