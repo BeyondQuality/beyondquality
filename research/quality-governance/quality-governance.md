@@ -12,6 +12,8 @@ Testing strategy, QA process, security work and product work usually run as sepa
 
 This research describes the level above them: governance, the company-wide human system of direction, oversight and accountability, through which an organization decides what quality is worth to it, how much uncertainty it accepts in pursuit of that value, and who answers for the outcome.
 
+The purpose of this research is to provide a tool (a framework) that allows organizations to gain and maintain clarity on the economics of their quality-related decisions. With that clarity, the right people can make these decisions on time and on economic grounds, and monitor their outcomes.
+
 It does three things:
 
 1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down (purpose, value objectives, risk appetite, policy) and what flows up (evidence, exposures, acceptance decisions).
