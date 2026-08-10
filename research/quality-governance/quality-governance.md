@@ -1,10 +1,8 @@
 ---
 author: Vitaly Sharovatov
-status: structure draft
+status: work in progress
 ---
 # Governance of quality
-
-<!-- Structure draft 2026-07-27. Each section carries a short description of its intended content; the meat comes after structure review. Working title and folder name provisional. Standards are paraphrased with clause references only; licensed text is never reproduced beyond fair use. -->
 
 ## What this research does
 
@@ -38,7 +36,7 @@ Repairing the four deficiencies buys four capabilities, one per deficiency, stat
 - **Structure:** the governing body sees one exposure picture in comparable units and sets its appetite vector deliberately; it can answer what it tolerates and why.
 - **Adoption:** AI adoption at a pace the organization can sustain: the debts named and watched, the countermeasures mandated and funded, the capacity to supervise, intervene and evolve retained.
 
-The capabilities land differently per seat, and no single reader can implement them alone; §7 carries the per-seat version: what each seat gains next to what each must do.
+The capabilities land differently per role, and no single reader can implement them alone; the practice page (listed in §7) will carry the per-role version: what each role gains next to what each must do.
 
 ## 2. Definitions
 
@@ -62,9 +60,11 @@ This section states the ordering thesis, which is definitional rather than good 
 This section applies the evaluate-direct-monitor cycle plus stakeholder engagement to the quality domain.
 
 - Flows down: purpose, value objectives, quality targets, risk appetite and acceptance thresholds, policy, delegation limits.
-- Flows up: evidence from testing and reviews, current exposures, acceptance decisions with their sign-offs, breaches and escapes.
+- Flows up: evidence from testing and reviews, current exposures, acceptance decisions with their sign-offs, breaches and escapes. The upward flow exists for two reasons: recalibration (evidence updates the policy and the appetite) and accountability (the body must be able to answer for what it tolerates).
 - One conversation at the top, three functions below: where QA, security and product management sit, and why the interface is the same for all three.
 - Economic decision rules are the operable form of policy and delegation: governance publishes the exchange rates (what a day of delay costs, what a unit of exposure reduction is worth), and teams decide locally within them without escalation. This is Reinertsen's device serving 38500's delegation element.
+- The interface runs as a never-ending loop: governance sets the policy (value objectives, risk appetite) from the whole picture; management turns it into the prioritized risk register and the work that holds the value-risk balance, deciding locally inside the published parameters; evidence and exposures flow back up; the policy gets updated. Economically, the loop is constrained optimization sustained over time: maximize value, subject to exposures staying within appetite.
+- Why the parameters are set at the top and nowhere else: the whole economic picture (the value side plus all three functions' exposures) can exist only at the level above all three, and any lower placement puts the owner of one term in charge of the sum: each silo's appetite would emerge from its own budget fights, and exchange rates would bend toward the function that sets them. Decisions are delegated inside the published parameters; parameter-setting and answerability are not.
 
 <!-- Interface diagram placeholder. -->
 
@@ -89,7 +89,7 @@ The two linked researches are not special cases of risk management; they are imp
 
 ## 6. The erosion thesis
 
-This section carries the research's own claim, the step §1 does not take: the problem statement establishes that the two debts grow; this section argues what their growth does to the governance system.
+This section carries the research's own claim, the step §1 does not take: the problem statement establishes that the two debts grow; this section argues what their growth does to the governance system. It is also where the purpose statement's "maintain" is defended: §4's loop keeps the clarity current, and this section argues what keeps the loop's own preconditions, comprehension and intent, alive.
 
 - AI-accelerated development does not merely add rows to the risk register. It erodes the organization's capacity to run the register at all: each step of the machinery depends on what the debts deplete. Risk identification needs intent (what could fail, and what failure would cost, cannot be named without knowing what the system is for); evidence evaluation needs comprehension (whether a check is credible evidence, and whether two checks are independent, cannot be judged without understanding what they exercise); review and rebalancing need both. The erosion reaches §3's value work too: intent debt manifests when decisions need to be made, and the value model is made of decisions.
 - The erosion holds only in the absence of countermeasures. Those are partly formulated in the ai-era-testing research (human-authored anchors, collaborative construction, the four conditions); this research states who mandates them, and its findings will feed back into updating ai-era-testing.
@@ -97,13 +97,16 @@ This section carries the research's own claim, the step §1 does not take: the p
 - The erosion also has a price in flow-economics vocabulary: comprehension debt raises the cost of change, and the cost of change is what makes future delay expensive. An organization that can no longer change fast and safely carries a higher effective cost of delay on everything it will ever ship. Cost of Quality accounting alone does not capture this term.
 - The consequence for the governing body: the question is no longer only "what are our risks" but "can our organization still know its risks".
 
-## 7. Putting it to work
+## 7. Research pages
 
-This section is the practice layer; its meat comes after the structure review. It carries the per-seat expansion of §1's four capabilities: what each seat gains next to what each must do, since no single seat can implement the system alone.
+Each section of this research gets its own page; the meat lands there, and links land here as the pages are written. Filenames are settled when drafting starts.
 
-- For governing bodies and executives: the parameters to set (value objectives for quality, risk appetite, oversight cadence, AI delegation limits) and the assurance to demand.
-- For QA and engineering leadership: what to supply upward (evidence, exposures, acceptance decisions) and how to run the two linked researches operationally underneath those parameters.
-- Possibly a short diagnostic: the signs that an organization has no quality governance.
+- Definitions.
+- Value first, risk second, including the value model (channels and measures).
+- The governance-management interface.
+- The management-layer implementations, with the two mapping tables.
+- The erosion thesis.
+- Putting it to work, per role (what each role gains next to what each must do): for governing bodies and executives, the parameters to set (value objectives for quality, risk appetite, oversight cadence, AI delegation limits) and the assurance to demand; for QA and engineering leadership, what to supply upward and how to run the two linked researches underneath those parameters; possibly a short diagnostic, the signs that an organization has no quality governance.
 
 ## 8. Scope and non-goals
 
@@ -118,7 +121,7 @@ This section is the practice layer; its meat comes after the structure review. I
 
 ## References
 
-Designations follow each standard's own: 37000, 31000 and 9000 are ISO standards with no IEC involvement; 38500, 38507 and 25010 are joint ISO/IEC standards from JTC 1. The mixed prefixes are deliberate.
+Designations follow each standard's own: 37000, 31000 and 9000 are ISO standards with no IEC involvement; 38500, 38507 and 25010 are joint ISO/IEC standards from JTC 1. The mixed prefixes are deliberate. Standards are paraphrased with clause references only; no licensed text is reproduced beyond fair use.
 
 - ISO 37000:2021, Governance of organizations
 - ISO/IEC 38500:2024, Information technology, Governance of IT for the organization
