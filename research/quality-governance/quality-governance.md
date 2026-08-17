@@ -65,7 +65,7 @@ The practice layer, per role: what each role gains next to what each must do; th
 ## 8. Scope and non-goals
 
 - In scope: governance of quality, and governance of the use of AI in building software.
-- Out of scope: governance of organizations in general (ISO 37000's territory), compliance management as such, and any reproduction of the standards, which are paraphrased with clause references.
+- Out of scope: governance of organizations in general (ISO 37000's territory), compliance management as such, security work (the same governance mechanism would serve it, but its standards are not studied in this research; it may be added later), and any reproduction of the standards, which are paraphrased with clause references.
 
 ## 9. Reading order
 
