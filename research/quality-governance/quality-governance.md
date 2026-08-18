@@ -40,7 +40,7 @@ The capabilities land differently per role, and no single reader can implement t
 
 ## 2. Definitions
 
-What governance is and is not: governance vs management per ISO/IEC 38500, why governance is not compliance, quality as a degree (which is what makes it governable at all), and the one-liner the research builds on. Page: [definitions.md](definitions.md).
+The vocabulary this research operates, taken from the standards and explained in simple words: governance, the governing body, management, accountability, risk appetite, compliance (including why governance is not compliance), quality as a degree (which is what makes it governable at all), and the working definition the research builds on. Page: [definitions.md](definitions.md).
 
 ## 3. Value first, risk second
 
