@@ -62,7 +62,9 @@ The standard does not support the synonym. Compliance appears in ISO/IEC 38500 i
 
 ## Quality
 
-ISO 9000 and ISO/IEC 25010 define quality as a degree: the degree to which what is produced matches the stated and implied needs of users and customers. "Degree" is the load-bearing word. Because quality is a degree, "how well" is a variable, and a variable needs someone to set it. Every organization sets it somehow: deliberately, as a decision with an owner and a rationale, or implicitly, as the residue of budget fights and shipping pressure. The problem statement's observations are what the implicit version looks like. That quality is a degree is also what makes it governable at all: there is a level to choose, a price attached to choosing it, and someone who must answer for the choice.
+ISO/IEC 25010:2011 defines the quality of a system as the "degree to which the system satisfies the stated and implied needs of its various stakeholders, and thus provides value" (3.1).
+
+"Degree" is the load-bearing word. Because quality is a degree, "how well" is a variable, and a variable needs someone to set it. Every organization sets it somehow: deliberately, as a decision with an owner and a rationale, or implicitly, as the residue of budget fights and shipping pressure. The problem statement's observations are what the implicit version looks like. That quality is a degree is also what makes it governable at all: there is a level to choose, a price attached to choosing it, and someone who must answer for the choice. Satisfying the needs "thus provides value": the value side sits inside the definition of quality itself, and [value.md](value.md) builds on exactly this.
 
 ## The working definition
 
