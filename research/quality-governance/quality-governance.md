@@ -44,7 +44,7 @@ The vocabulary this research operates, taken from the standards and explained in
 
 ## 3. Value first, risk second
 
-The ordering thesis, definitional rather than good practice: risk is the effect of uncertainty on objectives, so the value work sets objectives before risks can be derived. The value model (the degrees to target and what holding them is worth over time, with cost of delay as the time term) lives on the same page. Page: [value.md](value.md).
+The ordering thesis, definitional rather than good practice: risk is the effect of uncertainty on objectives, so the value work sets objectives before risks can be derived. The value model (the degrees to target and what reaching and holding them is worth to the company) lives on the same page. Page: [value.md](value.md).
 
 ## 4. The governance-management interface for quality
 
@@ -87,7 +87,7 @@ Designations follow each standard's own: 37000, 31000 and 9000 are ISO standards
 - Deming, W. E., *Out of the Crisis*, MIT Press. The fourteen points (pp. 23-24) ground §1's top-management condition: point 2 has Western management taking on leadership for change, and point 14 makes the transformation everybody's job.
 - Goodhart, C. A. E. (1975), "Problems of Monetary Management: The UK Experience", *Papers in Monetary Economics*, Reserve Bank of Australia. The original formulation behind Goodhart's law: an observed statistical regularity tends to collapse once pressure is placed upon it for control purposes.
 - Strathern, M. (1997), "'Improving ratings': audit in the British University system", *European Review*, 5(3), 305-321. The usual source of the popular phrasing of Goodhart's law, "when a measure becomes a target, it ceases to be a good measure", paraphrased in §1.
-- Reinertsen, D. G. (2009), *The Principles of Product Development Flow: Second Generation Lean Product Development*. Grounds the cost-of-delay and single-currency economics in §3, the economic decision rules in §4, and the delay price of erosion in §6.
+- Reinertsen, D. G. (2009), *The Principles of Product Development Flow: Second Generation Lean Product Development*. Grounds the economic decision rules in §4 and the delay price of erosion in §6.
 - Rust, R. T., Zahorik, A. J., Keiningham, T. L. (1995), "Return on Quality (ROQ): Making Service Quality Financially Accountable", *Journal of Marketing*, 59(2), 58-70. §3's financial-accountability grounding: quality is an investment, it is possible to spend too much, not all quality expenditures are equally valid.
 - Rust, R. T., Moorman, C., Dickson, P. R. (2002), "Getting Return on Quality: Revenue Expansion, Cost Reduction, or Both?", *Journal of Marketing*, 66(4), 7-24. §3's revenue-expansion finding.
 - Kano, N., Seraku, N., Takahashi, F., Tsuji, S. (1984), "Attractive Quality and Must-Be Quality", *Journal of The Japanese Society for Quality Control*, 14(2), 147-156. §3's must-be/attractive split.
