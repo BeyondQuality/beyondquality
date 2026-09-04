@@ -2,6 +2,7 @@
 discussion: 28
 author: Lilia Abdulina
 collaborators: Vitaly Sharovatov
+video: 7yBMAVeBv6E
 ---
 # QA in the Age of AI-Accelerated Development
 
