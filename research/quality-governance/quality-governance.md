@@ -48,7 +48,7 @@ The ordering thesis, definitional rather than good practice: risk is the effect 
 
 ## 4. The governance-management interface for quality
 
-What flows down (purpose, value objectives, quality targets, risk appetite, policy, delegation limits), what flows up (evidence, exposures, acceptance decisions, breaches) and why, the never-ending loop the interface runs as, and why the parameters are set at the top and nowhere else. Page: [interface.md](interface.md).
+What flows down (purpose, value objectives, quality targets, risk appetite, policy, delegation limits), what flows up (evidence, exposures, acceptance decisions, breaches) and why, and the never-ending loop the interface runs as; why the parameters are set at the top and nowhere else is argued on [value.md](value.md). Page: [interface.md](interface.md).
 
 ## 5. The management-layer implementations
 

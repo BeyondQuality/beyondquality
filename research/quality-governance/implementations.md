@@ -14,7 +14,8 @@ The two linked researches are not special cases of risk management; they are imp
 - Breadth caveat: this covers the product-quality slice of risk governance; cyber, financial and legal risk governance sit outside it.
 - Once the value model exists, the framework also implements value generation for quality.
 
-<!-- Mapping table placeholder: four-step loop to 38500 principles and framework elements. -->
+<!-- Mapping table placeholder: four-step loop to 38500 principles and framework elements.
+TODO (promised by interface.md, "The loop"): the mapping of the four-step loop onto the interface. Which step consumes which part of the statement (quality targets and the bets, Part 3; risk tolerances and escalation sizes, Part 6; the common rule, Part 5; the required minimums, Part 4), and which step produces which of the five kinds of reports (bet checks, current risk sizes, accepted risks with sign-offs, breaches and warnings, proposals). -->
 
 ## AI-era testing: maintaining governance when AI writes the software
 
