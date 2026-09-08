@@ -55,6 +55,51 @@ Return-on-quality researchers built their approach on four assumptions (Rust, Za
 
 In a firm-level study, firms leading with revenue expansion outperformed firms leading with cost reduction and firms attempting both at once (Rust, Moorman and Dickson 2002). Empirically, the return concentrates on the value side.
 
+## How the top arrives at the statement
+
+The governing body writes the statement in a few working sessions with the heads of the departments. Each of them brings the numbers their department already tracks. The body brings the company's purpose, the place where it intends to win, and the minimums that law and contract set. Nothing has to be measured first.
+
+The body uses today's numbers for three things:
+- as the starting point, since every worth it estimates is a change against them;
+- as evidence of where the company earns its money today and where it loses it;
+- later, at each review, as the baseline it compares the new numbers with.
+
+The body gets from these inputs to a written statement in eight steps. The numbers stay estimates throughout. At each review the body recalibrates them and brings them up to date. They never become precise, and they do not have to.
+
+**Step 1. Whose needs.** The body lists everyone whose needs the product has to satisfy:
+- each customer segment;
+- the regulators and authorities the company answers to (tax, data protection, safety);
+- the partners whose systems connect to the product;
+- the company itself, which needs a system that stays quick and safe to change.
+
+Under each of them the body writes down what that party needs from the product. Where a law, a regulation, a contract or an SLA sets a minimum for a need, the body marks that need as a required minimum. Nothing is dropped at this step; the body sorts the list in step 3. The standards ask for the same list: the governing body identifies and engages the internal and external stakeholders (38500 6.2.1), and it defines the value objectives by identifying the stakeholder groups and their expectations (37000 6.2.3.2).
+
+**Step 2. Today's numbers.** Each department states its current numbers, in its own units: customer success its churn and renewals, sales its win rates and discount depth, engineering its outages and rework, and so on (the statement's Part 2 lists the numbers with their owners). Nobody converts anyone else's numbers into their own. Each department keeps its numbers and answers for them. These numbers are the starting point: every level the body considers in step 5 is a change against them.
+
+**Step 3. Two tiers, value first.** Not every need gets a bet of its own. The body sorts the list by what is at stake. The needs where the company intends to win, according to its purpose and strategy, each get a bet. So do the needs the department heads expect to matter for their numbers soon ("enterprise deals are stalling on reliability questions"). Every other need is covered by the common rule, described after the statement: kept as good as products of this kind usually are, with no extra money spent on purpose. Past incidents and lost deals are evidence in this sorting, but a list of past damage alone would be the register of threats again, with the value side missing. No need is left off both lists, because a need on neither would get its level from the budget fights again. The whole list is covered and only the detail is rationed by the stakes: a full bet on every need would be spending too much on the model itself.
+
+**Step 4. Where the return would show.** For each need that gets a bet, and before anyone estimates anything, the body decides where better quality on that need would show up in the company's numbers:
+- in customers kept and a trust record that stays clean;
+- in deals won and a price that holds;
+- in a system that is quicker and safer to change;
+- for a required minimum, in a licence kept and fines avoided.
+
+The body then knows which department to ask about the worth in step 6. Ask the wrong department and the answer is wrong. Sales, asked what availability is worth, may say that nobody raises it in demos, while customer success knows the two renewals lost over last year's outages.
+
+**Step 5. Candidate levels, in both directions.** For each need with a bet, the body writes down two or three levels it could set instead of today's, some above it and some below. Lowering is a real option: a level held higher than it is worth costs money the company could keep (the four nines on an internal tool, from the availability example). For each candidate level, the people who would do the work of holding it estimate what it would cost. For most needs that is engineering; for the response time on support tickets it is the support team. They give a range, or an order of magnitude. If they cannot say closer than tenfold, the range is written down that wide. The width of the range is the uncertainty of that bet, and the body narrows it at each review as the actual costs become known.
+
+**Step 6. The worth conversation.** This is the heart of the method. For each candidate level, the department chosen in step 4 states what that level would win or protect over the coming period, as a range, in its own units. Customer success might state three to five accounts a year that it would otherwise lose. Sales might state two to four stalled enterprise deals unblocked. Engineering, for a need of internal quality, might state a third less rework in the areas it changes most. The owner is forecasting, and the forecast is the bet. At the review date the owner puts the actual number next to the range and explains the difference. Nobody states a worth in numbers they do not own.
+
+**Step 7. Choose the levels.** For each need, the body puts the cost range of each candidate level next to the worth ranges stated for it. It raises the level step by step, as long as each step earns or protects more than it costs, and stops at the first step that would not. It lowers a level where holding it costs more than it protects, after the look-ahead described under the statement: a level that today's numbers do not justify may still be kept for where the company intends to win. For the required minimums, the body's choices are smaller: the margin to hold above the minimum, the spend on making sure it holds, and how close to it the company tolerates coming. The statement lists those under Part 4.
+
+**Step 8. Set the tolerances and the review dates.** For each bet, the body decides how far the level may fall short before that counts as a breach, and when the bet is reviewed. Then it looks at the whole set and decides how much risk of each kind the company accepts. How much of each kind depends on what is at stake. Where the damage would be catastrophic or irreversible (a data breach, a broken legal minimum), the tolerance is near zero and nothing happens without a sign-off. Where the damage is linear and recoverable (a feature delayed, a report slow), the tolerance is wide. The body also sets the size of problem above which management must escalate instead of deciding alone. These tolerances are the company's priorities written as numbers. Two companies with the same product would set them differently, because their stakes differ, and the same company resets them when its stakes change. Then the body writes everything down as the statement and publishes it.
+
+The body gives each need attention in proportion to what is at stake, in both directions. Where the stakes are high, it sets a narrow tolerance and a small escalation size, asks for more assurance, reviews earlier and spends more before problems appear. Where the stakes are small, it deliberately does little, and what it saves there it can spend on the big bets. The same limit holds for the biggest bet as for the smallest: it is possible to spend too much. ISO 37000 states this rule three times: limits of decision-making authority are applied in response to the assessed risk (4.2.2), the level of assurance scrutiny depends on the assessed risk (6.4.3.3 a), and limits of decision-making authority are based on the associated level of risk (6.8.3.2.2 b).
+
+**Who does what.** The governing body decides the levels, the tolerances and the escalation sizes, and it answers for the whole model (38500 6.1). Each department owns its numbers and answers for them. The people who would hold a level estimate its cost. Management works out the numbers of each daily case inside the published statement ([interface.md](interface.md), the decision rule).
+
+**When.** The body finishes all eight steps before anyone changes how quality work is done. Nobody looks backward until a review date. In step 4 the body only chooses whom to ask; in step 6 the owners place the bet. Nothing is measured until the review date, when the owner puts the actual number next to the range and the bet is settled ([interface.md](interface.md), what flows up).
+
 ## The statement
 
 The governing body writes the value model down as one short document, the statement. The statement says: which qualities the company bets on, and at what level; what holding each level is expected to earn or protect; the minimums law and contract require; one common rule for every quality the company did not bet on; and how much risk of each kind the company accepts. Once it is published, any team can decide its daily cases against these numbers without asking upward; how a team weighs a case is described in [interface.md](interface.md).
@@ -115,5 +160,3 @@ The value model is, in the end, a set of deliberate bets: the quality levels the
 ISO/IEC 38500 backs the placement with an obligation: accountability "remains with the governing body and cannot be delegated" (6.1). The measuring, the reporting, even the drafting of the model can be handed down; deciding the numbers, and answering for what quality is worth to the company, cannot.
 
 Setting the model once is not enough. Users' needs change, and so do the system and the company, so both questions must be asked again, regularly; 38500 states the concern as a principle, viability and performance over time (5.12). Some events do not wait for the regular date: when a new regulation, a market shift, a new kind of deal or a change of strategy changes the stakes, the top reopens the affected bets at once (6.2.2); the trigger list in the [economics research](../testing_economics/step4.md), step 4, already covers such events. The [interface](interface.md) loop is where the re-asking happens: the reports flow back up, and the targets and the numbers behind them get updated. People run that loop, and they can run it only while they understand the system and know what it is for; keeping both alive is the subject of [the erosion thesis](erosion.md).
-
-<!-- Section to come: the bet-making method, how the top arrives at the statement below. -->
