@@ -71,7 +71,7 @@ The practice layer, per role: what each role gains next to what each must do; th
 
 1. This hub.
 2. The section pages in order: [definitions.md](definitions.md), [value.md](value.md), [interface.md](interface.md), [implementations.md](implementations.md), [erosion.md](erosion.md), [practice.md](practice.md).
-3. [Economics of Testing](../testing_economics/testing_economics.md): the risk-governance and oversight machinery. Its AI-era addendum is planned.
+3. [Economics of Testing](../testing_economics/testing_economics.md): the risk-governance and oversight machinery. Its AI-era addendum, [Economics of testing in the AI era](../testing_economics/ai-era.md), is in progress.
 4. [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md): the two debts, the generative ratification loop, the four conditions, and the Direction 3 proposal.
 
 ## References
@@ -83,7 +83,7 @@ Designations follow each standard's own: 37000, 31000 and 9000 are ISO standards
 - ISO/IEC 38507:2022, Governance implications of the use of artificial intelligence by organizations
 - ISO 31000:2018, Risk management, Guidelines
 - ISO 9000:2015, Quality management systems, Fundamentals and vocabulary
-- ISO/IEC 25010, SQuaRE product quality model
+- ISO/IEC 25010:2011, SQuaRE, System and software quality models. The edition the definitions and value pages quote; later editions reword the definition of quality.
 - Deming, W. E., *Out of the Crisis*, MIT Press. The fourteen points (pp. 23-24) ground §1's top-management condition: point 2 has Western management taking on leadership for change, and point 14 makes the transformation everybody's job.
 - Goodhart, C. A. E. (1975), "Problems of Monetary Management: The UK Experience", *Papers in Monetary Economics*, Reserve Bank of Australia. The original formulation behind Goodhart's law: an observed statistical regularity tends to collapse once pressure is placed upon it for control purposes.
 - Strathern, M. (1997), "'Improving ratings': audit in the British University system", *European Review*, 5(3), 305-321. The usual source of the popular phrasing of Goodhart's law, "when a measure becomes a target, it ceases to be a good measure", paraphrased in §1.
