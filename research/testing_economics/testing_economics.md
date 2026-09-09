@@ -17,6 +17,8 @@ Testing fits this definition: it is an investment made today to reduce the proba
 
 Because testing is an economic investment, its return cannot be guaranteed. At best, we can estimate expected value: testing reduces the likelihood and impact of costly failures, but those failures may never occur. In that sense, testing is comparable to insurance or preventive healthcare: we spend resources today based on forecasts of risk and cost, to reduce exposure to larger, uncertain losses later.
 
+This research works out the cost side of the investment in money: what testing costs, and what the failures it prevents would cost. What a given level of quality is worth to the company, the value side, is decided above the testing portfolio, by the governing body, and this framework takes it as an input; the value model and the method for arriving at it are described in [Governance of quality](../quality-governance/value.md).
+
 **The Cost of Quality (CoQ) framework**
 
 The economics of testing can be described using the classic CoQ framework, which categorizes quality-related costs into four types:

@@ -14,7 +14,7 @@ The purpose of this research is to provide a tool (a framework) that allows orga
 
 It does three things:
 
-1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down (purpose, value objectives, risk appetite, policy) and what flows up (evidence, exposures, acceptance decisions).
+1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down (purpose, value objectives, risk appetite, delegation limits) and what flows up (bet checks, risk sizes, accepted risks, breaches and warnings, proposals).
 2. Positions two existing researches as management-layer implementations of this system for the quality domain: [Economics of Testing](../testing_economics/testing_economics.md) and [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md).
 3. Advances its own thesis: AI-accelerated development does not merely add risks for this system to process; it erodes the human capacities the system runs on unless deliberate countermeasures are taken. The countermeasures are partly formulated in the ai-era-testing research already, and this work will feed updates back into it; governance is the level where they get mandated.
 
@@ -32,7 +32,7 @@ The four observations are one information deficiency (no model of value or loss)
 Repairing the four deficiencies buys four capabilities, one per deficiency, stated as capabilities rather than outcome promises: what becomes possible and decidable, not what improves by how much.
 
 - **Information:** the organization can state what quality is worth to it and what it stands to lose; quality investment gets an objective function instead of a plea.
-- **Decision:** the speed-quality trade becomes a decision made inside published exchange rates, locally and without escalation; loudness stops being the tiebreaker.
+- **Decision:** the speed-quality trade becomes a decision made against the published statement, locally and without escalation, each case worked out from its numbers; loudness stops being the tiebreaker.
 - **Structure:** the governing body sees one exposure picture in comparable units and sets its appetite vector deliberately; it can answer what it tolerates and why.
 - **Adoption:** AI adoption at a pace the organization can sustain: the debts named and watched, the countermeasures mandated and funded, the capacity to supervise, intervene and evolve retained.
 
@@ -48,7 +48,7 @@ The ordering thesis, definitional rather than good practice: risk is the effect 
 
 ## 4. The governance-management interface for quality
 
-What flows down (purpose, value objectives, quality targets, risk appetite, policy, delegation limits), what flows up (evidence, exposures, acceptance decisions, breaches) and why, and the never-ending loop the interface runs as; why the parameters are set at the top and nowhere else is argued on [value.md](value.md). Page: [interface.md](interface.md).
+What flows down (purpose, value objectives, quality targets, risk appetite, delegation limits; written down together as the statement, they are the governance policy), what flows up (five kinds of reports: bet checks, the current size of each risk, accepted risks with sign-offs, breaches and warnings, proposals; the evidence itself stays below) and why, and the never-ending loop the interface runs as; why the parameters are set at the top and nowhere else is argued on [value.md](value.md). Page: [interface.md](interface.md).
 
 ## 5. The management-layer implementations
 
@@ -91,5 +91,5 @@ Designations follow each standard's own: 37000, 31000 and 9000 are ISO standards
 - Rust, R. T., Zahorik, A. J., Keiningham, T. L. (1995), "Return on Quality (ROQ): Making Service Quality Financially Accountable", *Journal of Marketing*, 59(2), 58-70. §3's financial-accountability grounding: quality is an investment, it is possible to spend too much, not all quality expenditures are equally valid.
 - Rust, R. T., Moorman, C., Dickson, P. R. (2002), "Getting Return on Quality: Revenue Expansion, Cost Reduction, or Both?", *Journal of Marketing*, 66(4), 7-24. §3's revenue-expansion finding.
 - Kano, N., Seraku, N., Takahashi, F., Tsuji, S. (1984), "Attractive Quality and Must-Be Quality", *Journal of The Japanese Society for Quality Control*, 14(2), 147-156. §3's must-be/attractive split.
-- DORA, *Accelerate State of DevOps Report 2019* (dora.dev). §3's speed channel: the speed-stability finding.
+- DORA, *Accelerate State of DevOps Report 2019* (dora.dev). §3's return from the system itself: the speed-stability finding.
 - [Economics of Testing](../testing_economics/testing_economics.md) and [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md), the two researches this hub links
