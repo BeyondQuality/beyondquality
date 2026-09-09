@@ -71,7 +71,7 @@ The practice layer, per role: what each role gains next to what each must do; th
 
 1. This hub.
 2. The section pages in order: [definitions.md](definitions.md), [value.md](value.md), [interface.md](interface.md), [implementations.md](implementations.md), [erosion.md](erosion.md), [practice.md](practice.md).
-3. [Economics of Testing](../testing_economics/testing_economics.md): the risk-governance and oversight machinery. Its AI-era addendum, [Economics of testing in the AI era](../testing_economics/ai-era.md), is in progress.
+3. [Economics of Testing](../testing_economics/testing_economics.md): the risk-governance and oversight machinery. Its AI-era addendum is planned.
 4. [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md): the two debts, the generative ratification loop, the four conditions, and the Direction 3 proposal.
 
 ## References
