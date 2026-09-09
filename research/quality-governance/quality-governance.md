@@ -15,7 +15,7 @@ The purpose of this research is to provide a tool (a framework) that allows orga
 It does three things:
 
 1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down (purpose, value objectives, risk appetite, delegation limits) and what flows up (bet checks, risk sizes, accepted risks, breaches and warnings, proposals).
-2. Positions two existing researches as management-layer implementations of this system for the quality domain: [Economics of Testing](../testing_economics/testing_economics.md) and [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md).
+2. Positions two existing researches: [Economics of Testing](../testing_economics/testing_economics.md) is the how for risk management in QA, and this research uses it as the resource for management; [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md) diagnoses the problem agents introduce, researches it and suggests one possible solution.
 3. Advances its own thesis: AI-accelerated development does not merely add risks for this system to process; it erodes the human capacities the system runs on unless deliberate countermeasures are taken. The countermeasures are partly formulated in the ai-era-testing research already, and this work will feed updates back into it; governance is the level where they get mandated.
 
 ## 1. Problem statement
@@ -52,7 +52,7 @@ What flows down (purpose, value objectives, quality targets, risk appetite, dele
 
 ## 5. The management-layer implementations
 
-The two linked researches as implementations of this governance system, each instantiating different parts: economics implements risk governance, oversight and performance; ai-era-testing implements maintaining governance and accountability when AI writes the software. Page: [implementations.md](implementations.md).
+The two linked researches set against this governance system. Economics of Testing is the how for risk management in QA: its four-step loop runs inside the parameters the statement publishes and produces most of what flows up, which serves risk governance, oversight and performance. QA in the Age of AI-Accelerated Development diagnoses the problem agents introduce, researches it and suggests one possible solution; its two debts and four conditions are read against the governance tasks and the AI clauses. Page: [implementations.md](implementations.md).
 
 ## 6. The erosion thesis
 
