@@ -142,7 +142,7 @@ The common rule leaves the judgment of what "normal" means to management. That d
 
 Today, management's local judgment silently sets the level for everything, including the qualities the business depends on. Under the statement, those qualities have explicit levels in their bets; management's judgment covers only the needs the top deliberately marked as low-stakes, and the top can take any need back by giving it a bet.
 
-Today, when product and QA argue whether something is good enough, there is no written criterion, so the argument is won simply by authority. Under the statement, the common rule is a written criterion both sides can point at: "this is below what products like ours do" becomes a grounded argument, and so does "this is already normal, extra polish here is not funded".
+Today, when product and QA argue whether something is good enough, there is no written criterion, so the argument is often won simply by authority. Under the statement, the common rule is a written criterion both sides can point at: "this is below what products like ours do" becomes a grounded argument, and so does "this is already normal, extra polish here is not funded".
 
 Today, when an unspoken level turns out wrong, nobody answers for it, because nobody ever set it. Under the statement, the top answers for the common rule itself, management answers for keeping to it, and if one function quietly lowers the bar under deadline pressure, the damage shows up in other departments' numbers, which now reach the top together.
 
