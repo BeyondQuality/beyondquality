@@ -63,7 +63,7 @@ Each department reports its own actual numbers, the same numbers it answered for
 
 ## The loop
 
-Run continuously, the interface is a loop. The top sets the parameters in the statement, from the whole picture. Management turns them into work: it pursues the quality targets, runs the prioritized risk register, and decides the everyday cases inside the published parameters. The four-step loop of [Economics of Testing](../testing_economics/testing_economics.md) is exactly this machinery; [implementations.md](implementations.md) carries the mapping.
+Run continuously, the interface is a loop. The top sets the parameters in the statement, from the whole picture. Management turns them into work: it pursues the quality targets, runs the prioritized risk register, and decides the everyday cases inside the published parameters. The four-step loop of [Economics of Testing](../testing_economics/testing_economics.md) is that machinery on the quality side; [implementations.md](implementations.md) describes it step by step, as it runs today and as it changes when the governing body takes part.
 
 The reports flow back up and go to two places:
 - The bet checks and the proposals go into the reevaluation, where the top corrects the statement's numbers (otherwise they stay last year's guesses) and changes the set of bets. This half returns to [value.md](value.md), where the regular re-asking lives.
