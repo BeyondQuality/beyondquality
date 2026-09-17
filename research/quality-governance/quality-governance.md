@@ -36,7 +36,7 @@ Repairing the four deficiencies buys four capabilities, one per deficiency, stat
 - **Structure:** the governing body sees one exposure picture in comparable units and sets its appetite vector deliberately; it can answer what it tolerates and why.
 - **Adoption:** AI adoption at a pace the organization can sustain: the debts named and watched, the countermeasures mandated and funded, the capacity to supervise, intervene and evolve retained.
 
-The capabilities land differently per role, and no single reader can implement them alone; the [practice page](practice.md) will carry the per-role version: what each role gains next to what each must do.
+The capabilities land differently per role, and no single reader can implement them alone; the [practice page](practice.md) carries the per-role version: what each role gains next to what each must do.
 
 ## 2. Definitions
 
@@ -58,9 +58,9 @@ The two linked researches set against this governance system. Economics of Testi
 
 The research's own claim: AI-accelerated development erodes the capacity to run the machinery above unless countermeasures are mandated and funded, and this is where the purpose statement's "maintain" is defended. Page: [erosion.md](erosion.md).
 
-## 7. Putting it to work
+## 7. What each role does and gains
 
-The practice layer, per role: what each role gains next to what each must do; the parameters governing bodies set, what QA and engineering leadership supply upward, possibly a short diagnostic. Page: [practice.md](practice.md).
+Per role, what each does with the statement and what each gains: the governing body, every department head, product leadership, engineering leadership and QA leadership. Why no single role can put the system in place alone; what a board receives about quality today, a certificate, against the assurance it needs; why nobody outside the company will demand the interface, with cyber security as the case where regulation did; and seven questions anyone can ask in their own company. Page: [practice.md](practice.md).
 
 ## 8. Scope and non-goals
 
@@ -92,4 +92,5 @@ Designations follow each standard's own: 37000, 31000 and 9000 are ISO standards
 - Rust, R. T., Moorman, C., Dickson, P. R. (2002), "Getting Return on Quality: Revenue Expansion, Cost Reduction, or Both?", *Journal of Marketing*, 66(4), 7-24. §3's revenue-expansion finding.
 - Kano, N., Seraku, N., Takahashi, F., Tsuji, S. (1984), "Attractive Quality and Must-Be Quality", *Journal of The Japanese Society for Quality Control*, 14(2), 147-156. §3's must-be/attractive split.
 - DORA, *Accelerate State of DevOps Report 2019* (dora.dev). §3's return from the system itself: the speed-stability finding.
+- U.S. Securities and Exchange Commission (2023), press release 2023-139, "SEC Adopts Rules on Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure by Public Companies", 26 July 2023; Regulation S-K, Item 106. §7's case of a board-level interface built by regulation: public companies describe in their annual reports on Form 10-K the board's oversight of risks from cybersecurity threats, and management's role and expertise in assessing and managing them.
 - [Economics of Testing](../testing_economics/testing_economics.md) and [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md), the two researches this hub links
