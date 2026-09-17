@@ -1,6 +1,6 @@
 ---
 author: Vitaly Sharovatov
-status: draft
+status: done
 ---
 # What each role does and gains
 
