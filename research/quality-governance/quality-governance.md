@@ -14,7 +14,7 @@ The purpose of this research is to provide a tool (a framework) that allows orga
 
 It does three things:
 
-1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down (purpose, value objectives, risk appetite, delegation limits) and what flows up (bet checks, risk sizes, accepted risks, breaches and warnings, proposals).
+1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down (purpose, value objectives, quality targets, risk appetite, delegation limits) and what flows up (bet checks, risk sizes, accepted risks, breaches and warnings, proposals).
 2. Positions two existing researches: [Economics of Testing](../testing_economics/testing_economics.md) is the how for risk management in QA, and this research uses it as the resource for management; [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md) diagnoses the problem agents introduce, researches it and suggests one possible solution.
 3. Advances its own thesis: AI-accelerated development does not merely add risks for this system to process; it erodes the human capacities the system runs on unless deliberate countermeasures are taken. The countermeasures are partly formulated in the ai-era-testing research already, and this work will feed updates back into it; governance is the level where they get mandated.
 

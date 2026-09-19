@@ -6,9 +6,9 @@ status: draft
 
 Part of [Governance of quality](quality-governance.md).
 
-This page describes what flows between the top and the two functions.
+This page describes what flows between the top and the departments below it.
 
-The interface is everything that passes between the top and the two functions: what flows down from governance, what flows up from product and quality, and who decides what along the way. Most companies already have the reporting lines. What is missing is the content: nothing flows up in comparable units, nothing flows down as stated appetite. (The same mechanism would serve any risk-bearing function, security included; this research develops it for quality and product only, see the [scope](quality-governance.md).)
+The interface is everything that passes between the top and the departments below it: what flows down from governance, what flows up from product and quality and from every department that answers for a number the top has published, and who decides what along the way. Most companies already have the reporting lines. What is missing is the content: nothing flows up in comparable units, nothing flows down as stated appetite. (The same mechanism would serve any risk-bearing function, security included; this research develops it for quality and product only, see the [scope](quality-governance.md).)
 
 ## What flows down
 
@@ -69,6 +69,6 @@ The reports flow back up and go to two places:
 - The bet checks and the proposals go into the reevaluation, where the top corrects the statement's numbers (otherwise they stay last year's guesses) and changes the set of bets. This half returns to [value.md](value.md), where the regular re-asking lives.
 - The risk sizes, the accepted risks and the breaches stay with the top as the record it answers from, to owners, auditors, regulators, or a court if it comes to that.
 
-Breaches go to both places: they correct the estimates, and they go on the record. The statement gets refreshed, and the loop runs again; it never ends by design. In economic terms, the company keeps maximizing value while keeping every exposure within its appetite. That is one half of the "maintain" promised in the research's [purpose statement](quality-governance.md): the loop keeps the numbers current. The other half, keeping the loop itself alive, is [the erosion thesis](erosion.md)'s subject.
+Breaches go to both places: they correct the estimates, and they go on the record. The statement gets refreshed, and the loop runs again; it never ends by design. In economic terms, the company keeps each level where its worth supports it, no higher and no lower, and every exposure within its appetite. That is one half of the "maintain" promised in the research's [purpose statement](quality-governance.md): the loop keeps the numbers current. The other half, keeping the loop itself alive, is [the erosion thesis](erosion.md)'s subject.
 
 <!-- Interface diagram placeholder. -->
