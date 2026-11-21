@@ -2,10 +2,9 @@
 
 Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
-Companion to [Preserving Human Intent with Tiden](proposal-tiden2.md).
+Companion to [Preserving Human Intent with Tiden](proposal-tiden.md).
 
-This plan sets out how to test the hypothesis in [Preserving Human Intent with Tiden](proposal-tiden2.md) empirically. An evaluation has to answer four questions. First, do explicitly stated human decisions, business reasons, and known unknowns survive and guide later work? Second, do session gates and in-session repair loops catch drift genuinely rather than collapsing into [testing theatre](evaluation.md#direction-1-inspection)? Third, where does code-level comprehension debt force manual debugging or allow [structural erosion](analysis-lifecycle.md)? Fourth, do the results justify the full multi-role operating cost?
-[agy: these opening questions - do they "match" what we had promised ourselves in the proposal-tiden2.md? ]
+This plan sets out how to test the hypothesis in [Preserving Human Intent with Tiden](proposal-tiden.md) empirically. An evaluation has to answer four questions. First, do explicitly stated human decisions, business reasons, and known unknowns survive and guide later work? Second, do session gates and in-session repair loops catch drift genuinely rather than collapsing into [testing theatre](evaluation.md#direction-1-inspection)? Third, where does code-level comprehension debt force manual debugging or allow [structural erosion](analysis-lifecycle.md)? Fourth, do the results justify the full multi-role operating cost?
 
 ---
 
@@ -20,19 +19,19 @@ Four groups of outcome measures test the claims and risks in the proposal:
 
 2. **Behavioural adherence, gate behaviour, and mechanism attribution.**
    - System behaviour checked against an independent ground-truth test suite, separating **first-pass prevention** (the initial code already conforms thanks to injected context) from **in-session detection and repair** (mistakes caught by session gates and fixed before hand-off).
-   - Attribution across the stages of Tiden's [operating model](proposal-tiden2.md#2-the-operating-model):
+   - Attribution across the stages of Tiden's [operating model](proposal-tiden.md#2-the-operating-model):
      - *Retrieval recall and precision:* how well pre-coding text matching and post-edit file-anchor tracking pull in relevant specs and miss others, and how much irrelevant spec clutter enters the session.
      - *Hard session-close blocks:* how often session close refuses completion on missing settlement, undecided touched specs, missing or failing tests on touched and one-hop neighbour specs, or unfulfilled session promises (when strict promise enforcement is enabled), and whether the agent resolves each block cleanly. Also track whether a blocked branch quality gate leads to follow-up repair or stays unresolved.
      - *Advisory checks:* how often file-scope drift checks and current-session LLM decision checks flag a problem, and whether the agent or engineer fixes the issue or closes past the warning.
      - *Escape hatches and false-green tests:* independent audit of every promise waiver, risk acceptance, neighbour test deferral, and claim that a touched spec needs no text update, separating valid reasons from rubber-stamped excuses. Also count **false-green test links**, where a linked test passes in the runner while failing to check, or inverting, what the spec requires.
 
 3. **Supervision, intervention, and structural health under comprehension debt.**
-   - *Manual diagnosis when repairs stall or bugs escape* (matching the [comprehension scope](proposal-tiden2.md#scope) and [the collaborative-building experiment](proposal.md#5-experimental-program)): fault-localisation accuracy, human minutes spent reading unfamiliar agent-generated code, number of human repair instructions, and total time to fix a multi-module bug when agent repair gets stuck or a defect escapes past session close.
+   - *Manual diagnosis when repairs stall or bugs escape* (matching the [comprehension scope](proposal-tiden.md#scope) and [the collaborative-building experiment](proposal.md#5-experimental-program)): fault-localisation accuracy, human minutes spent reading unfamiliar agent-generated code, number of human repair instructions, and total time to fix a multi-module bug when agent repair gets stuck or a defect escapes past session close.
    - *Predicting behaviour without reading code:* how accurately supervising engineers predict edge-case behaviour on new inputs using specs and session reports alone.
    - *Longitudinal structural erosion* (tracking the SlopCodeBench pattern in [the lifecycle analysis](analysis-lifecycle.md)): code verbosity, duplication, complexity concentration, and architectural boundary violations across sequential feature checkpoints. This tests whether external behavioural specs and functional tests allow internal code structure to decay unless architectural rules or code review step in.
 
 4. **Complete cost, role load, and delivery.**
-   - *Model and tool spend:* total input and output tokens, model inference spend across context injection, refreshes, LLM checks, settlement, and repair retries, plus Tiden licensing fees. Report all costs per task and sprint alongside the control group ([economics argument](proposal-tiden2.md#4-the-economics-argument)).
+   - *Model and tool spend:* total input and output tokens, model inference spend across context injection, refreshes, LLM checks, settlement, and repair retries, plus Tiden licensing fees. Report all costs per task and sprint alongside the control group ([economics argument](proposal-tiden.md#4-the-economics-argument)).
    - *Human effort and waiting time by role:* active minutes and queue delays logged separately for **Product**, **QA**, and **Engineering** participants to test the 5:1 QA ratio and shared-product-specialist assumptions directly.
    - *Time by activity:* authoring or updating specs, answering mid-session clarifications, **reviewing both intent-branch spec diffs and session-close hand-off reports** (where risk acceptances and neighbour test deferrals appear), auditing spec-to-test links, cleaning up brownfield inferred specs, setting up test reporters or JSON report bridges, manual testing, and manual code debugging.
    - *Concurrency friction, rework, and throughput:* file-overlap alerts across parallel sessions, spec and code merge conflicts, untracked Git commits merged outside Tiden, fraction of fixes that introduce new regressions elsewhere, CI runtime and flake rate as agent-written tests accumulate, and total completed, independently verified changes per sprint.
@@ -52,7 +51,7 @@ The first controlled trial holds team setup constant across two groups:
 
 Both groups receive the exact same initial business rules, stated reasons, rejected alternatives, planned corrections, and authorised policy revisions. To avoid a strawman comparison against undocumented chat, the `Existing workflow` group records those same inputs in structured Markdown specs, ADRs, and CI tests.
 
-To test staffing tradeoffs and whether synchronous and asynchronous approaches complement each other ([open research questions](proposal-tiden2.md#6-open-research-questions)), a follow-up study compares four configurations:
+To test staffing tradeoffs and whether synchronous and asynchronous approaches complement each other ([open research questions](proposal-tiden.md#6-open-research-questions)), a follow-up study compares four configurations:
 
 1. **Solo engineer + existing workflow** (disciplined repository specs, ADRs, and CI).
 2. **Solo engineer + Tiden** (asynchronous Product and QA spec collaboration plus session gates).
@@ -83,7 +82,7 @@ Record the exact tool and workflow settings that affect enforcement: Tiden CLI a
 
 ### Optional Stage 0: Brownfield onboarding probe
 
-For experiments on established codebases ([operating model](proposal-tiden2.md#2-the-operating-model)), start from a working application seeded with one subtle pre-existing bug (where current code diverges from intended domain policy) and one undocumented rule whose original business reason does not appear in code. Run Tiden's code-to-spec inference and existing test import, then observe normal human review before feature work begins.
+For experiments on established codebases ([operating model](proposal-tiden.md#2-the-operating-model)), start from a working application seeded with one subtle pre-existing bug (where current code diverges from intended domain policy) and one undocumented rule whose original business reason does not appear in code. Run Tiden's code-to-spec inference and existing test import, then observe normal human review before feature work begins.
 
 Measure whether reviewers spot and fix the inferred bug or rubber-stamp it into "human-confirmed" baseline intent, whether unrecorded historical reasons stay marked as unknown rather than invented, and how much human time goes into spec cleanup, test-link checking, and test-runner setup.
 
@@ -166,6 +165,6 @@ Set practical effect-size thresholds before running the main comparison, report 
 
 ---
 
-← [Preserving Human Intent with Tiden](proposal-tiden2.md) | Next: [Industry-response evaluation](evaluation.md) →
+← [Preserving Human Intent with Tiden](proposal-tiden.md) | Next: [Industry-response evaluation](evaluation.md) →
 
 See also: [Collaborative-building proposal](proposal.md), [Research question](analysis-research-question.md), [Research hub](analysis.md).

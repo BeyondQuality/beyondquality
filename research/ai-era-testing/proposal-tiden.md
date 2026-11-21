@@ -4,7 +4,7 @@ Discussion: https://github.com/BeyondQuality/beyondquality/discussions/28
 
 This document proposes a Direction 3 approach (shaping the construction process itself rather than inspecting agent output after the fact): an asynchronous workflow for product, QA, and engineering specialists working with coding agents around [Tiden](https://tiden.ai/). Against our [research question](analysis-research-question.md), it aims to satisfy the intent and lifecycle conditions directly: preventing intent debt during construction for explicitly stated decisions, producing human-authored anchors for tests and documentation, and keeping those anchors coherent through maintenance and team turnover (the lifecycle gap left open by synchronous [collaborative building](proposal.md)). On comprehension, it accepts that line-by-line code comprehension debt will accumulate, and tests whether supervising and gating agents through specs and verification evidence keeps human understanding sufficient to supervise, intervene, and evolve the system.
 
-**Disclosure and evaluation commitment:** Vitaly Sharovatov, a contributor to this research, works at Qase as a developer advocate, and discussions within this research helped inform Qase's development of Tiden. This proposal sets out an open evaluation of whether the Tiden workflow actually satisfies those conditions, following the companion [Tiden evaluation plan](tiden-evaluation2.md). We plan to publish evaluation methods, benchmarks, and results as the work progresses, including negative and inconclusive findings, and to release experiment code as open source where feasible. We invite criticism, collaboration, and application of the evaluation framework to other tools and processes addressing the same problems.
+**Disclosure and evaluation commitment:** Vitaly Sharovatov, a contributor to this research, works at Qase as a developer advocate, and discussions within this research helped inform Qase's development of Tiden. This proposal sets out an open evaluation of whether the Tiden workflow actually satisfies those conditions, following the companion [Tiden evaluation plan](tiden-evaluation.md). We plan to publish evaluation methods, benchmarks, and results as the work progresses, including negative and inconclusive findings, and to release experiment code as open source where feasible. We invite criticism, collaboration, and application of the evaluation framework to other tools and processes addressing the same problems.
 
 ---
 
@@ -26,7 +26,7 @@ This motivates investigating an asynchronous configuration built around [Tiden](
 
 ## Scope
 
-This document sets out a testable hypothesis and its operating model; empirical validation belongs to the companion [Tiden evaluation plan](tiden-evaluation2.md). Five boundaries define its scope:
+This document sets out a testable hypothesis and its operating model; empirical validation belongs to the companion [Tiden evaluation plan](tiden-evaluation.md). Five boundaries define its scope:
 
 - **One concrete tool and process:** This proposal examines a specific asynchronous workflow around Tiden wrapping an external coding agent, not asynchronous or spec-driven development in general.
 - **Asynchronous team setting:** It focuses on engineers working in separate agent-assisted sessions with shared Product and QA support. Synchronous multi-role building is covered in the [collaborative-building proposal](proposal.md); combining the two is left as a comparison arm rather than developed here.
@@ -49,7 +49,7 @@ The hypothesis predicts four effects from introducing Tiden into the workflow:
 - **Reasoning and known unknowns remain usable across sessions.** A later engineer or newcomer can inspect not only an active rule, but also the stated rationale, rejected alternatives, accepted tradeoffs, and whether a reason was never recorded, even when the original decision-makers have rotated out.
 - **Specialists coordinate asynchronously around one operational record.** Product, QA, and engineering contributors can author constraints, test expectations, and corrections asynchronously without attending every coding session live, while each developer's agent receives applicable requirements and file-overlap alerts across concurrent sessions.
 
-For these effects to hold in practice, captured records must represent human intent without fabricating rationale, retrieval must surface the right obligations before and during edits, linked tests must genuinely falsify violations of those specs, and agents must repair real discrepancies rather than routing around gates through weak assertions or rubber-stamped waivers. Section 2 details how Tiden's operating model structures those steps, Section 4 weighs the proposed economic savings against offsetting costs and failure modes, and the [evaluation plan](tiden-evaluation2.md) tests each link in the chain.
+For these effects to hold in practice, captured records must represent human intent without fabricating rationale, retrieval must surface the right obligations before and during edits, linked tests must genuinely falsify violations of those specs, and agents must repair real discrepancies rather than routing around gates through weak assertions or rubber-stamped waivers. Section 2 details how Tiden's operating model structures those steps, Section 4 weighs the proposed economic savings against offsetting costs and failure modes, and the [evaluation plan](tiden-evaluation.md) tests each link in the chain.
 
 ---
 
@@ -102,7 +102,7 @@ When a hard block refuses close, Tiden returns the exact open test gaps or undec
 
 Settlement writes proposed spec updates, atomic decision records, and branch test-link declarations to the session's **Tiden intent branch** rather than overwriting canonical main, and links the Git pull request to that branch. Human review spans two complementary surfaces: Tiden's intent-branch diff preview displays **spec-tree changes only**, whereas risk acceptances and neighbour test deferrals sit on the **session record and session-close hand-off report**. Reviewers must check both surfaces if waived or deferred test gaps are to be caught before merge ([intent capture](https://docs.tiden.ai/docs/how-to/configure-agents#set-up-intent-capture), [branches](https://docs.tiden.ai/docs/product/branches)).
 
-Continuity across turns and sessions depends on the coding-agent host. **Claude Code and Codex** (once the user approves hook trust in Codex) support lifecycle hooks that surface unfinished intents on prompts, block agents from truncating Tiden CLI output, and warn before ending a turn with unchecked verification; Claude Code also restores working contracts after restarts or context compaction. Hosts without equivalent hook APIs, such as **Cursor, Gemini, and Copilot**, rely on skill instructions and passive session-end or post-commit capture. No host hook locks an engineer out of editing unrelated files; hard refusals happen only when CLI gate commands run. How reliably enforcement holds across turns and hosts is tested directly in the [evaluation plan](tiden-evaluation2.md#questions-for-the-experimental-program).
+Continuity across turns and sessions depends on the coding-agent host. **Claude Code and Codex** (once the user approves hook trust in Codex) support lifecycle hooks that surface unfinished intents on prompts, block agents from truncating Tiden CLI output, and warn before ending a turn with unchecked verification; Claude Code also restores working contracts after restarts or context compaction. Hosts without equivalent hook APIs, such as **Cursor, Gemini, and Copilot**, rely on skill instructions and passive session-end or post-commit capture. No host hook locks an engineer out of editing unrelated files; hard refusals happen only when CLI gate commands run. How reliably enforcement holds across turns and hosts is tested directly in the [evaluation plan](tiden-evaluation.md#questions-for-the-experimental-program).
 
 Merging a finished intent branch applies its proposed spec updates, decision records, and test links to canonical main. Because settlement updates behavioural spec prose when code changes, keeping explicit human decision records separate from code-synchronised spec descriptions is essential: updating a record, authorising a policy change, and passing tests are distinct events whose interaction must be tested empirically.
 
@@ -148,7 +148,7 @@ The [lifecycle analysis](analysis-lifecycle.md) describes how self-referential a
 
 As in the [collaborative-building proposal](proposal.md#from-tests-to-all-lifecycle-artifacts), breaking that loop requires anchoring downstream artifacts in human-confirmed intent rather than code surface. Tiden aims to provide that external anchor by storing human-stated specs and atomic decision records separately from repository code.
 
-Because settlement updates touched spec prose when code changes, keeping explicit human decision records (with human-versus-agent provenance and quoted rationale) separate from behavioural spec descriptions prevents routine code edits from quietly overwriting the recorded "why". Human review of intent branches and hand-off reports before merge remains the primary safeguard against ratifying a buggy implementation into canonical specs, a boundary tested directly in the [evaluation plan](tiden-evaluation2.md#unit-and-time-horizon).
+Because settlement updates touched spec prose when code changes, keeping explicit human decision records (with human-versus-agent provenance and quoted rationale) separate from behavioural spec descriptions prevents routine code edits from quietly overwriting the recorded "why". Human review of intent branches and hand-off reports before merge remains the primary safeguard against ratifying a buggy implementation into canonical specs, a boundary tested directly in the [evaluation plan](tiden-evaluation.md#unit-and-time-horizon).
 
 ### Corrections and revised decisions change future work
 
@@ -202,7 +202,7 @@ An empirical evaluation must test four linked questions: whether explicitly stat
 
 The first experiment isolates what Tiden adds by keeping everything else equal. Two groups run the same tasks with the same coding agent, model, and access to Product and QA specialists: one group uses Tiden and the control group does not. To avoid a strawman comparison against undocumented chat, the control group records the exact same human decisions, reasons, and revisions in standard repository files (Markdown specs, ADRs, `CLAUDE.md`, and CI tests). That tests whether Tiden's context injection, file-anchor tracking, and session-close gates outperform disciplined repository documentation alone.
 
-Testing organisational staffing claims requires extending beyond that two-arm baseline to a four-way comparison across solo existing workflow, solo with Tiden, synchronous [collaborative building](proposal.md), and collaborative building paired with Tiden, complemented by a targeted sub-comparison of hook-enabled versus hookless coding-agent hosts. The companion [Tiden evaluation plan](tiden-evaluation2.md) specifies the outcome metrics, experimental controls, longitudinal stress scenarios, scoring rubrics, and falsification criteria.
+Testing organisational staffing claims requires extending beyond that two-arm baseline to a four-way comparison across solo existing workflow, solo with Tiden, synchronous [collaborative building](proposal.md), and collaborative building paired with Tiden, complemented by a targeted sub-comparison of hook-enabled versus hookless coding-agent hosts. The companion [Tiden evaluation plan](tiden-evaluation.md) specifies the outcome metrics, experimental controls, longitudinal stress scenarios, scoring rubrics, and falsification criteria.
 
 ---
 
@@ -215,6 +215,6 @@ Testing organisational staffing claims requires extending beyond that two-arm ba
 
 ---
 
-← [Collaborative-building proposal](proposal.md) | Next: [Tiden evaluation plan](tiden-evaluation2.md) →
+← [Collaborative-building proposal](proposal.md) | Next: [Tiden evaluation plan](tiden-evaluation.md) →
 
 See also: [Research question](analysis-research-question.md), [Industry-response evaluation](evaluation.md), [Research hub](analysis.md).
