@@ -14,9 +14,9 @@ This research does two things:
 
 1. Diagnoses what changed qualitatively under agents: the two debts (comprehension, intent), the generative ratification loop, the Boehm-curve reshape. Explains why current industry responses (Direction 1/2 appraisal tools) hit structural ceilings.
 
-2. Formulates four conditions any solution has to satisfy, and advances one candidate (AI-enabled collaborative building) as a testable hypothesis.
+2. Formulates four conditions any solution has to satisfy and advances two candidates (AI-enabled collaborative building and supervision of coding agents with Tiden) as testable hypotheses.
 
-The proposal is not a settled answer; it is one Direction 3 candidate that needs empirical validation.
+Both Direction 3 proposals need empirical validation.
 
 ## Reading order
 
@@ -28,9 +28,11 @@ Each page has forward/back navigation in its footer.
 4. [analysis-lifecycle.md](analysis-lifecycle.md), what happens to compensation artifacts over time: the generative ratification loop
 5. [analysis-research-question.md](analysis-research-question.md), the asymmetry between the two debts; four conditions any solution must satisfy
 6. [proposal.md](proposal.md), AI-enabled collaborative building as one Direction 3 candidate
-7. [evaluation.md](evaluation.md), assessment of Direction 1/2 industry responses (Claude Code Review, JiTTests)
-8. [references.md](references.md), annotated sources
+7. [proposal-tiden.md](proposal-tiden.md), supervising coding agents through Tiden's shared specs and test gates as another Direction 3 candidate
+8. [tiden-evaluation.md](tiden-evaluation.md), empirical evaluation plan for the Tiden proposal
+9. [evaluation.md](evaluation.md), assessment of Direction 1/2 industry responses (Claude Code Review, JiTTests)
+10. [references.md](references.md), annotated sources
 
 ## Status
 
-Active research, emerging from discussion on [GitHub](https://github.com/BeyondQuality/beyondquality/discussions/28). The proposal is a hypothesis that needs empirical validation (see proposal §5). Everything here is open to critique and iteration.
+Active research, emerging from discussion on [GitHub](https://github.com/BeyondQuality/beyondquality/discussions/28). See the [collaborative building experimental program](proposal.md#5-experimental-program) and the [Tiden evaluation plan](tiden-evaluation.md) for how each hypothesis will be tested. Everything here is open to critique and iteration.

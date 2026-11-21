@@ -220,6 +220,6 @@ Any of these results would be informative. The third in particular would refine 
 
 ---
 
-← [Research Question](analysis-research-question.md) | Next: [Evaluation](evaluation.md) →
+← [Research Question](analysis-research-question.md) | Next: [Preserving Human Intent with Tiden](proposal-tiden.md) →
 
 See also: [analysis.md](analysis.md) (problem identification), [references.md](references.md) (annotated sources).
