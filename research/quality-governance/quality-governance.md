@@ -14,9 +14,9 @@ The purpose of this research is to provide a tool (a framework) that allows orga
 
 It does three things:
 
-1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down (purpose, value objectives, quality targets, risk appetite, delegation limits) and what flows up (bet checks, risk sizes, accepted risks, breaches and warnings, proposals).
+1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down inside one six-part statement (carrying purpose, value objectives and quality targets framed as deliberate bets, risk appetite and delegation limits alongside departmental baselines, required minimums and the common rule) and what flows up (bet checks, risk sizes with their evidence status, risks accepted in writing, breaches and warnings, and proposals to amend the statement, joined at reevaluation by refreshed departmental trends).
 2. Positions two existing researches: [Economics of Testing](../testing_economics/testing_economics.md) is the how for risk management in QA, and this research uses it as the resource for management; [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md) diagnoses the problem agents introduce, researches it and suggests one possible solution.
-3. Advances its own thesis: AI-accelerated development does not merely add risks for this system to process; it erodes the human capacities the system runs on unless deliberate countermeasures are taken. The countermeasures are partly formulated in the ai-era-testing research already, and this work will feed updates back into it; governance is the level where they get mandated.
+3. Advances its own thesis: AI-accelerated development does not merely add risks for this system to process; it erodes the human capacities the system runs on unless deliberate countermeasures are taken. The countermeasures are partly formulated in the ai-era-testing research already, and this work will feed updates back into it; governance is the level where the conditions and funding for them get mandated.
 
 ## 1. Problem statement
 
@@ -27,14 +27,14 @@ This section makes four observations and states their shared root.
 - **Quality work is governed in silos.** QA work, security work and product work run as separate functions with separate budgets and separate escalation paths, although a single body is accountable for all three and sets one purpose across them. Risk appetite legitimately differs across the three (a company may tolerate months without new features and not one security breach), but the differentiation is itself a decision of that one body, and today nobody makes it: each silo's tolerance emerges implicitly from its own budget fights. The reporting lines exist; a quality interface does not: nothing flows up in comparable units, nothing flows down as explicit appetite, and nobody compares the exposures.
 - **AI is being adopted into construction faster than it is being governed.** Companies hand code production to agents at a pace set by the market, and the adoption decision typically arrives with none of the instruments the AI-governance standard itself calls for: no human-oversight conditions, no delegation limits, no statement of appetite (ISO/IEC 38507). It is the speed-quality trade again, at the adoption scale: the speed side is visible and celebrated, the cost side is unpriced. Within this research's scope, the unpriced cost is knowledge: as agents take over construction, comprehension debt (the how) grows faster, and intent debt (the why) grows more slowly but is the harder one to recover.
 
-The four observations are one information deficiency (no model of value or loss), one decision deficiency (no common measure for time and quality, no owner of the whole), one structural deficiency (no interface where the sum could be owned), and the same decision deficiency repeated at the adoption scale, under an external dynamic that erodes the knowledge any fix would run on. The root: quality is treated as a set of management practices with nothing above them. The governing body's instruments (purpose, value objectives, risk appetite, delegation limits) are never explicitly connected to the quality work done below. The disconnect is self-reinforcing: organizational structure, incentive schemes, and the way processes and responsibilities are defined all shape one another, and together they produce the silos and the Goodhart's-law effects (a measure that becomes a target stops being a good measure) that keep each function optimizing its own numbers. This is why Deming's company-wide quality efforts only work when top management takes on leadership for the change, and why the governance standards make the same demand: governance starts from the very top, otherwise nothing works.
+The four observations are one information deficiency (no model of value or loss), one decision deficiency (no common measure for time and quality, no owner of the whole), one structural deficiency (no interface where the sum could be owned), and the same decision deficiency repeated at the adoption scale, under an external dynamic that erodes the knowledge any fix would run on. The root: quality is treated as a set of management practices with nothing above them. The governing body's instruments (purpose, value objectives, quality targets, risk appetite, delegation limits) are never explicitly connected to the quality work done below. The disconnect is self-reinforcing: organizational structure, incentive schemes, and the way processes and responsibilities are defined all shape one another, and together they produce the silos and the Goodhart's-law effects that keep each function optimizing its own numbers. This is why Deming's company-wide quality efforts only work when top management takes on leadership for the change, and why the governance standards make the same demand: governance starts from the very top, otherwise nothing works.
 
 Repairing the four deficiencies buys four capabilities, one per deficiency, stated as capabilities rather than outcome promises: what becomes possible and decidable, not what improves by how much.
 
 - **Information:** the organization can state what quality is worth to it and what it stands to lose; quality investment gets a case stated in money instead of a plea.
-- **Decision:** the speed-quality trade becomes a decision made against the published statement, locally and without escalation, each case worked out from its numbers; authority stops being the tiebreaker.
-- **Structure:** the governing body sees one exposure picture in comparable units and sets its appetite vector deliberately; it can answer what it tolerates and why.
-- **Adoption:** AI adoption at a pace the organization can sustain: the debts named and watched, the countermeasures mandated and funded, the capacity to supervise, intervene and evolve retained.
+- **Decision:** the speed-quality trade becomes a two-step check against the published statement, red lines checked first and inside them each case worked out from its numbers locally and without escalation; authority stops being the tiebreaker.
+- **Structure:** the governing body sees one exposure picture in comparable units and sets its risk appetite per kind of risk deliberately; it can answer what it tolerates and why.
+- **Adoption:** AI adoption at a pace the organization can sustain: the debts named and watched, the conditions set and the prevention funded, the capacity to supervise, intervene and evolve retained.
 
 The capabilities land differently per role, and no single reader can implement them alone; the [practice page](practice.md) carries the per-role version: what each role gains next to what each must do.
 
@@ -48,7 +48,7 @@ The ordering thesis, definitional rather than good practice: risk is the effect 
 
 ## 4. The governance-management interface for quality
 
-What flows down (purpose, value objectives, quality targets, risk appetite, delegation limits; written down together as the statement, they are the governance policy), what flows up (five kinds of reports: bet checks, the current size of each risk, accepted risks with sign-offs, breaches and warnings, proposals; the evidence itself stays below) and why, and the never-ending loop the interface runs as; why the parameters are set at the top and nowhere else is argued on [value.md](value.md). Page: [interface.md](interface.md).
+What flows down inside one six-part statement, the governance policy (carrying purpose, value objectives and quality targets framed as deliberate bets, risk appetite and delegation limits alongside departmental baselines, required minimums and the common rule), what flows up (five kinds of reports: bet checks, the current size of each risk with its evidence status, risks accepted in writing, breaches and warnings, and proposals to amend the statement, joined at reevaluation by refreshed departmental trends; the raw evidence stays below) and why, the two-step daily decision rule, and the never-ending loop the interface runs as; why the statement is ratified at the top and nowhere else is argued on [value.md](value.md). Page: [interface.md](interface.md).
 
 ## 5. The two researches under the governance level
 
@@ -56,7 +56,7 @@ The two linked researches set against this governance system. Economics of Testi
 
 ## 6. The erosion thesis
 
-The research's own claim: AI-accelerated development erodes the capacity to run the machinery above unless countermeasures are mandated and funded, and this is where the purpose statement's "maintain" is defended. Page: [erosion.md](erosion.md).
+The research's own claim: AI-accelerated development erodes the capacity to run the machinery above unless the conditions to keep that knowledge are set in the statement and the prevention is funded, and this is where the purpose statement's "maintain" is defended. Page: [erosion.md](erosion.md).
 
 ## 7. What each role does and gains
 
@@ -65,7 +65,7 @@ Per role, what each does with the statement and what each gains: the governing b
 ## 8. Scope and non-goals
 
 - In scope: governance of quality, and governance of the use of AI in building software.
-- Out of scope: governance of organizations in general (ISO 37000's territory), compliance management as such, security work (the same governance mechanism would serve it, but its standards are not studied in this research; it may be added later), and any reproduction of the standards, which are paraphrased with clause references.
+- Out of scope: governance of organizations in general (ISO 37000's territory), compliance management as such, security work (the same governance mechanism would serve it, but its standards are not studied in this research; it may be added later), and any reproduction of the standards beyond brief fair-use quotations of terms, with the rest paraphrased with clause references.
 
 ## 9. Reading order
 
@@ -76,14 +76,14 @@ Per role, what each does with the statement and what each gains: the governing b
 
 ## References
 
-Designations follow each standard's own: 37000, 31000 and 9000 are ISO standards with no IEC involvement; 38500, 38507 and 25010 are joint ISO/IEC standards from JTC 1. The mixed prefixes are deliberate. Standards are paraphrased with clause references only; no licensed text is reproduced beyond fair use.
+Designations follow each standard's own: 37000 and 31000 are ISO standards with no IEC involvement; 38500, 38507, 42001 and 25010 are joint ISO/IEC standards from JTC 1. The mixed prefixes are deliberate. Standards are paraphrased with clause references, with only brief definitions and terms quoted within fair use.
 
-- ISO 37000:2021, Governance of organizations
+- ISO 37000:2021, Governance of organizations, Guidance
 - ISO/IEC 38500:2024, Information technology, Governance of IT for the organization
-- ISO/IEC 38507:2022, Governance implications of the use of artificial intelligence by organizations
+- ISO/IEC 38507:2022, Information technology, Governance of IT, Governance implications of the use of artificial intelligence by organizations
+- ISO/IEC 42001:2023, Information technology, Artificial intelligence, Management system
 - ISO 31000:2018, Risk management, Guidelines
-- ISO 9000:2015, Quality management systems, Fundamentals and vocabulary
-- ISO/IEC 25010:2011, SQuaRE, System and software quality models. The edition the definitions and value pages quote; later editions reword the definition of quality.
+- ISO/IEC 25010:2011, Systems and software engineering, Systems and software Quality Requirements and Evaluation (SQuaRE), System and software quality models. The edition the definitions and value pages quote; the 2023 edition moves the general overview to ISO/IEC 25002 and rewords the quality characteristics from "degree" to "capability".
 - Deming, W. E., *Out of the Crisis*, MIT Press. The fourteen points (pp. 23-24) ground §1's top-management condition: point 2 has Western management taking on leadership for change, and point 14 makes the transformation everybody's job.
 - Goodhart, C. A. E. (1975), "Problems of Monetary Management: The UK Experience", *Papers in Monetary Economics*, Reserve Bank of Australia. The original formulation behind Goodhart's law: an observed statistical regularity tends to collapse once pressure is placed upon it for control purposes.
 - Strathern, M. (1997), "'Improving ratings': audit in the British University system", *European Review*, 5(3), 305-321. The usual source of the popular phrasing of Goodhart's law, "when a measure becomes a target, it ceases to be a good measure", paraphrased in §1.
@@ -91,6 +91,6 @@ Designations follow each standard's own: 37000, 31000 and 9000 are ISO standards
 - Rust, R. T., Zahorik, A. J., Keiningham, T. L. (1995), "Return on Quality (ROQ): Making Service Quality Financially Accountable", *Journal of Marketing*, 59(2), 58-70. §3's financial-accountability grounding: quality is an investment, it is possible to spend too much, not all quality expenditures are equally valid.
 - Rust, R. T., Moorman, C., Dickson, P. R. (2002), "Getting Return on Quality: Revenue Expansion, Cost Reduction, or Both?", *Journal of Marketing*, 66(4), 7-24. §3's revenue-expansion finding.
 - Kano, N., Seraku, N., Takahashi, F., Tsuji, S. (1984), "Attractive Quality and Must-Be Quality", *Journal of The Japanese Society for Quality Control*, 14(2), 147-156. §3's must-be/attractive split.
-- DORA, *Accelerate State of DevOps Report 2019* (dora.dev). §3's return from the system itself: the speed-stability finding.
+- DORA, *Accelerate State of DevOps Report 2019* and report overview (dora.dev/research/2019/dora-report/). §3's return from the system itself: the speed-stability finding.
 - U.S. Securities and Exchange Commission (2023), press release 2023-139, "SEC Adopts Rules on Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure by Public Companies", 26 July 2023; Regulation S-K, Item 106. §7's case of a board-level interface built by regulation: public companies describe in their annual reports on Form 10-K the board's oversight of risks from cybersecurity threats, and management's role and expertise in assessing and managing them.
 - [Economics of Testing](../testing_economics/testing_economics.md) and [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md), the two researches this hub links
