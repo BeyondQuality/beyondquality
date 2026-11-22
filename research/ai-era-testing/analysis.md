@@ -36,6 +36,8 @@ Whether code is "good enough" depends on what business problem it solves, what t
 
 - **[Research Question](analysis-research-question.md)**: the asymmetry between the two debts, and the four conditions any solution has to satisfy
 - **[Proposal: Direction 3 collaborative building](proposal.md)**: the hypothesis this analysis leads to. One candidate addressing three of the four research-question conditions directly, the fourth partially.
+- **[Proposal: Preserving Human Intent with Tiden](proposal-tiden.md)** describes how product, QA, and engineering record what the product should do and why. Tiden gives the agent the relevant specs and decisions before coding and sends failed checks back for repair before handoff.
+- **[Tiden evaluation plan](tiden-evaluation.md)**: how to test the Tiden proposal's intent preservation, verification, comprehension, and complete cost.
 - **[Evaluation: Direction 1/2 industry responses](evaluation.md)**: how current industry responses (JiTTests, Claude Code Review) measure up against this framework.
 
 ## 5. References
