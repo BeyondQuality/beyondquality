@@ -1,0 +1,343 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="1036" viewBox="0 0 1040 1036" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">The Governance-Management Interface for Quality: What Goes Where and When</title>
+  <desc id="diagram-desc">Diagram of the loop between the governing body and management: the governing body split across direction and reevaluation, the continuous accountability record, and active oversight for escalations and assurance; the six-part statement flowing down to govern both the four-step QA loop and daily two-step decisions; raw evidence produced by the QA loop and AI build work kept locally and sampled at reevaluation and on demand; five upward reports (R1 to R5) ordered from fastest to slowest cadence plus refreshed Part 2 departmental trends routed to reevaluation and the accountability record.</desc>
+
+  <defs>
+    <style>
+      .font { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      .h-main { font-size: 16.5px; font-weight: 600; fill: #0f172a; letter-spacing: -0.01em; }
+      .band-title { font-size: 12.5px; font-weight: 700; fill: #0f172a; letter-spacing: 0.04em; }
+      .band-sub { font-size: 11.5px; font-weight: 400; fill: #475569; }
+      .ext-title { font-size: 11px; font-weight: 700; fill: #334155; letter-spacing: 0.03em; }
+      .ext-sub { font-size: 11px; font-weight: 400; fill: #64748b; }
+      .card-h { font-size: 12.5px; font-weight: 600; fill: #0f172a; }
+      .card-h-accent { font-size: 12px; font-weight: 700; fill: #b04a20; letter-spacing: 0.02em; }
+      .item-b { font-size: 11.3px; font-weight: 600; fill: #0f172a; }
+      .item { font-size: 11px; font-weight: 400; fill: #334155; }
+      .item-muted { font-size: 10.7px; font-weight: 400; fill: #475569; }
+      .item-note { font-size: 10.3px; font-style: italic; fill: #64748b; }
+      .item-note-accent { font-size: 10.3px; font-style: italic; fill: #9a3f18; }
+      .route-tag { font-size: 10px; font-weight: 600; fill: #64748b; }
+      .pill-warm-text { font-size: 10px; font-weight: 600; fill: #b04a20; }
+      .pill-slate-text { font-size: 10px; font-weight: 600; fill: #334155; }
+      .edge-label { font-size: 10.5px; font-weight: 500; fill: #334155; }
+      .edge-label-accent { font-size: 10.5px; font-weight: 500; fill: #b04a20; }
+      .legend-text { font-size: 11px; font-weight: 500; fill: #334155; }
+    </style>
+
+    <marker id="arr-dark" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+    <marker id="arr-accent" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b04a20"/>
+    </marker>
+    <marker id="arr-accent-start" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M 10 1.5 L 1 5 L 10 8.5 z" fill="#b04a20"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas background -->
+  <rect x="0" y="0" width="1040" height="1036" rx="8" fill="#ffffff"/>
+
+  <!-- Header & Legend -->
+  <g class="font">
+    <text x="20" y="36" class="h-main">Governance-Management Interface: What Goes Where and When</text>
+
+    <line x1="628" y1="31" x2="658" y2="31" stroke="#0f172a" stroke-width="2" marker-end="url(#arr-dark)"/>
+    <text x="666" y="35" class="legend-text">Normal loop</text>
+
+    <line x1="750" y1="31" x2="784" y2="31" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
+    <text x="792" y="35" class="edge-label-accent">Exception / Assurance</text>
+
+    <rect x="932" y="19" width="88" height="20" rx="10" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
+    <text x="976" y="33" text-anchor="middle" class="pill-warm-text">When (timing)</text>
+  </g>
+
+  <!-- BAND 0: External Context -->
+  <g class="font">
+    <rect x="20" y="54" width="486" height="46" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="34" y="73" class="ext-title">EXTERNAL STAKEHOLDERS &amp; OBLIGATIONS</text>
+    <text x="34" y="90" class="ext-sub">Owners &amp; members (purpose), laws &amp; regulators, customer contracts</text>
+
+    <rect x="520" y="54" width="500" height="46" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="534" y="73" class="ext-title">EXTERNAL ACCOUNTABILITY</text>
+    <text x="534" y="90" class="ext-sub">Answers to owners &amp; members, regulators, auditors, and courts</text>
+
+    <!-- Band 0 <-> Band 1 connectors -->
+    <line x1="168" y1="100" x2="168" y2="128" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr-muted)"/>
+    <text x="177" y="119" class="ext-sub">Purpose &amp; external rules</text>
+
+    <line x1="560" y1="130" x2="560" y2="102" stroke="#0f172a" stroke-width="1.8" marker-end="url(#arr-dark)"/>
+    <text x="569" y="119" class="edge-label">Answers from the record</text>
+  </g>
+
+  <!-- BAND 1: THE GOVERNING BODY -->
+  <g class="font">
+    <rect x="20" y="130" width="1000" height="164" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="36" y="152" class="band-title">THE GOVERNING BODY</text>
+    <text x="198" y="152" class="band-sub">Board, supervisory board, or founders (executive management drafts; the body ratifies &amp; answers)</text>
+
+    <!-- Card 1A: Reevaluation & Direction -->
+    <rect x="36" y="162" width="360" height="114" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="48" y="183" class="card-h">Reevaluation &amp; Direction</text>
+    <rect x="238" y="169" width="146" height="19" rx="9.5" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
+    <text x="311" y="182" text-anchor="middle" class="pill-warm-text">Regular + Event triggers</text>
+    <text x="48" y="205" class="item">· 8-step working sessions with department heads</text>
+    <text x="48" y="224" class="item">· Corrects ranges, reviews appetite, remakes statement</text>
+    <text x="48" y="243" class="item">· Reopens bets on law, market, deal, or strategy shifts</text>
+    <text x="48" y="263" class="item-muted">In: R1, R2, R4, R5 + Part 2 trends + assurance findings</text>
+
+    <!-- Card 1B: Accountability Record -->
+    <rect x="408" y="162" width="296" height="114" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="420" y="183" class="card-h">Accountability Record</text>
+    <rect x="570" y="169" width="122" height="19" rx="9.5" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="631" y="182" text-anchor="middle" class="pill-slate-text">Kept continuously</text>
+    <text x="420" y="205" class="item">· Current risk sizes next to appetite (R2)</text>
+    <text x="420" y="224" class="item">· Risks accepted in writing inside limits (R3)</text>
+    <text x="420" y="243" class="item">· Explicit sign-offs granted on escalations</text>
+    <text x="420" y="263" class="item">· Material breaches, patterns &amp; failure costs (R4)</text>
+
+    <!-- Sign-offs saved from 1C to 1B -->
+    <line x1="716" y1="239" x2="706" y2="239" stroke="#b04a20" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arr-accent)"/>
+
+    <!-- Card 1C: Oversight: Sign-offs & Assurance -->
+    <rect x="716" y="162" width="288" height="114" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="728" y="183" class="card-h">Oversight: Sign-offs &amp; Assurance</text>
+    <text x="728" y="205" class="item">· Decides escalated cases; grants or refuses</text>
+    <text x="728" y="224" class="item">  explicit sign-offs (← saved to Record)</text>
+    <text x="728" y="243" class="item">· Commissions independent assurance checks</text>
+    <text x="728" y="263" class="item-muted">Assurance findings feed Reevaluation &amp; Direction</text>
+  </g>
+
+  <!-- TOP OPEN CHANNEL: Connectors between Band 1 (cards y=276, band y=294) and Band 2 (y=336) -->
+  <g class="font">
+    <!-- Statement Down -->
+    <line x1="168" y1="276" x2="168" y2="334" stroke="#0f172a" stroke-width="2" marker-end="url(#arr-dark)"/>
+    <text x="176" y="315" class="edge-label">↓ Publishes statement</text>
+
+    <!-- Reports Up to Reevaluation -->
+    <line x1="354" y1="336" x2="354" y2="278" stroke="#0f172a" stroke-width="2" marker-end="url(#arr-dark)"/>
+    <text x="362" y="315" class="edge-label">↑ R1, R2, R4, R5 + Trends</text>
+
+    <!-- Reports Up to Record -->
+    <line x1="536" y1="336" x2="536" y2="278" stroke="#0f172a" stroke-width="2" marker-end="url(#arr-dark)"/>
+    <text x="544" y="315" class="edge-label">↑ R2, R3, R4</text>
+
+    <!-- Exception Up/Down to Governing Body Oversight -->
+    <line x1="742" y1="416" x2="742" y2="278" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
+    <text x="750" y="315" class="edge-label-accent">↑ Escalate / ↓ Sign-off</text>
+
+    <!-- Assurance Down/Up from Governing Body Oversight -->
+    <line x1="932" y1="278" x2="932" y2="416" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
+    <text x="940" y="309" class="edge-label-accent">↓ Commissions</text>
+    <text x="940" y="322" class="edge-label-accent">↑ Findings</text>
+  </g>
+
+  <!-- BAND 2: THE INTERFACE (4 Planar Vertical Lanes, y=336..740) -->
+  <g class="font">
+
+    <!-- LANE 1: WHAT FLOWS DOWN (x=20..316, w=296, y=336..740) -->
+    <rect x="20" y="336" width="296" height="404" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+    <path d="M 21 344 Q 21 337 28 337 L 308 337 Q 315 337 315 344 L 315 388 L 21 388 Z" fill="#fef5f1"/>
+    <line x1="21" y1="388" x2="315" y2="388" stroke="#f6c4af" stroke-width="1"/>
+    <text x="34" y="358" class="card-h-accent">↓ WHAT FLOWS DOWN: STATEMENT</text>
+    <text x="34" y="376" class="pill-warm-text">Start · Reeval · Bet review · Shift / broken limit</text>
+
+    <text x="34" y="410" class="item-b">Part 1. The opening</text>
+    <text x="34" y="426" class="item-muted">Purpose, where to win, AI scope, 2-step rule</text>
+    <line x1="34" y1="438" x2="302" y2="438" stroke="#f1f5f9" stroke-width="1"/>
+
+    <text x="34" y="458" class="item-b">Part 2. Numbers &amp; owners</text>
+    <text x="34" y="474" class="item-muted">Baseline numbers each department answers for</text>
+    <line x1="34" y1="486" x2="302" y2="486" stroke="#f1f5f9" stroke-width="1"/>
+
+    <text x="34" y="506" class="item-b">Part 3. The bets (customer &amp; internal)</text>
+    <text x="34" y="522" class="item-muted">Target, floor, return &amp; cost ranges, review</text>
+    <text x="34" y="537" class="item-muted">(incl. bet on keeping software understanding)</text>
+    <line x1="34" y1="549" x2="302" y2="549" stroke="#f1f5f9" stroke-width="1"/>
+
+    <text x="34" y="569" class="item-b">Part 4. Required minimums</text>
+    <text x="34" y="585" class="item-muted">Law &amp; contract floors, safety margin, checks</text>
+    <line x1="34" y1="597" x2="302" y2="597" stroke="#f1f5f9" stroke-width="1"/>
+
+    <text x="34" y="617" class="item-b">Part 5. The common rule</text>
+    <text x="34" y="633" class="item-muted">As good as usual; normal care, no extra spend</text>
+    <line x1="34" y1="645" x2="302" y2="645" stroke="#f1f5f9" stroke-width="1"/>
+
+    <text x="34" y="665" class="item-b">Part 6. Risk appetite &amp; limits</text>
+    <text x="34" y="681" class="item-muted">Bounds per risk, escalation size, sign-offs;</text>
+    <text x="34" y="697" class="item-muted">AI rules, agent limits &amp; knowledge appetite</text>
+    <text x="34" y="722" class="item-note">Counts as published only when used daily</text>
+
+    <!-- LANE 2: WHAT FLOWS UP (x=330..640, w=310, y=336..740) -->
+    <rect x="330" y="336" width="310" height="404" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+    <path d="M 331 344 Q 331 337 338 337 L 632 337 Q 639 337 639 344 L 639 388 L 331 388 Z" fill="#f1f5f9"/>
+    <line x1="331" y1="388" x2="639" y2="388" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="344" y="358" class="card-h">↑ WHAT FLOWS UP: REPORTS R1-R5 + TRENDS</text>
+    <text x="344" y="376" class="pill-slate-text">Fastest to slowest cadence; measured vs bounds</text>
+
+    <!-- Group 1: At once: breach or stakes shift -->
+    <rect x="344" y="394" width="194" height="18" rx="9" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
+    <text x="441" y="407" text-anchor="middle" class="pill-warm-text">At once: breach or stakes shift</text>
+    <text x="344" y="426" class="item-b">R4. Breaches &amp; warnings before them</text>
+    <text x="626" y="426" text-anchor="end" class="route-tag">→ Both</text>
+    <text x="344" y="441" class="item-muted">Broken/near limits, patterns (+ SLA notice)</text>
+    <text x="344" y="457" class="item-muted">On stakes shift: fresh reports on affected</text>
+    <text x="626" y="457" text-anchor="end" class="route-tag">→ Reeval</text>
+    <line x1="344" y1="467" x2="626" y2="467" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Group 2: Management schedule -->
+    <rect x="344" y="474" width="252" height="18" rx="9" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="470" y="487" text-anchor="middle" class="pill-slate-text">Mgmt schedule (faster on fast-changing parts)</text>
+    <text x="344" y="505" class="item-b">R2. Current size of each risk</text>
+    <text x="626" y="505" text-anchor="end" class="route-tag">→ Both</text>
+    <text x="344" y="519" class="item-muted">Vs appetite (incl. knowledge risk); unsupported tags</text>
+    <text x="344" y="537" class="item-b">R3. Risks accepted in writing</text>
+    <text x="626" y="537" text-anchor="end" class="route-tag">→ Record</text>
+    <text x="344" y="551" class="item-muted">Signed locally: owner, reason, review date</text>
+    <line x1="344" y1="560" x2="626" y2="560" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Group 3: Bet review dates -->
+    <rect x="344" y="567" width="146" height="18" rx="9" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="417" y="580" text-anchor="middle" class="pill-slate-text">Each bet's review date</text>
+    <text x="344" y="598" class="item-b">R1. Bet checks (return + holding cost)</text>
+    <text x="626" y="598" text-anchor="end" class="route-tag">→ Reeval</text>
+    <text x="344" y="612" class="item-muted">Actual vs range + why (est., work, or world)</text>
+    <line x1="344" y1="621" x2="626" y2="621" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Group 4: Proposals -->
+    <rect x="344" y="628" width="212" height="18" rx="9" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="450" y="641" text-anchor="middle" class="pill-slate-text">Bet review · Reeval · Broken limit</text>
+    <text x="344" y="659" class="item-b">R5. Proposals to amend statement</text>
+    <text x="626" y="659" text-anchor="end" class="route-tag">→ Reeval</text>
+    <text x="344" y="673" class="item-muted">Bet on Part 5 need; drop/re-fund; limits</text>
+    <line x1="344" y1="682" x2="626" y2="682" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Group 5: Reevaluation -->
+    <rect x="344" y="689" width="118" height="18" rx="9" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
+    <text x="403" y="702" text-anchor="middle" class="pill-warm-text">At reevaluation</text>
+    <text x="344" y="720" class="item-b">Refreshed Part 2 departmental trends</text>
+    <text x="626" y="720" text-anchor="end" class="route-tag">→ Reeval</text>
+    <text x="344" y="734" class="item-muted">All dept baselines (checks Part 5 rule too)</text>
+
+    <!-- LANE 3: EXCEPTION PATH (x=654..830, w=176, y=418..658) -->
+    <rect x="654" y="418" width="176" height="240" rx="8" fill="#fffaf7" stroke="#ed6736" stroke-width="1.5" stroke-dasharray="5,3.5"/>
+    <text x="666" y="440" class="card-h-accent">↑↓ EXCEPTION PATH</text>
+    <rect x="666" y="448" width="152" height="18" rx="9" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
+    <text x="742" y="461" text-anchor="middle" class="pill-warm-text">Red line or limit crossed</text>
+
+    <text x="666" y="486" class="item-b">↑ Escalated case</text>
+    <text x="666" y="502" class="item-muted">Team sends both numbers:</text>
+    <text x="666" y="517" class="item-muted">delay cost + failure loss</text>
+    <text x="666" y="532" class="item-muted">(cannot ship on its own)</text>
+    <line x1="666" y1="545" x2="818" y2="545" stroke="#f6c4af" stroke-width="1"/>
+
+    <text x="666" y="566" class="item-b">↓ Explicit sign-off</text>
+    <text x="666" y="582" class="item-muted">Needed to cross a bound</text>
+    <text x="666" y="597" class="item-muted">or use a Part 4 margin;</text>
+    <text x="666" y="612" class="item-muted">saved to Record above</text>
+    <text x="666" y="640" class="item-note-accent">Normal cases stay below</text>
+
+    <!-- LANE 4: INDEPENDENT ASSURANCE CHECK (x=844..1020, w=176, y=418..658) -->
+    <rect x="844" y="418" width="176" height="240" rx="8" fill="#fffaf7" stroke="#b04a20" stroke-width="1.5" stroke-dasharray="5,3.5"/>
+    <text x="856" y="440" class="card-h-accent">↓↑ ASSURANCE CHECK</text>
+    <rect x="856" y="448" width="152" height="18" rx="9" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
+    <text x="932" y="461" text-anchor="middle" class="pill-warm-text">Reevaluation + on demand</text>
+
+    <text x="856" y="486" class="item-b">Independent checker</text>
+    <text x="856" y="502" class="item-muted">Does not write reports;</text>
+    <text x="856" y="517" class="item-muted">runs even when all looks</text>
+    <text x="856" y="532" class="item-muted">fine, scaled to risk size</text>
+    <line x1="856" y1="545" x2="1008" y2="545" stroke="#f6c4af" stroke-width="1"/>
+
+    <text x="856" y="566" class="item-b">Traces reports to evidence</text>
+    <text x="856" y="582" class="item-muted">Verifies numbers, immediate</text>
+    <text x="856" y="596" class="item-muted">breach reports, R3, and</text>
+    <text x="856" y="610" class="item-muted">code-independent check</text>
+    <text x="856" y="624" class="item-muted">sources against raw files</text>
+    <text x="856" y="644" class="item-note-accent">Findings feed Reevaluation</text>
+  </g>
+
+  <!-- BOTTOM OPEN CHANNEL: Connectors between Band 2 (y=740) and Band 3 (band y=776, cards y=794) -->
+  <g class="font">
+    <!-- Statement Down to whole Management & Teams band -->
+    <line x1="168" y1="740" x2="168" y2="774" stroke="#0f172a" stroke-width="2" marker-end="url(#arr-dark)"/>
+    <text x="176" y="763" class="edge-label">↓ Bounds, bets &amp; rules (govern all below)</text>
+
+    <!-- Reports Up from Management -->
+    <line x1="440" y1="794" x2="440" y2="742" stroke="#0f172a" stroke-width="2" marker-end="url(#arr-dark)"/>
+    <text x="448" y="763" class="edge-label">↑ Reports &amp; dept numbers</text>
+
+    <!-- Exception <-> Daily 2-Step Decision Rule -->
+    <line x1="742" y1="658" x2="742" y2="792" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
+    <text x="750" y="763" class="edge-label-accent">↑ 2 numbers / ↓ sign-off</text>
+
+    <!-- Assurance <-> Raw Evidence -->
+    <line x1="932" y1="658" x2="932" y2="792" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
+    <text x="940" y="763" class="edge-label-accent">↓↑ Samples</text>
+  </g>
+
+  <!-- BAND 3: MANAGEMENT & TEAMS (Symmetric bottom header bar so top channel is clear) -->
+  <g class="font">
+    <rect x="20" y="776" width="1000" height="244" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Card 3A: 4-Step QA Loop, Dept Tracking & AI Prevention -->
+    <rect x="36" y="794" width="460" height="190" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="50" y="816" class="card-h">4-Step QA Loop, Dept Tracking &amp; AI Prevention</text>
+    <text x="50" y="837" class="item">· Dept heads track Part 2 numbers &amp; distances to Part 4 minimums</text>
+    <text x="50" y="856" class="item">· Step 1-2: Price failure from Part 3 worth; rank vs Part 6 (→ R2, R3)</text>
+    <text x="50" y="875" class="item">· Step 3-4: Pick checks inside bet cost; rebalance on schedule/shifts</text>
+    <line x1="50" y1="888" x2="482" y2="888" stroke="#e2e8f0" stroke-width="1"/>
+
+    <text x="50" y="908" class="item-b">Under AI construction</text>
+    <text x="50" y="928" class="item">· Human-decided small pieces (Part 6 limit) funded by Part 3 bet</text>
+    <text x="50" y="947" class="item">· Tag code-derived tests as unsupported in R2; watch knowledge risk</text>
+    <text x="50" y="966" class="item">· Re-run human eval suite on tool updates (checks tool &amp; people)</text>
+
+    <!-- Card 3B: Daily Two-Step Decision Rule -->
+    <rect x="510" y="794" width="320" height="190" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="524" y="815" class="card-h">Daily 2-Step Decision Rule</text>
+    <rect x="744" y="801" width="72" height="18" rx="9" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="780" y="814" text-anchor="middle" class="pill-slate-text">Every case</text>
+
+    <text x="524" y="834" class="item-muted">Price both first: Product+Eng feature delay cost;</text>
+    <text x="524" y="848" class="item-muted">QA+Eng expected failure loss (from Part 3 worth)</text>
+    <line x1="524" y1="857" x2="816" y2="857" stroke="#e2e8f0" stroke-width="1"/>
+
+    <text x="524" y="873" class="item-b">1. Check red lines &amp; limits first</text>
+    <text x="524" y="887" class="item-muted">Escalation size, Part 4 minimums, Part 3 floors,</text>
+    <text x="524" y="901" class="item-muted">and Part 6 risk appetite.</text>
+    <text x="524" y="916" class="edge-label-accent">Crosses any: mitigate first or escalate both ↑</text>
+    <line x1="524" y1="925" x2="816" y2="925" stroke="#e2e8f0" stroke-width="1"/>
+
+    <text x="524" y="942" class="item-b">2. Inside red lines: decide locally</text>
+    <text x="524" y="957" class="item-muted">Weigh delay cost vs failure loss waiting removes;</text>
+    <text x="524" y="972" class="item">pick better option, zero meetings (accepted → R3)</text>
+
+    <!-- Card 3C: Raw Evidence (Stays below) -->
+    <rect x="844" y="794" width="160" height="190" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="856" y="815" class="card-h">Raw Evidence</text>
+    <text x="856" y="831" class="item-muted">(From QA loop &amp; builds)</text>
+
+    <text x="856" y="854" class="item">· QA test strategy:</text>
+    <text x="864" y="869" class="item-muted">checks per risk &amp;</text>
+    <text x="864" y="884" class="item-muted">residual owner</text>
+
+    <text x="856" y="904" class="item">· Test runs, reviews,</text>
+    <text x="864" y="919" class="item-muted">calibrated eval runs</text>
+
+    <text x="856" y="939" class="item">· Human commit &amp;</text>
+    <text x="864" y="954" class="item-muted">intent records</text>
+
+    <text x="856" y="974" class="item-note">Sampled + on demand ↑</text>
+
+    <!-- Band 3 Footer Label Bar -->
+    <text x="36" y="1006" class="band-title">MANAGEMENT &amp; TEAMS</text>
+    <text x="212" y="1006" class="band-sub">All Part 2 department heads + Product, Engineering, QA, Support, Operations, Legal &amp; Compliance</text>
+    <rect x="824" y="992" width="180" height="20" rx="10" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="914" y="1006" text-anchor="middle" class="pill-slate-text">Continuous · Stays below</text>
+  </g>
+</svg>
