@@ -1,6 +1,6 @@
 ---
 author: Vitaly Sharovatov
-status: work in progress
+status: draft
 ---
 # Governance of quality
 

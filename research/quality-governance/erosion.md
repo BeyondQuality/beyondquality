@@ -1,6 +1,6 @@
 ---
 author: Vitaly Sharovatov
-status: done
+status: draft
 ---
 # The erosion thesis
 
