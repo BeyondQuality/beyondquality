@@ -176,52 +176,52 @@
     <rect x="330" y="336" width="310" height="404" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
     <path d="M 331 344 Q 331 337 338 337 L 632 337 Q 639 337 639 344 L 639 388 L 331 388 Z" fill="#f1f5f9"/>
     <line x1="331" y1="388" x2="639" y2="388" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="344" y="358" class="card-h">↑ WHAT FLOWS UP: REPORTS R1-R5 + TRENDS</text>
+    <text x="344" y="358" class="card-h">↑ WHAT FLOWS UP: R1-R5 + TRENDS</text>
     <text x="344" y="376" class="pill-slate-text">Fastest to slowest cadence; measured vs bounds</text>
 
     <!-- Group 1: At once: breach or stakes shift -->
-    <rect x="344" y="394" width="194" height="18" rx="9" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
-    <text x="441" y="407" text-anchor="middle" class="pill-warm-text">At once: breach or stakes shift</text>
-    <text x="344" y="426" class="item-b">R4. Breaches &amp; warnings before them</text>
-    <text x="626" y="426" text-anchor="end" class="route-tag">→ Both</text>
-    <text x="344" y="441" class="item-muted">Broken/near limits, patterns (+ SLA notice)</text>
-    <text x="344" y="457" class="item-muted">On stakes shift: fresh reports on affected</text>
-    <text x="626" y="457" text-anchor="end" class="route-tag">→ Reeval</text>
-    <line x1="344" y1="467" x2="626" y2="467" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="344" y="393" width="194" height="17" rx="8.5" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
+    <text x="441" y="405" text-anchor="middle" class="pill-warm-text">At once: breach or stakes shift</text>
+    <text x="344" y="423" class="item-b">R4. Breaches &amp; warnings before them</text>
+    <text x="626" y="423" text-anchor="end" class="route-tag">→ Both</text>
+    <text x="344" y="437" class="item-muted">Broken/near limits, patterns (+ SLA notice)</text>
+    <text x="344" y="452" class="item-muted">On stakes shift: fresh reports on affected</text>
+    <text x="626" y="452" text-anchor="end" class="route-tag">→ Reeval</text>
+    <line x1="344" y1="462" x2="626" y2="462" stroke="#e2e8f0" stroke-width="1"/>
 
     <!-- Group 2: Management schedule -->
-    <rect x="344" y="474" width="252" height="18" rx="9" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="470" y="487" text-anchor="middle" class="pill-slate-text">Mgmt schedule (faster on fast-changing parts)</text>
-    <text x="344" y="505" class="item-b">R2. Current size of each risk</text>
-    <text x="626" y="505" text-anchor="end" class="route-tag">→ Both</text>
-    <text x="344" y="519" class="item-muted">Vs appetite (incl. knowledge risk); unsupported tags</text>
-    <text x="344" y="537" class="item-b">R3. Risks accepted in writing</text>
-    <text x="626" y="537" text-anchor="end" class="route-tag">→ Record</text>
-    <text x="344" y="551" class="item-muted">Signed locally: owner, reason, review date</text>
-    <line x1="344" y1="560" x2="626" y2="560" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="344" y="468" width="252" height="17" rx="8.5" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="470" y="480" text-anchor="middle" class="pill-slate-text">Mgmt schedule (faster on fast-changing parts)</text>
+    <text x="344" y="498" class="item-b">R2. Current size of each risk</text>
+    <text x="626" y="498" text-anchor="end" class="route-tag">→ Both</text>
+    <text x="344" y="512" class="item-muted">Vs appetite (incl. knowledge risk); unsupported tags</text>
+    <text x="344" y="529" class="item-b">R3. Risks accepted in writing</text>
+    <text x="626" y="529" text-anchor="end" class="route-tag">→ Record</text>
+    <text x="344" y="543" class="item-muted">Signed locally: owner, reason, review date</text>
+    <line x1="344" y1="553" x2="626" y2="553" stroke="#e2e8f0" stroke-width="1"/>
 
     <!-- Group 3: Bet review dates -->
-    <rect x="344" y="567" width="146" height="18" rx="9" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="417" y="580" text-anchor="middle" class="pill-slate-text">Each bet's review date</text>
-    <text x="344" y="598" class="item-b">R1. Bet checks (return + holding cost)</text>
-    <text x="626" y="598" text-anchor="end" class="route-tag">→ Reeval</text>
-    <text x="344" y="612" class="item-muted">Actual vs range + why (est., work, or world)</text>
-    <line x1="344" y1="621" x2="626" y2="621" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="344" y="559" width="146" height="17" rx="8.5" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="417" y="571" text-anchor="middle" class="pill-slate-text">Each bet's review date</text>
+    <text x="344" y="589" class="item-b">R1. Bet checks (return + holding cost)</text>
+    <text x="626" y="589" text-anchor="end" class="route-tag">→ Reeval</text>
+    <text x="344" y="603" class="item-muted">Actual vs range + why (est., work, or world)</text>
+    <line x1="344" y1="613" x2="626" y2="613" stroke="#e2e8f0" stroke-width="1"/>
 
     <!-- Group 4: Proposals -->
-    <rect x="344" y="628" width="212" height="18" rx="9" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="450" y="641" text-anchor="middle" class="pill-slate-text">Bet review · Reeval · Broken limit</text>
-    <text x="344" y="659" class="item-b">R5. Proposals to amend statement</text>
-    <text x="626" y="659" text-anchor="end" class="route-tag">→ Reeval</text>
-    <text x="344" y="673" class="item-muted">Bet on Part 5 need; drop/re-fund; limits</text>
-    <line x1="344" y1="682" x2="626" y2="682" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="344" y="619" width="212" height="17" rx="8.5" fill="#eef2f6" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="450" y="631" text-anchor="middle" class="pill-slate-text">Bet review · Reeval · Broken limit</text>
+    <text x="344" y="649" class="item-b">R5. Proposals to amend statement</text>
+    <text x="626" y="649" text-anchor="end" class="route-tag">→ Reeval</text>
+    <text x="344" y="663" class="item-muted">Bet on Part 5 need; drop/re-fund; limits</text>
+    <line x1="344" y1="673" x2="626" y2="673" stroke="#e2e8f0" stroke-width="1"/>
 
     <!-- Group 5: Reevaluation -->
-    <rect x="344" y="689" width="118" height="18" rx="9" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
-    <text x="403" y="702" text-anchor="middle" class="pill-warm-text">At reevaluation</text>
-    <text x="344" y="720" class="item-b">Refreshed Part 2 departmental trends</text>
-    <text x="626" y="720" text-anchor="end" class="route-tag">→ Reeval</text>
-    <text x="344" y="734" class="item-muted">All dept baselines (checks Part 5 rule too)</text>
+    <rect x="344" y="679" width="118" height="17" rx="8.5" fill="#fdeee7" stroke="#f6c4af" stroke-width="1"/>
+    <text x="403" y="691" text-anchor="middle" class="pill-warm-text">At reevaluation</text>
+    <text x="344" y="708" class="item-b">Refreshed Part 2 departmental trends</text>
+    <text x="626" y="708" text-anchor="end" class="route-tag">→ Reeval</text>
+    <text x="344" y="722" class="item-muted">All dept baselines (checks Part 5 rule too)</text>
 
     <!-- LANE 3: EXCEPTION PATH (x=654..830, w=176, y=418..658) -->
     <rect x="654" y="418" width="176" height="240" rx="8" fill="#fffaf7" stroke="#ed6736" stroke-width="1.5" stroke-dasharray="5,3.5"/>
@@ -272,11 +272,11 @@
     <text x="448" y="763" class="edge-label">↑ Reports &amp; dept numbers</text>
 
     <!-- Exception <-> Daily 2-Step Decision Rule -->
-    <line x1="742" y1="658" x2="742" y2="792" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
+    <line x1="742" y1="660" x2="742" y2="792" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
     <text x="750" y="763" class="edge-label-accent">↑ 2 numbers / ↓ sign-off</text>
 
     <!-- Assurance <-> Raw Evidence -->
-    <line x1="932" y1="658" x2="932" y2="792" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
+    <line x1="932" y1="660" x2="932" y2="792" stroke="#b04a20" stroke-width="1.8" stroke-dasharray="5,3.5" marker-start="url(#arr-accent-start)" marker-end="url(#arr-accent)"/>
     <text x="940" y="763" class="edge-label-accent">↓↑ Samples</text>
   </g>
 

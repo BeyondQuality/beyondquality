@@ -10,7 +10,9 @@ Managers spend hours every week in alignment meetings and in defending budgets, 
 
 The reason is in who answers for what. Usually the product manager answers for delivery and the QA lead for quality, and each pushes for what they answer for. The QA lead can write a rule, that nothing ships without a regression run, say, and the product manager is free to ignore it, because the QA lead has no authority over product; a rule the product manager writes has the same standing with QA; and when the two agree a rule together, the argument continues over what its words mean, because neither side has a number to settle it with. The product manager is rewarded for shipping on time, the QA lead is blamed for the failures that reach customers, and nobody below the top is judged on the balance between the two. So a rule both have to follow can only come from someone with authority over both, and it needs numbers that no single function sees; [value.md](value.md) says why that place is the top.
 
-![The governance-management interface: what flows down, what stays below, and what flows up](interface.svg)
+The diagram below puts the whole system on one page before each role's part is taken in turn.
+
+![The governance-management interface for quality: direction, record and oversight at the top, the statement, reports, exceptions and assurance in between, and the QA loop, daily decisions and raw evidence below](interface.svg)
 
 ## The governing body
 
