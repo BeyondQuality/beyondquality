@@ -1,4 +1,5 @@
 ---
+discussion: 50
 author: Vitaly Sharovatov
 status: draft
 ---
