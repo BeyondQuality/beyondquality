@@ -15,7 +15,7 @@ The purpose of this research is to provide a tool (a framework) that allows orga
 It does three things:
 
 1. Defines quality governance and its interface with management, using the vocabulary of ISO 37000, ISO/IEC 38500 and ISO/IEC 38507: what flows down inside one six-part statement (carrying purpose, value objectives and quality targets framed as deliberate bets, risk appetite and delegation limits alongside departmental baselines, required minimums and the common rule) and what flows up (bet checks, risk sizes with their evidence status, risks accepted in writing, breaches and warnings, and proposals to amend the statement, joined at reevaluation by refreshed departmental trends).
-2. Positions two existing researches: [Economics of Testing](../testing_economics/testing_economics.md) is the how for risk management in QA, and this research uses it as the resource for management; [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md) diagnoses the problem agents introduce, researches it and suggests one possible solution.
+2. Positions two existing researches: [Economics of Testing](../testing_economics/testing_economics.md) is the how for risk management in QA, and this research uses it as the resource for management; [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md) diagnoses the problem agents introduce, researches it and suggests candidate solutions.
 3. Advances its own thesis: AI-accelerated development does not merely add risks for this system to process; it erodes the human capacities the system runs on unless deliberate countermeasures are taken. The countermeasures are partly formulated in the ai-era-testing research already, and this work will feed updates back into it; governance is the level where the conditions and funding for them get mandated.
 
 ## 1. Problem statement
@@ -52,7 +52,7 @@ What flows down inside one six-part statement, the governance policy (carrying p
 
 ## 5. The two researches under the governance level
 
-The two linked researches set against this governance system. Economics of Testing is the how for risk management in QA: its four-step loop works without the governing body, and when the top takes part it runs inside the statement's numbers and produces most of what flows up, which serves risk governance, oversight and performance. QA in the Age of AI-Accelerated Development diagnoses the problem agents introduce, researches it and suggests one possible solution; its two debts and four conditions are read against the governance tasks and the AI clauses. Page: [implementations.md](implementations.md).
+The two linked researches set against this governance system. Economics of Testing is the how for risk management in QA: its four-step loop works without the governing body, and when the top takes part it runs inside the statement's numbers and produces most of what flows up, which serves risk governance, oversight and performance. QA in the Age of AI-Accelerated Development diagnoses the problem agents introduce, researches it and suggests candidate solutions; its two debts and four conditions are read against the governance tasks and the AI clauses. Page: [implementations.md](implementations.md).
 
 ## 6. The erosion thesis
 
@@ -72,7 +72,7 @@ Per role, what each does with the statement and what each gains: the governing b
 1. This hub.
 2. The section pages in order: [definitions.md](definitions.md), [value.md](value.md), [interface.md](interface.md), [implementations.md](implementations.md), [erosion.md](erosion.md), [practice.md](practice.md).
 3. [Economics of Testing](../testing_economics/testing_economics.md): the risk-governance and oversight machinery. Its AI-era addendum is planned.
-4. [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md): the two debts, the generative ratification loop, the four conditions, and the Direction 3 proposal.
+4. [QA in the Age of AI-Accelerated Development](../ai-era-testing/analysis.md): the two debts, the generative ratification loop, the four conditions, and the Direction 3 proposals.
 
 ## References
 
