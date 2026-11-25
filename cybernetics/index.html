@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Product Work as a Cybernetic System: Interactive Model</title>
+  <meta name="description" content="An 8-chapter interactive simulation of adaptation delay, handoff noise, testing blind spots, queues, rollout, fault isolation, and shock pre-emption in product organisations.">
+  <link rel="canonical" href="https://beyondquality.org/cybernetics/">
+  <link rel="icon" type="image/jpeg" href="/bq.jpeg">
+  <link rel="apple-touch-icon" href="/bq.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Beyond Quality">
+  <meta property="og:title" content="Product Work as a Cybernetic System: Interactive Model">
+  <meta property="og:description" content="An 8-chapter interactive simulation of adaptation delay, handoff noise, testing blind spots, queues, rollout, fault isolation, and shock pre-emption in product organisations.">
+  <meta property="og:url" content="https://beyondquality.org/cybernetics/">
+  <meta property="og:image" content="https://beyondquality.org/bq.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Product Work as a Cybernetic System: Interactive Model">
+  <meta name="twitter:description" content="An 8-chapter interactive simulation of adaptation delay, handoff noise, testing blind spots, queues, rollout, fault isolation, and shock pre-emption in product organisations.">
+  <meta name="twitter:image" content="https://beyondquality.org/bq.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="view-bar">
+      <span id="chapterKicker" class="section-eyebrow toolbar-eyebrow">Chapter 1 of 8</span>
+      <div class="view-mode-wrap">
+        <span class="view-mode-prefix">Language:</span>
+        <div class="view-mode-group" role="group" aria-label="Interface language">
+          <button id="productViewBtn" class="view-mode-btn active" data-view-mode="product" type="button" aria-pressed="true">Product view</button>
+          <button id="cyberneticsViewBtn" class="view-mode-btn" data-view-mode="cybernetics" type="button" aria-pressed="false">Cybernetics view</button>
+        </div>
+        <button id="copyLinkBtn" class="btn btn-copy-link" type="button" title="Copy shareable link for current setup">Copy link</button>
+      </div>
+    </div>
+
+    <nav class="chapter-nav" aria-label="Walkthrough chapters">
+      <button class="chapter-tab active" data-chapter="1" type="button">
+        <span class="chapter-num">1</span>
+        <span id="tabName1" class="chapter-name">Adaptation Time</span>
+      </button>
+      <button class="chapter-tab" data-chapter="2" type="button">
+        <span class="chapter-num">2</span>
+        <span id="tabName2" class="chapter-name">Handoff Noise</span>
+      </button>
+      <button class="chapter-tab" data-chapter="3" type="button">
+        <span class="chapter-num">3</span>
+        <span id="tabName3" class="chapter-name">Testing's Blind Spot</span>
+      </button>
+      <button class="chapter-tab" data-chapter="4" type="button">
+        <span class="chapter-num">4</span>
+        <span id="tabName4" class="chapter-name">Queues &amp; Bottlenecks</span>
+      </button>
+      <button class="chapter-tab" data-chapter="5" type="button">
+        <span class="chapter-num">5</span>
+        <span id="tabName5" class="chapter-name">Rollout &amp; Messaging</span>
+      </button>
+      <button class="chapter-tab" data-chapter="6" type="button">
+        <span class="chapter-num">6</span>
+        <span id="tabName6" class="chapter-name">Fault Isolation</span>
+      </button>
+      <button class="chapter-tab" data-chapter="7" type="button">
+        <span class="chapter-num">7</span>
+        <span id="tabName7" class="chapter-name">Rogue Waves</span>
+      </button>
+      <button class="chapter-tab" data-chapter="8" type="button">
+        <span class="chapter-num">8</span>
+        <span id="tabName8" class="chapter-name">Full Sandbox</span>
+      </button>
+    </nav>
+
+    <article id="storyCard" class="panel-card narrative story-card">
+      <div id="storyHeader" class="story-header">
+        <h1 id="chapterHeading" class="chapter-heading">Chapter 1: Adaptation Time (The 45-Second Hotel Shower)</h1>
+        <button id="storyToggleBtn" class="btn btn-story-toggle" type="button" aria-expanded="true" aria-controls="storyBody">Collapse story &#9650;</button>
+      </div>
+      <div id="storyBody" class="story-body">
+        <div id="chapterStory">
+          <p>
+            Imagine adjusting an old hotel shower where turning the tap takes 45 seconds to change the water temperature at the showerhead. You feel freezing water, crank it hot, wait 15 seconds, find it still freezing, crank it further, get scalded, and yank it back to cold. You never stabilise because the delay in your feedback loop blinds you to the effect of each adjustment until it is too late.
+          </p>
+          <p>
+            A product company faces the same lag constraint against a changing market. Its round-trip duration from noticing a market need, through <strong>Discovery</strong> (writing the Spec) and <strong>Build</strong>, to observing real users is its <strong>adaptation time</strong>. Even when market diagnosis is 100% accurate and code has zero bugs, starting work today means delivering into the world of <strong>today + adaptation time</strong>.
+          </p>
+        </div>
+
+        <div class="lesson-box">
+          <div id="lessonTitle" class="lesson-title">Chapter 1 Lesson</div>
+          <p id="lessonText">
+            Delay alone wrecks steering: when exhaustive upfront study or oversized build batches stretch your adaptation time past the market's pace of change, faultless research still ships an answer to yesterday's problem; keeping pace requires shipping thin vertical slices rather than rushing people.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <section class="stage-card" aria-label="Live cybernetic loop">
+      <div class="clock-bar">
+        <div class="clock-controls">
+          <button id="playPauseBtn" class="btn btn-primary" type="button">Pause</button>
+          <button id="resetBtn" class="btn" type="button">Reset</button>
+          <button id="topShockBtn" class="btn btn-shock is-hidden" type="button">Trigger Shock Wave</button>
+          <div class="speed-group" role="group" aria-label="Simulation clock speed">
+            <button class="speed-btn" data-speed="0.5" type="button">0.5x</button>
+            <button class="speed-btn active" data-speed="1" type="button">1x</button>
+            <button class="speed-btn" data-speed="2" type="button">2x</button>
+          </div>
+        </div>
+        <div class="clock-readout">
+          <span>Clock: <span id="clockValue" class="mono-stat">0.0d</span></span>
+          <span><span id="loopTimePrefix">Adaptation loop:</span> <span id="loopTimeValue" class="mono-stat">19.7d</span></span>
+          <span><span id="worldCyclePrefix">Market shift cycle:</span> <span id="worldCycleValue" class="mono-stat">10.8d</span></span>
+          <span id="stabilityBadge" class="ratio-pill danger">Slower than market (stale!)</span>
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="simCanvas" width="1140" height="276"></canvas>
+      </div>
+
+      <div id="visualLegend" class="visual-legend" aria-label="Visual key">
+        <span class="legend-item"><span class="legend-swatch legend-swatch-need" aria-hidden="true"></span><span id="legendNeedText">Blue silhouette = live market need</span></span>
+        <span class="legend-sep" aria-hidden="true">&middot;</span>
+        <span class="legend-item"><span class="legend-swatch legend-swatch-spec" aria-hidden="true"></span><span id="legendSpecText">Dashed outline = written Spec</span></span>
+        <span class="legend-sep" aria-hidden="true">&middot;</span>
+        <span class="legend-item"><span class="legend-swatch legend-swatch-built" aria-hidden="true"></span><span id="legendBuiltText">Solid shape = built product</span></span>
+        <span class="legend-sep" aria-hidden="true">&middot;</span>
+        <span class="legend-item"><span class="legend-swatch legend-swatch-chip" aria-hidden="true"></span><span id="legendChipText">Launch chips = % market fit</span></span>
+      </div>
+
+      <div class="history-bar">
+        <div class="history-left">
+          <span id="historyLabel" class="history-label">Last 16 launches:</span>
+          <div id="historyStrip" class="history-strip">
+            <span class="history-empty">Waiting for first work item to reach real users...</span>
+          </div>
+        </div>
+        <div id="historySummary" class="history-summary">
+          Average real-world fit: <span class="mono-stat">--</span>
+        </div>
+      </div>
+
+      <div id="experimentsRow" class="experiments-row stage-experiments"></div>
+
+      <div id="impactBar" class="impact-bar is-hidden" aria-live="polite">
+        <span class="impact-dot" aria-hidden="true"></span>
+        <div class="impact-content">
+          <span id="impactHeader" class="impact-header is-hidden"></span>
+          <span id="impactPills" class="impact-pills"></span>
+          <span id="impactSummary" class="impact-summary">Hover or adjust any unlocked control below to spotlight every place it affects in the loop.</span>
+        </div>
+      </div>
+    </section>
+
+    <div id="bookGrid" class="book-grid">
+      <section class="panel-card conditions-card">
+        <div class="panel-eyebrow-row">
+          <div id="environmentEyebrow" class="section-eyebrow">Outside World (Model Conditions)</div>
+        </div>
+
+        <!-- Outside World / Environment block -->
+        <div class="station-control-block">
+          <div class="station-block-title">
+            <span id="worldBlockTitle">Outside World</span>
+            <span id="worldNewBadge" class="new-badge is-hidden">Ch. 7</span>
+          </div>
+          <div id="driftControlGroup" class="control-group knob-row">
+            <div class="knob-wrap">
+              <input id="driftSlider" class="knob-input" type="range" min="0" max="3" step="1" value="2">
+              <div id="driftKnob" class="rotary-knob" aria-hidden="true"></div>
+            </div>
+            <div class="knob-copy">
+              <div class="control-header">
+                <label id="driftLabel" class="control-label" for="driftSlider">Market drift speed (the breeze)</label>
+                <span id="driftRegime" class="control-regime">Rapid</span>
+              </div>
+              <div id="driftHelp" class="control-help">How rapidly the Outside World morphs from one silhouette to the next.</div>
+            </div>
+          </div>
+
+          <div id="demandControlGroup" class="control-group knob-row is-hidden">
+            <div class="knob-wrap">
+              <input id="demandSlider" class="knob-input" type="range" min="0" max="3" step="1" value="1" disabled>
+              <div id="demandKnob" class="rotary-knob" aria-hidden="true"></div>
+            </div>
+            <div class="knob-copy">
+              <div class="control-header">
+                <label id="demandLabel" class="control-label" for="demandSlider">Incoming demand (request arrival)</label>
+                <span id="demandRegime" class="control-regime">Steady</span>
+              </div>
+              <div id="demandHelp" class="control-help">How fast customers and stakeholders push new requests to the intake gate.</div>
+            </div>
+          </div>
+
+          <div id="shockControlGroup" class="control-group knob-row is-hidden">
+            <div class="knob-wrap">
+              <input id="shockSlider" class="knob-input" type="range" min="0" max="3" step="1" value="0" disabled>
+              <div id="shockKnob" class="rotary-knob" aria-hidden="true"></div>
+            </div>
+            <div class="knob-copy">
+              <div class="control-header">
+                <label id="shockLabel" class="control-label" for="shockSlider">Shock probability (rogue waves)</label>
+                <span id="shockRegime" class="control-regime">Off</span>
+              </div>
+              <div id="shockActionRow" class="shock-action-row">
+                <span id="shockHelp" class="control-help">Abrupt step-change snapping Outside World to a new silhouette.</span>
+                <button id="triggerShockBtn" class="btn btn-shock" type="button" disabled>Trigger Shock Wave</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unchecked Handoff & Defect Noise block (unlocks Ch. 2 / Ch. 5) -->
+        <div id="noiseConditionsBlock" class="station-control-block is-hidden">
+          <div class="station-block-title">
+            <span id="noiseBlockTitle">Unchecked Handoff &amp; Defect Noise</span>
+            <span id="noiseNewBadge" class="new-badge is-hidden">Ch. 2</span>
+          </div>
+
+          <div id="discoveryNoiseGroup" class="control-group knob-row is-hidden">
+            <div class="knob-wrap">
+              <input id="discoveryNoiseSlider" class="knob-input" type="range" min="0" max="3" step="1" value="0" disabled>
+              <div id="discoveryNoiseKnob" class="rotary-knob" aria-hidden="true"></div>
+            </div>
+            <div class="knob-copy">
+              <div class="control-header">
+                <label id="discoveryNoiseLabel" class="control-label" for="discoveryNoiseSlider">Discovery &amp; spec noise (World &rarr; Spec)</label>
+                <span id="discoveryNoiseRegime" class="control-regime">None</span>
+              </div>
+              <div id="discoveryNoiseHelp" class="control-help">Distortion when reading the market and compressing findings into a written ticket.</div>
+            </div>
+          </div>
+
+          <div id="buildNoiseGroup" class="control-group knob-row is-hidden">
+            <div class="knob-wrap">
+              <input id="buildNoiseSlider" class="knob-input" type="range" min="0" max="3" step="1" value="0" disabled>
+              <div id="buildNoiseKnob" class="rotary-knob" aria-hidden="true"></div>
+            </div>
+            <div class="knob-copy">
+              <div class="control-header">
+                <label id="buildNoiseLabel" class="control-label" for="buildNoiseSlider">Build handoff &amp; coding noise (Spec &rarr; Code)</label>
+                <span id="buildNoiseRegime" class="control-regime">None</span>
+              </div>
+              <div id="buildNoiseHelp" class="control-help">Distortion from async ticket gaps and coding defects warping the solid shape.</div>
+            </div>
+          </div>
+
+          <div id="messagingNoiseGroup" class="control-group knob-row is-hidden">
+            <div class="knob-wrap">
+              <input id="messagingNoiseSlider" class="knob-input" type="range" min="0" max="3" step="1" value="0" disabled>
+              <div id="messagingNoiseKnob" class="rotary-knob" aria-hidden="true"></div>
+            </div>
+            <div class="knob-copy">
+              <div class="control-header">
+                <label id="messagingNoiseLabel" class="control-label" for="messagingNoiseSlider">Messaging &amp; docs noise (positioning)</label>
+                <span id="messagingNoiseRegime" class="control-regime">Accurate</span>
+              </div>
+              <div id="messagingNoiseHelp" class="control-help">Mismatch between marketing/docs promises and what the shipped code actually does (e.g. labelling a Circle as "TRIANGLE").</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-card governance-card">
+        <div class="panel-eyebrow-row">
+          <div id="activeControlsEyebrow" class="section-eyebrow">Process &amp; Governance Levers (Chapter 1)</div>
+          <button id="hintsToggleBtn" class="btn btn-hints-toggle" type="button" aria-expanded="true">Hide hints &#9650;</button>
+        </div>
+
+        <div id="governanceColumns" class="governance-columns is-early-chapters">
+          <div class="gov-col gov-col-upstream">
+            <!-- Flow & WIP block -->
+            <div id="flowControlBlock" class="station-control-block is-hidden">
+              <div class="station-block-title">
+                <span id="flowBlockTitle">Flow &amp; WIP</span>
+                <span id="flowNewBadge" class="new-badge is-hidden">Ch. 4</span>
+              </div>
+              <div id="flowControlGroup" class="control-group knob-row">
+                <div class="knob-wrap">
+                  <input id="wipSlider" class="knob-input" type="range" min="0" max="3" step="1" value="0" disabled>
+                  <div id="wipKnob" class="rotary-knob" aria-hidden="true"></div>
+                </div>
+                <div class="knob-copy">
+                  <div class="control-header">
+                    <label id="wipLabel" class="control-label" for="wipSlider">WIP limit (max bets in flight)</label>
+                    <span id="wipRegime" class="control-regime">One at a time (1)</span>
+                  </div>
+                  <div id="wipHelp" class="control-help">Caps active bets in flight; extra requests wait outside until a bet finishes.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Discovery block -->
+            <div class="station-control-block">
+              <div class="station-block-title">
+                <span id="discoveryBlockTitle">Discovery &amp; Spec</span>
+                <span id="discoveryNewBadge" class="new-badge is-hidden">Ch. 2</span>
+              </div>
+
+              <div class="control-group">
+                <div id="discoverySliderZone" class="knob-row">
+                  <div class="knob-wrap">
+                    <input id="discoverySlider" class="knob-input" type="range" min="0" max="3" step="1" value="3">
+                    <div id="discoveryKnob" class="rotary-knob" aria-hidden="true"></div>
+                  </div>
+                  <div class="knob-copy">
+                    <div class="control-header">
+                      <label id="discoveryLabel" class="control-label" for="discoverySlider">Upfront discovery &amp; spec depth</label>
+                      <span id="discoveryRegime" class="control-regime">Paralysis</span>
+                    </div>
+                    <div id="discoveryHelp" class="control-help">Thin slices ship fast; deeper desk study trims ~24% to 38% of misreads with diminishing returns while adding lag.</div>
+                  </div>
+                </div>
+
+                <div id="discoveryDampenerBox" class="dampener-box is-hidden">
+                  <label class="dampener-label" for="discoveryDampenerToggle">
+                    <input id="discoveryDampenerToggle" class="switch-input" type="checkbox" role="switch" disabled>
+                    <span class="toggle-switch" aria-hidden="true"><span class="toggle-thumb"></span></span>
+                    <span class="dampener-copy">
+                      <span class="dampener-title-row">
+                        <span id="discoveryDampenerTitle">Watch real users &amp; check the Spec together</span>
+                        <span id="discoveryDampenerStatus" class="dampener-status">Baseline: None</span>
+                      </span>
+                      <span id="discoveryDampenerMeta" class="dampener-meta">Cuts Discovery noise by ~82%, adds +1.8d to Discovery.</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Build block -->
+            <div class="station-control-block">
+              <div class="station-block-title">
+                <span id="buildBlockTitle">Build</span>
+                <span id="buildNewBadge" class="new-badge is-hidden">Ch. 2</span>
+              </div>
+
+              <div class="control-group">
+                <div id="buildSliderZone" class="knob-row">
+                  <div class="knob-wrap">
+                    <input id="buildSlider" class="knob-input" type="range" min="0" max="3" step="1" value="1">
+                    <div id="buildKnob" class="rotary-knob" aria-hidden="true"></div>
+                  </div>
+                  <div class="knob-copy">
+                    <div class="control-header">
+                      <label id="buildLabel" class="control-label" for="buildSlider">Build slice size (batch scope)</label>
+                      <span id="buildRegime" class="control-regime">Medium batch</span>
+                    </div>
+                    <div id="buildHelp" class="control-help">Smaller vertical slices finish faster and stay steerable; oversized batches sit longer and drift harder.</div>
+                  </div>
+                </div>
+
+                <div id="build10xBox" class="dampener-box is-hidden">
+                  <label class="dampener-label" for="build10xToggle">
+                    <input id="build10xToggle" class="switch-input" type="checkbox" role="switch" disabled>
+                    <span class="toggle-switch" aria-hidden="true"><span class="toggle-thumb"></span></span>
+                    <span class="dampener-copy">
+                      <span class="dampener-title-row">
+                        <span id="build10xTitle">10x Build throughput</span>
+                        <span id="build10xStatus" class="dampener-status is-hidden"></span>
+                      </span>
+                      <span id="build10xMeta" class="dampener-meta">Cuts Build time per item 10x (e.g. 15 devs to 1 tester, or fast build automation).</span>
+                    </span>
+                  </label>
+                </div>
+
+                <div id="buildDampenerBox" class="dampener-box is-hidden">
+                  <label class="dampener-label" for="buildDampenerToggle">
+                    <input id="buildDampenerToggle" class="switch-input" type="checkbox" role="switch" disabled>
+                    <span class="toggle-switch" aria-hidden="true"><span class="toggle-thumb"></span></span>
+                    <span class="dampener-copy">
+                      <span class="dampener-title-row">
+                        <span id="buildDampenerTitle">Pair during Build</span>
+                        <span id="buildDampenerStatus" class="dampener-status">Baseline: None</span>
+                      </span>
+                      <span id="buildDampenerMeta" class="dampener-meta">Cuts Build noise by ~84%; focuses 2 people on 1 bet at a time (halves parallel Build WIP in Ch. 4+; 0d added lead time).</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gov-col gov-col-downstream">
+            <!-- Testing block -->
+            <div id="testingControlBlock" class="station-control-block is-hidden">
+              <div class="station-block-title">
+                <span id="testingBlockTitle">Testing</span>
+                <span id="testingNewBadge" class="new-badge is-hidden">Ch. 3</span>
+              </div>
+
+              <div id="testingControlGroup" class="control-group knob-row">
+                <div class="knob-wrap">
+                  <input id="testingSlider" class="knob-input" type="range" min="0" max="3" step="1" value="0" disabled>
+                  <div id="testingKnob" class="rotary-knob" aria-hidden="true"></div>
+                </div>
+                <div class="knob-copy">
+                  <div class="control-header">
+                    <label id="testingLabel" class="control-label" for="testingSlider">Testing thoroughness (Built == Spec)</label>
+                    <span id="testingRegime" class="control-regime">Off</span>
+                  </div>
+                  <div id="testingHelp" class="control-help">Checks solid Built shape strictly against written Spec; mismatches loop back to Build with a wrench badge.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rollout / Go-to-Market block -->
+            <div id="rolloutControlBlock" class="station-control-block is-hidden">
+              <div class="station-block-title">
+                <span id="rolloutBlockTitle">Rollout &amp; Messaging (Go-to-Market)</span>
+                <span id="rolloutNewBadge" class="new-badge is-hidden">Ch. 5</span>
+              </div>
+
+              <div id="rolloutControlGroup" class="control-group">
+                <div id="reachSliderZone" class="knob-row">
+                  <div class="knob-wrap">
+                    <input id="reachSlider" class="knob-input" type="range" min="0" max="3" step="1" value="3" disabled>
+                    <div id="reachKnob" class="rotary-knob" aria-hidden="true"></div>
+                  </div>
+                  <div class="knob-copy">
+                    <div class="control-header">
+                      <label id="reachLabel" class="control-label" for="reachSlider">Rollout reach (distribution &amp; visibility)</label>
+                      <span id="reachRegime" class="control-regime">Full (100%)</span>
+                    </div>
+                    <div id="reachHelp" class="control-help">How much of the target market discovers the shipped product (Silent leaves it tiny and unlabelled).</div>
+                  </div>
+                </div>
+
+                <div id="rolloutDampenerBox" class="dampener-box">
+                  <label class="dampener-label" for="rolloutDampenerToggle">
+                    <input id="rolloutDampenerToggle" class="switch-input" type="checkbox" role="switch" disabled>
+                    <span class="toggle-switch" aria-hidden="true"><span class="toggle-thumb"></span></span>
+                    <span class="dampener-copy">
+                      <span class="dampener-title-row">
+                        <span id="rolloutDampenerTitle">Check messaging &amp; docs against build</span>
+                        <span id="rolloutDampenerStatus" class="dampener-status">Baseline: Accurate</span>
+                      </span>
+                      <span id="rolloutDampenerMeta" class="dampener-meta">Aligns positioning and docs with the real build (~88% less label noise, +1d Rollout time).</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Incoming Channels (Outer Loop) block -->
+            <div id="channelsControlBlock" class="station-control-block is-hidden">
+              <div class="station-block-title">
+                <span id="channelsBlockTitle">Incoming Channels (Outer Loop)</span>
+                <span id="channelsNewBadge" class="new-badge is-hidden">Ch. 6</span>
+              </div>
+
+              <div class="control-group">
+                <div id="diagnosticChannelBox" class="dampener-box is-hidden">
+                  <label class="dampener-label" for="diagnosticChannelToggle">
+                    <input id="diagnosticChannelToggle" class="switch-input" type="checkbox" role="switch" disabled>
+                    <span class="toggle-switch" aria-hidden="true"><span class="toggle-thumb"></span></span>
+                    <span class="dampener-copy">
+                      <span class="dampener-title-row">
+                        <span id="diagnosticChannelTitle">Diagnostic channel: watch real users post-launch</span>
+                        <span id="diagnosticChannelStatus" class="dampener-status is-hidden"></span>
+                      </span>
+                      <span id="diagnosticChannelMeta" class="dampener-meta">Watches real users on every release (+0.7d per launch) so failed launches route straight to Rollout, Build, or Discovery.</span>
+                    </span>
+                  </label>
+                </div>
+
+                <div id="andonCordBox" class="dampener-box is-hidden">
+                  <label class="dampener-label" for="andonCordToggle">
+                    <input id="andonCordToggle" class="switch-input" type="checkbox" role="switch" disabled>
+                    <span class="toggle-switch" aria-hidden="true"><span class="toggle-thumb"></span></span>
+                    <span class="dampener-copy">
+                      <span class="dampener-title-row">
+                        <span id="andonCordTitle">Andon cord: pre-empt &amp; flush queues on shock</span>
+                        <span id="andonCordStatus" class="dampener-status is-hidden"></span>
+                      </span>
+                      <span id="andonCordMeta" class="dampener-meta">Fires an immediate interrupt when a rogue wave hits, clearing pre-shock items from stations and queues right away.</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="chapter-pager bottom-pager">
+      <button id="prevChapterBtn" class="btn is-hidden" type="button">&larr; Previous chapter</button>
+      <span></span>
+      <button id="nextChapterBtn" class="btn btn-primary" type="button">Next: Chapter 2 (Handoff Noise) &rarr;</button>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="model.js"></script>
+  <script src="diagram-view.js"></script>
+  <script src="url-state.js"></script>
+  <script src="controls-view.js"></script>
+</body>
+</html>
