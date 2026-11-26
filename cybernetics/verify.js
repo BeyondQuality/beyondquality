@@ -5665,6 +5665,126 @@ check('URL GET parameters: round-trip all 18 settings + UI flags, live replaceSt
   api.applyChapter(1);
 });
 
+check('Vignette URL modes (ui=bare & ui=controls): chrome stripping, sticky URL sync, and in-place Open full interactive model transition', function () {
+  // 1. Default normal mode shows full walkthrough chrome and hides #vignetteFooter
+  api.applyUrlQuery('');
+  assert.strictEqual(api.getUiMode(), 'normal');
+  assert(!idElements.pageShell.classList.contains('is-ui-bare') && !idElements.pageShell.classList.contains('is-ui-controls'));
+  assert(!idElements.viewBar.classList.contains('is-hidden'), 'Expected .view-bar visible in normal mode');
+  assert(!idElements.chapterNav.classList.contains('is-hidden'), 'Expected .chapter-nav visible in normal mode');
+  assert(!idElements.storyCard.classList.contains('is-hidden'), 'Expected #storyCard visible in normal mode');
+  assert(!idElements.experimentsRow.classList.contains('is-hidden'), 'Expected #experimentsRow visible in normal mode');
+  assert(!idElements.bookGrid.classList.contains('is-hidden'), 'Expected #bookGrid visible in normal mode');
+  assert(!idElements.bottomPager.classList.contains('is-hidden'), 'Expected #bottomPager visible in normal mode');
+  assert(idElements.vignetteFooter.classList.contains('is-hidden'), 'Expected #vignetteFooter hidden in normal mode');
+
+  // 2. ?ch=4&ui=bare strips navigation, story, presets, impactBar, controls, and pager while keeping stage + link
+  assert(api.applyUrlQuery('?ch=4&wip=1&pair=1&ui=bare'), 'Expected applyUrlQuery to accept ui=bare');
+  assert.strictEqual(api.getUiMode(), 'bare');
+  assert(idElements.pageShell.classList.contains('is-ui-bare') && !idElements.pageShell.classList.contains('is-ui-controls'));
+  assert(idElements.viewBar.classList.contains('is-hidden'), 'Expected .view-bar hidden in ui=bare');
+  assert(idElements.chapterNav.classList.contains('is-hidden'), 'Expected .chapter-nav hidden in ui=bare');
+  assert(idElements.storyCard.classList.contains('is-hidden'), 'Expected #storyCard hidden in ui=bare');
+  assert(idElements.experimentsRow.classList.contains('is-hidden'), 'Expected #experimentsRow hidden in ui=bare');
+  assert(idElements.impactBar.classList.contains('is-hidden'), 'Expected #impactBar hidden in ui=bare');
+  assert(idElements.bookGrid.classList.contains('is-hidden'), 'Expected #bookGrid hidden in ui=bare');
+  assert(idElements.bottomPager.classList.contains('is-hidden'), 'Expected #bottomPager hidden in ui=bare');
+  assert(!idElements.vignetteFooter.classList.contains('is-hidden'), 'Expected #vignetteFooter visible in ui=bare');
+  assert.strictEqual(api.getState().spotlightZones.length, 0, 'ui=bare must not light control-diff spotlight rings on load');
+  assert.strictEqual(global.window.location.search, '?ch=4&wip=1&pair=1&ui=bare');
+  assert.strictEqual(
+    idElements.openFullModelLink.getAttribute('href'),
+    'https://beyondquality.org/cybernetics/?ch=4&wip=1&pair=1',
+    'Expected Open full interactive model link to preserve current chapter and active params without ui=bare'
+  );
+  assert.strictEqual(idElements.openFullModelLink.getAttribute('target'), '_self');
+
+  // Speed and Pause changes inside ui=bare keep ui=bare sticky in URL and update full-model href
+  speedBtns[2].dispatchEvent('click'); // 2x speed
+  idElements.playPauseBtn.dispatchEvent('click'); // pause
+  assert.strictEqual(global.window.location.search, '?ch=4&wip=1&pair=1&speed=2&paused=1&ui=bare');
+  assert.strictEqual(
+    idElements.openFullModelLink.getAttribute('href'),
+    'https://beyondquality.org/cybernetics/?ch=4&wip=1&pair=1&speed=2&paused=1'
+  );
+  idElements.playPauseBtn.dispatchEvent('click'); // resume
+  speedBtns[1].dispatchEvent('click'); // 1x speed
+  assert.strictEqual(global.window.location.search, '?ch=4&wip=1&pair=1&ui=bare');
+
+  // Advance simulation so history chips exist, then verify modifier-click leaves vignette intact while plain click unfolds in-place
+  runSeconds(18);
+  const preUnfoldState = api.getState();
+  assert(preUnfoldState.clockSec >= 17.5 && preUnfoldState.history.length >= 1, 'Expected running clock and launch history before unfolding');
+
+  let prevented = false;
+  idElements.openFullModelLink.dispatchEvent('click', {
+    button: 0,
+    metaKey: true,
+    preventDefault: function () { prevented = true; }
+  });
+  assert.strictEqual(prevented, false, 'Cmd/Ctrl-click must allow native new-tab link navigation');
+  assert.strictEqual(api.getUiMode(), 'bare', 'Cmd/Ctrl-click must leave current tab in ui=bare');
+
+  idElements.openFullModelLink.dispatchEvent('click', {
+    button: 0,
+    preventDefault: function () { prevented = true; }
+  });
+  assert.strictEqual(prevented, true, 'Plain left-click in top-level tab should unfold in-place without page reload');
+  assert.strictEqual(api.getUiMode(), 'normal');
+  assert(!idElements.viewBar.classList.contains('is-hidden') && !idElements.storyCard.classList.contains('is-hidden'));
+  assert(!idElements.storyCard.classList.contains('is-collapsed'), 'Unfolding into full model should show chapter Story expanded');
+  assert(!idElements.experimentsRow.classList.contains('is-hidden') && !idElements.impactBar.classList.contains('is-hidden'));
+  assert(!idElements.bookGrid.classList.contains('is-hidden') && !idElements.bottomPager.classList.contains('is-hidden'));
+  assert(idElements.vignetteFooter.classList.contains('is-hidden'));
+  assert.strictEqual(global.window.location.search, '?ch=4&wip=1&pair=1', 'Unfolding into full model must drop ui=bare from URL');
+  assert.strictEqual(api.getState().clockSec, preUnfoldState.clockSec, 'In-place unfold must preserve running clock');
+  assert.strictEqual(api.getState().history.length, preUnfoldState.history.length, 'In-place unfold must preserve launch history');
+
+  // 3. ?ch=4&ui=controls hides navigation, story, and pager while keeping presets, impactBar, and chapter controls active
+  assert(api.applyUrlQuery('?ch=4&ui=controls'), 'Expected applyUrlQuery to accept ui=controls');
+  assert.strictEqual(api.getUiMode(), 'controls');
+  assert(idElements.pageShell.classList.contains('is-ui-controls') && !idElements.pageShell.classList.contains('is-ui-bare'));
+  assert(idElements.viewBar.classList.contains('is-hidden') && idElements.chapterNav.classList.contains('is-hidden'));
+  assert(idElements.storyCard.classList.contains('is-hidden') && idElements.bottomPager.classList.contains('is-hidden'));
+  assert(!idElements.experimentsRow.classList.contains('is-hidden'), 'Expected #experimentsRow visible in ui=controls');
+  assert(!idElements.impactBar.classList.contains('is-hidden'), 'Expected #impactBar visible on Ch. 2+ in ui=controls');
+  assert(!idElements.bookGrid.classList.contains('is-hidden'), 'Expected #bookGrid visible in ui=controls');
+  assert(!idElements.vignetteFooter.classList.contains('is-hidden'), 'Expected #vignetteFooter visible in ui=controls');
+  assert.strictEqual(global.window.location.search, '?ch=4&ui=controls');
+  assert.strictEqual(idElements.openFullModelLink.getAttribute('href'), 'https://beyondquality.org/cybernetics/?ch=4');
+
+  // Turning a knob inside ui=controls keeps ui=controls sticky and updates full-model href
+  idElements.wipSlider.value = '1';
+  idElements.wipSlider.dispatchEvent('input');
+  assert.strictEqual(global.window.location.search, '?ch=4&wip=1&ui=controls');
+  assert.strictEqual(idElements.openFullModelLink.getAttribute('href'), 'https://beyondquality.org/cybernetics/?ch=4&wip=1');
+
+  // When embedded inside an iframe (window.self !== window.top), link targets _blank and allows native navigation
+  global.window.self = { frame: 1 };
+  global.window.top = { topWindow: 1 };
+  try {
+    api.applyUrlQuery('?ui=bare');
+    assert.strictEqual(api.getState().settings.chapter, 1, 'Expected bare ?ui=bare without ch= to open Chapter 1');
+    assert.strictEqual(global.window.location.search, '?ch=1&ui=bare');
+    assert.strictEqual(idElements.openFullModelLink.getAttribute('href'), 'https://beyondquality.org/cybernetics/');
+    assert.strictEqual(idElements.openFullModelLink.getAttribute('target'), '_blank');
+    let iframePrevented = false;
+    idElements.openFullModelLink.dispatchEvent('click', {
+      button: 0,
+      preventDefault: function () { iframePrevented = true; }
+    });
+    assert.strictEqual(iframePrevented, false, 'Iframe click must not preventDefault so target=_blank opens full tab');
+  } finally {
+    delete global.window.self;
+    delete global.window.top;
+  }
+
+  // Restore clean baseline state
+  api.applyUrlQuery('');
+  api.setViewMode('product');
+  api.applyChapter(1);
+});
+
 check('Publishing metadata: index.html includes Beyond Quality favicon, canonical URL, and Open Graph / Twitter preview tags', function () {
   assert(
     /<link\s+rel="icon"\s+type="image\/jpeg"\s+href="\/bq\.jpeg">/i.test(htmlSource) &&

@@ -25,8 +25,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-shell">
-    <div class="view-bar">
+  <div id="pageShell" class="page-shell">
+    <div id="viewBar" class="view-bar">
       <span id="chapterKicker" class="section-eyebrow toolbar-eyebrow">Chapter 1 of 8</span>
       <div class="view-mode-wrap">
         <span class="view-mode-prefix">Language:</span>
@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <nav class="chapter-nav" aria-label="Walkthrough chapters">
+    <nav id="chapterNav" class="chapter-nav" aria-label="Walkthrough chapters">
       <button class="chapter-tab active" data-chapter="1" type="button">
         <span class="chapter-num">1</span>
         <span id="tabName1" class="chapter-name">Adaptation Time</span>
@@ -487,10 +487,14 @@
       </section>
     </div>
 
-    <div class="chapter-pager bottom-pager">
+    <div id="bottomPager" class="chapter-pager bottom-pager">
       <button id="prevChapterBtn" class="btn is-hidden" type="button">&larr; Previous chapter</button>
       <span></span>
       <button id="nextChapterBtn" class="btn btn-primary" type="button">Next: Chapter 2 (Handoff Noise) &rarr;</button>
+    </div>
+
+    <div id="vignetteFooter" class="vignette-footer is-hidden">
+      <a id="openFullModelLink" class="open-full-model-link" href="https://beyondquality.org/cybernetics/">Open full interactive model &rarr;</a>
     </div>
   </div>
 

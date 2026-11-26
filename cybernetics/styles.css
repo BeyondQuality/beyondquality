@@ -932,6 +932,53 @@ body {
   font-size: 0.8rem;
 }
 
+/* Stripped-down vignette modes (?ui=bare and ?ui=controls) */
+.page-shell.is-ui-bare,
+.page-shell.is-ui-controls {
+  padding-top: 0.75rem;
+  padding-bottom: 1.25rem;
+}
+
+.page-shell.is-ui-bare .view-bar,
+.page-shell.is-ui-bare .chapter-nav,
+.page-shell.is-ui-bare .story-card,
+.page-shell.is-ui-bare .stage-experiments,
+.page-shell.is-ui-bare .impact-bar,
+.page-shell.is-ui-bare .book-grid,
+.page-shell.is-ui-bare .bottom-pager,
+.page-shell.is-ui-controls .view-bar,
+.page-shell.is-ui-controls .chapter-nav,
+.page-shell.is-ui-controls .story-card,
+.page-shell.is-ui-controls .bottom-pager {
+  display: none !important;
+}
+
+.page-shell.is-ui-bare .stage-card,
+.page-shell.is-ui-controls .book-grid {
+  margin-bottom: 0.45rem;
+}
+
+.vignette-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.08rem 0.15rem 0;
+}
+
+.open-full-model-link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+.open-full-model-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* Rotary Knob & Safeguard Switch Console */
 .section-eyebrow {
   font-size: 0.72rem;

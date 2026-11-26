@@ -69,11 +69,14 @@
       if (uiFlags.paused) {
         extraPairs.push('paused=1');
       }
-      if (uiFlags.storyCollapsed) {
+      if (uiFlags.storyCollapsed && uiFlags.uiMode !== 'bare' && uiFlags.uiMode !== 'controls') {
         extraPairs.push('story=0');
       }
-      if (uiFlags.hintsCollapsed) {
+      if (uiFlags.hintsCollapsed && uiFlags.uiMode !== 'bare') {
         extraPairs.push('hints=0');
+      }
+      if (uiFlags.uiMode === 'bare' || uiFlags.uiMode === 'controls') {
+        extraPairs.push('ui=' + uiFlags.uiMode);
       }
     }
 
@@ -201,6 +204,15 @@
       }
     }
 
+    let uiMode = null;
+    if (Object.prototype.hasOwnProperty.call(rawMap, 'ui')) {
+      const um = String(rawMap.ui).trim().toLowerCase();
+      if (um === 'bare' || um === 'controls' || um === 'normal') {
+        uiMode = um;
+        hasRecognizedParams = true;
+      }
+    }
+
     if (!hasRecognizedParams) {
       return { hasRecognizedParams: false };
     }
@@ -228,6 +240,7 @@
       hasRecognizedParams: true,
       chapter: chapter,
       view: view,
+      uiMode: uiMode,
       presetIdx: presetIdx,
       overrides: overrides,
       speed: speed,

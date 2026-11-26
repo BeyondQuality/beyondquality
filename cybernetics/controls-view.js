@@ -110,6 +110,9 @@
     return document.getElementById('tabName' + n);
   });
 
+  const pageShellEl = document.getElementById('pageShell');
+  const viewBarEl = document.getElementById('viewBar');
+  const chapterNavEl = document.getElementById('chapterNav');
   const chapterKickerEl = document.getElementById('chapterKicker');
   const productViewBtn = document.getElementById('productViewBtn');
   const cyberneticsViewBtn = document.getElementById('cyberneticsViewBtn');
@@ -130,8 +133,11 @@
   const discoverySliderZoneEl = document.getElementById('discoverySliderZone');
   const buildSliderZoneEl = document.getElementById('buildSliderZone');
   const reachSliderZoneEl = document.getElementById('reachSliderZone');
+  const bottomPagerEl = document.getElementById('bottomPager');
   const prevChapterBtn = document.getElementById('prevChapterBtn');
   const nextChapterBtn = document.getElementById('nextChapterBtn');
+  const vignetteFooterEl = document.getElementById('vignetteFooter');
+  const openFullModelLinkEl = document.getElementById('openFullModelLink');
   const bookGridEl = document.getElementById('bookGrid');
   const governanceColumnsEl = document.getElementById('governanceColumns');
   const hintsToggleBtn = document.getElementById('hintsToggleBtn');
@@ -466,6 +472,7 @@
     syncActivePresetButtonsUI();
   }
 
+  let uiMode = 'normal';
   let storyCollapsed = false;
   let hintsCollapsed = false;
   let urlSyncReady = false;
@@ -474,9 +481,20 @@
 
   function getCurrentUiFlags() {
     return {
+      uiMode: uiMode,
       speed: sim.speedMultiplier,
       paused: !sim.running,
       storyCollapsed: storyCollapsed,
+      hintsCollapsed: hintsCollapsed
+    };
+  }
+
+  function getFullModelUiFlags() {
+    return {
+      uiMode: 'normal',
+      speed: sim.speedMultiplier,
+      paused: !sim.running,
+      storyCollapsed: false,
       hintsCollapsed: hintsCollapsed
     };
   }
@@ -489,7 +507,62 @@
     return U.buildFullShareUrl(getShareQueryString());
   }
 
+  function syncOpenFullModelLinkUI() {
+    if (!openFullModelLinkEl) return;
+    const fullQuery = U.buildShareQueryString(getFullModelUiFlags());
+    const fullUrl = U.buildFullShareUrl(fullQuery);
+    openFullModelLinkEl.href = fullUrl;
+    openFullModelLinkEl.setAttribute('href', fullUrl);
+    try {
+      if (window.self && window.top && window.self !== window.top) {
+        openFullModelLinkEl.setAttribute('target', '_blank');
+        openFullModelLinkEl.setAttribute('rel', 'noopener');
+      } else {
+        openFullModelLinkEl.setAttribute('target', '_self');
+      }
+    } catch (_) {
+      openFullModelLinkEl.setAttribute('target', '_blank');
+      openFullModelLinkEl.setAttribute('rel', 'noopener');
+    }
+  }
+
+  function syncUiModeUI() {
+    const isBare = uiMode === 'bare';
+    const isControls = uiMode === 'controls';
+    const isVignette = isBare || isControls;
+    if (pageShellEl) {
+      pageShellEl.classList.toggle('is-ui-bare', isBare);
+      pageShellEl.classList.toggle('is-ui-controls', isControls);
+    }
+    if (viewBarEl) viewBarEl.classList.toggle('is-hidden', isVignette);
+    if (chapterNavEl) chapterNavEl.classList.toggle('is-hidden', isVignette);
+    if (storyCardEl) storyCardEl.classList.toggle('is-hidden', isVignette);
+    if (experimentsRowEl) experimentsRowEl.classList.toggle('is-hidden', isBare);
+    if (impactBarEl) impactBarEl.classList.toggle('is-hidden', isBare || settings.chapter < 2);
+    if (bookGridEl) bookGridEl.classList.toggle('is-hidden', isBare);
+    if (bottomPagerEl) bottomPagerEl.classList.toggle('is-hidden', isVignette);
+    if (vignetteFooterEl) vignetteFooterEl.classList.toggle('is-hidden', !isVignette);
+    syncOpenFullModelLinkUI();
+  }
+
+  function setUiMode(mode) {
+    const nextMode = mode === 'bare' || mode === 'controls' ? mode : 'normal';
+    uiMode = nextMode;
+    if (nextMode === 'bare') {
+      sim.hoverStack.length = 0;
+      sim.hoverControlKey = null;
+      sim.hoverImpactBar = false;
+      sim.activeSpotlight = null;
+    }
+    syncUiModeUI();
+    renderImpactBar();
+    setupCanvasResolution();
+    renderCanvas();
+    syncUrlFromState();
+  }
+
   function syncUrlFromState() {
+    syncOpenFullModelLinkUI();
     if (!urlSyncReady) return;
     const query = getShareQueryString();
     if (query === lastSyncedQuery) return;
@@ -620,7 +693,7 @@
   }
 
   function renderImpactBar() {
-    if (settings.chapter < 2) {
+    if (settings.chapter < 2 || uiMode === 'bare') {
       impactBarEl.classList.add('is-hidden');
       impactBarEl.classList.remove('is-active', 'is-hover');
       clearImpactToneClasses();
@@ -961,7 +1034,7 @@
     const showCh6 = chNum >= 6;
     const showCh7 = chNum >= 7;
 
-    impactBarEl.classList.toggle('is-hidden', !showCh2);
+    impactBarEl.classList.toggle('is-hidden', !showCh2 || uiMode === 'bare');
     topShockBtn.classList.toggle('is-hidden', !showCh7);
     topShockBtn.disabled = !showCh7;
     governanceColumnsEl.classList.toggle('is-early-chapters', !showCh3);
@@ -1033,6 +1106,7 @@
     storyCollapsed = false;
     renderPresetsForChapter(chNum);
     syncViewModeUI();
+    syncUiModeUI();
     syncControlsFromSettings();
     resetSimulation();
     syncUrlFromState();
@@ -1903,6 +1977,24 @@
     });
   }
 
+  if (openFullModelLinkEl) {
+    openFullModelLinkEl.addEventListener('click', function (e) {
+      let inFrame = false;
+      try {
+        inFrame = Boolean(window.self && window.top && window.self !== window.top);
+      } catch (_) {
+        inFrame = true;
+      }
+      if (inFrame) return;
+      if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)) return;
+      if (e && e.button !== undefined && e.button !== 0) return;
+      if (e && e.preventDefault) e.preventDefault();
+      storyCollapsed = false;
+      syncStoryCollapseUI();
+      setUiMode('normal');
+    });
+  }
+
   window.addEventListener('resize', setupCanvasResolution);
 
   productViewBtn.addEventListener('click', function () {
@@ -1956,16 +2048,19 @@
     if (!parsed.hasRecognizedParams) {
       const prevReadyDefault = urlSyncReady;
       urlSyncReady = false;
+      uiMode = 'normal';
       applySpeedMultiplier(1);
       sim.running = true;
       applyChapter(1);
       urlSyncReady = prevReadyDefault;
+      syncUrlFromState();
       return false;
     }
 
     const prevReady = urlSyncReady;
     urlSyncReady = false;
 
+    uiMode = parsed.uiMode === 'bare' || parsed.uiMode === 'controls' ? parsed.uiMode : 'normal';
     settings.viewMode = parsed.view === 'cybernetics' ? 'cybernetics' : 'product';
     applyChapter(parsed.chapter);
 
@@ -1987,15 +2082,18 @@
     }
 
     applySpeedMultiplier(parsed.speed !== null ? parsed.speed : 1);
-    storyCollapsed = parsed.storyCollapsed !== null ? parsed.storyCollapsed : false;
-    hintsCollapsed = parsed.hintsCollapsed !== null ? parsed.hintsCollapsed : false;
+    storyCollapsed =
+      uiMode === 'normal' && parsed.storyCollapsed !== null ? parsed.storyCollapsed : false;
+    hintsCollapsed =
+      uiMode !== 'bare' && parsed.hintsCollapsed !== null ? parsed.hintsCollapsed : false;
     sim.running = parsed.paused !== null ? !parsed.paused : true;
 
     syncViewModeUI();
+    syncUiModeUI();
     syncControlsFromSettings();
     resetSimulation();
 
-    if (settings.chapter >= 2 && Object.keys(targetValues).length > 0) {
+    if (uiMode !== 'bare' && settings.chapter >= 2 && Object.keys(targetValues).length > 0) {
       let matchedPreset = null;
       for (let i = 0; i < chObj.presets.length; i++) {
         if (doesPresetMatchSettings(chObj.presets[i])) {
@@ -2040,6 +2138,10 @@
     applyUrlQuery: applyUrlQuery,
     getShareQuery: getShareQueryString,
     getShareUrl: buildFullShareUrl,
+    getUiMode: function () {
+      return uiMode;
+    },
+    setUiMode: setUiMode,
     setViewMode: setViewMode,
     getChapters: function () {
       return CHAPTERS;
