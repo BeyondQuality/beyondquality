@@ -5759,15 +5759,37 @@ check('Vignette URL modes (ui=bare & ui=controls): chrome stripping, sticky URL 
   assert.strictEqual(global.window.location.search, '?ch=4&wip=1&ui=controls');
   assert.strictEqual(idElements.openFullModelLink.getAttribute('href'), 'https://beyondquality.org/cybernetics/?ch=4&wip=1');
 
-  // When embedded inside an iframe (window.self !== window.top), link targets _blank and allows native navigation
+  // When embedded inside an iframe (window.self !== window.top), link targets _blank, pageShell gets .is-framed,
+  // and simulation holds at 0.0d while hidden inside a closed <details> (innerHeight === 0) or off-screen until viewed
   global.window.self = { frame: 1 };
   global.window.top = { topWindow: 1 };
+  global.window.innerHeight = 0; // closed <details> zero height
   try {
-    api.applyUrlQuery('?ui=bare');
-    assert.strictEqual(api.getState().settings.chapter, 1, 'Expected bare ?ui=bare without ch= to open Chapter 1');
-    assert.strictEqual(global.window.location.search, '?ch=1&ui=bare');
-    assert.strictEqual(idElements.openFullModelLink.getAttribute('href'), 'https://beyondquality.org/cybernetics/');
+    api.applyUrlQuery('?ch=4&ui=bare');
+    assert(idElements.pageShell.classList.contains('is-framed'), 'Expected .is-framed class on #pageShell inside iframe');
+    assert.strictEqual(idElements.openFullModelLink.getAttribute('href'), 'https://beyondquality.org/cybernetics/?ch=4');
     assert.strictEqual(idElements.openFullModelLink.getAttribute('target'), '_blank');
+
+    // Tick 100 animation frames (5.0s wall time) while <details> is closed: clock stays frozen at 0.0d without writing paused=1
+    for (let f = 0; f < 100; f++) api.tickFrame(0.05);
+    assert.strictEqual(api.getState().clockSec, 0, 'Closed <details> iframe (innerHeight=0) must hold simulation at 0.0d');
+    assert.strictEqual(api.getState().running, true, 'Visibility hold must not flip manual running state to false');
+    assert.strictEqual(global.window.location.search, '?ch=4&ui=bare', 'Visibility hold must not write paused=1 to URL');
+
+    // Unfolding <details> restores positive innerHeight and starts simulation immediately from 0.0d
+    global.window.innerHeight = 395;
+    for (let f = 0; f < 20; f++) api.tickFrame(0.05);
+    const afterOpenClock = api.getState().clockSec;
+    assert(afterOpenClock >= 0.95, 'Unfolding <details> must start advancing clock from 0.0d, got ' + afterOpenClock);
+
+    // Off-screen IntersectionObserver state also pauses advancement without altering manual running state
+    api.setIntersectionVisible(false);
+    for (let f = 0; f < 40; f++) api.tickFrame(0.05);
+    assert.strictEqual(api.getState().clockSec, afterOpenClock, 'Scrolling out of view must hold simulation clock');
+    api.setIntersectionVisible(true);
+    api.tickFrame(0.05);
+    assert(api.getState().clockSec > afterOpenClock, 'Scrolling back into view must resume simulation clock');
+
     let iframePrevented = false;
     idElements.openFullModelLink.dispatchEvent('click', {
       button: 0,
@@ -5775,12 +5797,15 @@ check('Vignette URL modes (ui=bare & ui=controls): chrome stripping, sticky URL 
     });
     assert.strictEqual(iframePrevented, false, 'Iframe click must not preventDefault so target=_blank opens full tab');
   } finally {
+    api.setIntersectionVisible(true);
+    delete global.window.innerHeight;
     delete global.window.self;
     delete global.window.top;
   }
 
   // Restore clean baseline state
   api.applyUrlQuery('');
+  assert(!idElements.pageShell.classList.contains('is-framed'), 'Top-level restore must clear .is-framed');
   api.setViewMode('product');
   api.applyChapter(1);
 });

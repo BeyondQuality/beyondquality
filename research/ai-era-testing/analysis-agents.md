@@ -96,6 +96,14 @@ Scaling with agents: using the O((n + εn²) / (1-r(n))) framework:
 
 All three terms move in the wrong direction simultaneously. The compounding is multiplicative, not additive, the superlinear costs don't just increase, they accelerate.
 
+<details class="sim-disclosure">
+  <summary>Watch how 10x build speed and rework bounce-backs compound inside a 1x testing queue</summary>
+  <iframe
+    src="/cybernetics/?ch=4&amp;ui=bare"
+    title="Interactive diagram: 10x build speed and rework compounding inside a 1x testing queue"
+    loading="lazy"></iframe>
+</details>
+
 ## What is qualitatively new (not just "more of the same")
 
 | Factor | Pre-AI | With agents |

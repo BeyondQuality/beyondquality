@@ -97,6 +97,53 @@ body {
   border: 0;
 }
 
+/* Collapsible live simulator vignette disclosure */
+.sim-disclosure {
+  margin: 0.75rem 0 1.5rem 0;
+}
+
+.sim-disclosure summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #b04a20;
+  list-style: none;
+  user-select: none;
+}
+
+.sim-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.sim-disclosure summary::before {
+  content: "\25B8";
+  display: inline-block;
+  font-size: 0.85em;
+  transition: transform 0.15s ease;
+}
+
+.sim-disclosure[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.sim-disclosure summary:hover {
+  color: #8f3915;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.sim-disclosure iframe {
+  display: block;
+  width: 100%;
+  height: 395px;
+  margin-top: 0.65rem;
+  border: 0;
+  background: transparent;
+}
+
 /* Artifact header: a hairline rule separates the site hero (above) from the
    article's own header (title + meta), so the two zones stop blurring. */
 .article-rule {

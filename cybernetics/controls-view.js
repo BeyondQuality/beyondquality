@@ -92,6 +92,7 @@
   const playPauseBtn = document.getElementById('playPauseBtn');
   const resetBtn = document.getElementById('resetBtn');
   const topShockBtn = document.getElementById('topShockBtn');
+  const simCanvasEl = document.getElementById('simCanvas');
   const clockValueEl = document.getElementById('clockValue');
   const loopTimePrefixEl = document.getElementById('loopTimePrefix');
   const loopTimeValueEl = document.getElementById('loopTimeValue');
@@ -507,22 +508,25 @@
     return U.buildFullShareUrl(getShareQueryString());
   }
 
+  function isRunningInFrame() {
+    try {
+      return Boolean(window.self && window.top && window.self !== window.top);
+    } catch (_) {
+      return true;
+    }
+  }
+
   function syncOpenFullModelLinkUI() {
     if (!openFullModelLinkEl) return;
     const fullQuery = U.buildShareQueryString(getFullModelUiFlags());
     const fullUrl = U.buildFullShareUrl(fullQuery);
     openFullModelLinkEl.href = fullUrl;
     openFullModelLinkEl.setAttribute('href', fullUrl);
-    try {
-      if (window.self && window.top && window.self !== window.top) {
-        openFullModelLinkEl.setAttribute('target', '_blank');
-        openFullModelLinkEl.setAttribute('rel', 'noopener');
-      } else {
-        openFullModelLinkEl.setAttribute('target', '_self');
-      }
-    } catch (_) {
+    if (isRunningInFrame()) {
       openFullModelLinkEl.setAttribute('target', '_blank');
       openFullModelLinkEl.setAttribute('rel', 'noopener');
+    } else {
+      openFullModelLinkEl.setAttribute('target', '_self');
     }
   }
 
@@ -533,6 +537,7 @@
     if (pageShellEl) {
       pageShellEl.classList.toggle('is-ui-bare', isBare);
       pageShellEl.classList.toggle('is-ui-controls', isControls);
+      pageShellEl.classList.toggle('is-framed', isRunningInFrame());
     }
     if (viewBarEl) viewBarEl.classList.toggle('is-hidden', isVignette);
     if (chapterNavEl) chapterNavEl.classList.toggle('is-hidden', isVignette);
@@ -1979,13 +1984,7 @@
 
   if (openFullModelLinkEl) {
     openFullModelLinkEl.addEventListener('click', function (e) {
-      let inFrame = false;
-      try {
-        inFrame = Boolean(window.self && window.top && window.self !== window.top);
-      } catch (_) {
-        inFrame = true;
-      }
-      if (inFrame) return;
+      if (isRunningInFrame()) return;
       if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)) return;
       if (e && e.button !== undefined && e.button !== 0) return;
       if (e && e.preventDefault) e.preventDefault();
@@ -1995,7 +1994,37 @@
     });
   }
 
-  window.addEventListener('resize', setupCanvasResolution);
+  let intersectionVisible = !(isRunningInFrame() && typeof window.IntersectionObserver === 'function');
+
+  function isSimCurrentlyVisible() {
+    if (!intersectionVisible) return false;
+    if (typeof document !== 'undefined' && document.hidden) return false;
+    if (window.innerHeight !== undefined && window.innerHeight <= 0) return false;
+    return true;
+  }
+
+  if (typeof window.IntersectionObserver === 'function' && simCanvasEl) {
+    const visObserver = new window.IntersectionObserver(
+      function (entries) {
+        for (let i = 0; i < entries.length; i++) {
+          intersectionVisible = Boolean(entries[i].isIntersecting);
+        }
+        if (typeof performance !== 'undefined' && performance.now) {
+          lastFrameMs = performance.now();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    visObserver.observe(simCanvasEl);
+  }
+
+  window.addEventListener('resize', function () {
+    if (pageShellEl) pageShellEl.classList.toggle('is-framed', isRunningInFrame());
+    if (typeof performance !== 'undefined' && performance.now) {
+      lastFrameMs = performance.now();
+    }
+    setupCanvasResolution();
+  });
 
   productViewBtn.addEventListener('click', function () {
     setViewMode('product');
@@ -2142,6 +2171,9 @@
       return uiMode;
     },
     setUiMode: setUiMode,
+    setIntersectionVisible: function (vis) {
+      intersectionVisible = Boolean(vis);
+    },
     setViewMode: setViewMode,
     getChapters: function () {
       return CHAPTERS;
@@ -2247,6 +2279,10 @@
   }
 
   function advanceFrame(rawDt) {
+    if (!isSimCurrentlyVisible()) {
+      syncPlayPauseUI();
+      return;
+    }
     const tacticallyPaused = advanceTacticalPause(rawDt);
     syncPlayPauseUI();
     if (sim.running && !tacticallyPaused) {

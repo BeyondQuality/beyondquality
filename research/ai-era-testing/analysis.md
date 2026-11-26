@@ -42,3 +42,6 @@ Whether code is "good enough" depends on what business problem it solves, what t
 
 ## 5. References
 - **[annotated links](references.md)**
+
+## 6. Companion model
+- **[Product Work as a Cybernetic System](../../cybernetics/factors.md)** and its **[8-chapter interactive simulation](https://beyondquality.org/cybernetics/)**: general feedback-loop model of adaptation delay, handoff noise, testing blind spots, and queues.

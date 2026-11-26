@@ -939,6 +939,13 @@ body {
   padding-bottom: 1.25rem;
 }
 
+.page-shell.is-framed,
+.page-shell.is-framed.is-ui-bare,
+.page-shell.is-framed.is-ui-controls {
+  max-width: none;
+  padding: 0.25rem 0 0.2rem;
+}
+
 .page-shell.is-ui-bare .view-bar,
 .page-shell.is-ui-bare .chapter-nav,
 .page-shell.is-ui-bare .story-card,
